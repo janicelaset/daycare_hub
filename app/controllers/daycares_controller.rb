@@ -16,6 +16,10 @@ class DaycaresController < ApplicationController
     end
   end
 
+  def show
+    @daycare = Daycare.find(params[:id])
+  end
+
   private
   def daycare_params
     params.require(:daycare).permit(:name, :type, :summary)
