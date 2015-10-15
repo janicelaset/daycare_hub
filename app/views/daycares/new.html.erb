@@ -1,0 +1,14 @@
+<%= form_for @daycare do |f|%>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :structure %>
+  <%= f.text_field :structure %>
+
+  <%= f.label :summary %>
+  <%= f.text_field :summary %>
+
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'All Daycares', daycares_path %>
