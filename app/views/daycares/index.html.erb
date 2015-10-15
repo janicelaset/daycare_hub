@@ -1,1 +1,5 @@
-Hello
+<ul>
+  <% @daycares.each do |daycare| %>
+    <li><%= daycare.name %></li>
+  <% end %>
+</ul>
