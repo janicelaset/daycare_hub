@@ -20,8 +20,21 @@ class DaycaresController < ApplicationController
     @daycare = Daycare.find(params[:id])
   end
 
+  def edit
+    @daycare = Daycare.find(params[:id])
+  end
+
+  def update
+    @daycare = Daycare.find(params[:id])
+    if @daycare.update(daycare_params)
+      redirect_to daycare_path(@daycare)
+    else
+      render :edit
+    end
+  end
+
   private
   def daycare_params
-    params.require(:daycare).permit(:name, :type, :summary)
+    params.require(:daycare).permit(:name, :structure, :summary)
   end
 end
