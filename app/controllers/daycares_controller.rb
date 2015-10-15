@@ -33,6 +33,12 @@ class DaycaresController < ApplicationController
     end
   end
 
+  def destroy
+    @daycare = Daycare.find(params[:id])
+    @daycare.destroy
+    redirect_to daycares_path
+  end
+
   private
   def daycare_params
     params.require(:daycare).permit(:name, :structure, :summary)
