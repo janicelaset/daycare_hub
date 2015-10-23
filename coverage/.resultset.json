@@ -512,7 +512,9 @@
       "C:/Users/Janice/Dev/rails/daycare_hub/spec/factories/users.rb": [
         1,
         1,
-        null,
+        1,
+        1,
+        1,
         null,
         null,
         null
@@ -610,7 +612,7 @@
         null,
         null,
         1,
-        0,
+        1,
         0,
         null,
         null,
@@ -690,13 +692,13 @@
         1,
         null,
         1,
-        0,
-        0,
-        0,
+        3,
+        2,
+        2,
         null,
         null,
         1,
-        0,
+        1,
         null,
         null
       ],
@@ -731,6 +733,21 @@
         1,
         1,
         null,
+        null,
+        null
+      ],
+      "C:/Users/Janice/Dev/rails/daycare_hub/spec/features/username_signin_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -815,6 +832,6 @@
         null
       ]
     },
-    "timestamp": 1445572710
+    "timestamp": 1445607800
   }
 }
