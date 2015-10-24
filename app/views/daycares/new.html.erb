@@ -1,11 +1,3 @@
 <h4>Add your daycare</h4>
 
-<%= form_for [current_user, @daycare] do |f|%>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-
-  <%= f.label :structure %>
-  <%= f.text_field :structure %>
-
-  <%= f.submit %>
-<% end %>
+<%= render 'form' %>

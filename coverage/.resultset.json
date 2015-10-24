@@ -627,7 +627,7 @@
         null,
         null,
         1,
-        6,
+        8,
         1,
         null,
         null,
@@ -652,16 +652,28 @@
       "C:/Users/Janice/Dev/rails/daycare_hub/app/controllers/daycares_controller.rb": [
         1,
         1,
-        3,
+        5,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        2,
+        1,
+        null,
+        1,
+        null,
         null,
         null,
         1,
         1,
-        null,
-        null,
-        1,
-        1,
-        0,
+        2,
         null,
         null
       ],
@@ -725,7 +737,34 @@
         null,
         null
       ],
-      "C:/Users/Janice/Dev/rails/daycare_hub/spec/features/user_signin_spec.rb": [
+      "C:/Users/Janice/Dev/rails/daycare_hub/spec/features/daycare_crud_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "C:/Users/Janice/Dev/rails/daycare_hub/spec/features/user_sign_in_spec.rb": [
         1,
         null,
         1,
@@ -859,6 +898,6 @@
         null
       ]
     },
-    "timestamp": 1445647741
+    "timestamp": 1445651339
   }
 }

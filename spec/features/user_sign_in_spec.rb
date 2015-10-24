@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe "signing in with user name process" do
-  it "signs up a user with user name" do
+describe "the sign in process" do
+  it "signs up user with user name" do
     visit new_user_registration_path
     fill_in 'User name', :with => 'user'
     fill_in 'Email', :with => 'user@email.com'
@@ -11,7 +11,7 @@ describe "signing in with user name process" do
     expect(page).to have_content 'Welcome!'
   end
 
-  it "signs in with user name" do
+  it "signs in user with user name" do
     user = FactoryGirl.create(:user)
     visit user_session_path
     fill_in 'Login', :with => 'testuser'
@@ -20,7 +20,7 @@ describe "signing in with user name process" do
     expect(page).to have_content 'Signed in successfully.'
   end
 
-  it "return error if user signs up with a user name of existing email" do
+  it "returns error if user signs up with a user name of existing email" do
     user = FactoryGirl.create(:user)
     visit new_user_registration_path
     fill_in 'User name', :with => 'email@email.com'

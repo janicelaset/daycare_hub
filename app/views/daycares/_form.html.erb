@@ -1,4 +1,6 @@
-<%= form_for @daycare do |f|%>
+<%= render "layouts/errors", :object => @daycare %>
+
+<%= form_for [current_user, @daycare] do |f|%>
   <%= f.label :name %>
   <%= f.text_field :name %>
 
