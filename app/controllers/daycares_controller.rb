@@ -1,6 +1,11 @@
 class DaycaresController < ApplicationController
   def new
     @daycare = Daycare.new
+
+    respond_to do |format|
+      format.html 
+      format.js
+    end
   end
 
   def create
