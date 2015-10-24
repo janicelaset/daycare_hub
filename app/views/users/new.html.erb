@@ -9,7 +9,7 @@
             <% end %>
           </div>
           <div id="daycare-name-minus" style="display:none">
-            <%= link_to new_user_daycare_path(current_user, @daycare), remote: true do %>
+            <%= link_to daycares_view_path(current_user), remote: true do %>
               <span ><i class="glyphicon glyphicon-minus"></i></span>
             <% end %>
           </div>

@@ -3,10 +3,18 @@ class DaycaresController < ApplicationController
     @daycare = Daycare.new
 
     respond_to do |format|
-      format.html 
+      format.html
       format.js
     end
   end
+
+  def view
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
 
   def create
     @daycare = Daycare.new(daycare_params)
@@ -36,9 +44,8 @@ class DaycaresController < ApplicationController
   end
 
   def show
-    @daycare = Daycare.find(params[:id])
+    @daycare = Daycare.new
   end
-
 
   private
   def daycare_params
