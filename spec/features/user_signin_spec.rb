@@ -39,4 +39,13 @@ describe "signing in with user name process" do
     click_button 'Log in'
     expect(page).to have_content 'Add your daycare'
   end
+
+  it "directs users daycare to daycare show page on sign in" do
+    daycare = FactoryGirl.create(:daycare)
+    visit user_session_path
+    fill_in 'Login', :with => 'testuser'
+    fill_in 'Password', :with => 'password'
+    click_button 'Log in'
+    expect(page).to have_content 'My Daycare'
+  end
 end

@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
       @daycare = Daycare.new
       new_user_daycare_path(current_user, @daycare)
     else
-      @daycare = Daycare.find(params[:id])
+      @daycare = Daycare.find(current_user.daycare.id)
       user_daycare_path(current_user, @daycare)
     end
  end
