@@ -1,7 +1,3 @@
 <%= @daycare.name %>
 <%= @daycare.structure %>
 <%= @daycare.summary %>
-
-<%= link_to 'Edit', edit_daycare_path(@daycare) %>
-<%= link_to 'Delete', daycare_path(@daycare), data: {method: 'delete', confirm: "Delete Daycare?"} %>
-<%= link_to 'All Daycares', daycares_path %>

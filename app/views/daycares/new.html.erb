@@ -1,4 +1,6 @@
-<%= form_for @daycare do |f|%>
+<h4>Add your daycare</h4>
+
+<%= form_for [current_user, @daycare] do |f|%>
   <%= f.label :name %>
   <%= f.text_field :name %>
 
@@ -10,5 +12,3 @@
 
   <%= f.submit %>
 <% end %>
-
-<%= link_to 'All Daycares', daycares_path %>

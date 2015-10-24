@@ -13,6 +13,12 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-   user_path(current_user)
+    if current_user.daycare == nil
+      @daycare = Daycare.new
+      new_user_daycare_path(current_user, @daycare)
+    else
+      @daycare = Daycare.find(params[:id])
+      user_daycare_path(current_user, @daycare)
+    end
  end
 end

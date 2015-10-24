@@ -1,7 +1,5 @@
 <ul>
   <% @daycares.each do |daycare| %>
-    <li><%= link_to daycare.name, daycare_path(daycare) %></li>
+    <li><%= link_to daycare.name, user_daycare_path(daycare) %></li>
   <% end %>
 </ul>
-
-<%= link_to 'Add Daycare', new_daycare_path %>

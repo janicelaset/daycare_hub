@@ -31,4 +31,12 @@ describe "signing in with user name process" do
     expect(page).to have_content 'User name is invalid'
   end
 
+  it "directs users with no daycare to new daycare page on sign in" do
+    user = FactoryGirl.create(:user)
+    visit user_session_path
+    fill_in 'Login', :with => 'testuser'
+    fill_in 'Password', :with => 'password'
+    click_button 'Log in'
+    expect(page).to have_content 'Add your daycare'
+  end
 end
