@@ -47,11 +47,12 @@
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
+              <li><%= link_to 'Home', root_path %></li>
               <% if current_user.daycare != nil %>
                 <li><%= link_to "View Profile", user_daycare_path(current_user, current_user.daycare) %></li>
                 <li><%= link_to "Edit Profile", edit_user_daycare_path(current_user, current_user.daycare) %></li>
-                <li role="separator" class="divider"></li>
               <% end %>
+                <li role="separator" class="divider"></li>
               <li><%= link_to "Sign Out", destroy_user_session_path, method: 'delete' %></li>
             </ul>
           </li>
