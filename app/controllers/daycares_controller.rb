@@ -32,6 +32,7 @@ class DaycaresController < ApplicationController
     @daycare = Daycare.find(params[:id])
 
     respond_to do |format|
+      format.html
       format.js
     end
   end
