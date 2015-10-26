@@ -37,7 +37,7 @@ describe "the sign in process" do
     fill_in 'Login', :with => 'testuser'
     fill_in 'Password', :with => 'password'
     click_button 'Log in'
-    expect(page).to have_content 'Add your daycare'
+    expect(page).to have_content 'Add Daycare'
   end
 
   it "directs users daycare to daycare show page on sign in" do

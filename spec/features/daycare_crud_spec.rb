@@ -5,9 +5,8 @@ describe "the daycare crud process" do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
     daycare = Daycare.new
-    visit new_user_daycare_path(user, daycare)
+    visit new_user_path(user)
     fill_in 'Name', :with => 'My Daycare'
-    fill_in 'daycare_structure', :with => 'home'
     click_button 'Create Daycare'
     expect(page).to have_content 'My Daycare'
   end
