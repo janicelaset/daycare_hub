@@ -55,6 +55,8 @@ group :test do
   gem 'capybara'
   gem 'simplecov', :require => false
   gem 'database_cleaner', '~> 1.5', '>= 1.5.1'
+  gem 'poltergeist'
+  # gem 'phantomjs', :require => 'phantomjs/poltergeist'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

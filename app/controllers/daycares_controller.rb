@@ -1,14 +1,12 @@
 class DaycaresController < ApplicationController
-  def new
-    @daycare = Daycare.new
-
+  def view
     respond_to do |format|
       format.html
       format.js
     end
   end
 
-  def view
+  def show
     respond_to do |format|
       format.html
       format.js
@@ -21,22 +19,33 @@ class DaycaresController < ApplicationController
     @daycare.user = @user
 
     if @daycare.save
-      # respond_to do |format|
-      #   format.html { redirect_to edit_user_path(@user) }
-      #   format.js
-      # end
-      redirect_to edit_user_path(@user)
+      respond_to do |format|
+        format.html
+        format.js
+      end
     else
       render 'users/new'
+    end
+  end
+
+  def edit
+    @daycare = Daycare.find(params[:id])
+
+    respond_to do |format|
+      format.js
     end
   end
 
   def update
     @user = User.find(params[:user_id])
     @daycare = Daycare.find(params[:id])
+    @daycare.user = @user
 
     if @daycare.update(daycare_params)
-      redirect_to user_daycare_path(@user, @daycare)
+      respond_to do |format|
+        # format.html { redirect_to edit_user_path(@user) }
+        format.js
+      end
     else
       render :edit
     end

@@ -4,7 +4,7 @@
       <div class="media">
         <div class="media-left media-top">
           <div id="daycare-name-plus">
-            <%= link_to new_user_daycare_path(current_user, @daycare), id: 'add-daycare-name', remote: true do %>
+            <%= link_to edit_user_daycare_path(current_user, @daycare), id: 'daycare-edit-name', remote: true do %>
               <span ><i class="glyphicon glyphicon-plus"></i></span>
             <% end %>
           </div>
@@ -17,9 +17,11 @@
         <div class="media-body">
           <h4 class="media-heading">Daycare</h4>
           <div id="daycare-name-form" style="display:none;"></div>
-          <% if current_user.daycare %>
-            <%= render 'daycares/name' %>
-          <% end %>
+          <div id="daycare-display-name">
+            <% if current_user.daycare %>
+              <%= render 'daycares/name' %>
+            <% end %>
+          </div>
         </div>
       </div>
     </li>

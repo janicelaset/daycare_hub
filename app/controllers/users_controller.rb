@@ -8,6 +8,6 @@ class UsersController < ApplicationController
   end
 
   def edit
-
+    @daycare = Daycare.find(params[:id])
   end
 end

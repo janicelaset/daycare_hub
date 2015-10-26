@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "the daycare crud process" do
-  it "allows user to add daycare" do
+  it "allows user to add daycare", js: true do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
     daycare = Daycare.new
@@ -14,10 +14,8 @@ describe "the daycare crud process" do
   it "displays errors with daycare save method" do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
-    daycare = Daycare.new
-    visit new_user_daycare_path(user, daycare)
+    visit new_user_path(user)
     fill_in 'Name', :with => ''
-    fill_in 'daycare_structure', :with => 'home'
     click_button 'Create Daycare'
     expect(page).to have_content 'Please fix these errors'
   end
@@ -26,11 +24,11 @@ describe "the daycare crud process" do
     daycare = FactoryGirl.create(:daycare)
     user = daycare.user
     login_as(user, :scope => :user)
-    visit edit_user_daycare_path(user, daycare)
-    fill_in 'Name', :with => 'Daycare'
-    fill_in 'daycare_structure', :with => 'home'
+    visit edit_user_path(user)
+    click_link 'daycare-edit-name'
+    fill_in 'Name', :with => 'Updated Daycare'
     click_button 'Update Daycare'
-    expect(page).to have_content 'Daycare'
+    expect(page).to have_content 'Updated Daycare'
   end
 
   it "displays errors with daycare update method" do
