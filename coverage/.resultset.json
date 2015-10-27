@@ -53,8 +53,8 @@
         null,
         null,
         1,
-        14,
-        14,
+        15,
+        15,
         null,
         null,
         null,
@@ -851,6 +851,15 @@
         null,
         null
       ],
+      "C:/Users/Janice/Dev/rails/daycare_hub/spec/features/image_crud_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "C:/Users/Janice/Dev/rails/daycare_hub/spec/features/user_sign_in_spec.rb": [
         1,
         null,
@@ -982,6 +991,6 @@
         null
       ]
     },
-    "timestamp": 1445918411
+    "timestamp": 1445952470
   }
 }
