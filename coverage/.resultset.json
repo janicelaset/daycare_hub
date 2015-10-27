@@ -53,8 +53,8 @@
         null,
         null,
         1,
-        15,
-        15,
+        17,
+        17,
         null,
         null,
         null,
@@ -533,6 +533,14 @@
         null,
         null
       ],
+      "C:/Users/Janice/Dev/rails/daycare_hub/spec/factories/images.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
       "C:/Users/Janice/Dev/rails/daycare_hub/spec/factories/users.rb": [
         1,
         1,
@@ -968,12 +976,26 @@
         1,
         2,
         2,
+        2,
         null
       ],
       "C:/Users/Janice/Dev/rails/daycare_hub/app/models/daycare.rb": [
         1,
         1,
+        1,
         null,
+        1,
+        null
+      ],
+      "C:/Users/Janice/Dev/rails/daycare_hub/spec/models/image_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        null
+      ],
+      "C:/Users/Janice/Dev/rails/daycare_hub/app/models/image.rb": [
+        1,
         1,
         null
       ],
@@ -991,6 +1013,6 @@
         null
       ]
     },
-    "timestamp": 1445952470
+    "timestamp": 1445954745
   }
 }
