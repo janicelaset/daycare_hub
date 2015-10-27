@@ -1,6 +1,6 @@
 <%= render 'layouts/errors', :object => @image %>
 
-<%= form_for [@daycare, @image], remote: true, :html => {:class => "form-horizontal"}  do |f| %>
+<%= form_for [@daycare, @image], :html => {:class => "form-horizontal"}  do |f| %>
   <div class="form-group">
     <div class="col-sm-12">
       <%= f.file_field :picture %>
