@@ -1,0 +1,23 @@
+<div class="media">
+  <div class="media-left media-top">
+    <div id="daycare-image-plus">
+      <%= link_to new_daycare_image_path(@daycare), id: 'daycare-add-image', remote: true do %>
+        <span ><i class="glyphicon glyphicon-plus"></i></span>
+      <% end %>
+    </div>
+    <div id="daycare-image-minus" style="display:none">
+      <%= link_to daycare_images_path(@daycare), remote: true do %>
+        <span ><i class="glyphicon glyphicon-minus"></i></span>
+      <% end %>
+    </div>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Images</h4>
+    <div id="daycare-image-form" style="display:none;"></div>
+    <div id="daycare-display-image">
+      <% if @daycare.images.any? %>
+        <%= render 'images/image' %>
+      <% end %>
+    </div>
+  </div>
+</div>
