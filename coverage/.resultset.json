@@ -53,8 +53,8 @@
         null,
         null,
         1,
-        13,
-        13,
+        14,
+        14,
         null,
         null,
         null,
@@ -639,7 +639,7 @@
         null,
         null,
         1,
-        10,
+        11,
         1,
         null,
         null,
@@ -718,6 +718,13 @@
         null,
         1,
         1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
         4,
         null,
         null
@@ -783,7 +790,7 @@
       "C:/Users/Janice/Dev/rails/daycare_hub/app/controllers/users_controller.rb": [
         1,
         1,
-        1,
+        2,
         null,
         null,
         1,
@@ -830,6 +837,16 @@
         null,
         null,
         1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         1,
         1,
         1,
@@ -925,7 +942,6 @@
         null,
         null,
         1,
-        1,
         null
       ],
       "C:/Users/Janice/Dev/rails/daycare_hub/spec/helpers/users_helper_spec.rb": [
@@ -941,7 +957,6 @@
         null,
         null,
         null,
-        1,
         1,
         null
       ],
@@ -971,10 +986,9 @@
         1,
         null,
         1,
-        1,
         null
       ]
     },
-    "timestamp": 1445894075
+    "timestamp": 1445904519
   }
 }

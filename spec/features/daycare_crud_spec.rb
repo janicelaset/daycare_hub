@@ -41,4 +41,14 @@ describe "the daycare crud process" do
     click_button 'Update Daycare'
     expect(page).to have_content 'Please fix these errors'
   end
+
+  it "allows user to delete daycare", js: true do
+    daycare = FactoryGirl.create(:daycare)
+    user = daycare.user
+    login_as(user, :scope => :user)
+    visit user_path(user)
+    find('.dropdown').click
+    find('#delete-daycare').click
+    expect(page).to have_content 'Add Daycare'
+  end
 end

@@ -40,7 +40,7 @@ describe "the sign in process" do
     expect(page).to have_content 'Add Daycare'
   end
 
-  it "directs users daycare to daycare show page on sign in" do
+  it "directs users with daycare to profile page on sign in" do
     daycare = FactoryGirl.create(:daycare)
     visit user_session_path
     fill_in 'Login', :with => 'testuser'

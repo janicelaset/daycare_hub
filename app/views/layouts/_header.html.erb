@@ -38,7 +38,6 @@
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
           <% if current_user.daycare == nil %>
-            <!-- <li><%= link_to "Add Daycare", new_user_daycare_path(current_user, @daycare) %></li> -->
             <li><%= link_to "Add Daycare", new_user_path(current_user) %></li>
           <% end %>
           <li class="dropdown">
@@ -55,6 +54,7 @@
               <% if current_user.daycare != nil %>
                 <li><%= link_to "View Profile", user_path(current_user, current_user.daycare) %></li>
                 <li><%= link_to "Edit Profile", edit_user_path(current_user, current_user.daycare) %></li>
+                <li><%= link_to "Delete Daycare", user_daycare_path(current_user, current_user.daycare), id: 'delete-daycare', remote: true, method: :delete %></li>
               <% end %>
                 <li><%= link_to 'Feedback' %></li>
                 <li role="separator" class="divider"></li>
