@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "C:/Users/Janice/Dev/rails/daycare_hub/spec/controllers/daycares_controller_spec.rb": [
+      "C:/Users/Janice/Dev/rails/daycare_hub/spec/controllers/contacts_controller_spec.rb": [
         1,
         null,
         1,
@@ -575,6 +575,9 @@
         null,
         null,
         1,
+        1,
+        null,
+        null,
         null,
         null,
         null,
@@ -669,6 +672,10 @@
         1,
         null
       ],
+      "C:/Users/Janice/Dev/rails/daycare_hub/app/helpers/contacts_helper.rb": [
+        1,
+        null
+      ],
       "C:/Users/Janice/Dev/rails/daycare_hub/app/helpers/daycares_helper.rb": [
         1,
         null
@@ -683,6 +690,86 @@
       ],
       "C:/Users/Janice/Dev/rails/daycare_hub/app/helpers/users_helper.rb": [
         1,
+        null
+      ],
+      "C:/Users/Janice/Dev/rails/daycare_hub/app/controllers/contacts_controller.rb": [
+        1,
+        1,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "C:/Users/Janice/Dev/rails/daycare_hub/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        12,
+        13,
+        10,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        4,
+        3,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "C:/Users/Janice/Dev/rails/daycare_hub/spec/controllers/daycares_controller_spec.rb": [
+        1,
+        null,
+        1,
+        null,
         null
       ],
       "C:/Users/Janice/Dev/rails/daycare_hub/app/controllers/daycares_controller.rb": [
@@ -743,37 +830,6 @@
         1,
         1,
         4,
-        null,
-        null
-      ],
-      "C:/Users/Janice/Dev/rails/daycare_hub/app/controllers/application_controller.rb": [
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        12,
-        13,
-        10,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        4,
-        3,
-        null,
-        1,
-        null,
         null,
         null
       ],
@@ -863,6 +919,12 @@
         1,
         4,
         null,
+        4,
+        4,
+        null,
+        0,
+        null,
+        null,
         null
       ],
       "C:/Users/Janice/Dev/rails/daycare_hub/spec/features/contact_spec.rb": [
@@ -875,14 +937,14 @@
         1,
         1,
         1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -1002,6 +1064,23 @@
         1,
         1,
         null,
+        null
+      ],
+      "C:/Users/Janice/Dev/rails/daycare_hub/spec/helpers/contacts_helper_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
         null
       ],
       "C:/Users/Janice/Dev/rails/daycare_hub/spec/helpers/daycares_helper_spec.rb": [
@@ -1129,6 +1208,6 @@
         null
       ]
     },
-    "timestamp": 1445996941
+    "timestamp": 1446037640
   }
 }

@@ -11,9 +11,9 @@ describe "the contact crud process" do
     fill_in 'City', :with => 'City'
     fill_in 'State', :with => 'OR'
     fill_in 'Zip', :with => '12345'
-    fill_in 'phone', :with => '123-456-7890'
-    fill_in 'email', :with => 'user@email.com'
-    click_button 'Add Contact'
+    fill_in 'Email', :with => 'user@email.com'
+    fill_in 'Phone', :with => '123-456-7890'
+    click_button 'Create Contact'
     expect(page).to have_content '1234 Address Dr'
   end
 end

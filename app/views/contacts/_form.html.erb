@@ -1,14 +1,39 @@
 <%= render "layouts/errors", :object => @contact %>
 
 <%= form_for [@daycare, @contact], remote: true, :html => {:class => "form-horizontal"} do |f| %>
-<div class="form-group">
+  <div class="form-group">
+    <%= f.label :address, class: 'control-label col-sm-1' %>
+    <div class="col-sm-11 daycare-edit-field">
+      <%= f.text_field :address, class: 'form-control' %>
+    </div>
 
-  <%= f.label :address, class: 'control-label col-sm-1' %>
-  <div class="col-sm-11 daycare-edit-field">
-    <%= f.text_field :address, class: 'form-control' %>
+    <%= f.label :city, class: 'control-label col-sm-1' %>
+    <div class="col-sm-4 daycare-edit-field">
+      <%= f.text_field :city, class: 'form-control' %>
+    </div>
+
+    <%= f.label :state, class: 'control-label col-sm-1' %>
+    <div class="col-sm-2 daycare-edit-field">
+      <%= f.text_field :state, class: 'form-control' %>
+    </div>
+
+    <%= f.label :zip, class: 'control-label col-sm-1' %>
+    <div class="col-sm-3 daycare-edit-field">
+      <%= f.text_field :zip, class: 'form-control' %>
+    </div>
+
+    <%= f.label :email, class: 'control-label col-sm-1' %>
+    <div class="col-sm-5 daycare-edit-field">
+      <%= f.text_field :email, class: 'form-control' %>
+    </div>
+
+    <%= f.label :phone, class: 'control-label col-sm-1' %>
+    <div class="col-sm-5 daycare-edit-field">
+      <%= f.text_field :phone, class: 'form-control' %>
+    </div>
+
+    <div class="pull-right col-sm-3">
+      <%= f.submit class:'btn' %>
+    </div>
   </div>
-  <div class="pull-right col-sm-3">
-    <%= f.submit class:'btn' %>
-  </div>
-</div>
 <% end %>

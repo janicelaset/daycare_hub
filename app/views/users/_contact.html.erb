@@ -1,8 +1,14 @@
 <div class="media">
   <div class="media-left media-top">
     <div id="daycare-contact-plus">
-      <%= link_to new_daycare_contact_path(@daycare), id: 'daycare-add-contact', remote: true do %>
-        <span ><i class="glyphicon glyphicon-plus"></i></span>
+      <% if @daycare.contact.nil? %>
+        <%= link_to new_daycare_contact_path(@daycare), id: 'daycare-add-contact', remote: true do %>
+          <span ><i class="glyphicon glyphicon-plus"></i></span>
+        <% end %>
+      <% else %>
+        <%= link_to edit_daycare_contact_path(@daycare, @contact), id: 'daycare-edit-contact', remote: true do %>
+          <span ><i class="glyphicon glyphicon-plus"></i></span>
+        <% end %>
       <% end %>
     </div>
     <div id="daycare-contact-minus" style="display:none">
