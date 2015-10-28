@@ -16,4 +16,16 @@ describe "the contact crud process" do
     click_button 'Create Contact'
     expect(page).to have_content '1234 Address Dr'
   end
+
+  it "allows users to update contact information" do
+    daycare = FactoryGirl.create(:daycare)
+    contact = FactoryGirl.create(:contact)
+    user = daycare.user
+    login_as(user, :scope => :user)
+    visit edit_user_path(user)
+    click_link 'daycare-edit-contact'
+    fill_in 'Address', :with => 'New Address Dr'
+    click_button 'Update Contact'
+    expect(page).to have_content 'New Address Dr'
+  end
 end

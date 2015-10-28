@@ -33,6 +33,30 @@ class ContactsController < ApplicationController
     end
   end
 
+  def edit
+    @contact = Contact.find(params[:id])
+    @daycare = current_user.daycare
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
+  def update
+    @contact = Contact.find(params[:id])
+    @daycare = current_user.daycare
+
+    if @contact.update(contact_params)
+      respond_to do |format|
+        format.html
+        format.js
+      end
+    else
+      flash[:notice] = "Contact information not updated"
+    end
+  end
+
   private
   def contact_params
     params.require(:contact).permit(:address, :city, :state, :zip, :email, :phone)

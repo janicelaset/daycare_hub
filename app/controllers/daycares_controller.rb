@@ -37,7 +37,7 @@ class DaycaresController < ApplicationController
 
     if @daycare.update(daycare_params)
       respond_to do |format|
-        # format.html { redirect_to edit_user_path(@user) }
+        format.html
         format.js
       end
     else
