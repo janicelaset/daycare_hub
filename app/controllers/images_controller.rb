@@ -1,8 +1,12 @@
 class ImagesController < ApplicationController
   def index
     @images = current_user.daycare.images
-  end
 
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
 
   def new
     @daycare = current_user.daycare
@@ -16,7 +20,7 @@ class ImagesController < ApplicationController
 
   def create
     @daycare = Daycare.find(params[:daycare_id])
-    @image = Image.new(image_params)
+    # @image = Image.new(image_params)
     @image.daycare = @daycare
 
     if @image.save

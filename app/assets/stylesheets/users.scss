@@ -1,7 +1,23 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$light-blue: #4FD5D6;
 
 .edit-form-heading {
   margin-bottom: 1em;;
+}
+
+.header-profile {
+  text-align: center;
+  color: #fff;
+  background: $light-blue;
+  height: 200px;
+}
+
+.header-profile .intro-text .name {
+  display: block;
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 2em;
+  font-weight: 700;
 }

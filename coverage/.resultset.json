@@ -563,6 +563,10 @@
         null,
         null,
         1,
+        1,
+        null,
+        null,
+        1,
         null,
         null,
         null,
@@ -662,6 +666,10 @@
         null
       ],
       "C:/Users/Janice/Dev/rails/daycare_hub/app/helpers/home_helper.rb": [
+        1,
+        null
+      ],
+      "C:/Users/Janice/Dev/rails/daycare_hub/app/helpers/images_helper.rb": [
         1,
         null
       ],
@@ -778,6 +786,48 @@
       "C:/Users/Janice/Dev/rails/daycare_hub/app/controllers/home_controller.rb": [
         1,
         1,
+        null,
+        null
+      ],
+      "C:/Users/Janice/Dev/rails/daycare_hub/spec/controllers/images_controller_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "C:/Users/Janice/Dev/rails/daycare_hub/app/controllers/images_controller.rb": [
+        1,
+        1,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        0,
         null,
         null
       ],
@@ -954,6 +1004,23 @@
         1,
         null
       ],
+      "C:/Users/Janice/Dev/rails/daycare_hub/spec/helpers/images_helper_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
       "C:/Users/Janice/Dev/rails/daycare_hub/spec/helpers/users_helper_spec.rb": [
         1,
         null,
@@ -997,6 +1064,8 @@
       "C:/Users/Janice/Dev/rails/daycare_hub/app/models/image.rb": [
         1,
         1,
+        1,
+        1,
         null
       ],
       "C:/Users/Janice/Dev/rails/daycare_hub/spec/models/user_spec.rb": [
@@ -1013,6 +1082,6 @@
         null
       ]
     },
-    "timestamp": 1445954745
+    "timestamp": 1445987746
   }
 }
