@@ -1,0 +1,14 @@
+<%= render "layouts/errors", :object => @contact %>
+
+<%= form_for [@daycare, @contact], remote: true, :html => {:class => "form-horizontal"} do |f| %>
+<div class="form-group">
+
+  <%= f.label :address, class: 'control-label col-sm-1' %>
+  <div class="col-sm-11 daycare-edit-field">
+    <%= f.text_field :address, class: 'form-control' %>
+  </div>
+  <div class="pull-right col-sm-3">
+    <%= f.submit class:'btn' %>
+  </div>
+</div>
+<% end %>

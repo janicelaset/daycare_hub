@@ -12,7 +12,10 @@ Rails.application.routes.draw do
     resources :images
   end
 
-  get 'users/daycares/:user_id/view' => 'daycares#view', as: 'daycares_view'
+  resources :daycares do
+    resources :contacts
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

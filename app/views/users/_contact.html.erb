@@ -1,0 +1,23 @@
+<div class="media">
+  <div class="media-left media-top">
+    <div id="daycare-contact-plus">
+      <%= link_to new_daycare_contact_path(@daycare), id: 'daycare-add-contact', remote: true do %>
+        <span ><i class="glyphicon glyphicon-plus"></i></span>
+      <% end %>
+    </div>
+    <div id="daycare-contact-minus" style="display:none">
+      <%= link_to daycare_contacts_path(@daycare), remote: true do %>
+        <span ><i class="glyphicon glyphicon-minus"></i></span>
+      <% end %>
+    </div>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Contact</h4>
+    <div id="daycare-contact-form" style="display:none;"></div>
+    <div id="daycare-display-contact">
+      <% if @daycare.contact != nil %>
+        <!-- <%= render 'images/image' %> -->
+      <% end %>
+    </div>
+  </div>
+</div>

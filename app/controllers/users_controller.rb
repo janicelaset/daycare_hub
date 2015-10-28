@@ -9,5 +9,11 @@ class UsersController < ApplicationController
 
   def edit
     @daycare = current_user.daycare
+
+    if (@daycare.contact.nil?)
+      @contact = Contact.new
+    else
+      @contact = @daycare.contact
+    end
   end
 end

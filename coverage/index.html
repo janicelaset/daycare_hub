@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-10-27T18:26:46-07:00">2015-10-27T18:26:46-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-10-27T18:49:01-07:00">2015-10-27T18:49:01-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">93.88%</span></span>
+    (<span class="covered_percent"><span class="green">91.84%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.31
+         1.28
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>49</b> files in total.
-    <b>327</b> relevant lines. 
-    <span class="green"><b>307</b> lines covered</span> and
-    <span class="red"><b>20</b> lines missed </span>
+    <b>50</b> files in total.
+    <b>343</b> relevant lines. 
+    <span class="green"><b>315</b> lines covered</span> and
+    <span class="red"><b>28</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -97,7 +97,7 @@
         <td>7</td>
         <td>7</td>
         <td>0</td>
-        <td>2.1</td>
+        <td>2.3</td>
       </tr>
       
       <tr>
@@ -187,7 +187,7 @@
         <td>15</td>
         <td>13</td>
         <td>2</td>
-        <td>1.9</td>
+        <td>2.0</td>
       </tr>
       
       <tr>
@@ -411,6 +411,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#818dd3a61b3893e781f577b36a2c4cb727eb929d" class="src_link" title="spec/features/contact_spec.rb">spec/features/contact_spec.rb</a></td>
+        <td class="red strong">50.0 %</td>
+        <td>19</td>
+        <td>16</td>
+        <td>8</td>
+        <td>8</td>
+        <td>0.5</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#fa970f9b6cd2b2db5dc169d8b950c100a9d7c079" class="src_link" title="spec/features/daycare_crud_spec.rb">spec/features/daycare_crud_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>54</td>
@@ -527,7 +537,7 @@
         <td>24</td>
         <td>24</td>
         <td>0</td>
-        <td>2.5</td>
+        <td>2.6</td>
       </tr>
       
       <tr>
@@ -1476,8 +1486,8 @@
           <code class="ruby">  def edit</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="11">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="11">
+          <span class="hits">4</span>
           
           <code class="ruby">    @daycare = current_user.daycare</code>
         </li>
@@ -1968,8 +1978,8 @@
           <code class="ruby">  def validate_username</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="28">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="12" data-linenumber="28">
+          <span class="hits">12</span>
           
           <code class="ruby">    if User.where(email: user_name).exists?</code>
         </li>
@@ -5620,6 +5630,138 @@
   </pre>
 </div>
       
+        <div class="source_table" id="818dd3a61b3893e781f577b36a2c4cb727eb929d">
+  <div class="header">
+    <h3>spec/features/contact_spec.rb</h3>
+    <h4><span class="red">50.0 %</span> covered</h4>
+    <div>
+      <b>16</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
+      <span class="red"><b>8</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe &quot;the contact crud process&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &quot;allows user to add contact information&quot;, js: true do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    daycare = FactoryGirl.create(:daycare)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    user = daycare.user</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    login_as(user, :scope =&gt; :user)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit edit_user_path(user)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &#39;daycare-add-contact&#39;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="10">
+          
+          
+          <code class="ruby">    fill_in &#39;Address&#39;, :with =&gt; &#39;1234 Address Dr&#39;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="11">
+          
+          
+          <code class="ruby">    fill_in &#39;City&#39;, :with =&gt; &#39;City&#39;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="12">
+          
+          
+          <code class="ruby">    fill_in &#39;State&#39;, :with =&gt; &#39;OR&#39;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="13">
+          
+          
+          <code class="ruby">    fill_in &#39;Zip&#39;, :with =&gt; &#39;12345&#39;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="14">
+          
+          
+          <code class="ruby">    fill_in &#39;phone&#39;, :with =&gt; &#39;123-456-7890&#39;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="15">
+          
+          
+          <code class="ruby">    fill_in &#39;email&#39;, :with =&gt; &#39;user@email.com&#39;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="16">
+          
+          
+          <code class="ruby">    click_button &#39;Add Contact&#39;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="17">
+          
+          
+          <code class="ruby">    expect(page).to have_content &#39;1234 Address Dr&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
         <div class="source_table" id="fa970f9b6cd2b2db5dc169d8b950c100a9d7c079">
   <div class="header">
     <h3>spec/features/daycare_crud_spec.rb</h3>
@@ -7254,14 +7396,14 @@
           <code class="ruby">  config.around(:each) do |example|</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="45">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="20" data-linenumber="45">
+          <span class="hits">20</span>
           
           <code class="ruby">    DatabaseCleaner.cleaning do</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="46">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="20" data-linenumber="46">
+          <span class="hits">20</span>
           
           <code class="ruby">      example.run</code>
         </li>
