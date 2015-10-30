@@ -17,3 +17,8 @@
   <p><%= @contact.phone %></p>
   <p><%= @contact.email %></p>
 </div>
+<div id="daycare-profile-image">
+  <% @daycare.images.each do |image| %>
+    <%= image_tag image.picture.url(:thumb) %>
+  <% end %>
+</div>

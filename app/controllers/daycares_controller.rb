@@ -9,6 +9,10 @@ class DaycaresController < ApplicationController
     else
       @contact = @daycare.contact
     end
+
+    if @daycare.images.nil?
+      @image = Image.new
+    end
   end
 
   def new
@@ -32,11 +36,14 @@ class DaycaresController < ApplicationController
 
   def edit
     @daycare = Daycare.find(params[:id])
-    if @daycare.contact.nil?
+
+    if @daycare.contact.nil? #if user has not added contact information
       @contact = Contact.new
     else
       @contact = @daycare.contact
     end
+
+    @image = Image.new
 
     respond_to do |format|
       format.html

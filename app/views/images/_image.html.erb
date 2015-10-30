@@ -1,3 +1,20 @@
-<% @daycare.images.each do |image| %>
-  <%= image_tag image.picture.url(:thumb) %>
-<% end %>
+<div class="panel panel-default">
+  <div class="panel-heading" role="tab" id="headingThree">
+    <h4 class="panel-title">
+      <a id="daycare-add-image" class="collapsed pull-right" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <span class="glyphicon glyphicon-plus daycare-add-glyph"></span>
+      </a>
+      Images
+    </h4>
+  </div>
+  <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+    <div id="image-add-form" class="panel-body">
+      <% if @daycare.images.any? %>
+        <% @daycare.images.each do |image| %>
+          <%= image_tag image.picture.url(:thumb) %>
+        <% end %>
+      <% end %>
+      <%= render "images/form" %>
+    </div>
+  </div>
+</div>
