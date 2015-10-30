@@ -48,7 +48,7 @@ describe "the daycare crud process" do
     login_as(user, :scope => :user)
     visit user_path(user)
     find('.dropdown').click
-    find('#delete-daycare').click
+    find('#delete-profile').click
     expect(page).to have_content 'Add Daycare'
   end
 end
