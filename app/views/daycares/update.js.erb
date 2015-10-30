@@ -4,3 +4,6 @@ $('#daycare-display-name').show()
 $('#daycare-name-minus').hide()
 
 $('#daycare-name-form').slideUp(350);
+
+$('#collapseOne').removeClass('collapse in').addClass('collapse');
+$('#daycare-name').text('<%= @daycare.name %>');
