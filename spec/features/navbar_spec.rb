@@ -17,8 +17,9 @@ describe "The navbar links" do
     login_as(user, :scope => :user)
     visit root_path
     expect(page).to have_content 'My Daycare'
-    expect(page).to have_css("a#view-profile")
-    expect(page).to have_css("a#edit-profile")
-    expect(page).to have_css("a#delete-profile")
+    expect(page).to have_css "a#view-profile"
+    expect(page).to have_css "a#edit-profile"
+    expect(page).to have_css "a#delete-profile"
+    expect(page).to_not have_content 'Add Daycare'
   end
 end

@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-10-30T09:21:12-07:00">2015-10-30T09:21:12-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-10-30T09:27:23-07:00">2015-10-30T09:27:23-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">82.95%</span></span>
+    (<span class="covered_percent"><span class="yellow">83.1%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.17
+         1.16
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>55</b> files in total.
-    <b>434</b> relevant lines. 
-    <span class="green"><b>360</b> lines covered</span> and
-    <span class="red"><b>74</b> lines missed </span>
+    <b>426</b> relevant lines. 
+    <span class="green"><b>354</b> lines covered</span> and
+    <span class="red"><b>72</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -102,12 +102,12 @@
       
       <tr>
         <td class="strong"><a href="#487fa380b2ddf2280b7d107257793a110646d26b" class="src_link" title="app/controllers/users_controller.rb">app/controllers/users_controller.rb</a></td>
-        <td class="red strong">80.0 %</td>
-        <td>19</td>
-        <td>10</td>
-        <td>8</td>
-        <td>2</td>
-        <td>1.4</td>
+        <td class="green strong">100.0 %</td>
+        <td>3</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -483,9 +483,9 @@
       <tr>
         <td class="strong"><a href="#19373142fb439425d46c275d270c7db2c676731a" class="src_link" title="spec/features/navbar_spec.rb">spec/features/navbar_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>24</td>
-        <td>19</td>
-        <td>19</td>
+        <td>25</td>
+        <td>20</td>
+        <td>20</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -1933,11 +1933,11 @@
         <div class="source_table" id="487fa380b2ddf2280b7d107257793a110646d26b">
   <div class="header">
     <h3>app/controllers/users_controller.rb</h3>
-    <h4><span class="red">80.0 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>10</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>1</b> relevant lines. 
+      <span class="green"><b>1</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -1950,109 +1950,13 @@
           <code class="ruby">class UsersController &lt; ApplicationController</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="2">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def show</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    @daycare = current_user.daycare</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="4">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="never" data-hits="" data-linenumber="2">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def new</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="7">
-          
-          
-          <code class="ruby">    @daycare = Daycare.new</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="8">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="9">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="10">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def edit</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="11">
-          <span class="hits">3</span>
-          
-          <code class="ruby">    @daycare = current_user.daycare</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="12">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="13">
-          <span class="hits">3</span>
-          
-          <code class="ruby">    if (@daycare.contact.nil?)</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="14">
-          <span class="hits">3</span>
-          
-          <code class="ruby">      @contact = Contact.new</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
-          
-          
-          <code class="ruby">    else</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="16">
-          
-          
-          <code class="ruby">      @contact = @daycare.contact</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="17">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="18">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="3">
           
           
           <code class="ruby">end</code>
@@ -7245,8 +7149,8 @@
     <h3>spec/features/navbar_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>19</b> relevant lines. 
-      <span class="green"><b>19</b> lines covered</span> and
+      <b>20</b> relevant lines. 
+      <span class="green"><b>20</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -7371,28 +7275,34 @@
         <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_css(&quot;a#view-profile&quot;)</code>
+          <code class="ruby">    expect(page).to have_css &quot;a#view-profile&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_css(&quot;a#edit-profile&quot;)</code>
+          <code class="ruby">    expect(page).to have_css &quot;a#edit-profile&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to have_css(&quot;a#delete-profile&quot;)</code>
+          <code class="ruby">    expect(page).to have_css &quot;a#delete-profile&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to_not have_content &#39;Add Daycare&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">end</code>
