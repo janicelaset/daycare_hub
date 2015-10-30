@@ -1,11 +1,15 @@
 <div class="panel panel-default">
   <div class="panel-heading" role="tab" id="headingTwo">
     <h4 class="panel-title">
-      <a id="daycare-edit-contact" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="pull-right">
-        Contact
+      <a id="daycare-edit-contact" class="collapsed pull-right" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <% if @daycare.contact.nil? %>
+          <span class="glyphicon glyphicon-plus daycare-add-glyph"></span>
+        <% else %>
+          <span class="glyphicon glyphicon-pencil daycare-edit-glyph"></span>
+        <% end %>
       </a>
       <div id="daycare-contact">
-
+        Contact
       </div>
     </h4>
   </div>

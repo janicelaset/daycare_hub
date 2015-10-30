@@ -1,16 +1,24 @@
 // Place all the styles related to the daycares controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$light-blue: #4FD5D6;
 
-span.glyphicon-plus {
-  font-size: 1.7em;
-  color: #CCCCCC;
+.header-profile {
+  text-align: center;
+  color: #fff;
+  background: $light-blue;
+  height: 200px;
 }
 
-span.glyphicon-plus:hover {
+.header-profile .intro-text .name {
+  display: block;
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.daycare-edit-glyph:hover,
+.daycare-add-glyph:hover {
   color: gray;
-}
-
-.daycare-edit-field {
-  margin-bottom: 10px;
 }
