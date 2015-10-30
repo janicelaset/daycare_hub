@@ -41,7 +41,10 @@ class DaycaresController < ApplicationController
         format.js
       end
     else
-      render :edit
+      respond_to do |format|
+        format.html
+        format.js
+      end      
     end
   end
 

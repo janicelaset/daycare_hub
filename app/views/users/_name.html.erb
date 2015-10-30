@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+  <div class="panel-heading" role="tab" id="headingOne">
+    <h4 class="panel-title">
+      <a id="daycare-edit-name" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="pull-right" >
+        <span class="glyphicon glyphicon-pencil daycare-edit-glyph"></span>
+      </a>
+      <div id="daycare-name">
+        <%= current_user.daycare.name %>
+      </div>
+    </h4>
+  </div>
+  <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+    <div class="panel-body">
+      <%= render 'daycares/form' %>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,5 @@
+* How do you process update errors via ajax?
+
 == README
 
 - users can log in with username or email
