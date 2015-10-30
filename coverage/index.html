@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-10-30T12:16:37-07:00">2015-10-30T12:16:37-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-10-30T15:17:48-07:00">2015-10-30T15:17:48-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">90.93%</span></span>
+    (<span class="covered_percent"><span class="green">90.59%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.37
+         1.38
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>55</b> files in total.
-    <b>485</b> relevant lines. 
-    <span class="green"><b>441</b> lines covered</span> and
-    <span class="red"><b>44</b> lines missed </span>
+    <b>489</b> relevant lines. 
+    <span class="green"><b>443</b> lines covered</span> and
+    <span class="red"><b>46</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -72,12 +72,12 @@
       
       <tr>
         <td class="strong"><a href="#74b0739596755846768ee5172caf6035d1e5020b" class="src_link" title="app/controllers/daycares_controller.rb">app/controllers/daycares_controller.rb</a></td>
-        <td class="yellow strong">86.05 %</td>
-        <td>76</td>
-        <td>43</td>
-        <td>37</td>
-        <td>6</td>
-        <td>2.3</td>
+        <td class="yellow strong">84.78 %</td>
+        <td>83</td>
+        <td>46</td>
+        <td>39</td>
+        <td>7</td>
+        <td>2.4</td>
       </tr>
       
       <tr>
@@ -92,11 +92,11 @@
       
       <tr>
         <td class="strong"><a href="#054c3d36d2c94c6cf413017f25f14367f9c3bccb" class="src_link" title="app/controllers/images_controller.rb">app/controllers/images_controller.rb</a></td>
-        <td class="red strong">28.57 %</td>
+        <td class="red strong">27.27 %</td>
         <td>37</td>
-        <td>21</td>
+        <td>22</td>
         <td>6</td>
-        <td>15</td>
+        <td>16</td>
         <td>0.3</td>
       </tr>
       
@@ -1213,11 +1213,11 @@
         <div class="source_table" id="74b0739596755846768ee5172caf6035d1e5020b">
   <div class="header">
     <h3>app/controllers/daycares_controller.rb</h3>
-    <h4><span class="yellow">86.05 %</span> covered</h4>
+    <h4><span class="yellow">84.78 %</span> covered</h4>
     <div>
-      <b>43</b> relevant lines. 
-      <span class="green"><b>37</b> lines covered</span> and
-      <span class="red"><b>6</b> lines missed.</span>
+      <b>46</b> relevant lines. 
+      <span class="green"><b>39</b> lines covered</span> and
+      <span class="red"><b>7</b> lines missed.</span>
     </div>
   </div>
   
@@ -1293,25 +1293,25 @@
         <li class="never" data-hits="" data-linenumber="12">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="13">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="10" data-linenumber="13">
+          <span class="hits">10</span>
           
-          <code class="ruby">  def new</code>
+          <code class="ruby">    if @daycare.images.nil?</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="15">
-          <span class="hits">6</span>
+        <li class="missed" data-hits="0" data-linenumber="14">
           
-          <code class="ruby">    @daycare = Daycare.new</code>
+          
+          <code class="ruby">      @image = Image.new</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
@@ -1329,157 +1329,157 @@
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
-          <code class="ruby">  def create</code>
+          <code class="ruby">  def new</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="19">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="6" data-linenumber="19">
+          <span class="hits">6</span>
           
-          <code class="ruby">    @daycare = Daycare.new(daycare_params)</code>
+          <code class="ruby">    @daycare = Daycare.new</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="20">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    @user = User.find(params[:user_id])</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="21">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    @daycare.user = @user</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="22">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="23">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    if @daycare.save</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="24">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      respond_to do |format|</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="25">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        format.html</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="26">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        format.js</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="27">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="28">
-          
-          
-          <code class="ruby">    else</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="29">
-          
-          
-          <code class="ruby">      #process error</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="30">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="33">
+        <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
-          <code class="ruby">  def edit</code>
+          <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="34">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="2" data-linenumber="23">
+          <span class="hits">2</span>
           
-          <code class="ruby">    @daycare = Daycare.find(params[:id])</code>
+          <code class="ruby">    @daycare = Daycare.new(daycare_params)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="35">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="2" data-linenumber="24">
+          <span class="hits">2</span>
           
-          <code class="ruby">    if @daycare.contact.nil?</code>
+          <code class="ruby">    @user = User.find(params[:user_id])</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="36">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="2" data-linenumber="25">
+          <span class="hits">2</span>
           
-          <code class="ruby">      @contact = Contact.new</code>
+          <code class="ruby">    @daycare.user = @user</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="37">
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="27">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    if @daycare.save</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      respond_to do |format|</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        format.html</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="30">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        format.js</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="38">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="33">
           
-          <code class="ruby">      @contact = @daycare.contact</code>
+          
+          <code class="ruby">      #process error</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="41">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
           
-          <code class="ruby">    respond_to do |format|</code>
+          <code class="ruby">  def edit</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="42">
+        <li class="covered" data-hits="5" data-linenumber="38">
           <span class="hits">5</span>
           
-          <code class="ruby">      format.html</code>
+          <code class="ruby">    @daycare = Daycare.find(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="40">
           <span class="hits">5</span>
           
-          <code class="ruby">      format.js</code>
+          <code class="ruby">    if @daycare.contact.nil? #if user has not added contact information</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="41">
+          <span class="hits">4</span>
+          
+          <code class="ruby">      @contact = Contact.new</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="43">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @contact = @daycare.contact</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="44">
@@ -1491,151 +1491,151 @@
         <li class="never" data-hits="" data-linenumber="45">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="covered" data-hits="5" data-linenumber="46">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    @image = Image.new</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="47">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="5" data-linenumber="48">
+          <span class="hits">5</span>
           
-          <code class="ruby">  def update</code>
+          <code class="ruby">    respond_to do |format|</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="48">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="5" data-linenumber="49">
+          <span class="hits">5</span>
           
-          <code class="ruby">    @user = User.find(params[:user_id])</code>
+          <code class="ruby">      format.html</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="49">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="5" data-linenumber="50">
+          <span class="hits">5</span>
           
-          <code class="ruby">    @daycare = Daycare.find(params[:id])</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="50">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    @daycare.user = @user</code>
+          <code class="ruby">      format.js</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="51">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="52">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    if @daycare.update(daycare_params)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="53">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      respond_to do |format|</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="54">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        format.html</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="55">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        format.js</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="56">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="57">
-          
-          
-          <code class="ruby">    else</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="58">
-          
-          
-          <code class="ruby">      respond_to do |format|</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="59">
-          
-          
-          <code class="ruby">        format.html</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="60">
-          
-          
-          <code class="ruby">        format.js</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="61">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="62">
-          
-          
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="63">
+        <li class="never" data-hits="" data-linenumber="52">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="64">
+        <li class="never" data-hits="" data-linenumber="53">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="65">
+        <li class="covered" data-hits="1" data-linenumber="54">
           <span class="hits">1</span>
           
-          <code class="ruby">  def destroy</code>
+          <code class="ruby">  def update</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="55">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @user = User.find(params[:user_id])</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="56">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @daycare = Daycare.find(params[:id])</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @daycare.user = @user</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="59">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    if @daycare.update(daycare_params)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="60">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      respond_to do |format|</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="61">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        format.html</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="62">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        format.js</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="63">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="65">
+          
+          
+          <code class="ruby">      respond_to do |format|</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="66">
           
           
-          <code class="ruby">    @daycare = Daycare.find(params[:id])</code>
+          <code class="ruby">        format.html</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="67">
           
           
-          <code class="ruby">    @daycare.destroy</code>
+          <code class="ruby">        format.js</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="68">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="69">
+        <li class="never" data-hits="" data-linenumber="69">
           
           
-          <code class="ruby">    redirect_to new_user_path(current_user)</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="70">
@@ -1653,28 +1653,70 @@
         <li class="covered" data-hits="1" data-linenumber="72">
           <span class="hits">1</span>
           
-          <code class="ruby">  private</code>
+          <code class="ruby">  def destroy</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="73">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="73">
           
-          <code class="ruby">  def daycare_params</code>
+          
+          <code class="ruby">    @daycare = Daycare.find(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="74">
-          <span class="hits">3</span>
+        <li class="missed" data-hits="0" data-linenumber="74">
           
-          <code class="ruby">    params.require(:daycare).permit(:name, :structure)</code>
+          
+          <code class="ruby">    @daycare.destroy</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="75">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="76">
+          
+          
+          <code class="ruby">    redirect_to new_user_path(current_user)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="77">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="76">
+        <li class="never" data-hits="" data-linenumber="78">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="79">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="80">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def daycare_params</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="81">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    params.require(:daycare).permit(:name, :structure)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="82">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="83">
           
           
           <code class="ruby">end</code>
@@ -1729,11 +1771,11 @@
         <div class="source_table" id="054c3d36d2c94c6cf413017f25f14367f9c3bccb">
   <div class="header">
     <h3>app/controllers/images_controller.rb</h3>
-    <h4><span class="red">28.57 %</span> covered</h4>
+    <h4><span class="red">27.27 %</span> covered</h4>
     <div>
-      <b>21</b> relevant lines. 
+      <b>22</b> relevant lines. 
       <span class="green"><b>6</b> lines covered</span> and
-      <span class="red"><b>15</b> lines missed.</span>
+      <span class="red"><b>16</b> lines missed.</span>
     </div>
   </div>
   
@@ -1872,10 +1914,10 @@
           <code class="ruby">    @daycare = Daycare.find(params[:daycare_id])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="missed" data-hits="0" data-linenumber="23">
           
           
-          <code class="ruby">    # @image = Image.new(image_params)</code>
+          <code class="ruby">    @image = Image.new(image_params)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="24">
@@ -1899,7 +1941,7 @@
         <li class="missed" data-hits="0" data-linenumber="27">
           
           
-          <code class="ruby">      redirect_to edit_user_path(current_user)</code>
+          <code class="ruby">      redirect_to edit_user_daycare_path(current_user, @daycare)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="28">
