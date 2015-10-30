@@ -5,7 +5,7 @@ describe "the daycare crud process" do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
     daycare = Daycare.new
-    visit new_user_path(user)
+    visit new_user_daycare_path(user, daycare)
     fill_in 'Name', :with => 'My Daycare'
     click_button 'Create Daycare'
     expect(page).to have_content 'My Daycare'
@@ -14,7 +14,8 @@ describe "the daycare crud process" do
   it "displays errors with daycare save method" do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
-    visit new_user_path(user)
+    daycare = Daycare.new
+    visit new_user_daycare_path(user, daycare)
     fill_in 'Name', :with => ''
     click_button 'Create Daycare'
     expect(page).to have_content 'Please fix these errors'
@@ -24,7 +25,7 @@ describe "the daycare crud process" do
     daycare = FactoryGirl.create(:daycare)
     user = daycare.user
     login_as(user, :scope => :user)
-    visit edit_user_path(user)
+    visit edit_user_daycare_path(user, daycare)
     click_link 'daycare-edit-name'
     fill_in 'Name', :with => 'Updated Daycare'
     click_button 'Update Daycare'

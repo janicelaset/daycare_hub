@@ -1,9 +1,12 @@
 class DaycaresController < ApplicationController
+  before_action :authenticate_user!, except: [:show]
+
   def show
-    respond_to do |format|
-      format.html
-      format.js
-    end
+    @daycare = current_user.daycare
+  end
+
+  def new
+    @daycare = Daycare.new
   end
 
   def create
@@ -17,12 +20,17 @@ class DaycaresController < ApplicationController
         format.js
       end
     else
-      render 'users/new'
+      #process error
     end
   end
 
   def edit
     @daycare = Daycare.find(params[:id])
+    if @daycare.contact.nil?
+      @contact = Contact.new
+    else
+      @contact = @daycare.contact
+    end
 
     respond_to do |format|
       format.html
@@ -44,7 +52,7 @@ class DaycaresController < ApplicationController
       respond_to do |format|
         format.html
         format.js
-      end      
+      end
     end
   end
 
