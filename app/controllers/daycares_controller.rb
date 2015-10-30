@@ -3,6 +3,12 @@ class DaycaresController < ApplicationController
 
   def show
     @daycare = current_user.daycare
+
+    if @daycare.contact.nil?  #if user has not added contact information
+      @contact = Contact.new
+    else
+      @contact = @daycare.contact
+    end
   end
 
   def new

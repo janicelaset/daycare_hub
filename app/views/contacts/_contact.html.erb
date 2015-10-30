@@ -2,11 +2,9 @@
   <div class="panel-heading" role="tab" id="headingTwo">
     <h4 class="panel-title">
       <a id="daycare-edit-contact" class="collapsed pull-right" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        <% if @daycare.contact.nil? %>
-          <span class="glyphicon glyphicon-plus daycare-add-glyph"></span>
-        <% else %>
-          <span class="glyphicon glyphicon-pencil daycare-edit-glyph"></span>
-        <% end %>
+        <div id="contact-add-edit-glyph">
+          <%= render 'contacts/add_edit_glyph' %>
+        </div>
       </a>
       <div id="daycare-contact">
         Contact
@@ -14,7 +12,7 @@
     </h4>
   </div>
   <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-    <div class="panel-body">
+    <div id="contact-edit-form" class="panel-body">
       <%= render 'contacts/form' %>
     </div>
   </div>
