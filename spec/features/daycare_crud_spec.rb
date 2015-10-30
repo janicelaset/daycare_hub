@@ -47,9 +47,9 @@ describe "the daycare crud process" do
     daycare = FactoryGirl.create(:daycare)
     user = daycare.user
     login_as(user, :scope => :user)
-    visit user_path(user)
+    visit user_daycare_path(user, daycare)
     find('.dropdown').click
-    find('#delete-profile').click
+    find('#delete-daycare').click
     expect(page).to have_content 'Add Daycare'
   end
 end

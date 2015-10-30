@@ -50,15 +50,14 @@
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to 'Home', root_path %></li>
+              <li><%= link_to 'Home', root_path, id: 'menu-home' %></li>
               <% if current_user.daycare != nil %>
-                <li><%= link_to "View Profile", user_path(current_user, current_user.daycare), id: 'view-profile' %></li>
-                <li><%= link_to "Edit Profile", edit_user_path(current_user, current_user.daycare), id: 'edit-profile' %></li>
-                <li><%= link_to "Delete Profile", user_daycare_path(current_user, current_user.daycare), id: 'delete-profile', method: :delete %></li>
+                <li><%= link_to "View Daycare", user_daycare_path(current_user, current_user.daycare), id: 'menu-view-daycare' %></li>
+                <li><%= link_to "Edit Daycare", edit_user_daycare_path(current_user, current_user.daycare), id: 'menu-edit-daycare' %></li>
+                <li><%= link_to "Delete Daycare", user_daycare_path(current_user, current_user.daycare), id: 'menu-delete-daycare', method: :delete %></li>
               <% end %>
-                <li><%= link_to 'Feedback' %></li>
                 <li role="separator" class="divider"></li>
-              <li><%= link_to "Sign Out", destroy_user_session_path, method: 'delete' %></li>
+              <li><%= link_to "Sign Out", destroy_user_session_path, id: 'menu-signout', method: 'delete' %></li>
             </ul>
           </li>
         <% else %>
