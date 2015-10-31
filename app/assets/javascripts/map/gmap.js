@@ -6,6 +6,15 @@ var map;
 
 function initialize() {
 
+  var input = document.getElementById('search-text-field');
+
+  var options = {
+          types: ['address'],
+          componentRestrictions: {country: 'us'}
+        };
+
+  var autocomplete = new google.maps.places.Autocomplete(input, options);
+
   var mapOptions = {
           center: new google.maps.LatLng(30.055487, 31.279766),
           zoom: 8,
@@ -17,7 +26,7 @@ function initialize() {
         };
         // initializing map
         map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
-
+console.log(map);
    // geocoding
       var geocoding  = new google.maps.Geocoder();
       $("#submit_button_geocoding").click(function(){
@@ -26,8 +35,6 @@ function initialize() {
       $("#submit_button_reverse").click(function(){
         codeLatLng(geocoding);
       });
-
-
 }
 
 var info;
