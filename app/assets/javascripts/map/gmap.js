@@ -101,15 +101,14 @@ function codeAddress(geocoding){
   }
 }
 
+// <script
+//     src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=drawing,places&callback=initialize">
+// </script>
 function loadScript() {
-	console.log("map loading ...");
   var script = document.createElement('script');
   script.type = 'text/javascript';
-  //'https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBJYFdplGeKUUEmGZ-vL4ydiSZ09Khsa_o&sensor=false&libraries=drawing'
   script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
-    //'&v=3.14'+
-    //'&key=AIzaSyBJYFdplGeKUUEmGZ-vL4ydiSZ09Khsa_o'+
-    '&libraries=drawing'+
+    '&libraries=drawing,places'+
     '&callback=initialize';
   document.body.appendChild(script);
 }
