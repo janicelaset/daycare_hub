@@ -16,6 +16,10 @@ Rails.application.routes.draw do
     resources :contacts
   end
 
+  get "/geocoding", to: "home#geocoding", as: "geocoding"
+  get "/reverse_geocoding", to: "home#reverse_geocoding", as: "reverse_geocoding"
+  get "/search-results", to: "home#show", as: "search_results"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
