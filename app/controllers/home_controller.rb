@@ -16,6 +16,6 @@ class HomeController < ApplicationController
 
   def show
     @address = params[:search]
-    binding.pry
+    @radius = params[:radius]
   end
 end

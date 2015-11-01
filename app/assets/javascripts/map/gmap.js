@@ -9,7 +9,7 @@ function initialize() {
   var input = document.getElementById('search-text-field');
 
   var options = {
-          // types: ['address'],
+          types: ['address'],
           componentRestrictions: {country: 'us'}
         };
 
@@ -20,8 +20,8 @@ function initialize() {
   autocomplete.addListener('place_changed', autocomplete.getPlace());
 
   var mapOptions = {
-          center: new google.maps.LatLng(30.055487, 31.279766),
-          zoom: 8,
+          center: new google.maps.LatLng(39.8282, -98.5795),
+          zoom: 4,
           mapTypeId: google.maps.MapTypeId.NORMAL,
           panControl: true,
           scaleControl: false,
@@ -32,13 +32,13 @@ function initialize() {
         map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
 
    // geocoding
-      var geocoding  = new google.maps.Geocoder();
-      $("#submit_button_geocoding").click(function(){
-        codeAddress(geocoding);
-      });
-      $("#submit_button_reverse").click(function(){
-        codeLatLng(geocoding);
-      });
+      // var geocoding  = new google.maps.Geocoder();
+      // $("#submit_button_geocoding").click(function(){
+      //   codeAddress(geocoding);
+      // });
+      // $("#submit_button_reverse").click(function(){
+      //   codeLatLng(geocoding);
+      // });
 }
 
 
@@ -95,6 +95,7 @@ function codeLatLng(geocoding){
   }
 }
 function codeAddress(geocoding){
+  console.log("in codeAddress")
   var address = $("#search_box_geocoding").val();
   if(address.length > 0){
     geocoding.geocode({'address': address},function(results, status){
