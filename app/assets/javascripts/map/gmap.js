@@ -15,6 +15,10 @@ function initialize() {
 
   var autocomplete = new google.maps.places.Autocomplete(input, options);
 
+  // When the user selects an address from the dropdown, populate the address
+  // fields in the form.
+  autocomplete.addListener('place_changed', autocomplete.getPlace());
+
   var mapOptions = {
           center: new google.maps.LatLng(30.055487, 31.279766),
           zoom: 8,
@@ -26,7 +30,7 @@ function initialize() {
         };
         // initializing map
         map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
-console.log(map);
+
    // geocoding
       var geocoding  = new google.maps.Geocoder();
       $("#submit_button_geocoding").click(function(){
@@ -36,6 +40,7 @@ console.log(map);
         codeLatLng(geocoding);
       });
 }
+
 
 var info;
 function codeLatLng(geocoding){

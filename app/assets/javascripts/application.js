@@ -16,7 +16,7 @@
 //= require turbolinks
 //= require_tree .
 
-var setRadius = function(radius) {
-  console.log("set radius");
+var setRadius = function(radius, value) {
   $('#radius-select').text(radius);
+  $('#radius-value').val(value);
 }

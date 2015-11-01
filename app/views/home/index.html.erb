@@ -5,24 +5,18 @@
       <div class="col-md-8 col-md-offset-2">
         <div class="input-group">
           <%= text_field_tag :search, params[:search], class: "form-control input-lg", placeholder: "Enter address or zip code", id: "search-text-field" %>
+          <%= hidden_field_tag 'radius-value', 5 %>
           <span class="input-group-addon" id="sizing-addon1">within</span>
-          <!-- <select class="input-lg form-control" id="sel1">
-            <option>5 miles</option>
-            <option>10 miles</option>
-            <option>20 mils</option>
-            <option>30 miles</option>
-          </select> -->
           <span class="input-group-btn">
             <button type="button" class="btn btn-default btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span id="radius-select">5 miles</span>
             <span class="caret"></span>
             </button>
             <ul class="dropdown-menu">
-              <%= link_to '10 miles', '#', radius: '10', onClick: "setRadius('10 miles')" %>
-              <li><a href="#" onclick="setRadius('5 miles')">5 miles</a></li>
-              <li><a href="#" onclick="setRadius('10 miles')">10 miles</a></li>
-              <li><a href="#" onclick="setRadius('20 miles')">20 miles</a></li>
-              <li><a href="#" onclick="setRadius('30 miles')">30 miles</a></li>
+              <li><a href="#" onclick="setRadius('5 miles', 5)">5 miles</a></li>
+              <li><a href="#" onclick="setRadius('10 miles', 10)">10 miles</a></li>
+              <li><a href="#" onclick="setRadius('20 miles', 20)">20 miles</a></li>
+              <li><a href="#" onclick="setRadius('30 miles', 30)">30 miles</a></li>
             </ul>
             <button class="btn btn-success btn-lg" type="submit">Go!</button>
           </span>
