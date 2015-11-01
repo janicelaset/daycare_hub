@@ -15,6 +15,7 @@ class HomeController < ApplicationController
   end
 
   def show
-
+    @address = params[:search]
+    binding.pry
   end
 end

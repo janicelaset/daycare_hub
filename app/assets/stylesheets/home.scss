@@ -29,9 +29,13 @@
   margin-bottom: 0;
 }
 
+.navbar-default {
+  background-color: white;
+}
+
 .jumbotron {
   background-image:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(header_bkg.jpg);
-  opacity: 1;
+  opacity: 0.9;
   background-size: cover;
   margin-bottom: 0;
   overflow:hidden;
@@ -39,4 +43,9 @@
   height: 600px;
   text-align: center;
   color: white;
+}
+
+.input-lg,
+.btn-lg {
+  height: 3.2em;
 }

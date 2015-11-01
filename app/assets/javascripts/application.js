@@ -15,3 +15,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+var setRadius = function(radius) {
+  console.log("set radius");
+  $('#radius-select').text(radius);
+}

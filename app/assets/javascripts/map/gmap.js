@@ -9,7 +9,7 @@ function initialize() {
   var input = document.getElementById('search-text-field');
 
   var options = {
-          types: ['address'],
+          // types: ['address'],
           componentRestrictions: {country: 'us'}
         };
 
