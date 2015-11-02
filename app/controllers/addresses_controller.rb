@@ -5,13 +5,26 @@ class AddressesController < ApplicationController
     @address.daycare = @daycare
 
     if @address.save
-      binding.pry
       respond_to do |format|
         format.html
         format.js
       end
     else
       flash[:notice] = "Address information not saved"
+    end
+  end
+
+  def update
+    @address = Address.find(params[:id])
+    @daycare = current_user.daycare
+
+    if @address.update(address_params)
+      respond_to do |format|
+        format.html
+        format.js
+      end
+    else
+      flash[:notice] = "Address information not updated"
     end
   end
 

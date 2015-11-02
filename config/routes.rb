@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   end
 
   resources :daycares do
-    resources :addresses, only: [:create]
+    resources :addresses, only: [:create, :update, :show]
   end
 
   get "/geocoding", to: "home#geocoding", as: "geocoding"

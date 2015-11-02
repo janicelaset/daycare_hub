@@ -7,16 +7,12 @@ describe "the contact crud process" do
     login_as(user, :scope => :user)
     visit edit_user_daycare_path(user, daycare)
     click_link 'daycare-edit-contact'
-    fill_in 'Address', :with => '1234 Address Dr'
-    fill_in 'City', :with => 'City'
-    fill_in 'State', :with => 'OR'
-    fill_in 'Zip', :with => '12345'
     fill_in 'Email', :with => 'user@email.com'
     fill_in 'Phone', :with => '123-456-7890'
     click_button 'Create Contact'
     find('.dropdown').click
     find('#menu-view-daycare').click
-    expect(page).to have_content '1234 Address Dr'
+    expect(page).to have_content 'user@email.com'
   end
 
   it "allows users to update contact information", js:true do
@@ -27,10 +23,10 @@ describe "the contact crud process" do
     login_as(user, :scope => :user)
     visit edit_user_daycare_path(user, daycare)
     click_link 'daycare-edit-contact'
-    fill_in 'Address', :with => 'New Address Dr'
+    fill_in 'Email', :with => 'newemail@email.com'
     click_button 'Update Contact'
     find('.dropdown').click
     find('#menu-view-daycare').click
-    expect(page).to have_content 'New Address Dr'
+    expect(page).to have_content 'newemail@email.com'
   end
 end
