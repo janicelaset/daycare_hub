@@ -17,5 +17,9 @@ class HomeController < ApplicationController
   def show
     @address = params[:search]
     @radius = params[:radius]
+
+    respond_to do |format|
+      format.js
+    end
   end
 end
