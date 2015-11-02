@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Address, type: :model do
-  it { should belong_to :contact }
+  it { should belong_to :daycare }
 
   it { should validate_presence_of :street }
   it { should validate_presence_of :city }

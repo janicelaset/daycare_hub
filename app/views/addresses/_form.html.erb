@@ -1,0 +1,29 @@
+<%= render "layouts/errors", :object => @address %>
+
+<%= form_for [@daycare, @address], remote: true, :html => {:class => "form-horizontal"} do |f| %>
+  <div class="form-group">
+    <%= f.label :street, class: 'control-label col-sm-1' %>
+    <div class="col-sm-11 daycare-edit-field">
+      <%= f.text_field :street, class: 'form-control', required: true %>
+    </div>
+
+    <%= f.label :city, class: 'control-label col-sm-1' %>
+    <div class="col-sm-4 daycare-edit-field">
+      <%= f.text_field :city, class: 'form-control', required: true %>
+    </div>
+
+    <%= f.label :state, class: 'control-label col-sm-1' %>
+    <div class="col-sm-2 daycare-edit-field">
+      <%= f.text_field :state, class: 'form-control', required: true %>
+    </div>
+
+    <%= f.label :zip, class: 'control-label col-sm-1' %>
+    <div class="col-sm-3 daycare-edit-field">
+      <%= f.text_field :zip, class: 'form-control', required: true %>
+    </div>
+
+    <div class="pull-right col-sm-3">
+      <%= f.submit class:'btn' %>
+    </div>
+  </div>
+<% end %>

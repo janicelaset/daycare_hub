@@ -8,7 +8,7 @@ describe "the sign in process" do
     fill_in 'Password', :with => 'password'
     fill_in 'Password confirmation', :with => 'password'
     click_button 'Sign up'
-    expect(page).to have_content 'Welcome!'
+    expect(page).to have_content 'user'
   end
 
   it "signs in user with user name" do
@@ -17,7 +17,7 @@ describe "the sign in process" do
     fill_in 'Login', :with => 'testuser'
     fill_in 'Password', :with => 'password'
     click_button 'Log in'
-    expect(page).to have_content 'Signed in successfully.'
+    expect(page).to have_content 'testuser'
   end
 
   it "returns error if user signs up with a user name of existing email" do

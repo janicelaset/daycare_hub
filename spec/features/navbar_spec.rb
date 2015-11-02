@@ -67,8 +67,9 @@ describe "The navbar links" do
     user = daycare.user
     login_as(user, :scope => :user)
     visit user_daycare_path(user, daycare)
+    expect(page).to have_content('My Daycare')
     find('.dropdown').click
     find('#menu-signout').click
-    expect(page).to have_content("Signed out successfully.")
+    expect(page).to_not have_content('My Daycare')
   end
 end

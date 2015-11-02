@@ -1,5 +1,5 @@
 class Address < ActiveRecord::Base
-  belongs_to :contact
+  belongs_to :daycare
 
   validates :street, :presence => true
   validates :city, :presence => true

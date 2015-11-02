@@ -4,6 +4,12 @@ class DaycaresController < ApplicationController
   def show
     @daycare = current_user.daycare
 
+    if @daycare.address.nil?  #if user has not added contact information
+      @address = Address.new
+    else
+      @address = @daycare.address
+    end
+
     if @daycare.contact.nil?  #if user has not added contact information
       @contact = Contact.new
     else
@@ -41,6 +47,12 @@ class DaycaresController < ApplicationController
       @contact = Contact.new
     else
       @contact = @daycare.contact
+    end
+
+    if @daycare.address.nil? #if user has not added contact information
+      @address = Address.new
+    else
+      @address = @daycare.address
     end
 
     @image = Image.new
