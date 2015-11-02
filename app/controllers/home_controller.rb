@@ -16,10 +16,13 @@ class HomeController < ApplicationController
 
   def show
     @address = params[:search]
-    @radius = params[:radius]
+    @radius = params["radius-value"]
+
+    @nearby = Address.where("state = 'OR'")
 
     respond_to do |format|
       format.js
     end
   end
+
 end

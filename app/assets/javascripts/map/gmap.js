@@ -5,7 +5,7 @@ $(window).load(function() {
 var map;
 
 function initialize() {
-
+console.log("init")
   var input = document.getElementById('search-text-field');
 
   var options = {
@@ -40,6 +40,7 @@ function initialize() {
       //   codeLatLng(geocoding);
       // });
 }
+
 
 
 var info;
@@ -112,6 +113,23 @@ function codeAddress(geocoding){
   }else{
     alert("Search field can't be blank");
   }
+}
+
+function displaySearchResults(origin, radius, nearby) {
+console.log("display results")
+debugger;
+
+var mapOptions = {
+        center: new google.maps.LatLng(39.8282, -98.5795),
+        zoom: 4,
+        mapTypeId: google.maps.MapTypeId.NORMAL,
+        panControl: true,
+        scaleControl: false,
+        streetViewControl: true,
+        overviewMapControl: true
+      };
+      // initializing map
+      map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
 }
 
 // <script

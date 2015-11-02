@@ -1,12 +1,10 @@
+<div id="search-page">
 <div class="jumbotron">
   <h1>Find a daycare near you</h1>
   <div class="row">
-    <%= form_tag(search_results_path, :method => "get", id: "search-form") do %>
+    <%= form_tag(search_results_path, :method => "get", id: "search-form", remote: true) do %>
       <div class="col-md-8 col-md-offset-2">
         <div class="input-group">
-          <%= text_field_tag :search, params[:search], class: "form-control input-lg", placeholder: "Enter address or zip code", id: "search-text-field" %>
-          <%= hidden_field_tag 'radius-value', 5 %>
-          <span class="input-group-addon" id="sizing-addon1">within</span>
           <span class="input-group-btn">
             <button type="button" class="btn btn-default btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span id="radius-select">5 miles</span>
@@ -18,10 +16,20 @@
               <li><a href="#" onclick="setRadius('20 miles', 20)">20 miles</a></li>
               <li><a href="#" onclick="setRadius('30 miles', 30)">30 miles</a></li>
             </ul>
+          </span>
+          <span class="input-group-addon" id="sizing-addon1">from</span>
+          <%= text_field_tag :search, params[:search], class: "form-control input-lg", placeholder: "Enter address or zip code", id: "search-text-field" %>
+          <%= hidden_field_tag 'radius-value', 5 %>
+          <span class="input-group-btn">
             <button class="btn btn-success btn-lg" type="submit">Go!</button>
           </span>
         </div><!-- /input-group -->
       </div><!-- /.col-lg-6 -->
     <% end %>
   </div>
+</div>
+</div>
+
+<div id="search-results">
+
 </div>
