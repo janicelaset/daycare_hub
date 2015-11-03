@@ -19,18 +19,6 @@ console.log("init")
   // fields in the form.
   autocomplete.addListener('place_changed', autocomplete.getPlace());
 
-  var mapOptions = {
-          center: new google.maps.LatLng(39.8282, -98.5795),
-          zoom: 4,
-          mapTypeId: google.maps.MapTypeId.NORMAL,
-          panControl: true,
-          scaleControl: false,
-          streetViewControl: true,
-          overviewMapControl: true
-        };
-        // initializing map
-        map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
-
    // geocoding
       // var geocoding  = new google.maps.Geocoder();
       // $("#submit_button_geocoding").click(function(){
@@ -40,8 +28,6 @@ console.log("init")
       //   codeLatLng(geocoding);
       // });
 }
-
-
 
 var info;
 function codeLatLng(geocoding){
@@ -115,23 +101,103 @@ function codeAddress(geocoding){
   }
 }
 
-function displaySearchResults(origin, radius, nearby) {
-console.log("display results")
-debugger;
+function displaySearchResults(origin, radius, addresses) {
+  //addresses sent as
+  // [&quot;2222 SE Foxglove Ct, Hillsboro, OR 97123&quot;, &quot;18000 SW Farmington Rd, Aloha, OR 97007&quot;, &quot;15135 SW Beard Rd, Beaverton, OR 97007&quot;, &quot;18685 SW Baseline Rd, Beaverton, OR 97006&quot;, &quot;15150 SW Koll Pkwy, Beaverton, OR 97006&quot;]
 
-var mapOptions = {
-        center: new google.maps.LatLng(39.8282, -98.5795),
-        zoom: 4,
-        mapTypeId: google.maps.MapTypeId.NORMAL,
-        panControl: true,
-        scaleControl: false,
-        streetViewControl: true,
-        overviewMapControl: true
-      };
-      // initializing map
-      map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
+  //parse and convert to array of addresses
+  addresses = addresses.replace(/\[/g, '');
+  addresses = addresses.replace(/\]/g, '');
+  addresses = addresses.split('&quot;, &quot;');
+
+  var destination = [];
+  addresses.forEach(function(address) {
+    address = address.replace(/&quot;/g, '');
+    destination.push(address);
+  });
+
+  // var mapOptions = {
+  //         center: new google.maps.LatLng(39.8282, -98.5795),
+  //         zoom: 4,
+  //         mapTypeId: google.maps.MapTypeId.NORMAL,
+  //         panControl: true,
+  //         scaleControl: false,
+  //         streetViewControl: true,
+  //         overviewMapControl: true
+  //       };
+  // // initializing map
+  // map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
+  var bounds = new google.maps.LatLngBounds;
+  var markersArray = [];
+
+  var origin1 = {lat: 55.93, lng: -3.118};
+  var origin2 = 'Greenwich, England';
+  var destinationA = 'Stockholm, Sweden';
+  var destinationB = {lat: 50.087, lng: 14.421};
+
+  // var destinationIcon = 'https://chart.googleapis.com/chart?' +
+  //     'chst=d_map_pin_letter&chld=D|FF0000|000000';
+  // var originIcon = 'https://chart.googleapis.com/chart?' +
+  //     'chst=d_map_pin_letter&chld=O|FFFF00|000000';
+  var map = new google.maps.Map(document.getElementById('map-canvas'), {
+    center: {lat: 55.53, lng: 9.4},
+    zoom: 10
+  });
+
+  var geocoder = new google.maps.Geocoder;
+  var service = new google.maps.DistanceMatrixService;
+  service.getDistanceMatrix({
+      // origins: [origin1, origin2],
+      // destinations: [destinationA, destinationB],
+      origins: [origin],
+      destinations: destination,
+      travelMode: google.maps.TravelMode.DRIVING,
+      unitSystem: google.maps.UnitSystem.METRIC,
+      avoidHighways: false,
+      avoidTolls: false
+    }, function(response, status) {
+      if (status !== google.maps.DistanceMatrixStatus.OK) {
+        alert('Error was: ' + status);
+      } else {
+        var originList = response.originAddresses;
+        var destinationList = response.destinationAddresses;
+        deleteMarkers(markersArray);
+
+        var showGeocodedAddressOnMap = function(asDestination) {
+          // var icon = asDestination ? destinationIcon : originIcon;
+          return function(results, status) {
+            if (status === google.maps.GeocoderStatus.OK) {
+              map.fitBounds(bounds.extend(results[0].geometry.location));
+              markersArray.push(new google.maps.Marker({
+                map: map,
+                position: results[0].geometry.location,
+                // icon: icon
+              }));
+            } else {
+              alert('Geocode was not successful due to: ' + status);
+            }
+          };
+        };
+
+        for (var i = 0; i < originList.length; i++) {
+          var results = response.rows[i].elements;
+          geocoder.geocode({'address': originList[i]},
+              showGeocodedAddressOnMap(false));
+          for (var j = 0; j < results.length; j++) {
+            geocoder.geocode({'address': destinationList[j]},
+                showGeocodedAddressOnMap(true));
+          }
+        }
+      }
+    });
 }
 
+function deleteMarkers(markersArray) {
+  for (var i = 0; i < markersArray.length; i++) {
+    markersArray[i].setMap(null);
+  }
+  markersArray = [];
+}
 // <script
 //     src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=drawing,places&callback=initialize">
 // </script>

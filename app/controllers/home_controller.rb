@@ -18,7 +18,11 @@ class HomeController < ApplicationController
     @address = params[:search]
     @radius = params["radius-value"]
 
-    @nearby = Address.where("state = 'OR'")
+    in_state = Address.where("state = 'OR'")
+    @destination = []
+    in_state.each do |address|
+      @destination.push(address.full_address)
+    end
 
     respond_to do |format|
       format.js
