@@ -20,6 +20,10 @@ Rails.application.routes.draw do
     resources :addresses, only: [:create, :update, :show]
   end
 
+  resources :daycares do
+    resources :teachers, only: [:create]
+  end
+
   get "/geocoding", to: "home#geocoding", as: "geocoding"
   get "/reverse_geocoding", to: "home#reverse_geocoding", as: "reverse_geocoding"
   get "/search-results", to: "home#show", as: "search_results"

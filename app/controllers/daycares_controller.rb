@@ -49,10 +49,16 @@ class DaycaresController < ApplicationController
       @contact = @daycare.contact
     end
 
-    if @daycare.address.nil? #if user has not added contact information
+    if @daycare.address.nil? #if user has not added address
       @address = Address.new
     else
       @address = @daycare.address
+    end
+
+    if @daycare.teachers.any? #if user has not added any teachers
+      @teachers = @daycare.teachers
+    else
+      @teacher = Teacher.new
     end
 
     @image = Image.new

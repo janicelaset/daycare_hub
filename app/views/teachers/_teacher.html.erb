@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+  <div class="panel-heading" role="tab" id="headingFive">
+    <h4 class="panel-title">
+      <a id="daycare-edit-teacher" class="collapsed pull-right" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+        <div id="teacher-add-edit-glyph">
+          <%= render 'teachers/add_edit_glyph' %>
+        </div>
+      </a>
+      Teachers
+    </h4>
+  </div>
+  <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+    <div id="teacher-edit-form" class="panel-body">
+      <%= render 'teachers/form' %>
+    </div>
+  </div>
+</div>
