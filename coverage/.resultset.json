@@ -57,8 +57,8 @@
         null,
         null,
         1,
-        38,
-        38,
+        41,
+        41,
         null,
         null,
         null,
@@ -563,6 +563,14 @@
         null,
         null
       ],
+      "/Users/janicelaset/Desktop/daycare_hub/spec/factories/teachers.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/janicelaset/Desktop/daycare_hub/spec/factories/users.rb": [
         1,
         1,
@@ -998,6 +1006,17 @@
         1,
         0,
         0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        null,
+        null,
         null,
         null
       ],
@@ -1479,11 +1498,13 @@
         2,
         2,
         2,
+        2,
         null,
         2,
         null
       ],
       "/Users/janicelaset/Desktop/daycare_hub/app/models/daycare.rb": [
+        1,
         1,
         1,
         1,
@@ -1507,6 +1528,22 @@
         1,
         null
       ],
+      "/Users/janicelaset/Desktop/daycare_hub/spec/models/teacher_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        null,
+        2,
+        null
+      ],
+      "/Users/janicelaset/Desktop/daycare_hub/app/models/teacher.rb": [
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
       "/Users/janicelaset/Desktop/daycare_hub/spec/models/user_spec.rb": [
         1,
         null,
@@ -1521,6 +1558,6 @@
         null
       ]
     },
-    "timestamp": 1446496121
+    "timestamp": 1446609327
   }
 }
