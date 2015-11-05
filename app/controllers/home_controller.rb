@@ -24,9 +24,12 @@ class HomeController < ApplicationController
       @destination.push(address.full_address)
     end
 
-    respond_to do |format|
-      format.js
-    end
+    # @link = "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=drawing,places&callback=displaySearchResults(#{@address, @radius, @destination})"
+stuff = in_state.to_json
+
+    # respond_to do |format|
+    #   format.js
+    # end
   end
 
 end

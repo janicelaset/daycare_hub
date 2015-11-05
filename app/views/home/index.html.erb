@@ -2,7 +2,7 @@
 <div class="jumbotron">
   <h1>Find a daycare near you</h1>
   <div class="row">
-    <%= form_tag(search_results_path, :method => "get", id: "search-form", remote: true) do %>
+    <%= form_tag(search_results_path, :method => "get", id: "search-form") do %>
       <div class="col-md-8 col-md-offset-2">
         <div class="input-group">
           <span class="input-group-btn">
@@ -33,3 +33,7 @@
 <div id="search-results">
 
 </div>
+
+<script
+src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=drawing,places&callback=initialize">
+</script>

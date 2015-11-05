@@ -1,0 +1,14 @@
+<div class="container">
+
+  <div id="map-container">
+    <div id="map-canvas"></div>
+  </div>
+
+</div>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=drawing,places"></script>
+
+<script>
+  displaySearchResults("<%= @address %>", "<%= @radius %>", "<%= @destination %>");
+</script>

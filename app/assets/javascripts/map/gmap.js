@@ -1,6 +1,6 @@
-$(window).load(function() {
-  loadScript();
-});
+// $(window).load(function() {
+//   // loadScript();
+// });
 
 var map;
 
@@ -19,6 +19,11 @@ console.log("init")
   // fields in the form.
   autocomplete.addListener('place_changed', autocomplete.getPlace());
 
+
+  // map = new google.maps.Map(document.getElementById('map-canvas'), {
+  //   center: {lat: -34.397, lng: 150.644},
+  //   zoom: 8
+  // });
    // geocoding
       // var geocoding  = new google.maps.Geocoder();
       // $("#submit_button_geocoding").click(function(){
@@ -102,9 +107,12 @@ function codeAddress(geocoding){
 }
 
 function displaySearchResults(origin, radius, addresses) {
+
   //addresses sent as string
   //"[&quot;2222 SE Foxglove Ct, Hillsboro, OR 97123&quot;, &quot;18000 SW Farmington Rd, Aloha, OR 97007&quot;, &quot;15135 SW Beard Rd, Beaverton, OR 97007&quot;, &quot;18685 SW Baseline Rd, Beaverton, OR 97006&quot;, &quot;15150 SW Koll Pkwy, Beaverton, OR 97006&quot;]"
-
+console.log(origin);
+console.log(radius);
+console.log(addresses);
   //parse and convert to array of addresses
   addresses = addresses.replace(/\[/g, '');   //remove brackets
   addresses = addresses.replace(/\]/g, '');
@@ -183,6 +191,7 @@ function displaySearchResults(origin, radius, addresses) {
         }
       }
     });
+
 }
 
 function deleteMarkers(markersArray) {
