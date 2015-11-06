@@ -11,7 +11,19 @@
  * file per style scope.
  *= require_self
  *= require_tree
+ *= require jquery-ui/draggable
+ *= require jquery-ui/resizable
+ *= require jquery-ui/selectable
+ *= require jquery-ui/sortable
  */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#draggablePanelList .panel-heading {
+    cursor: move;
+}
+
+.panel-list {
+  margin-bottom: 0.4em;
+}
