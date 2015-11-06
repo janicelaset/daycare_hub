@@ -23,10 +23,28 @@ $light-blue: #4FD5D6;
   color: gray;
 }
 
+a {
+  text-decoration: none !important;
+}
+
+a > .panel-heading {
+  background-color: #f5f5f5;
+  // background-color: #E5ECFF; //light blue
+}
+
+.panel-heading:hover {
+  // background-color: #BECEFF;
+  background-color: #F3F3F3;
+}
+
 .daycare-edit-field {
   margin-bottom: 1em;
 }
 
 #daycare-edit-page {
   margin-top: 2em;
+}
+
+.panel-daycare-edit {
+  margin-bottom: 0.4em;
 }

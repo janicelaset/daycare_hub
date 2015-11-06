@@ -1,17 +1,19 @@
-<div class="panel panel-default">
-  <div class="panel-heading" role="tab" id="headingThree">
-    <h4 class="panel-title">
-      <a id="daycare-edit-contact" class="collapsed pull-right" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        <div id="contact-add-edit-glyph">
-          <%= render 'contacts/add_edit_glyph' %>
-        </div>
-      </a>
-      Contact
-    </h4>
-  </div>
-  <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-    <div id="contact-edit-form" class="panel-body">
-      <%= render 'contacts/form' %>
+<div class="panel-daycare-edit">
+  <div class="panel panel-default">
+    <a id="daycare-edit-contact" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+      <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="panel-title">
+            <div id="contact-add-edit-glyph">
+              <%= render 'contacts/add_edit_glyph' %>
+            </div>
+          Contact
+        </h4>
+      </div>
+    </a>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div id="contact-edit-form" class="panel-body">
+        <%= render 'contacts/form' %>
+      </div>
     </div>
   </div>
 </div>

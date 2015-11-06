@@ -1,20 +1,22 @@
-<div class="panel panel-default">
-  <div class="panel-heading" role="tab" id="headingFour">
-    <h4 class="panel-title">
-      <a id="daycare-add-image" class="collapsed pull-right" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-        <span class="glyphicon glyphicon-plus daycare-add-glyph"></span>
-      </a>
-      Images
-    </h4>
-  </div>
-  <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-    <div id="image-add-form" class="panel-body">
-      <% if @daycare.images.any? %>
-        <% @daycare.images.each do |image| %>
-          <%= image_tag image.picture.url(:thumb) %>
+<div class="panel-daycare-edit">
+  <div class="panel panel-default">
+    <a id="daycare-add-image" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+      <div class="panel-heading" role="tab" id="headingFour">
+        <h4 class="panel-title">
+          <span class="glyphicon glyphicon-plus daycare-add-glyph pull-right"></span>
+          Images
+        </h4>
+      </div>
+    </a>
+    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+      <div id="image-add-form" class="panel-body">
+        <% if @daycare.images.any? %>
+          <% @daycare.images.each do |image| %>
+            <%= image_tag image.picture.url(:thumb) %>
+          <% end %>
         <% end %>
-      <% end %>
-      <%= render "images/form" %>
+        <%= render "images/form" %>
+      </div>
     </div>
   </div>
 </div>
