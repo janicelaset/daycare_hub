@@ -19,6 +19,7 @@ class DaycaresController < ApplicationController
     if @daycare.images.nil?
       @image = Image.new
     end
+
   end
 
   def new
@@ -57,9 +58,9 @@ class DaycaresController < ApplicationController
 
     if @daycare.teachers.any? #if user has not added any teachers
       @teachers = @daycare.teachers
-    else
-      @teacher = Teacher.new
     end
+
+    @teacher = Teacher.new
 
     @image = Image.new
 

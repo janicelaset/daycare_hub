@@ -1,0 +1,25 @@
+<div id="draggable">
+
+
+<% if @daycare.teachers.any? %>
+  <% @daycare.teachers.each do |teacher| %>
+    <div class="media">
+      <%= link_to edit_daycare_teacher_path(@daycare, teacher), remote:true do %>
+        <span ><i class="glyphicon glyphicon-pencil pull-right"></i></span>
+      <% end %>
+      <div class="media-left media-top">
+        <%= image_tag teacher.picture.url(:thumb) %>
+      </div>
+      <div class="media-body">
+        <h4><%= teacher.name %></h4>
+        <%= teacher.about %>
+      </div>
+    </div>
+    <div id="edit-teacher-<%= teacher.id %>">
+
+    </div>
+    <hr>
+  <% end %>
+<% end %>
+</div>
+<%= render 'teachers/form' %>
