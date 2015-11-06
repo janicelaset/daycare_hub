@@ -1,10 +1,10 @@
 // $(window).load(function() {
-//   // loadScript();
+//   loadScript();
 // });
 
 var map;
 
-function initialize() {
+function autoComplete() {
 console.log("init")
   var input = document.getElementById('search-text-field');
 
@@ -107,7 +107,7 @@ function codeAddress(geocoding){
 }
 
 function fullAddress(address) {
-  return address.street + "," + address.city + "," + address.state + address.zip;
+  return address.street + ", " + address.city + ", " + address.state + address.zip;
 }
 
 function displaySearchResults(origin, radius, addresses, daycares) {
@@ -152,10 +152,10 @@ console.log(destination);
   var bounds = new google.maps.LatLngBounds;
   var markersArray = [];
 
-  var origin1 = {lat: 55.93, lng: -3.118};
-  var origin2 = 'Greenwich, England';
-  var destinationA = 'Stockholm, Sweden';
-  var destinationB = {lat: 50.087, lng: 14.421};
+  // var origin1 = {lat: 55.93, lng: -3.118};
+  // var origin2 = 'Greenwich, England';
+  // var destinationA = 'Stockholm, Sweden';
+  // var destinationB = {lat: 50.087, lng: 14.421};
 
   // var destinationIcon = 'https://chart.googleapis.com/chart?' +
   //     'chst=d_map_pin_letter&chld=D|FF0000|000000';
@@ -174,9 +174,9 @@ console.log(destination);
       origins: [origin],
       destinations: destination,
       travelMode: google.maps.TravelMode.DRIVING,
-      unitSystem: google.maps.UnitSystem.METRIC,
+      unitSystem: google.maps.UnitSystem.IMPERIAL,
       avoidHighways: false,
-      avoidTolls: false
+      avoidTolls: false,
     }, function(response, status) {
       if (status !== google.maps.DistanceMatrixStatus.OK) {
         alert('Error was: ' + status);
@@ -206,6 +206,7 @@ console.log(destination);
           geocoder.geocode({'address': originList[i]},
               showGeocodedAddressOnMap(false));
           for (var j = 0; j < results.length; j++) {
+            console.log(results[j].distance.text);
             geocoder.geocode({'address': destinationList[j]},
                 showGeocodedAddressOnMap(true));
           }
@@ -228,7 +229,6 @@ function loadScript() {
   var script = document.createElement('script');
   script.type = 'text/javascript';
   script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
-    '&libraries=drawing,places'+
-    '&callback=initialize';
+    '&libraries=drawing,places';
   document.body.appendChild(script);
 }
