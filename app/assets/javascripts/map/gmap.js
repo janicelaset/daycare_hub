@@ -106,27 +106,48 @@ function codeAddress(geocoding){
   }
 }
 
-function displaySearchResults(origin, radius, addresses) {
+function fullAddress(address) {
+  return address.street + "," + address.city + "," + address.state + address.zip;
+}
+
+function displaySearchResults(origin, radius, addresses, daycares) {
 
   //addresses sent as string
   //"[&quot;2222 SE Foxglove Ct, Hillsboro, OR 97123&quot;, &quot;18000 SW Farmington Rd, Aloha, OR 97007&quot;, &quot;15135 SW Beard Rd, Beaverton, OR 97007&quot;, &quot;18685 SW Baseline Rd, Beaverton, OR 97006&quot;, &quot;15150 SW Koll Pkwy, Beaverton, OR 97006&quot;]"
-console.log(origin);
-console.log(radius);
+// console.log(origin);
+// console.log(radius);
+// console.log(addresses);
+
+daycares = daycares.replace(/&quot;/g, '"');
+daycares = JSON.parse(daycares);
+console.log(daycares);
+
+addresses = addresses.replace(/&quot;/g, '"');
+addresses = JSON.parse(addresses);
+
+var destination = [];
+addresses.forEach(function(address) {
+  address = fullAddress(address);
+  destination.push(address);
+});
 console.log(addresses);
+console.log(destination);
+
+
   //parse and convert to array of addresses
-  addresses = addresses.replace(/\[/g, '');   //remove brackets
-  addresses = addresses.replace(/\]/g, '');
-  addresses = addresses.split('&quot;, &quot;');
+  // addresses = addresses.replace(/\[/g, '');   //remove brackets
+  // addresses = addresses.replace(/\]/g, '');
+  // addresses = addresses.split('&quot;, &quot;');
 
   //results in array
   // ["&quot;2222 SE Foxglove Ct, Hillsboro, OR 97123", "18000 SW Farmington Rd, Aloha, OR 97007", "15135 SW Beard Rd, Beaverton, OR 97007", "18685 SW Baseline Rd, Beaverton, OR 97006", "15150 SW Koll Pkwy, Beaverton, OR 97006&quot;"]
 
   //remove &quot; from first and last address
-  var destination = [];
-  addresses.forEach(function(address) {
-    address = address.replace(/&quot;/g, '');
-    destination.push(address);
-  });
+  // var destination = [];
+  // addresses.forEach(function(address) {
+  //   address = address.replace(/&quot;/g, '');
+  //   destination.push(address);
+  // });
 
   var bounds = new google.maps.LatLngBounds;
   var markersArray = [];

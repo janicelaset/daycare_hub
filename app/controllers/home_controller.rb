@@ -20,16 +20,16 @@ class HomeController < ApplicationController
 
     in_state = Address.where("state = 'OR'")
     @destination = []
+    @daycares = []
     in_state.each do |address|
       @destination.push(address.full_address)
+      @daycares.push(address.daycare)
     end
+@destination = in_state
 
-    # @link = "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=drawing,places&callback=displaySearchResults(#{@address, @radius, @destination})"
-stuff = in_state.to_json
+    @destination = @destination.to_json
+    @daycares = @daycares.to_json
 
-    # respond_to do |format|
-    #   format.js
-    # end
   end
 
 end
