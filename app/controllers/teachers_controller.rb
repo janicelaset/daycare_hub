@@ -39,8 +39,18 @@ class TeachersController < ApplicationController
     end
   end
 
+  def move
+    @daycare = Daycare.find(params[:daycare_id])
+binding.pry
+    params['edit-teacher'].each_with_index do |id, index|
+      teacher = Teacher.find(id)
+      teacher.update_attribute(:position, index+1) if teacher
+    end
+    render nothing: true
+  end
+
   private
   def teacher_params
-    params.require(:teacher).permit(:name, :about, :picture)
+    params.require(:teacher).permit(:name, :about, :picture, :id, :position)
   end
 end

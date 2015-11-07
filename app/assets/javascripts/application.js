@@ -12,12 +12,8 @@
 //
 //= require jquery
 //= require bootstrap-sprockets
+//= require jquery-ui
 //= require jquery_ujs
-//= require jquery-ui/draggable
-//= require jquery-ui/droppable
-//= require jquery-ui/resizable
-//= require jquery-ui/selectable
-//= require jquery-ui/sortable
 //= require turbolinks
 //= require_tree .
 
@@ -25,25 +21,3 @@ var setRadius = function(radius, value) {
   $('#radius-select').text(radius);
   $('#radius-value').val(value);
 }
-
-$(function() {
-    $( "#draggable" ).draggable();
-  });
-
-$(function($) {
-  var panelList = $('#draggablePanelList');
-
-  panelList.sortable({
-      // Only make the .panel-heading child elements support dragging.
-      // Omit this to make then entire <li>...</li> draggable.
-      handle: '.panel-heading',
-      update: function() {
-          $('.panel', panelList).each(function(index, elem) {
-               var $listItem = $(elem),
-                   newIndex = $listItem.index();
-
-               // Persist the new indices.
-          });
-      }
-  });
-});

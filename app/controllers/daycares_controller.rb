@@ -57,7 +57,7 @@ class DaycaresController < ApplicationController
     end
 
     if @daycare.teachers.any? #if user has not added any teachers
-      @teachers = @daycare.teachers
+      @teachers = @daycare.teachers.order("position")
     end
 
     @teacher = Teacher.new
