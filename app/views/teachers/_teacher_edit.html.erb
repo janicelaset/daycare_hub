@@ -1,7 +1,6 @@
 <% if @daycare.teachers.any? %>
 <ul id="teacherList" class="list-unstyled" data-update-url="<%= move_daycare_teachers_path(@daycare) %>">
   <% @daycare.teachers.each do |teacher| %>
-    <div class="panel-list">
       <li class="panel panel-info" id="teacher-<%= teacher.id %>">
         <div class="panel-heading">
           <%= teacher.name %>
@@ -21,7 +20,6 @@
           </div>
         </div>
       </li>
-    </div>
     <div id="edit-teacher-<%= teacher.id %>">
 
     </div>

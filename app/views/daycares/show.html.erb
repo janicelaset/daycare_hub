@@ -23,3 +23,8 @@
     <%= image_tag image.picture.url(:thumb) %>
   <% end %>
 </div>
+<div id="daycare-profile-teacher">
+  <% @teachers.each do |teacher| %>
+    <%= teacher.name %>
+  <% end %>
+</div>

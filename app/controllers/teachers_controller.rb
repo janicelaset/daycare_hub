@@ -41,8 +41,8 @@ class TeachersController < ApplicationController
 
   def move
     @daycare = Daycare.find(params[:daycare_id])
-binding.pry
-    params['edit-teacher'].each_with_index do |id, index|
+
+    params['teacher'].each_with_index do |id, index|
       teacher = Teacher.find(id)
       teacher.update_attribute(:position, index+1) if teacher
     end
