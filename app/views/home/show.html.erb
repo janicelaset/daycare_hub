@@ -1,14 +1,20 @@
 <div class="container">
-
   <div id="map-container">
     <div id="map-canvas"></div>
   </div>
 
+  <div class="row search-results">
+    <!-- <div class="col-xs-6">
+      <div class="search-results-col1">stuff</div>
+    </div>
+    <div class="col-xs-6">
+      <div class="search-results-col2">stuff</div>
+    </div>
+  </div> -->
 </div>
-
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=drawing,places"></script>
 
 <script>
-  displaySearchResults("<%= @address %>", "<%= @radius %>", "<%= @destination %>", "<%= @daycares %>");
+  displaySearchResults("<%= @address %>", "<%= @radius %>", "<%= @destination %>", "<%= @daycares %>", "<%= @images %>");
 </script>

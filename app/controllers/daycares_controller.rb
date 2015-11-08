@@ -20,9 +20,10 @@ class DaycaresController < ApplicationController
       @image = Image.new
     end
 
-    if @daycare.teachers.any?
-      @teachers = @daycare.teachers.order("position")
-    end
+    @daycare.teachers = @daycare.teachers.order("position")
+    # if @daycare.teachers.any?
+    #   @teachers = @daycare.teachers.order("position")
+    # end
 
   end
 

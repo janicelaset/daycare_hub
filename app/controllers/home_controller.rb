@@ -18,18 +18,22 @@ class HomeController < ApplicationController
     @address = params[:search]
     @radius = params["radius-value"]
 
-    in_state = Address.where("state = 'OR'")
-    @destination = []
-    @daycares = []
-    in_state.each do |address|
-      @destination.push(address.full_address)
-      @daycares.push(address.daycare)
-    end
-@destination = in_state
+    @destination = Address.where("state = 'OR'")
 
+    @daycares = []
+    @images = []
+    @destination.each do |address|
+      @daycares.push(address.daycare)
+      if address.daycare.images.any?
+        image = address.daycare.images.first.image_url
+      else
+        image = nil
+      end
+      @images.push(image)
+    end
     @destination = @destination.to_json
     @daycares = @daycares.to_json
-
+    @images = @images.to_json
   end
 
 end

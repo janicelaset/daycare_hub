@@ -115,7 +115,7 @@ function milesToMeters(miles) {
   return miles * 1609.344;
 }
 
-function displaySearchResults(origin, radius, addresses, daycares) {
+function displaySearchResults(origin, radius, addresses, daycares, images) {
 
   //google distance matrix values always expressed in meters
   radius = milesToMeters(radius);
@@ -132,6 +132,10 @@ console.log(daycares);
 
 addresses = addresses.replace(/&quot;/g, '"');
 addresses = JSON.parse(addresses);
+
+images = images.replace(/&quot;/g, '"');
+images = JSON.parse(images);
+console.log(images);
 
 var destination = [];
 addresses.forEach(function(address) {
@@ -238,6 +242,8 @@ console.log(destination);
                             "<p>" + results[j].distance.text + "</p>";
               geocoder.geocode({'address': destinationList[j]},
                   showGeocodedAddressOnMap(true, content));
+
+              $(".row.search-results").append("<div class='col-xs-6'>" + daycares[j].name + "</div>" + "<div>" + "<img src=" + images[j] + ">" + "</div>");
             }
           }
         }
