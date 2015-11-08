@@ -110,8 +110,16 @@ function fullAddress(address) {
   return address.street + ", " + address.city + ", " + address.state + address.zip;
 }
 
+function milesToMeters(miles) {
+  //1 mile = 1609.344 meters
+  return miles * 1609.344;
+}
+
 function displaySearchResults(origin, radius, addresses, daycares) {
 
+  //google distance matrix values always expressed in meters
+  radius = milesToMeters(radius);
+console.log(radius);
   //addresses sent as string
   //"[&quot;2222 SE Foxglove Ct, Hillsboro, OR 97123&quot;, &quot;18000 SW Farmington Rd, Aloha, OR 97007&quot;, &quot;15135 SW Beard Rd, Beaverton, OR 97007&quot;, &quot;18685 SW Baseline Rd, Beaverton, OR 97006&quot;, &quot;15150 SW Koll Pkwy, Beaverton, OR 97006&quot;]"
 // console.log(origin);
@@ -151,6 +159,7 @@ console.log(destination);
 
   var bounds = new google.maps.LatLngBounds;
   var markersArray = [];
+  var infoWindowContentArray = [];
 
   // var origin1 = {lat: 55.93, lng: -3.118};
   // var origin2 = 'Greenwich, England';
@@ -162,8 +171,8 @@ console.log(destination);
   // var originIcon = 'https://chart.googleapis.com/chart?' +
   //     'chst=d_map_pin_letter&chld=O|FFFF00|000000';
   var map = new google.maps.Map(document.getElementById('map-canvas'), {
-    center: {lat: 55.53, lng: 9.4},
-    zoom: 10
+    center: {lat: 39.8282, lng: -98.5795},
+    zoom: 4
   });
 
   var geocoder = new google.maps.Geocoder;
@@ -185,16 +194,29 @@ console.log(destination);
         var destinationList = response.destinationAddresses;
         deleteMarkers(markersArray);
 
-        var showGeocodedAddressOnMap = function(asDestination) {
+        var showGeocodedAddressOnMap = function(asDestination, contentString) {
           // var icon = asDestination ? destinationIcon : originIcon;
           return function(results, status) {
             if (status === google.maps.GeocoderStatus.OK) {
               map.fitBounds(bounds.extend(results[0].geometry.location));
-              markersArray.push(new google.maps.Marker({
+              var marker = new google.maps.Marker({
                 map: map,
                 position: results[0].geometry.location,
-                // icon: icon
-              }));
+              });
+              if(contentString != "") {
+                var infowindow = new google.maps.InfoWindow({
+                  content: contentString
+                });
+                marker.addListener('click', function() {
+                  infowindow.open(map, marker);
+                });
+              }
+              markersArray.push(marker);
+              // markersArray.push(new google.maps.Marker({
+              //   map: map,
+              //   position: results[0].geometry.location,
+              //   // icon: icon
+              // }));
             } else {
               alert('Geocode was not successful due to: ' + status);
             }
@@ -204,11 +226,19 @@ console.log(destination);
         for (var i = 0; i < originList.length; i++) {
           var results = response.rows[i].elements;
           geocoder.geocode({'address': originList[i]},
-              showGeocodedAddressOnMap(false));
+              showGeocodedAddressOnMap(false, "")); //send empty content for origin
+
           for (var j = 0; j < results.length; j++) {
-            console.log(results[j].distance.text);
-            geocoder.geocode({'address': destinationList[j]},
-                showGeocodedAddressOnMap(true));
+            //show addresses within radius
+            if(results[j].distance.value <= radius) {
+              console.log(daycares[j].name);
+              var content = "<strong>" + daycares[j].name + "</strong>" +
+                            "<div>" + addresses[j].street + "</div>" +
+                            "<div>" + addresses[j].city + ", " + addresses[j].state + " " + addresses[j].zip + "</div>" +
+                            "<p>" + results[j].distance.text + "</p>";
+              geocoder.geocode({'address': destinationList[j]},
+                  showGeocodedAddressOnMap(true, content));
+            }
           }
         }
       }
