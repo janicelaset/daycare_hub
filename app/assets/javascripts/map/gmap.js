@@ -243,7 +243,22 @@ console.log(destination);
               geocoder.geocode({'address': destinationList[j]},
                   showGeocodedAddressOnMap(true, content));
 
-              $(".row.search-results").append("<div class='col-xs-6'>" + daycares[j].name + "</div>" + "<div>" + "<img src=" + images[j] + ">" + "</div>");
+              $(".row.search-results").append(
+                "<div class='col-md-6'>" +
+                  "<div class='thumbnail'>" +
+                    "<div class='media'>" +
+                      "<div class='media-left media-top daycare-search-image'>" +
+                        "<img src=" + images[j] + ">" +
+                      "</div>" +
+                      "<div class='media-body'>" +
+                        "<h4>" + daycares[j].name + "</h4>" +
+                        "<div>" + addresses[j].street + "</div>" +
+                        "<div>" + addresses[j].city + ", " + addresses[j].state + " " + addresses[j].zip + "</div>" +
+                        "<p>" + results[j].distance.text + "</p>" +
+                      "</div>" +
+                    "</div>" +
+                  "</div>" +
+                "</div>");
             }
           }
         }
