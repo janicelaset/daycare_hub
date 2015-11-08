@@ -235,7 +235,9 @@ console.log(destination);
           for (var j = 0; j < results.length; j++) {
             //show addresses within radius
             if(results[j].distance.value <= radius) {
-              console.log(daycares[j].name);
+              if (images[j] === null) {
+                images[j] = 'Brick.png';
+              }
               var content = "<strong>" + daycares[j].name + "</strong>" +
                             "<div>" + addresses[j].street + "</div>" +
                             "<div>" + addresses[j].city + ", " + addresses[j].state + " " + addresses[j].zip + "</div>" +
@@ -247,8 +249,11 @@ console.log(destination);
                 "<div class='col-md-6'>" +
                   "<div class='thumbnail'>" +
                     "<div class='media'>" +
-                      "<div class='media-left media-top daycare-search-image'>" +
+                      "<div class='media-left media-top'>" +
+                        "<div class='search-results-image'>" +
                         "<img src=" + images[j] + ">" +
+                        // "<img src=" + 'Brick.png' + ">" +
+                        "</div>" +
                       "</div>" +
                       "<div class='media-body'>" +
                         "<h4>" + daycares[j].name + "</h4>" +
