@@ -1029,6 +1029,8 @@
         0,
         null,
         0,
+        null,
+        0,
         0,
         0,
         0,
@@ -1038,8 +1040,10 @@
         0,
         null,
         0,
-        0,
         null,
+        0,
+        0,
+        0,
         null,
         null,
         null
@@ -1633,6 +1637,10 @@
         1,
         1,
         1,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/janicelaset/Desktop/daycare_hub/spec/models/teacher_spec.rb": [
@@ -1669,6 +1677,6 @@
         null
       ]
     },
-    "timestamp": 1446942844
+    "timestamp": 1447098130
   }
 }
