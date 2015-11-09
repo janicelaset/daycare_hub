@@ -1,6 +1,6 @@
 <% if @daycare.teachers.any? %>
 <ul id="teacherList" class="list-unstyled" data-update-url="<%= move_daycare_teachers_path(@daycare) %>">
-  <% @daycare.teachers.each do |teacher| %>
+  <% @teachers.each do |teacher| %>
       <li class="panel panel-info" id="teacher-<%= teacher.id %>">
         <div class="panel-heading">
           <%= teacher.name %>
@@ -11,10 +11,10 @@
         <div class="panel-body">
           <div class="media">
             <div class="media-left media-top">
-<!--              <%= image_tag teacher.picture.url(:thumb) %> -->
+             <%= image_tag teacher.picture.url(:thumb) %>
             </div>
             <div class="media-body">
-              <h4>About</h4>
+              <h4><%= teacher.name %></h4>
               <%= teacher.about %>
             </div>
           </div>

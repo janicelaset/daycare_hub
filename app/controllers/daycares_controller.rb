@@ -21,6 +21,7 @@ class DaycaresController < ApplicationController
     end
 
     @daycare.teachers = @daycare.teachers.order("position")
+    @teachers = @daycare.teachers.order("position")
     # if @daycare.teachers.any?
     #   @teachers = @daycare.teachers.order("position")
     # end
