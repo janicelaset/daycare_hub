@@ -1,18 +1,17 @@
 class TeachersController < ApplicationController
 
   def create
-    binding.pry
     @teacher = Teacher.new(teacher_params)
     @daycare = Daycare.find(params[:daycare_id])
     @teacher.daycare = @daycare
 
     if @teacher.save
       @teacher = Teacher.new
-      # respond_to do |format|
-      #   format.html
-      #   format.js
-      # end
-      redirect_to edit_user_daycare_path(current_user, @daycare)
+      respond_to do |format|
+        format.html
+        format.js
+      end
+      # redirect_to edit_user_daycare_path(current_user, @daycare)
     end
   end
 

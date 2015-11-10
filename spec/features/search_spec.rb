@@ -6,7 +6,6 @@ describe "The daycare search process" do
     visit root_path
     fill_in 'search-text-field', :with => '17683 SW Farmington Rd Aloha, OR 97007'
     click_button 'Go!'
-    binding.pry
     expect(page).to have_content 'My Daycare'
   end
 end
