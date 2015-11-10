@@ -5,14 +5,16 @@ class TeachersController < ApplicationController
     @daycare = Daycare.find(params[:daycare_id])
     @teacher.daycare = @daycare
 
-    if @teacher.save
-      @teacher = Teacher.new
-      respond_to do |format|
-        format.html
-        format.js
-      end
-      # redirect_to edit_user_daycare_path(current_user, @daycare)
+    @teacher.save
+
+    #create new teacher to display create teacher form so users can add more teachers
+    @teacher = Teacher.new
+
+    respond_to do |format|
+      format.html
+      format.js
     end
+
   end
 
   def edit
@@ -29,15 +31,10 @@ class TeachersController < ApplicationController
     @teacher = Teacher.find(params[:id])
     @daycare = Daycare.find(params[:daycare_id])
 
-    if @teacher.update(teacher_params)
-      # respond_to do |format|
-      #   format.html
-      #   format.js
-      # end
-      redirect_to edit_user_daycare_path(current_user, @daycare)
-
-    else
-      flash[:notice] = "Teacher information not updated"
+    @teacher.update(teacher_params)
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 

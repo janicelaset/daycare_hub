@@ -3,8 +3,10 @@
     <% @daycare.teachers.each do |teacher| %>
       <li class="panel panel-info" id="teacher-<%= teacher.id %>">
         <div class="panel-heading">
-          <%= teacher.name %>
-          <%= link_to edit_daycare_teacher_path(@daycare, teacher), remote:true do %>
+          <span id="panel-name-teacher-<%= teacher.id %>">
+            <%= teacher.name %>
+          </span>
+          <%= link_to edit_daycare_teacher_path(@daycare, teacher), id: "teacher-edit-#{teacher.id}", remote:true do %>
             <span><i class="glyphicon glyphicon-pencil pull-right"></i></span>
           <% end %>
         </div>
@@ -14,7 +16,7 @@
              <%= image_tag teacher.picture.url(:thumb) %>
             </div>
             <div class="media-body">
-              <h4><%= teacher.name %></h4>
+              <h4 id="header-name-teacher-<%= teacher.id %>"><%= teacher.name %></h4>
               <%= teacher.about %>
             </div>
           </div>
