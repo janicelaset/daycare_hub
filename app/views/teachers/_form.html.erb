@@ -1,5 +1,5 @@
 
-<%= form_for [@daycare, @teacher], remote: true, :html => {:class => "form-horizontal"} do |f| %>
+<%= form_for [@daycare, @teacher], remote: true, :html => { :class => "form-horizontal", :multipart => true } do |f| %>
   <div class="form-group">
     <%= f.label :name, class: 'control-label col-sm-1' %>
     <div class="col-sm-5 daycare-edit-field">
@@ -18,5 +18,11 @@
     <div class="pull-right col-sm-3">
       <%= f.submit class:'btn' %>
     </div>
+
+  <% if @teacher.name != nil %>
+      <div class="pull-right col-sm-3">
+        <button class="btn pull-right" onclick="hideTeacherForm('<%= @teacher.id %>')" id="cancel-teacher-edit">Cancel</button>
+      </div>
+  <% end %>
   </div>
 <% end %>

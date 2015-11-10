@@ -11,14 +11,20 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.turbolinks
 //= require bootstrap-sprockets
 //= require jquery-ui
 //= require jquery_ujs
+//= require jquery.remotipart
+//= require jquery.turbolinks
 //= require turbolinks
 //= require_tree .
 
 var setRadius = function(radius, value) {
   $('#radius-select').text(radius);
   $('#radius-value').val(value);
+}
+
+var hideTeacherForm = function (id) {
+  alert("hide teacher form");
+  $('#edit-teacher-' + id).hide();
 }
