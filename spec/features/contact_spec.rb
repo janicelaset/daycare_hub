@@ -29,4 +29,18 @@ describe "the contact crud process" do
     find('#menu-view-daycare').click
     expect(page).to have_content 'newemail@email.com'
   end
+
+#using html to require fields (validation tested in model)
+  # it "allows users to update contact information", js:true do
+  #   daycare = FactoryGirl.create(:daycare)
+  #   contact = FactoryGirl.create(:contact)
+  #   user = daycare.user
+  #   daycare.contact = contact
+  #   login_as(user, :scope => :user)
+  #   visit edit_user_daycare_path(user, daycare)
+  #   click_link 'daycare-edit-contact'
+  #   fill_in 'Email', :with => ''
+  #   click_button 'Update Contact'
+  #   expect(page).to have_content 'Please fix these errors'
+  # end
 end

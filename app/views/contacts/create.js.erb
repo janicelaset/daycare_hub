@@ -1,3 +1,7 @@
-$('#collapseThree').removeClass('collapse in').addClass('collapse');
-$('#contact-add-edit-glyph').html('<%= j render 'contacts/add_edit_glyph' %>')
-$('#contact-edit-form').html('<%= j render 'contacts/form' %>')
+if ("<%= @error %>")
+  alert("error");
+else {
+  $('#collapseThree').removeClass('collapse in').addClass('collapse');
+  $('#contact-add-edit-glyph').html('<%= j render 'contacts/add_edit_glyph' %>')
+  $('#contact-edit-form').html('<%= j render 'contacts/form' %>')
+}

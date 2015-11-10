@@ -37,14 +37,12 @@ class DaycaresController < ApplicationController
     @user = User.find(params[:user_id])
     @daycare.user = @user
 
-    if @daycare.save
-      respond_to do |format|
-        format.html
-        format.js
-      end
-    else
-      #process error
+    @daycare.save
+    respond_to do |format|
+      format.html
+      format.js
     end
+
   end
 
   def edit
@@ -81,16 +79,11 @@ class DaycaresController < ApplicationController
     @daycare = Daycare.find(params[:id])
     @daycare.user = @user
 
-    if @daycare.update(daycare_params)
-      respond_to do |format|
-        format.html
-        format.js
-      end
-    else
-      respond_to do |format|
-        format.html
-        format.js
-      end
+    @daycare.update(daycare_params)
+
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 

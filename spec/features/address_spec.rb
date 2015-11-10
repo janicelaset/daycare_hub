@@ -18,10 +18,9 @@ describe "the address crud process" do
   end
 
   it "allows users to update address information", js:true do
-    daycare = FactoryGirl.create(:daycare)
     address = FactoryGirl.create(:address)
+    daycare = address.daycare
     user = daycare.user
-    daycare.address = address
     login_as(user, :scope => :user)
     visit edit_user_daycare_path(user, daycare)
     click_link 'daycare-edit-address'

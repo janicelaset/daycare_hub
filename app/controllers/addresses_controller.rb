@@ -4,28 +4,27 @@ class AddressesController < ApplicationController
     @daycare = Daycare.find(params[:daycare_id])
     @address.daycare = @daycare
 
-    if @address.save
-      respond_to do |format|
-        format.html
-        format.js
-      end
-    else
-      flash[:notice] = "Address information not saved"
+
+    @address.save
+
+    respond_to do |format|
+      format.html
+      format.js
     end
+
   end
 
   def update
     @address = Address.find(params[:id])
     @daycare = current_user.daycare
 
-    if @address.update(address_params)
-      respond_to do |format|
-        format.html
-        format.js
-      end
-    else
-      flash[:notice] = "Address information not updated"
+    @address.update(address_params)
+
+    respond_to do |format|
+      format.html
+      format.js
     end
+
   end
 
   private
