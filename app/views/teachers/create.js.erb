@@ -1,4 +1,11 @@
 $('#teacher-add-edit-glyph').html('<%= j render 'teachers/add_edit_glyph' %>')
 $('#teacher-edit-form').html('<%= j render 'teachers/teacher_edit' %>')
 
-  // $('#teacherList').sortable();
+$('#teacherList').sortable({
+    axis: 'y',
+    panel: '.panel-heading',
+    update: function() {
+      $.post($(this).data('update-url'), $(this).sortable('serialize'))
+    }
+  }
+);
