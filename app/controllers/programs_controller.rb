@@ -15,6 +15,32 @@ class ProgramsController < ApplicationController
     end
   end
 
+  def edit
+    @daycare = Daycare.find(params[:daycare_id])
+    @program = Program.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
+  def update
+    @program = Program.find(params[:id])
+    @daycare = Daycare.find(params[:daycare_id])
+
+    @program.update(program_params)
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
+  def destroy
+    @program = Program.find(params[:id])
+    @program.destroy
+  end
+
   def move
     @daycare = Daycare.find(params[:daycare_id])
 
