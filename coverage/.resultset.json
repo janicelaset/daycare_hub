@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Guest/Desktop/daycare_hub/spec/controllers/addresses_controller_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/controllers/addresses_controller_spec.rb": [
         1,
         null,
         1,
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/rails_helper.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -57,8 +57,8 @@
         null,
         null,
         1,
-        44,
-        44,
+        48,
+        48,
         null,
         null,
         null,
@@ -89,14 +89,14 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/config/environment.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/Guest/Desktop/daycare_hub/config/application.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/config/application.rb": [
         1,
         null,
         1,
@@ -133,12 +133,12 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/config/boot.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/Guest/Desktop/daycare_hub/config/environments/test.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/config/environments/test.rb": [
         1,
         null,
         null,
@@ -183,7 +183,7 @@
         1,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/config/initializers/assets.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -192,309 +192,12 @@
         null,
         null,
         null,
-        null,
-        null,
-        null,
-        1
-      ],
-      "/Users/Guest/Desktop/daycare_hub/config/initializers/backtrace_silencers.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/Guest/Desktop/daycare_hub/config/initializers/cookies_serializer.rb": [
-        null,
-        null,
-        1
-      ],
-      "/Users/Guest/Desktop/daycare_hub/config/initializers/devise.rb": [
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/Guest/Desktop/daycare_hub/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/Guest/Desktop/daycare_hub/config/initializers/inflections.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+      "/Users/janicelaset/Desktop/daycare_hub/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -503,18 +206,315 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/config/initializers/mime_types.rb": [
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/Guest/Desktop/daycare_hub/config/initializers/session_store.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/Guest/Desktop/daycare_hub/config/initializers/wrap_parameters.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/config/initializers/devise.rb": [
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/janicelaset/Desktop/daycare_hub/config/initializers/filter_parameter_logging.rb": [
+        null,
+        null,
+        null,
+        1
+      ],
+      "/Users/janicelaset/Desktop/daycare_hub/config/initializers/inflections.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/janicelaset/Desktop/daycare_hub/config/initializers/mime_types.rb": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/janicelaset/Desktop/daycare_hub/config/initializers/session_store.rb": [
+        null,
+        null,
+        1
+      ],
+      "/Users/janicelaset/Desktop/daycare_hub/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -530,7 +530,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/factories/addresses.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/factories/addresses.rb": [
         1,
         1,
         1,
@@ -541,7 +541,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/factories/contacts.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/factories/contacts.rb": [
         1,
         1,
         1,
@@ -549,7 +549,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/factories/daycares.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/factories/daycares.rb": [
         1,
         1,
         1,
@@ -558,7 +558,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/factories/images.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/factories/images.rb": [
         1,
         1,
         null,
@@ -566,7 +566,15 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/factories/teachers.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/factories/programs.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/janicelaset/Desktop/daycare_hub/spec/factories/teachers.rb": [
         1,
         1,
         1,
@@ -574,7 +582,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/factories/users.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/factories/users.rb": [
         1,
         1,
         1,
@@ -584,7 +592,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/config/routes.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/config/routes.rb": [
         1,
         null,
         1,
@@ -671,7 +679,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/app/models/user.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/app/models/user.rb": [
         1,
         1,
         null,
@@ -705,39 +713,39 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/app/helpers/addresses_helper.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/app/helpers/addresses_helper.rb": [
         1,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/app/helpers/application_helper.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/app/helpers/contacts_helper.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/app/helpers/contacts_helper.rb": [
         1,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/app/helpers/daycares_helper.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/app/helpers/daycares_helper.rb": [
         1,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/app/helpers/home_helper.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/app/helpers/home_helper.rb": [
         1,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/app/helpers/images_helper.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/app/helpers/images_helper.rb": [
         1,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/app/helpers/teachers_helper.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/app/helpers/teachers_helper.rb": [
         1,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/app/helpers/users_helper.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/app/helpers/users_helper.rb": [
         1,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/app/controllers/addresses_controller.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/app/controllers/addresses_controller.rb": [
         1,
         1,
         1,
@@ -774,7 +782,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/app/controllers/application_controller.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/app/controllers/application_controller.rb": [
         1,
         1,
         null,
@@ -805,14 +813,14 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/controllers/contacts_controller_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/controllers/contacts_controller_spec.rb": [
         1,
         null,
         1,
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/app/controllers/contacts_controller.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/app/controllers/contacts_controller.rb": [
         1,
         null,
         1,
@@ -847,14 +855,14 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/controllers/daycares_controller_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/controllers/daycares_controller_spec.rb": [
         1,
         null,
         1,
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/app/controllers/daycares_controller.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/app/controllers/daycares_controller.rb": [
         1,
         1,
         null,
@@ -957,7 +965,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/controllers/home_controller_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/controllers/home_controller_spec.rb": [
         1,
         null,
         1,
@@ -971,7 +979,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/app/controllers/home_controller.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/app/controllers/home_controller.rb": [
         1,
         1,
         null,
@@ -1000,14 +1008,14 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/controllers/images_controller_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/controllers/images_controller_spec.rb": [
         1,
         null,
         1,
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/app/controllers/images_controller.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/app/controllers/images_controller.rb": [
         1,
         1,
         0,
@@ -1046,14 +1054,14 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/controllers/teachers_controller_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/controllers/teachers_controller_spec.rb": [
         1,
         null,
         1,
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/app/controllers/teachers_controller.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/app/controllers/teachers_controller.rb": [
         1,
         null,
         1,
@@ -1115,19 +1123,19 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/controllers/users_controller_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/controllers/users_controller_spec.rb": [
         1,
         null,
         1,
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/app/controllers/users_controller.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/app/controllers/users_controller.rb": [
         1,
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/features/address_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/features/address_spec.rb": [
         1,
         null,
         1,
@@ -1152,59 +1160,6 @@
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/Guest/Desktop/daycare_hub/spec/features/authentication_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
         1,
         1,
         1,
@@ -1215,7 +1170,60 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/features/contact_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/features/authentication_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/janicelaset/Desktop/daycare_hub/spec/features/contact_spec.rb": [
         1,
         null,
         1,
@@ -1263,7 +1271,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/features/daycare_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/features/daycare_spec.rb": [
         1,
         null,
         1,
@@ -1310,7 +1318,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/features/image_crud_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/features/image_spec.rb": [
         1,
         null,
         1,
@@ -1319,7 +1327,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/features/navbar_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/features/navbar_spec.rb": [
         1,
         null,
         1,
@@ -1386,19 +1394,6 @@
         null,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/Guest/Desktop/daycare_hub/spec/features/search_spec.rb": [
-        1,
-        null,
         1,
         1,
         1,
@@ -1409,7 +1404,20 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/features/teacher_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/features/search_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/janicelaset/Desktop/daycare_hub/spec/features/teacher_spec.rb": [
         1,
         null,
         1,
@@ -1474,14 +1482,11 @@
         1,
         1,
         1,
-        null,
-        null,
-        null,
         2,
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/helpers/addresses_helper_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/helpers/addresses_helper_spec.rb": [
         1,
         null,
         null,
@@ -1497,7 +1502,7 @@
         1,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/helpers/contacts_helper_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/helpers/contacts_helper_spec.rb": [
         1,
         null,
         null,
@@ -1513,7 +1518,7 @@
         1,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/helpers/daycares_helper_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/helpers/daycares_helper_spec.rb": [
         1,
         null,
         null,
@@ -1530,7 +1535,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/helpers/home_helper_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/helpers/home_helper_spec.rb": [
         1,
         null,
         null,
@@ -1546,7 +1551,7 @@
         1,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/helpers/images_helper_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/helpers/images_helper_spec.rb": [
         1,
         null,
         null,
@@ -1562,7 +1567,7 @@
         1,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/helpers/teachers_helper_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/helpers/teachers_helper_spec.rb": [
         1,
         null,
         null,
@@ -1578,7 +1583,7 @@
         1,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/helpers/users_helper_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/helpers/users_helper_spec.rb": [
         1,
         null,
         null,
@@ -1594,7 +1599,7 @@
         1,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/models/address_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/models/address_spec.rb": [
         1,
         null,
         1,
@@ -1606,7 +1611,7 @@
         2,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/app/models/address.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/app/models/address.rb": [
         1,
         null,
         1,
@@ -1625,7 +1630,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/models/contact_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/models/contact_spec.rb": [
         1,
         null,
         1,
@@ -1636,7 +1641,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/app/models/contact.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/app/models/contact.rb": [
         1,
         1,
         null,
@@ -1644,10 +1649,11 @@
         1,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/models/daycare_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/models/daycare_spec.rb": [
         1,
         null,
         1,
+        2,
         2,
         2,
         2,
@@ -1657,7 +1663,8 @@
         2,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/app/models/daycare.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/app/models/daycare.rb": [
+        1,
         1,
         1,
         1,
@@ -1668,14 +1675,14 @@
         1,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/models/image_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/models/image_spec.rb": [
         1,
         null,
         1,
         2,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/app/models/image.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/app/models/image.rb": [
         1,
         1,
         1,
@@ -1686,7 +1693,27 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/models/teacher_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/models/program_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        null,
+        2,
+        2,
+        null
+      ],
+      "/Users/janicelaset/Desktop/daycare_hub/app/models/program.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/janicelaset/Desktop/daycare_hub/spec/models/teacher_spec.rb": [
         1,
         null,
         1,
@@ -1695,7 +1722,7 @@
         2,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/app/models/teacher.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/app/models/teacher.rb": [
         1,
         1,
         1,
@@ -1707,20 +1734,20 @@
         1,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/models/user_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/models/user_spec.rb": [
         1,
         null,
         1,
         2,
         null
       ],
-      "/Users/Guest/Desktop/daycare_hub/spec/views/home/index.html.erb_spec.rb": [
+      "/Users/janicelaset/Desktop/daycare_hub/spec/views/home/index.html.erb_spec.rb": [
         1,
         null,
         1,
         null
       ]
     },
-    "timestamp": 1447201874
+    "timestamp": 1447266109
   }
 }
