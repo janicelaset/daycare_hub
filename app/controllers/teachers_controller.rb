@@ -38,6 +38,11 @@ class TeachersController < ApplicationController
     end
   end
 
+  def destroy
+    @teacher = Teacher.find(params[:id])
+    @teacher.destroy
+  end
+
   def move
     @daycare = Daycare.find(params[:daycare_id])
 

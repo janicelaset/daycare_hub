@@ -9,6 +9,9 @@
           <%= link_to edit_daycare_teacher_path(@daycare, teacher), id: "teacher-edit-#{teacher.id}", remote:true do %>
             <span><i class="glyphicon glyphicon-pencil pull-right"></i></span>
           <% end %>
+          <%= link_to daycare_teacher_path(@daycare, teacher), method: 'delete', data: { confirm: "Are you sure you want do delete #{teacher.name}?" }, id: "teacher-delete-#{teacher.id}", remote:true do %>
+            <span><i class="glyphicon glyphicon-trash pull-right"></i></span>
+          <% end %>
         </div>
         <div class="panel-body">
           <div class="media">

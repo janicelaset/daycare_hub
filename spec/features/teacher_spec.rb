@@ -52,4 +52,16 @@ describe "The teacher crud process" do
     find('#menu-view-daycare').click
     expect(page).to have_content 'Teacher About FirstTeacher'
   end
+
+  it "allows the user to delete a teacher", js:true do
+    daycare = FactoryGirl.create(:daycare)
+    teacher = FactoryGirl.create(:teacher)
+    daycare.teachers.push(teacher)
+    user = daycare.user
+    login_as(user, :scope => :user)
+    visit edit_user_daycare_path(user, daycare)
+    click_link 'daycare-edit-teacher'
+    find("#teacher-delete-#{teacher.id}").trigger('click')
+    expect { find("#teacher-delete-#{teacher.id}").trigger('click') }.to change(Teacher, :count).by(-1)
+  end
 end
