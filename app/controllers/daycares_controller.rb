@@ -2,7 +2,11 @@ class DaycaresController < ApplicationController
   before_action :authenticate_user!, except: [:show]
 
   def show
-    @daycare = current_user.daycare
+    if current_user
+      @daycare = current_user.daycare
+    else
+      @daycare = Daycare.find(params[:id])
+    end
 
     if @daycare.address.nil?  #if user has not added contact information
       @address = Address.new
