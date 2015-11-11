@@ -2,12 +2,33 @@
 <%= form_for [@daycare, @program], remote: true, :html => { :class => "form-horizontal", :multipart => true } do |f| %>
   <div class="form-group">
     <%= f.label :name, class: 'control-label col-sm-1' %>
-    <div class="col-sm-5 daycare-edit-field">
+    <div class="col-sm-4 daycare-edit-field">
       <%= f.text_field :name, id: "program-edit-name#{@program.id}", class: 'form-control program-edit-name', required: true, placeholder: "eg. Infant, Toddler, Preschool, etc" %>
     </div>
 
+    <%= f.label "Age Range", class: 'control-label col-sm-2' %>
+    <div class="col-sm-1 daycare-edit-field">
+      <%= f.text_field :age_from, class: 'form-control' %>
+    </div>
+
+    <div class="col-sm-1 daycare-edit-field">
+      <%= f.text_field :age_from_units, class: 'form-control' %>
+    </div>
+
+    <div class="col-sm-1">
+      <%= f.label "to", class: 'control-label' %>
+    </div>
+
+    <div class="col-sm-1 daycare-edit-field">
+      <%= f.text_field :age_to, class: 'form-control' %>
+    </div>
+
+    <div class="col-sm-1 daycare-edit-field">
+      <%= f.text_field :age_to_units, class: 'form-control' %>
+    </div>
+
     <%= f.label :description, class: 'control-label col-sm-1' %>
-    <div class="col-sm-5 daycare-edit-field">
+    <div class="col-sm-11 daycare-edit-field">
       <%= f.text_area :description, class: 'form-control', required: true %>
     </div>
 
