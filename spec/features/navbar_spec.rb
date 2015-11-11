@@ -11,7 +11,7 @@ describe "The navbar links" do
     expect(page).to have_content 'testuser'
   end
 
-  it "displays daycare name and edit, view, and delete daycare links if user has daycare" do
+  it "displays daycare name and edit, and view daycare links if user has daycare" do
     daycare = FactoryGirl.create(:daycare)
     user = daycare.user
     login_as(user, :scope => :user)
@@ -19,7 +19,6 @@ describe "The navbar links" do
     expect(page).to have_content 'My Daycare'
     expect(page).to have_css "a#menu-view-daycare"
     expect(page).to have_css "a#menu-edit-daycare"
-    expect(page).to have_css "a#menu-delete-daycare"
     expect(page).to_not have_content 'Add Daycare'
   end
 
