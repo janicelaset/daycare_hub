@@ -58,13 +58,40 @@
     <p><%= @contact.email %></p>
   </div>
 
-  <% if @daycare.teachers.any? %>
-    <hr>
+<div id="daycare-profile-program">
+  <% if @daycare.programs.any? %>
     <div class="daycare-profile-header">
+      <hr>
+      <h1>Programs</h1>
+    </div>
+
+    <div id="program-wrapper class="row"">
+      <% @programs.each do |program| %>
+        <div class="col-md-6">
+          <div class="media daycare-profile-program">
+            <div class="media-left">
+            </div>
+            <div class="media-body">
+              <h4><%= program.name %></h4>
+              <p>
+                <%= program.description %>
+              </p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+<div id="daycare-profile-teacher">
+  <% if @daycare.teachers.any? %>
+    <div class="daycare-profile-header">
+    <hr>
       <h1>Teachers</h1>
     </div>
 
-    <div id="wrapper">
+    <div id="teacher-wrapper" class="row">
       <% @teachers.each do |teacher| %>
         <div class="col-md-6">
           <div class="media daycare-profile-teacher">
@@ -82,4 +109,6 @@
       <% end %>
     </div>
   <% end %>
+</div>
+
 </div>

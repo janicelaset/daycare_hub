@@ -1,0 +1,23 @@
+<div class="panel-daycare-edit">
+  <div class="panel panel-default">
+    <a id="daycare-edit-program" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+      <div class="panel-heading" role="tab" id="headingFive">
+        <h4 class="panel-title">
+          <div id="program-add-edit-glyph">
+            <%= render 'programs/add_edit_glyph' %>
+          </div>
+          Programs
+        </h4>
+      </div>
+    </a>
+    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+      <div class="panel-body">
+        <span id="program-edit-form">
+          <%= render 'programs/program_list' %>
+        </span>
+        <h4>Add a Program</h4>
+        <%= render 'programs/form' %>
+      </div>
+    </div>
+  </div>
+</div>

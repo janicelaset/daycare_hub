@@ -20,6 +20,9 @@ class DaycaresController < ApplicationController
       @image = Image.new
     end
 
+    @daycare.programs = @daycare.programs.order("position")
+    @programs = @daycare.programs.order("position")
+
     @daycare.teachers = @daycare.teachers.order("position")
     @teachers = @daycare.teachers.order("position")
     # if @daycare.teachers.any?
@@ -60,13 +63,16 @@ class DaycaresController < ApplicationController
       @address = @daycare.address
     end
 
+    @image = Image.new
+
+    @program = Program.new
+
     if @daycare.teachers.any? #if user has not added any teachers
       @teachers = @daycare.teachers.order("position")
     end
 
     @teacher = Teacher.new
 
-    @image = Image.new
 
     respond_to do |format|
       format.html
