@@ -53,6 +53,6 @@ class ProgramsController < ApplicationController
 
   private
   def program_params
-    params.require(:program).permit(:name, :description, :id, :position)
+    params.require(:program).permit(:name, :description, :age_from, :age_from_units, :age_to, :age_to_units, :avalable, :id, :position)
   end
 end

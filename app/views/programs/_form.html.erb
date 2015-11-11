@@ -1,43 +1,53 @@
 
 <%= form_for [@daycare, @program], remote: true, :html => { :class => "form-horizontal", :multipart => true } do |f| %>
   <div class="form-group">
-    <%= f.label :name, class: 'control-label col-sm-1' %>
-    <div class="col-sm-4 daycare-edit-field">
+    <%= f.label :name, class: 'control-label col-md-1' %>
+    <div class="col-md-4 daycare-edit-field">
       <%= f.text_field :name, id: "program-edit-name#{@program.id}", class: 'form-control program-edit-name', required: true, placeholder: "eg. Infant, Toddler, Preschool, etc" %>
     </div>
 
-    <%= f.label "Age Range", class: 'control-label col-sm-2' %>
-    <div class="col-sm-1 daycare-edit-field">
-      <%= f.text_field :age_from, class: 'form-control' %>
+    <%= f.label "Age Range", class: 'control-label col-md-2' %>
+    <div class="col-md-1 daycare-edit-field">
+      <%= f.text_field :age_from, class: 'form-control program-age-field' %>
     </div>
 
-    <div class="col-sm-1 daycare-edit-field">
-      <%= f.text_field :age_from_units, class: 'form-control' %>
+    <div class="col-md-1 daycare-edit-field">
+      <%= f.select :age_from_units, ["years", "months", "weeks"], { :style =>  "min-width: 5em;"}, class: 'form-control program-age-units'%>
     </div>
 
-    <div class="col-sm-1">
-      <%= f.label "to", class: 'control-label' %>
+    <div class="col-md-1">
+      <center><%= f.label "to", "to", class: 'control-label' %></center>
     </div>
 
-    <div class="col-sm-1 daycare-edit-field">
-      <%= f.text_field :age_to, class: 'form-control' %>
+    <div class="col-md-1 daycare-edit-field">
+      <%= f.text_field :age_to, class: 'form-control program-age-field' %>
     </div>
 
-    <div class="col-sm-1 daycare-edit-field">
-      <%= f.text_field :age_to_units, class: 'form-control' %>
+    <div class="col-md-1 daycare-edit-field">
+      <%= f.select :age_to_units, ["years", "months", "weeks"], { :style =>  "min-width: 5em;"}, class: 'form-control program-age-units'%>
     </div>
 
-    <%= f.label :description, class: 'control-label col-sm-1' %>
-    <div class="col-sm-11 daycare-edit-field">
+    <%= f.label :description, class: 'control-label col-md-1' %>
+    <div class="col-md-11 daycare-edit-field">
       <%= f.text_area :description, class: 'form-control', required: true %>
     </div>
 
-    <div class="pull-right col-sm-3">
+      <%= f.label :available, "Are there Openings?", class: 'control-label col-md-3' %>
+      <div class="col-md-1 daycare-edit-field">
+      <%= f.label :available, "Yes", class: 'control-label' %>
+      <%= f.radio_button :available, true , class: 'form-control', :checked => true, :value => true %>
+      </div>
+      <div class="col-md-1 daycare-edit-field">
+      <%= f.label :available, "No", class: 'control-label' %>
+      <%= f.radio_button :available, false, class: 'form-control', :value => false %>
+    </div>
+
+    <div class="pull-right col-md-3">
       <%= f.submit class:'btn' %>
     </div>
 
   <% if @program.name != nil %>
-      <div class="pull-right col-sm-3">
+      <div class="pull-right col-md-3">
         <button class="btn pull-right" onclick="hideTeacherForm('<%= @program.id %>')" id="cancel-program-edit">Cancel</button>
       </div>
   <% end %>
