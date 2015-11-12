@@ -1,0 +1,26 @@
+<% if @daycare.teachers.any? %>
+  <div id="daycare-profile-teacher">
+    <div class="daycare-profile-header">
+      <hr>
+      <h1>Teachers</h1>
+    </div>
+
+    <div id="teacher-wrapper" class="row">
+      <% @teachers.each do |teacher| %>
+      <div class="col-md-6">
+        <div class="media daycare-profile-teacher">
+          <div class="media-left">
+            <%= image_tag teacher.picture.url(:thumb) %>
+          </div>
+          <div class="media-body">
+            <h4><%= teacher.name %></h4>
+            <p>
+              <%= teacher.about %>
+            </p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>

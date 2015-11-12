@@ -1,0 +1,25 @@
+<% if @daycare.programs.any? %>
+  <div id="daycare-profile-program">
+    <div class="daycare-profile-header">
+      <hr>
+      <h1>Programs</h1>
+    </div>
+
+    <div id="program-wrapper class="row"">
+      <% @programs.each do |program| %>
+      <div class="col-md-6">
+        <div class="media daycare-profile-program">
+          <div class="media-left">
+          </div>
+          <div class="media-body">
+            <h4><%= program.name %></h4>
+            <p>
+              <%= program.description %>
+            </p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>

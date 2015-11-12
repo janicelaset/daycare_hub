@@ -62,5 +62,5 @@ group :test do
   gem 'simplecov', :require => false
   gem 'database_cleaner', '~> 1.5', '>= 1.5.1'
   gem 'poltergeist'
-  # gem 'phantomjs', :require => 'phantomjs/poltergeist'
+  gem 'phantomjs', :require => 'phantomjs/poltergeist'
 end
