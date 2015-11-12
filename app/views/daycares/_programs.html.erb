@@ -7,11 +7,11 @@
 
     <div id="program-wrapper class="row"">
       <% @programs.each_with_index do |program, index| %>
-      <div class="row">
+      <div class="col-md-6">
         <div class="media daycare-profile-program">
           <% if index % 2 == 0 %>
-            <div class="media-left">
-              test
+            <div class="media-left media-middle">
+              <%= image_tag program.picture.url(:small) %>
             </div>
             <div class="media-body">
               <div class="col-md-12">
@@ -57,8 +57,8 @@
                 </div>
               </div>
             </div>
-            <div class="media-right">
-              test
+            <div class="media-right media-middle">
+              <%= image_tag program.picture.url(:small) %>
             </div>
           <% end %>
         </div>

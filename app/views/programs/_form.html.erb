@@ -33,6 +33,12 @@
     </div>
 
     <div class="col-md-12">
+      <br>
+      <%= f.label 'Add Photo', class: 'control-label col-sm-2' %>
+      <div class="col-md-2">
+        <%= f.file_field :picture %>
+      </div>
+
       <%= f.label :available, "Are there Openings?", class: 'control-label col-md-3' %>
       <div class="col-md-1 daycare-edit-field">
       <%= f.label :available, "Yes", class: 'control-label' %>
@@ -42,6 +48,7 @@
         <%= f.label :available, "No", class: 'control-label' %>
         <%= f.radio_button :available, false, class: 'form-control', :value => false %>
       </div>
+      <br>
     </div>
 
     <div class="pull-right col-md-3">
