@@ -1,33 +1,35 @@
 <% if @daycare.programs.any? %>
-  <div id="daycare-profile-program">
-    <div class="daycare-profile-header">
-      <hr>
-      <h1>Programs</h1>
-    </div>
+  <div class="row">
+    <div id="daycare-profile-program">
+      <div class="daycare-profile-header">
+        <hr>
+        <h1>Programs</h1>
+      </div>
 
-    <div id="program-wrapper class="row"">
-      <% @programs.each_with_index do |program, index| %>
-        <div class="col-md-6">
-          <div class="thumbnail daycare-profile-program">
-            <div class="daycare-profile-program-img">
-              <%= image_tag program.picture.url(:small) %>
-            </div>
-            <div class="caption">
-              <h3><%= program.name %></h3>
-              <p><%= program.description %></p>
-              <h4>Ages</h4>
-              <p>
-                <%= program.age_from %> to <%= program.age_to %>
-              </p>
-              <% if program.available == true %>
-                We have openings
-              <% else %>
-                No openings
-              <% end %>
+      <div id="program-wrapper class="row"">
+        <% @programs.each_with_index do |program, index| %>
+          <div class="col-md-4">
+            <div class="thumbnail daycare-profile-program">
+              <div class="daycare-profile-program-img">
+                <%= image_tag program.picture.url(:medium) %>
+              </div>
+              <div class="caption">
+                <h3><%= program.name %></h3>
+                <p><%= program.description %></p>
+                <h4>Ages</h4>
+                <p>
+                  <%= program.age_from %> to <%= program.age_to %>
+                </p>
+                <% if program.available == true %>
+                  We have openings
+                <% else %>
+                  No openings
+                <% end %>
+              </div>
             </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 <% end %>
