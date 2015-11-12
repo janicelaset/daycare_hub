@@ -18,93 +18,10 @@ console.log("init")
   // When the user selects an address from the dropdown, populate the address
   // fields in the form.
   autocomplete.addListener('place_changed', autocomplete.getPlace());
-
-
-  // map = new google.maps.Map(document.getElementById('map-canvas'), {
-  //   center: {lat: -34.397, lng: 150.644},
-  //   zoom: 8
-  // });
-   // geocoding
-      // var geocoding  = new google.maps.Geocoder();
-      // $("#submit_button_geocoding").click(function(){
-      //   codeAddress(geocoding);
-      // });
-      // $("#submit_button_reverse").click(function(){
-      //   codeLatLng(geocoding);
-      // });
 }
 
 var info;
-function codeLatLng(geocoding){
 
-  var input = $('#search_box_reverse').val();
-  console.log(input);
-
-  var latlngbounds = new google.maps.LatLngBounds();
-  var listener;
-  var regex = /([1-9])+\.([1-9])+\,([1-9])+\.([1-9])+/g;
-  if(regex.test(input)) {
-  var latLngStr = input.split(",",2);
-  var lat = parseFloat(latLngStr[0]);
-  var lng = parseFloat(latLngStr[1]);
-  var latLng = new google.maps.LatLng(lat, lng);
-  geocoding.geocode({'latLng': latLng}, function(results, status) {
-     if (status == google.maps.GeocoderStatus.OK){
-       if(results.length > 0){
-         //map.setZoom(11);
-         var marker;
-         map.setCenter(results[1].geometry.location);
-         var i;
-        info = createInfoWindow("");
-         for(i in results){
-           latlngbounds.extend(results[i].geometry.location);
-             marker = new google.maps.Marker({
-             map: map,
-             position: results[i].geometry.location
-           });
-
-          google.maps.event.addListener(marker, 'click', (function(marker,i) {
-            return function() {
-            info.setContent(results[i].formatted_address);
-            info.open(map,marker);
-            }
-          })(marker,i));
-        }
-
-         map.fitBounds(latlngbounds);
-         listener = google.maps.event.addListener(map, "idle", function() {
-          if (map.getZoom() > 16) map.setZoom(16);
-            google.maps.event.removeListener(listener);
-          });
-       }
-     }
-    else{
-       alert("Geocoder failed due to: " + status);
-     }
-  });
-  }else{
-    alert("Wrong lat,lng format!");
-  }
-}
-function codeAddress(geocoding){
-  console.log("in codeAddress")
-  var address = $("#search_box_geocoding").val();
-  if(address.length > 0){
-    geocoding.geocode({'address': address},function(results, status){
-      if(status == google.maps.GeocoderStatus.OK){
-        map.setCenter(results[0].geometry.location);
-        var marker  =  new google.maps.Marker({
-          map: map,
-          position: results[0].geometry.location
-        });
-        }else{
-        alert("Geocode was not successful for the following reason: " + status);
-      }
-    });
-  }else{
-    alert("Search field can't be blank");
-  }
-}
 
 function fullAddress(address) {
   return address.street + ", " + address.city + ", " + address.state + address.zip;
@@ -120,11 +37,6 @@ function displaySearchResults(origin, radius, addresses, daycares, images) {
   //google distance matrix values always expressed in meters
   radius = milesToMeters(radius);
 console.log(radius);
-  //addresses sent as string
-  //"[&quot;2222 SE Foxglove Ct, Hillsboro, OR 97123&quot;, &quot;18000 SW Farmington Rd, Aloha, OR 97007&quot;, &quot;15135 SW Beard Rd, Beaverton, OR 97007&quot;, &quot;18685 SW Baseline Rd, Beaverton, OR 97006&quot;, &quot;15150 SW Koll Pkwy, Beaverton, OR 97006&quot;]"
-// console.log(origin);
-// console.log(radius);
-// console.log(addresses);
 
 daycares = daycares.replace(/&quot;/g, '"');
 daycares = JSON.parse(daycares);
@@ -145,30 +57,9 @@ addresses.forEach(function(address) {
 console.log(addresses);
 console.log(destination);
 
-
-  //parse and convert to array of addresses
-  // addresses = addresses.replace(/\[/g, '');   //remove brackets
-  // addresses = addresses.replace(/\]/g, '');
-  // addresses = addresses.split('&quot;, &quot;');
-
-  //results in array
-  // ["&quot;2222 SE Foxglove Ct, Hillsboro, OR 97123", "18000 SW Farmington Rd, Aloha, OR 97007", "15135 SW Beard Rd, Beaverton, OR 97007", "18685 SW Baseline Rd, Beaverton, OR 97006", "15150 SW Koll Pkwy, Beaverton, OR 97006&quot;"]
-
-  //remove &quot; from first and last address
-  // var destination = [];
-  // addresses.forEach(function(address) {
-  //   address = address.replace(/&quot;/g, '');
-  //   destination.push(address);
-  // });
-
   var bounds = new google.maps.LatLngBounds;
   var markersArray = [];
   var infoWindowContentArray = [];
-
-  // var origin1 = {lat: 55.93, lng: -3.118};
-  // var origin2 = 'Greenwich, England';
-  // var destinationA = 'Stockholm, Sweden';
-  // var destinationB = {lat: 50.087, lng: 14.421};
 
   // var destinationIcon = 'https://chart.googleapis.com/chart?' +
   //     'chst=d_map_pin_letter&chld=D|FF0000|000000';
