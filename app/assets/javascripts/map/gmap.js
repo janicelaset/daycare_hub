@@ -205,6 +205,7 @@ console.log(destination);
               map.fitBounds(bounds.extend(results[0].geometry.location));
               var marker = new google.maps.Marker({
                 map: map,
+                animation: google.maps.Animation.DROP,
                 position: results[0].geometry.location,
               });
               if(contentString != "") {
