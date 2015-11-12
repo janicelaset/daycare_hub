@@ -15,22 +15,21 @@
             </div>
             <div class="media-body">
               <div class="col-md-12">
-                <div class="col-md-10">
+                <div class="col-md-9">
                   <h3><%= program.name %></h3>
                   <p>
                     <%= program.description %>
                   </p>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3 daycare-profile-age-col">
                   <h4>Ages</h4>
                   <p>
                     <%= program.age_from %> to <%= program.age_to %>
                   </p>
-
                   <% if program.available == true %>
-                    true
+                    We have openings
                   <% else %>
-                    false
+                    No openings
                   <% end %>
                 </div>
               </div>
@@ -38,22 +37,22 @@
           <% else %>
             <div class="media-body">
               <div class="col-md-12">
-                <div class="col-md-10">
+                <div class="col-md-9">
                   <h3><%= program.name %></h3>
                   <p>
                     <%= program.description %>
                   </p>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3 daycare-profile-age-col">
                   <h4>Ages</h4>
                   <p>
                     <%= program.age_from %> to <%= program.age_to %>
                   </p>
 
                   <% if program.available == true %>
-                  true
+                    We have openings
                   <% else %>
-                  false
+                    No openings
                   <% end %>
                 </div>
               </div>
