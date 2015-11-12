@@ -29,26 +29,28 @@
 
     <%= f.label :description, class: 'control-label col-md-1' %>
     <div class="col-md-11 daycare-edit-field">
-      <%= f.text_area :description, class: 'form-control', required: true %>
+      <%= f.text_area :description, class: 'form-control', required: true, rows: "5" %>
     </div>
 
+    <div class="col-md-12">
       <%= f.label :available, "Are there Openings?", class: 'control-label col-md-3' %>
       <div class="col-md-1 daycare-edit-field">
       <%= f.label :available, "Yes", class: 'control-label' %>
       <%= f.radio_button :available, true , class: 'form-control', :checked => true, :value => true %>
       </div>
       <div class="col-md-1 daycare-edit-field">
-      <%= f.label :available, "No", class: 'control-label' %>
-      <%= f.radio_button :available, false, class: 'form-control', :value => false %>
+        <%= f.label :available, "No", class: 'control-label' %>
+        <%= f.radio_button :available, false, class: 'form-control', :value => false %>
+      </div>
     </div>
 
     <div class="pull-right col-md-3">
-      <%= f.submit class:'btn' %>
+      <%= f.submit class:'btn btn-primary btn-block' %>
     </div>
 
   <% if @program.name != nil %>
       <div class="pull-right col-md-3">
-        <button class="btn pull-right" onclick="hideTeacherForm('<%= @program.id %>')" id="cancel-program-edit">Cancel</button>
+        <button class="btn btn-primary btn-block pull-right" onclick="hideTeacherForm('<%= @program.id %>')" id="cancel-program-edit">Cancel</button>
       </div>
   <% end %>
   </div>

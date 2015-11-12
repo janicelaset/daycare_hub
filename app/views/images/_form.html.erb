@@ -1,9 +1,12 @@
 <%= render 'layouts/errors', :object => @image %>
+
+<h4>Add an Image</h4>
 <%= form_for [@daycare, @image], :html => {:class => "form-horizontal"}  do |f| %>
   <div class="form-group">
-    <div class="col-sm-12">
+    <div class="col-sm-12 daycare-edit-field">
       <%= f.file_field :picture %>
     </div>
+
     <div class="col-sm-2 ">
       <%= f.label :description, class: 'control-label' %>
     </div>
@@ -11,7 +14,7 @@
       <%= f.text_field :description, class: 'form-control' %>
     </div>
     <div class="pull-right col-sm-3">
-      <%= f.submit "Add Image", class: 'btn' %>
+      <%= f.submit "Add Image", class: 'btn btn-primary btn-block' %>
     </div>
   </div>
 <% end %>

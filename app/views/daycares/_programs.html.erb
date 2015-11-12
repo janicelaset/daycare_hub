@@ -6,17 +6,62 @@
     </div>
 
     <div id="program-wrapper class="row"">
-      <% @programs.each do |program| %>
-      <div class="col-md-6">
+      <% @programs.each_with_index do |program, index| %>
+      <div class="row">
         <div class="media daycare-profile-program">
-          <div class="media-left">
-          </div>
-          <div class="media-body">
-            <h4><%= program.name %></h4>
-            <p>
-              <%= program.description %>
-            </p>
-          </div>
+          <% if index % 2 == 0 %>
+            <div class="media-left">
+              test
+            </div>
+            <div class="media-body">
+              <div class="col-md-12">
+                <div class="col-md-10">
+                  <h3><%= program.name %></h3>
+                  <p>
+                    <%= program.description %>
+                  </p>
+                </div>
+                <div class="col-md-2">
+                  <h4>Ages</h4>
+                  <p>
+                    <%= program.age_from %> to <%= program.age_to %>
+                  </p>
+
+                  <% if program.available == true %>
+                    true
+                  <% else %>
+                    false
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          <% else %>
+            <div class="media-body">
+              <div class="col-md-12">
+                <div class="col-md-10">
+                  <h3><%= program.name %></h3>
+                  <p>
+                    <%= program.description %>
+                  </p>
+                </div>
+                <div class="col-md-2">
+                  <h4>Ages</h4>
+                  <p>
+                    <%= program.age_from %> to <%= program.age_to %>
+                  </p>
+
+                  <% if program.available == true %>
+                  true
+                  <% else %>
+                  false
+                  <% end %>
+                </div>
+              </div>
+            </div>
+            <div class="media-right">
+              test
+            </div>
+          <% end %>
         </div>
       </div>
       <% end %>

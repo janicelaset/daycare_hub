@@ -1,10 +1,7 @@
-<% if @address != nil %>
-  <div id="daycare-profile-contact">
+<% if @address.id != nil %>
+  <div id="daycare-profile-address">
     <h3>Address</h3>
     <p><%= @address.street %></p>
     <p><%= @address.city %> <%= @address.state %> <%= @address.zip %></p>
-    <h3>Contact</h3>
-    <p><%= @contact.phone %></p>
-    <p><%= @contact.email %></p>
   </div>
 <% end %>

@@ -28,8 +28,8 @@ class ProgramsController < ApplicationController
   def update
     @program = Program.find(params[:id])
     @daycare = Daycare.find(params[:daycare_id])
-
     @program.update(program_params)
+
     respond_to do |format|
       format.html
       format.js
@@ -53,6 +53,6 @@ class ProgramsController < ApplicationController
 
   private
   def program_params
-    params.require(:program).permit(:name, :description, :age_from, :age_from_units, :age_to, :age_to_units, :avalable, :id, :position)
+    params.require(:program).permit(:name, :description, :age_from, :age_from_units, :age_to, :age_to_units, :available, :id, :position)
   end
 end

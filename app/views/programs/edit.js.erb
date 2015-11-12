@@ -1,2 +1,4 @@
 $('#edit-program-<%= @program.id %>').html("<%= j render 'form' %>");
-$('#edit-program-<%= @program.id %>').show();
+$('#edit-program-<%= @program.id %>').prepend("<br><h4>Edit Program</h4><br>");
+$('#edit-program-<%= @program.id %>').hide();
+$('#edit-program-<%= @program.id %>').slideDown(350);
