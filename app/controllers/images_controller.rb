@@ -1,21 +1,21 @@
 class ImagesController < ApplicationController
   def index
-    @images = current_user.daycare.images
-
-    respond_to do |format|
-      format.html
-      format.js
-    end
+    # @images = current_user.daycare.images
+    #
+    # respond_to do |format|
+    #   format.html
+    #   format.js
+    # end
   end
 
   def new
-    @daycare = current_user.daycare
-    @image = Image.new
-
-    respond_to do |format|
-      format.html
-      format.js
-    end
+    # @daycare = current_user.daycare
+    # @image = Image.new
+    #
+    # respond_to do |format|
+    #   format.html
+    #   format.js
+    # end
   end
 
   def create
@@ -23,11 +23,10 @@ class ImagesController < ApplicationController
     @image = Image.new(image_params)
     @image.daycare = @daycare
 
-    if @image.save
-      redirect_to edit_user_daycare_path(current_user, @daycare)
-    else
-      flash[:notice] = "Image not saved"
-    end
+    @image.save
+
+    redirect_to edit_user_daycare_path(current_user, @daycare)
+
   end
 
   private

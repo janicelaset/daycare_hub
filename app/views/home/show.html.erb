@@ -5,19 +5,19 @@
         <div class="col-md-3">
           <strong>Age</strong>
           <button type="button" class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span id="radius-select">5 miles</span>
+          <span id="radius-select">All</span>
           <span class="caret"></span>
           </button>
           <ul class="dropdown-menu">
-            <li><a href="#" onclick="setRadius('5 miles', 5)">5 miles</a></li>
-            <li><a href="#" onclick="setRadius('10 miles', 10)">10 miles</a></li>
-            <li><a href="#" onclick="setRadius('20 miles', 20)">20 miles</a></li>
-            <li><a href="#" onclick="setRadius('30 miles', 30)">30 miles</a></li>
+            <li><a href="#" onclick="setRadius('< 1 Year', 5)">< 1 Year</a></li>
+            <li><a href="#" onclick="setRadius('1 Year', 10)">1 Year</a></li>
+            <li><a href="#" onclick="setRadius('2 Years', 20)">2 Years</a></li>
+            <li><a href="#" onclick="setRadius('3 Years', 30)">3 Years</a></li>
           </ul>
         </div>
       </div>
       <%= form_tag(search_results_path, :method => "get", id: "search-form") do %>
-        <div class="row">
+        <!-- <div class="row">
           <div class="input-group">
             <span class="input-group-btn">
               <button type="button" class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -32,8 +32,8 @@
               </ul>
               <button class="btn btn-success" type="submit">Go!</button>
             </span>
-          </div><!-- /input-group -->
-        </div><!-- /.col-md-8 -->
+          </div>
+        </div> -->
       <% end %>
     </div>
   </div>

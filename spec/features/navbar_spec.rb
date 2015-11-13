@@ -27,7 +27,7 @@ describe "The navbar links" do
     user = daycare.user
     login_as(user, :scope => :user)
     visit user_daycare_path(user, daycare)
-    click_link 'CareHub'
+    click_link 'beebsy'
     expect(page).to have_content('Home')
   end
 
