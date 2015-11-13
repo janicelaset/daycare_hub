@@ -20,7 +20,7 @@ class DaycaresController < ApplicationController
       @contact = @daycare.contact
     end
 
-    if @daycare.images.nil?
+    if @daycare.images.any? == false
       @image = Image.new
     end
 
