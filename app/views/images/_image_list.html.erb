@@ -1,0 +1,33 @@
+<% if @daycare.images.any? %>
+  <ul id="imageList" class="list-unstyled" data-update-url="<%= move_daycare_images_path(@daycare) %>">
+    <% @daycare.images.each do |image| %>
+      <li class="panel panel-info" id="image-<%= image.id %>">
+        <div class="panel-heading">
+          <span id="panel-name-image-<%= image.id %>">
+            <%= image.picture_file_name %>
+          </span>
+          <%= link_to edit_daycare_image_path(@daycare, image), id: "image-edit-#{image.id}", remote:true do %>
+            <span><i class="glyphicon glyphicon-pencil pull-right"></i></span>
+          <% end %>
+          <%= link_to daycare_image_path(@daycare, image), method: 'delete', data: { confirm: "Are you sure you want do delete #{image.picture_file_name}?" }, id: "image-delete-#{image.id}", remote:true do %>
+            <span><i class="glyphicon glyphicon-trash pull-right"></i></span>
+          <% end %>
+        </div>
+        <div class="panel-body">
+          <div class="media">
+            <div class="media-left media-top">
+              <%= image_tag image.picture.url(:thumb) %>
+            </div>
+            <div class="media-body">
+              <h4>Description</h4>
+              <%= image.description %>
+            </div>
+          </div>
+        </div>
+      </li>
+      <div id="edit-image-<%= image.id %>">
+      </div>
+    <% end %>
+  </ul>
+  <hr>
+<% end %>

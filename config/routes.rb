@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   end
 
   resources :daycares do
-    resources :images
+    resources :images, only: [:create, :edit, :update, :destroy] do
+      collection { post :move }
+    end
   end
 
   resources :daycares do

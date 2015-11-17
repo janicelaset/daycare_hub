@@ -9,13 +9,14 @@
       </div>
     </a>
     <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-      <div id="image-add-form" class="panel-body">
-        <% if @daycare.images.any? %>
-          <% @daycare.images.each do |image| %>
-            <%= image_tag image.picture.url(:thumb) %>
-          <% end %>
-        <% end %>
-        <%= render "images/form" %>
+      <div class="panel-body">
+        <span id="image-add-list">
+          <%= render 'images/image_list' %>
+        </span>
+        <h4>Add an Image</h4>
+        <span id="image-add-form">
+          <%= render "images/form" %>
+        </span>
       </div>
     </div>
   </div>

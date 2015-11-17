@@ -1,5 +1,5 @@
 
-<%= form_for [@daycare, @program], remote: true, :html => { :class => "form-horizontal", :multipart => true } do |f| %>
+<%= form_for [@daycare, @program], :html => { :class => "form-horizontal", :multipart => true }, remote: true do |f| %>
   <div class="form-group">
     <%= f.label :name, class: 'control-label col-md-1' %>
     <div class="col-md-4 daycare-edit-field">
