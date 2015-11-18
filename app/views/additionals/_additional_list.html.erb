@@ -1,0 +1,33 @@
+<% if @daycare.additionals.any? %>
+  <ul id="additionalList" class="list-unstyled" data-update-url="<%= move_daycare_additionals_path(@daycare) %>">
+    <% @daycare.additionals.each do |additional| %>
+      <li class="panel panel-info" id="additional-<%= additional.id %>">
+        <div class="panel-heading">
+          <span id="panel-name-additional-<%= additional.id %>">
+            <%= additional.title %>
+          </span>
+          <%= link_to edit_daycare_additional_path(@daycare, additional), id: "additional-edit-#{additional.id}", remote:true do %>
+            <span><i class="glyphicon glyphicon-pencil pull-right"></i></span>
+          <% end %>
+          <%= link_to daycare_additional_path(@daycare, additional), method: 'delete', data: { confirm: "Are you sure you want do delete #{additional.title}?" }, id: "additional-delete-#{additional.id}", remote:true do %>
+            <span><i class="glyphicon glyphicon-trash pull-right"></i></span>
+          <% end %>
+        </div>
+        <div class="panel-body">
+          <div class="media">
+            <div class="media-left media-top">
+              <%= image_tag additional.image.url(:small) %>
+            </div>
+            <div class="media-body">
+              <h4 id="header-name-additional-<%= additional.id %>"><%= additional.title %></h4>
+              <%= additional.content %>
+            </div>
+          </div>
+        </div>
+      </li>
+      <div id="edit-additional-<%= additional.id %>">
+      </div>
+    <% end %>
+  </ul>
+  <hr>
+<% end %>

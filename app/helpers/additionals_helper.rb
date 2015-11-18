@@ -1,0 +1,2 @@
+module AdditionalsHelper
+end

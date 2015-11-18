@@ -1,0 +1,12 @@
+$('#additional-add-edit-glyph').html('<%= j render 'additionals/add_edit_glyph' %>');
+$('#additional-edit-list').html('<%= j render 'additionals/additional_list' %>');
+// $('#additional-edit-form').html('<%= j render 'additionals/form' %>');
+
+$('#additionalList').sortable({
+    axis: 'y',
+    panel: '.panel-heading',
+    update: function() {
+      $.post($(this).data('update-url'), $(this).sortable('serialize'))
+    }
+  }
+);

@@ -1,0 +1,25 @@
+<div class="panel-daycare-edit">
+  <div class="panel panel-default">
+    <a id="daycare-edit-additional" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+      <div class="panel-heading" role="tab" id="headingNine">
+        <h4 class="panel-title">
+          <div id="additional-add-edit-glyph">
+            <%= render 'additionals/add_edit_glyph' %>
+          </div>
+          Additional Information
+        </h4>
+      </div>
+    </a>
+    <div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+      <div class="panel-body">
+        <span id="additional-edit-list">
+          <%= render 'additionals/additional_list' %>
+        </span>
+        <h4>Add Information</h4>
+        <span id="additional-edit-form">
+          <%= render 'additionals/form' %>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

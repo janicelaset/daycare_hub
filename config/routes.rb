@@ -44,6 +44,12 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :daycares do
+    resources :additionals, only: [:create, :edit, :update, :destroy] do
+      collection { post :move }
+    end
+  end
+
 
   get "/search-results", to: "home#show", as: "search_results"
 

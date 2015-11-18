@@ -91,6 +91,7 @@ class DaycaresController < ApplicationController
 
     @teacher = Teacher.new
 
+    @additional = Additional.new
 
     respond_to do |format|
       format.html

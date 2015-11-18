@@ -1,0 +1,32 @@
+
+<%= form_for [@daycare, @additional], :html => { :class => "form-horizontal", :multipart => true }, remote: true do |f| %>
+  <div class="form-group">
+    <%= f.label :title, class: 'control-label col-md-1' %>
+    <div class="col-md-4 daycare-edit-field">
+      <%= f.text_field :title, id: "additional-edit-name#{@additional.id}", class: 'form-control additional-edit-name', required: true, placeholder: "" %>
+    </div>
+
+    <%= f.label :content, class: 'control-label col-md-1' %>
+    <div class="col-md-11 daycare-edit-field">
+      <%= f.text_area :content, class: 'form-control', required: true, rows: "5" %>
+    </div>
+
+    <div class="col-md-12">
+      <br>
+      <%= f.label 'Add Photo', class: 'control-label col-sm-2' %>
+      <div class="col-md-2">
+        <%= f.file_field :picture %>
+      </div>
+    </div>
+
+    <div class="pull-right col-md-3">
+      <%= f.submit class:'btn btn-primary btn-block' %>
+    </div>
+
+  <% if @additional.title != nil %>
+      <div class="pull-right col-md-3">
+        <button class="btn btn-primary btn-block pull-right" onclick="hideTeacherForm('<%= @additional.id %>')" id="cancel-additional-edit">Cancel</button>
+      </div>
+  <% end %>
+  </div>
+<% end %>
