@@ -6,6 +6,7 @@ class Daycare < ActiveRecord::Base
   has_many :teachers
   has_many :programs
   has_one :summary
+  has_many :certifications
 
   validates :name, :presence => true
 end
