@@ -10,8 +10,8 @@
 
     <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
     <div class="col-sm-12 daycare-edit-field">
-      <span class="btn btn-primary btn-file">
-        Select Image<%= f.file_field :picture, onchange: "$('#image-form').submit();", class: "btn-block", id: "btn-select-image" %>
+      <span class="btn btn-primary btn-file pull-right">
+        Add Image<%= f.file_field :picture, onchange: "$('#image-form').submit();", class: "btn-block", id: "btn-select-image" %>
       </span>
     </div>
     <!-- <div class="pull-right col-sm-3">

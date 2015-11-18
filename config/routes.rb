@@ -33,6 +33,12 @@ Rails.application.routes.draw do
   end
 
   resources :daycares do
+    resources :certifications, only: [:create, :edit, :update, :destroy] do
+      collection { post :move }
+    end
+  end
+
+  resources :daycares do
     resources :teachers, only: [:create, :edit, :update, :destroy] do
       collection { post :move }
     end

@@ -72,7 +72,7 @@ class DaycaresController < ApplicationController
     else
       @summary = @daycare.summary
     end
-    
+
     if @daycare.address.nil? #if user has not added address
       @address = Address.new
     else
@@ -82,6 +82,8 @@ class DaycaresController < ApplicationController
     @image = Image.new
 
     @program = Program.new
+
+    @certification = Certification.new
 
     if @daycare.teachers.any? #if user has not added any teachers
       @teachers = @daycare.teachers.order("position")

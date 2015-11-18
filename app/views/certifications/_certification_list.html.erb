@@ -1,0 +1,33 @@
+<% if @daycare.certifications.any? %>
+  <ul id="certificationList" class="list-unstyled" data-update-url="<%= move_daycare_certifications_path(@daycare) %>">
+    <% @daycare.certifications.each do |certification| %>
+      <li class="panel panel-info" id="certification-<%= certification.id %>">
+        <div class="panel-heading">
+          <span id="panel-name-certification-<%= certification.id %>">
+            <%= certification.name %>
+          </span>
+          <%= link_to edit_daycare_certification_path(@daycare, certification), id: "certification-edit-#{certification.id}", remote:true do %>
+            <span><i class="glyphicon glyphicon-pencil pull-right"></i></span>
+          <% end %>
+          <%= link_to daycare_certification_path(@daycare, certification), method: 'delete', data: { confirm: "Are you sure you want do delete #{certification.name}?" }, id: "certification-delete-#{certification.id}", remote:true do %>
+            <span><i class="glyphicon glyphicon-trash pull-right"></i></span>
+          <% end %>
+        </div>
+        <div class="panel-body">
+          <div class="media">
+            <div class="media-left media-top">
+              <%= image_tag certification.image.url(:small) %>
+            </div>
+            <div class="media-body">
+              <h4 id="header-name-certification-<%= certification.id %>"><%= certification.name %></h4>
+              <%= certification.description %>
+            </div>
+          </div>
+        </div>
+      </li>
+      <div id="edit-certification-<%= certification.id %>">
+      </div>
+    <% end %>
+  </ul>
+  <hr>
+<% end %>

@@ -85,7 +85,7 @@ a > .panel-heading {
 .btn-file {
     position: relative;
     overflow: hidden;
-    float: right;
+    // float: right;
     width: 14.5em;
 }
 .btn-file input[type=file] {
@@ -102,4 +102,9 @@ a > .panel-heading {
     background: white;
     cursor: inherit;
     display: block;
+}
+
+.label-image-upload {
+  font-size: 1em;
+  font-weight: normal;
 }

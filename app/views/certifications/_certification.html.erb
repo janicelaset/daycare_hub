@@ -1,0 +1,25 @@
+<div class="panel-daycare-edit">
+  <div class="panel panel-default">
+    <a id="daycare-edit-certification" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+      <div class="panel-heading" role="tab" id="headingSeven">
+        <h4 class="panel-title">
+          <div id="certification-add-edit-glyph">
+            <%= render 'certifications/add_edit_glyph' %>
+          </div>
+          Certifications
+        </h4>
+      </div>
+    </a>
+    <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+      <div class="panel-body">
+        <span id="certification-edit-list">
+          <%= render 'certifications/certification_list' %>
+        </span>
+        <h4>Add Certification</h4>
+        <span id="certification-edit-form">
+          <%= render 'certifications/form' %>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

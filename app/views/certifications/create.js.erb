@@ -1,0 +1,15 @@
+$('#certification-add-edit-glyph').html('<%= j render 'certifications/add_edit_glyph' %>');
+$('#certification-edit-list').html('<%= j render 'certifications/certification_list' %>');
+$('#certification-edit-name<%= @certification.id %>').val("");
+$('#certification-edit-link<%= @certification.id %>').val("");
+$('#certification-edit-desc<%= @certification.id %>').val("");
+// $('#certification-edit-form').html('<%= j render 'certifications/form' %>');
+
+// $('#certificationList').sortable({
+//     axis: 'y',
+//     panel: '.panel-heading',
+//     update: function() {
+//       $.post($(this).data('update-url'), $(this).sortable('serialize'))
+//     }
+//   }
+// );
