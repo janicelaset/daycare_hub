@@ -61,8 +61,8 @@
         null,
         null,
         1,
-        59,
-        59,
+        63,
+        63,
         null,
         null,
         null,
@@ -534,6 +534,14 @@
         null,
         null
       ],
+      "/Users/Guest/Desktop/daycare_hub/spec/factories/additionals.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/Guest/Desktop/daycare_hub/spec/factories/addresses.rb": [
         1,
         1,
@@ -654,6 +662,12 @@
         null,
         null,
         null,
+        1,
+        1,
+        2,
+        null,
+        null,
+        null,
         null,
         1,
         null,
@@ -755,6 +769,10 @@
         1,
         null
       ],
+      "/Users/Guest/Desktop/daycare_hub/app/helpers/certifications_helper.rb": [
+        1,
+        null
+      ],
       "/Users/Guest/Desktop/daycare_hub/app/helpers/contacts_helper.rb": [
         1,
         null
@@ -846,6 +864,37 @@
         1,
         1,
         null,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/daycare_hub/spec/controllers/certifications_controller_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/daycare_hub/app/controllers/certifications_controller.rb": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        0,
         null,
         null
       ],
@@ -978,6 +1027,8 @@
         null,
         2,
         null,
+        null,
+        17,
         null,
         17,
         null,
@@ -1742,6 +1793,23 @@
         1,
         null
       ],
+      "/Users/Guest/Desktop/daycare_hub/spec/helpers/certifications_helper_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
       "/Users/Guest/Desktop/daycare_hub/spec/helpers/contacts_helper_spec.rb": [
         1,
         null,
@@ -1872,6 +1940,30 @@
         1,
         null
       ],
+      "/Users/Guest/Desktop/daycare_hub/spec/models/additional_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        null,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/daycare_hub/app/models/additional.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
       "/Users/Guest/Desktop/daycare_hub/spec/models/address_spec.rb": [
         1,
         null,
@@ -1954,11 +2046,13 @@
         2,
         2,
         2,
+        2,
         null,
         2,
         null
       ],
       "/Users/Guest/Desktop/daycare_hub/app/models/daycare.rb": [
+        1,
         1,
         1,
         1,
@@ -2064,6 +2158,6 @@
         null
       ]
     },
-    "timestamp": 1447875265
+    "timestamp": 1447886715
   }
 }

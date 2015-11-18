@@ -9,6 +9,7 @@ RSpec.describe Daycare, type: :model do
   it { should have_many :teachers }
   it { should have_many :certifications }
   it { should have_one :summary }
+  it { should have_many :additionals }
 
   it { should validate_presence_of :name }
 end
