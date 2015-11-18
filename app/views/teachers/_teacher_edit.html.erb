@@ -20,7 +20,7 @@
             </div>
             <div class="media-body">
               <h4 id="header-name-teacher-<%= teacher.id %>"><%= teacher.name %></h4>
-              <%= teacher.about %>
+              <%= simple_format h teacher.about %>
             </div>
           </div>
         </div>
