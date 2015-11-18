@@ -8,9 +8,9 @@ describe "The daycare search process" do
     login_as(user, :scope => :user)
     visit edit_user_daycare_path(user, daycare)
     click_link 'daycare-add-image'
-    attach_file('image_picture', 'spec/images/daycare.jpg')
-    fill_in 'image-edit-desc', :with => 'Photo Description'
-    click_button 'Add Image'
+    attach_file('image[picture]', 'spec/images/daycare.jpg')
+    # fill_in 'image-edit-desc', :with => 'Photo Description'
+    # click_button 'Add Image'
     visit root_path
     fill_in 'search-text-field', :with => '17683 SW Farmington Rd Aloha, OR 97007'
     click_button 'Go!'

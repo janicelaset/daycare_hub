@@ -20,6 +20,12 @@ class DaycaresController < ApplicationController
       @contact = @daycare.contact
     end
 
+    if @daycare.summary.nil?
+      @summary = Summary.new
+    else
+      @summary = @daycare.summary
+    end
+
     if @daycare.images.any? == false
       @image = Image.new
     end
@@ -61,6 +67,12 @@ class DaycaresController < ApplicationController
       @contact = @daycare.contact
     end
 
+    if @daycare.summary.nil?
+      @summary = Summary.new
+    else
+      @summary = @daycare.summary
+    end
+    
     if @daycare.address.nil? #if user has not added address
       @address = Address.new
     else

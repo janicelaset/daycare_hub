@@ -1,0 +1,19 @@
+<div class="panel-daycare-edit">
+  <div class="panel panel-default">
+    <a id="daycare-edit-summary" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+      <div class="panel-heading" role="tab" id="headingFour">
+        <h4 class="panel-title">
+          <div id="summary-add-edit-glyph">
+            <%= render 'summaries/add_edit_glyph' %>
+          </div>
+          Summary
+        </h4>
+      </div>
+    </a>
+    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+      <div id="summary-edit-form" class="panel-body">
+        <%= render 'summaries/form' %>
+      </div>
+    </div>
+  </div>
+</div>
