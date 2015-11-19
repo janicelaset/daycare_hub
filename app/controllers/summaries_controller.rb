@@ -24,6 +24,20 @@ class SummariesController < ApplicationController
     end
   end
 
+  def destroy
+    @daycare = Daycare.find(params[:daycare_id])
+    @summary = Summary.find(params[:id])
+    @summary.destroy
+
+    @summary = Summary.new
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+
+  end
+
   private
   def summary_params
     params.require(:summary).permit(:content)

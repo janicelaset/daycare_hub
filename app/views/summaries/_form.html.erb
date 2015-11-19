@@ -10,5 +10,11 @@
     <div class="pull-right col-sm-3">
       <%= f.submit class:'btn btn-primary btn-block' %>
     </div>
+
+    <% if @summary.id != nil %>
+      <div class="pull-right col-sm-3">
+        <%= link_to "Delete Summary", daycare_summary_path(@daycare, @summary), class:'btn btn-primary pull-right', method: 'delete', data: { confirm: "Are you sure you want do delete summary?" }, remote: true %>
+      </div>
+    <% end %>
   </div>
 <% end %>
