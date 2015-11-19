@@ -15,6 +15,27 @@ class ImagesController < ApplicationController
     end
   end
 
+  def edit
+    @daycare = Daycare.find(params[:daycare_id])
+    @image = Image.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
+  def update
+    @image = Image.find(params[:id])
+    @daycare = Daycare.find(params[:daycare_id])
+    @image.update(image_params)
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   def destroy
     @image = Image.find(params[:id])
     @image.destroy

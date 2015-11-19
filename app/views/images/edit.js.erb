@@ -1,0 +1,4 @@
+$('#edit-image-<%= @image.id %>').html("<%= j render 'form' %>");
+$('#edit-image-<%= @image.id %>').prepend("<br><h4>Edit Image</h4><br>");
+$('#edit-image-<%= @image.id %>').hide();
+$('#edit-image-<%= @image.id %>').slideDown(350);
