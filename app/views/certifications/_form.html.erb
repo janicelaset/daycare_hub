@@ -20,7 +20,7 @@
       <span class="btn btn-default btn-file">
         Select Image<%= f.file_field :image, class: "btn-block", id: "btn-select-image", onchange: "$('#upload-file-info').html($(this).val());" %>
       </span>
-      <span class='label label-default label-image-upload' id="upload-file-info"></span>
+      <span class='label label-default label-image-upload' id="certification-upload-file-info<%= @certification.id %>"></span>
     </div>
 
     <div class="pull-right col-md-3">

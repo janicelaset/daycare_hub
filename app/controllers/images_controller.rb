@@ -41,6 +41,16 @@ class ImagesController < ApplicationController
     @image.destroy
   end
 
+  def move
+    @daycare = Daycare.find(params[:daycare_id])
+
+    params['image'].each_with_index do |id, index|
+      image = Image.find(id)
+      image.update_attribute(:position, index+1) if image
+    end
+    render nothing: true
+  end
+
   private
   def image_params
     params.require(:image).permit(:picture, :description)
