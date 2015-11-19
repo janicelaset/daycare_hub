@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-11-18T16:11:05-08:00">2015-11-18T16:11:05-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-11-18T16:41:13-08:00">2015-11-18T16:41:13-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">97.55%</span></span>
+    (<span class="covered_percent"><span class="green">96.44%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.93
+         1.91
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>102</b> files in total.
-    <b>980</b> relevant lines. 
-    <span class="green"><b>956</b> lines covered</span> and
-    <span class="red"><b>24</b> lines missed </span>
+    <b>984</b> relevant lines. 
+    <span class="green"><b>949</b> lines covered</span> and
+    <span class="red"><b>35</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -152,12 +152,12 @@
       
       <tr>
         <td class="strong"><a href="#91d7dca4556a0cb2cdb2b6081c4abf31d292fa41" class="src_link" title="app/controllers/teachers_controller.rb">app/controllers/teachers_controller.rb</a></td>
-        <td class="green strong">100.0 %</td>
+        <td class="red strong">77.14 %</td>
         <td>59</td>
         <td>35</td>
-        <td>35</td>
-        <td>0</td>
-        <td>1.5</td>
+        <td>27</td>
+        <td>8</td>
+        <td>1.2</td>
       </tr>
       
       <tr>
@@ -782,12 +782,12 @@
       
       <tr>
         <td class="strong"><a href="#f7752a021812638e5c308a4bb99ba29c3259cb0c" class="src_link" title="spec/features/image_spec.rb">spec/features/image_spec.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>28</td>
-        <td>20</td>
-        <td>20</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td class="green strong">91.3 %</td>
+        <td>42</td>
+        <td>23</td>
+        <td>21</td>
+        <td>2</td>
+        <td>0.9</td>
       </tr>
       
       <tr>
@@ -1052,12 +1052,12 @@
       
       <tr>
         <td class="strong"><a href="#a2ef16fd0671fa6725b238381e2160d0091ad1f1" class="src_link" title="spec/rails_helper.rb">spec/rails_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>83</td>
+        <td class="green strong">96.67 %</td>
+        <td>84</td>
+        <td>30</td>
         <td>29</td>
-        <td>29</td>
-        <td>0</td>
-        <td>5.6</td>
+        <td>1</td>
+        <td>5.4</td>
       </tr>
       
       <tr>
@@ -3729,11 +3729,11 @@
         <div class="source_table" id="91d7dca4556a0cb2cdb2b6081c4abf31d292fa41">
   <div class="header">
     <h3>app/controllers/teachers_controller.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="red">77.14 %</span> covered</h4>
     <div>
       <b>35</b> relevant lines. 
-      <span class="green"><b>35</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <span class="green"><b>27</b> lines covered</span> and
+      <span class="red"><b>8</b> lines missed.</span>
     </div>
   </div>
   
@@ -3758,20 +3758,20 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="4">
+          
           
           <code class="ruby">    @teacher = Teacher.new(teacher_params)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="5">
+          
           
           <code class="ruby">    @daycare = Daycare.find(params[:daycare_id])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="6">
+          
           
           <code class="ruby">    @teacher.daycare = @daycare</code>
         </li>
@@ -3782,8 +3782,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="8">
+          
           
           <code class="ruby">    @teacher.save</code>
         </li>
@@ -3800,8 +3800,8 @@
           <code class="ruby">    #create new teacher to display create teacher form so users can add more teachers</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="11">
+          
           
           <code class="ruby">    @teacher = Teacher.new</code>
         </li>
@@ -3812,20 +3812,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="13">
+          
           
           <code class="ruby">    respond_to do |format|</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="14">
+          
           
           <code class="ruby">      format.html</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="15">
+          
           
           <code class="ruby">      format.js</code>
         </li>
@@ -4076,8 +4076,8 @@
           <code class="ruby">  def teacher_params</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="57">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="57">
+          <span class="hits">2</span>
           
           <code class="ruby">    params.require(:teacher).permit(:name, :about, :picture, :id, :position)</code>
         </li>
@@ -11037,11 +11037,11 @@
         <div class="source_table" id="f7752a021812638e5c308a4bb99ba29c3259cb0c">
   <div class="header">
     <h3>spec/features/image_spec.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="green">91.3 %</span> covered</h4>
     <div>
-      <b>20</b> relevant lines. 
-      <span class="green"><b>20</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>23</b> relevant lines. 
+      <span class="green"><b>21</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
     </div>
   </div>
   
@@ -11054,163 +11054,247 @@
           <code class="ruby">require &#39;rails_helper&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="2">
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;spec_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
-          
-          <code class="ruby">describe &quot;Image crud process&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  it &quot;allows user to add image to daycare&quot;, js: true do</code>
+          <code class="ruby">describe &quot;Image crud process&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">    daycare = FactoryGirl.create(:daycare)</code>
+          <code class="ruby">  it &quot;allows user to add image to daycare&quot;, js: true do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">    user = daycare.user</code>
+          <code class="ruby">    daycare = FactoryGirl.create(:daycare)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">    login_as(user, :scope =&gt; :user)</code>
+          <code class="ruby">    user = daycare.user</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">    visit edit_user_daycare_path(user, daycare)</code>
+          <code class="ruby">    login_as(user, :scope =&gt; :user)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">    click_link &#39;daycare-add-image&#39;</code>
+          <code class="ruby">    visit edit_user_daycare_path(user, daycare)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
+          <code class="ruby">    click_link &#39;daycare-add-image&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
           <code class="ruby">    fill_in &#39;image-edit-desc&#39;, :with =&gt; &#39;Photo Description&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby">    # click_on &#39;btn-select-image&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
           <code class="ruby">    attach_file(&#39;image[picture]&#39;, &#39;spec/images/daycare.jpg&#39;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="13">
-          
-          
-          <code class="ruby">    # find(&#39;.dropdown&#39;).click</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
           
           
+          <code class="ruby">    # find(&#39;.dropdown&#39;).click</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
           <code class="ruby">    # find(&#39;#menu-view-daycare&#39;).click</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
+        <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
           <code class="ruby">    expect(page).to have_content &#39;daycare.jpg&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
           <code class="ruby">  it &quot;allows user to delete image for daycare&quot;, js: true do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
+        <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
           <code class="ruby">    daycare = FactoryGirl.create(:daycare)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="20">
+        <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
           <code class="ruby">    user = daycare.user</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
           <code class="ruby">    login_as(user, :scope =&gt; :user)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="22">
+        <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
           <code class="ruby">    visit edit_user_daycare_path(user, daycare)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="23">
+        <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
           <code class="ruby">    click_link &#39;daycare-add-image&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="24">
+        <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
           <code class="ruby">    fill_in &#39;image-edit-desc&#39;, :with =&gt; &#39;Photo Description&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
+        <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
           <code class="ruby">    attach_file(&#39;image[picture]&#39;, &#39;spec/images/daycare.jpg&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="26">
+        <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
+          
+          <code class="ruby">    page.should have_selector?(&quot;#image-delete-#{daycare.images.first.id}&quot;)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="28">
+          
+          
+          <code class="ruby">    find(&quot;#image-delete-#{daycare.images.first.id}&quot;).trigger(&#39;click&#39;)  #icon is on draggable panel header(overlapping elements)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="29">
+          
           
           <code class="ruby">    expect(page).to_not have_content &#39;daycare.jpg&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">  # it &quot;allows user to update image for daycare&quot;, js: true do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">  #   daycare = FactoryGirl.create(:daycare)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby">  #   user = daycare.user</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">  #   login_as(user, :scope =&gt; :user)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby">  #   visit edit_user_daycare_path(user, daycare)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby">  #   click_link &#39;daycare-add-image&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby">  #   fill_in &#39;image-edit-desc&#39;, :with =&gt; &#39;Photo Description&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby">  #   attach_file(&#39;image[picture]&#39;, &#39;spec/images/daycare.jpg&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">  #   expect(page).to_not have_content &#39;daycare.jpg&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">  # end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
           
           
           <code class="ruby">end</code>
@@ -14853,11 +14937,11 @@
         <div class="source_table" id="a2ef16fd0671fa6725b238381e2160d0091ad1f1">
   <div class="header">
     <h3>spec/rails_helper.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="green">96.67 %</span> covered</h4>
     <div>
-      <b>29</b> relevant lines. 
+      <b>30</b> relevant lines. 
       <span class="green"><b>29</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -14942,421 +15026,427 @@
           <code class="ruby">  # Capybara::Poltergeist::Driver.new(app, options)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="missed" data-hits="0" data-linenumber="14">
+          
+          
+          <code class="ruby">  Capybara::Poltergeist::Driver.new(app, {debug: false, :default_wait_time =&gt; 30, :timeout =&gt; 90})</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
-          
-          <code class="ruby">require &#39;phantomjs&#39; # &lt;-- Not required if your app does Bundler.require automatically (e.g. when using Rails)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
-          <code class="ruby">Capybara.register_driver :poltergeist do |app|</code>
+          <code class="ruby">require &#39;phantomjs&#39; # &lt;-- Not required if your app does Bundler.require automatically (e.g. when using Rails)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
-          <code class="ruby">  Capybara::Poltergeist::Driver.new(app, :phantomjs =&gt; Phantomjs.path)</code>
+          <code class="ruby">Capybara.register_driver :poltergeist do |app|</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">end</code>
+          <code class="ruby">  Capybara::Poltergeist::Driver.new(app, :phantomjs =&gt; Phantomjs.path)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
           
           
-          <code class="ruby"># Add additional requires below this line. Rails is not loaded until this point!</code>
+          <code class="ruby">end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
           
           
-          <code class="ruby"></code>
+          <code class="ruby"># Add additional requires below this line. Rails is not loaded until this point!</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
           
           
-          <code class="ruby"># Requires supporting ruby files with custom matchers and macros, etc, in</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
           
           
-          <code class="ruby"># spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are</code>
+          <code class="ruby"># Requires supporting ruby files with custom matchers and macros, etc, in</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="23">
           
           
-          <code class="ruby"># run as spec files by default. This means that files in spec/support that end</code>
+          <code class="ruby"># spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
           
           
-          <code class="ruby"># in _spec.rb will both be required and run as specs, causing the specs to be</code>
+          <code class="ruby"># run as spec files by default. This means that files in spec/support that end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby"># run twice. It is recommended that you do not name files matching this glob to</code>
+          <code class="ruby"># in _spec.rb will both be required and run as specs, causing the specs to be</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
           
           
-          <code class="ruby"># end with _spec.rb. You can configure this pattern with the --pattern</code>
+          <code class="ruby"># run twice. It is recommended that you do not name files matching this glob to</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
           
           
-          <code class="ruby"># option on the command line or in ~/.rspec, .rspec or `.rspec-local`.</code>
+          <code class="ruby"># end with _spec.rb. You can configure this pattern with the --pattern</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="28">
           
           
-          <code class="ruby">#</code>
+          <code class="ruby"># option on the command line or in ~/.rspec, .rspec or `.rspec-local`.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="29">
           
           
-          <code class="ruby"># The following line is provided for convenience purposes. It has the downside</code>
+          <code class="ruby">#</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="30">
           
           
-          <code class="ruby"># of increasing the boot-up time by auto-requiring all files in the support</code>
+          <code class="ruby"># The following line is provided for convenience purposes. It has the downside</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="31">
           
           
-          <code class="ruby"># directory. Alternatively, in the individual `*_spec.rb` files, manually</code>
+          <code class="ruby"># of increasing the boot-up time by auto-requiring all files in the support</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="32">
           
           
-          <code class="ruby"># require only the support files necessary.</code>
+          <code class="ruby"># directory. Alternatively, in the individual `*_spec.rb` files, manually</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
           
           
-          <code class="ruby">#</code>
+          <code class="ruby"># require only the support files necessary.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="34">
           
           
-          <code class="ruby"># Dir[Rails.root.join(&#39;spec/support/**/*.rb&#39;)].each { |f| require f }</code>
+          <code class="ruby">#</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">
           
           
-          <code class="ruby"></code>
+          <code class="ruby"># Dir[Rails.root.join(&#39;spec/support/**/*.rb&#39;)].each { |f| require f }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="36">
           
           
-          <code class="ruby"># Checks for pending migrations before tests are run.</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="37">
           
           
+          <code class="ruby"># Checks for pending migrations before tests are run.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
           <code class="ruby"># If you are not using ActiveRecord, you can remove this line.</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="38">
+        <li class="covered" data-hits="1" data-linenumber="39">
           <span class="hits">1</span>
           
           <code class="ruby">ActiveRecord::Migration.maintain_test_schema!</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="40">
+        <li class="covered" data-hits="1" data-linenumber="41">
           <span class="hits">1</span>
           
           <code class="ruby">RSpec.configure do |config|</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="never" data-hits="" data-linenumber="42">
           
           
           <code class="ruby">  # Remove this line if you&#39;re not using ActiveRecord or ActiveRecord fixtures</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="42">
+        <li class="covered" data-hits="1" data-linenumber="43">
           <span class="hits">1</span>
           
           <code class="ruby">  config.fixture_path = &quot;#{::Rails.root}/spec/fixtures&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="44">
           
           
-          <code class="ruby">  # If you&#39;re not using ActiveRecord, or you&#39;d prefer not to run each of your</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="45">
           
           
-          <code class="ruby">  # examples within a transaction, remove the following line or assign false</code>
+          <code class="ruby">  # If you&#39;re not using ActiveRecord, or you&#39;d prefer not to run each of your</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="46">
           
           
-          <code class="ruby">  # instead of true.</code>
+          <code class="ruby">  # examples within a transaction, remove the following line or assign false</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="47">
           
           
-          <code class="ruby">  # config.use_transactional_fixtures = true</code>
+          <code class="ruby">  # instead of true.</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="48">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="48">
           
-          <code class="ruby">  config.before(:suite) do</code>
+          
+          <code class="ruby">  # config.use_transactional_fixtures = true</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="49">
           <span class="hits">1</span>
           
-          <code class="ruby">    DatabaseCleaner.strategy = :truncation</code>
+          <code class="ruby">  config.before(:suite) do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    DatabaseCleaner.strategy = :truncation</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="51">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="52">
+        <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
           <code class="ruby">  config.around(:each) do |example|</code>
         </li>
       
-        <li class="covered" data-hits="67" data-linenumber="53">
+        <li class="covered" data-hits="67" data-linenumber="54">
           <span class="hits">67</span>
           
           <code class="ruby">    DatabaseCleaner.cleaning do</code>
         </li>
       
-        <li class="covered" data-hits="67" data-linenumber="54">
+        <li class="covered" data-hits="67" data-linenumber="55">
           <span class="hits">67</span>
           
           <code class="ruby">      example.run</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="55">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="56">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="57">
           
           
-          <code class="ruby">  # RSpec Rails can automatically mix in different behaviours to your tests</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="58">
           
           
-          <code class="ruby">  # based on their file location, for example enabling you to call `get` and</code>
+          <code class="ruby">  # RSpec Rails can automatically mix in different behaviours to your tests</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="59">
           
           
-          <code class="ruby">  # `post` in specs under `spec/controllers`.</code>
+          <code class="ruby">  # based on their file location, for example enabling you to call `get` and</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="60">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  # `post` in specs under `spec/controllers`.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="61">
           
           
-          <code class="ruby">  # You can disable this behaviour by removing the line below, and instead</code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="62">
           
           
-          <code class="ruby">  # explicitly tag your specs with their type, e.g.:</code>
+          <code class="ruby">  # You can disable this behaviour by removing the line below, and instead</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="63">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  # explicitly tag your specs with their type, e.g.:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="64">
           
           
-          <code class="ruby">  #     RSpec.describe UsersController, :type =&gt; :controller do</code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="65">
           
           
-          <code class="ruby">  #       # ...</code>
+          <code class="ruby">  #     RSpec.describe UsersController, :type =&gt; :controller do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="66">
           
           
-          <code class="ruby">  #     end</code>
+          <code class="ruby">  #       # ...</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="67">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  #     end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="68">
           
           
-          <code class="ruby">  # The different available types are documented in the features, such as in</code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="69">
           
           
+          <code class="ruby">  # The different available types are documented in the features, such as in</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="70">
+          
+          
           <code class="ruby">  # https://relishapp.com/rspec/rspec-rails/docs</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="70">
+        <li class="covered" data-hits="1" data-linenumber="71">
           <span class="hits">1</span>
           
           <code class="ruby">  config.infer_spec_type_from_file_location!</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="71">
+        <li class="never" data-hits="" data-linenumber="72">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="72">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  config.include Warden::Test::Helpers</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="73">
           <span class="hits">1</span>
           
-          <code class="ruby">  config.before :suite do</code>
+          <code class="ruby">  config.include Warden::Test::Helpers</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="74">
           <span class="hits">1</span>
           
-          <code class="ruby">    Warden.test_mode!</code>
+          <code class="ruby">  config.before :suite do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="75">
+        <li class="covered" data-hits="1" data-linenumber="75">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    Warden.test_mode!</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="76">
           
           
-          <code class="ruby">end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="77">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="78">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="78">
           
-          <code class="ruby">Shoulda::Matchers.configure do |config|</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="79">
           <span class="hits">1</span>
           
-          <code class="ruby">  config.integrate do |with|</code>
+          <code class="ruby">Shoulda::Matchers.configure do |config|</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="80">
           <span class="hits">1</span>
           
-          <code class="ruby">    with.test_framework :rspec</code>
+          <code class="ruby">  config.integrate do |with|</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="81">
           <span class="hits">1</span>
           
+          <code class="ruby">    with.test_framework :rspec</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="82">
+          <span class="hits">1</span>
+          
           <code class="ruby">    with.library :rails</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="82">
+        <li class="never" data-hits="" data-linenumber="83">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="83">
+        <li class="never" data-hits="" data-linenumber="84">
           
           
           <code class="ruby">end</code>
