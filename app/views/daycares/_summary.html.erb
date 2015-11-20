@@ -1,5 +1,5 @@
 <% if @summary.id != nil %>
 <div id="daycare-profile-summary">
-  <%= @summary.content %>
+  <%= simple_format h @summary.content %>
 </div>
 <% end %>
