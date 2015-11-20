@@ -2,9 +2,8 @@
 
 <%= form_for [@daycare, @summary], remote: true, :html => {:class => "form-horizontal"} do |f| %>
   <div class="form-group">
-    <%= f.label "About your daycare", class: 'control-label col-sm-2' %>
     <div class="col-sm-12 daycare-edit-field">
-      <%= f.text_area :content, class: 'form-control', required: true, rows: '4' %>
+      <%= f.text_area :content, class: 'form-control', required: true, rows: '4', placeholder: "Write a short summary about your daycare. This will appear as a heading on your page." %>
     </div>
 
     <div class="pull-right col-sm-3">

@@ -1,7 +1,7 @@
 if ("<%= @error %>")
   alert("error");
 else {
-  $('#collapseFour').removeClass('collapse in').addClass('collapse');
+  $('#collapseFour').collapse("hide");
   $('#summary-add-edit-glyph').html('<%= j render 'summaries/add_edit_glyph' %>')
   $('#summary-edit-form').html('<%= j render 'summaries/form' %>')
 }
