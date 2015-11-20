@@ -28,6 +28,9 @@ class DaycaresController < ApplicationController
 
     if @daycare.images.any? == false
       @image = Image.new
+    else
+      @daycare.images = @daycare.images.order("position")
+      @images = @daycare.images.order("position")
     end
 
     @daycare.programs = @daycare.programs.order("position")
@@ -79,13 +82,16 @@ class DaycaresController < ApplicationController
       @address = @daycare.address
     end
 
+    if @daycare.images.any?
+      @images = @daycare.images.order("position")
+    end
     @image = Image.new
 
     @program = Program.new
 
     @certification = Certification.new
 
-    if @daycare.teachers.any? #if user has not added any teachers
+    if @daycare.teachers.any?
       @teachers = @daycare.teachers.order("position")
     end
 

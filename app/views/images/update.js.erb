@@ -1,4 +1,13 @@
 $('#edit-image-<%= @image.id %>').slideUp(350, function() {
   $("#image-add-list").html("<%= j render 'images/image_list' %>")
-$('#header-name-image-<%= @image.id %>').text('<%= @image.picture_file_name %>')
+  $('#header-name-image-<%= @image.id %>').text('<%= @image.picture_file_name %>')
+
+  $('#imageList').sortable({
+      axis: 'y',
+      panel: '.panel-heading',
+      update: function() {
+        $.post($(this).data('update-url'), $(this).sortable('serialize'))
+      }
+    }
+  );
 });

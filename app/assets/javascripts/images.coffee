@@ -8,6 +8,4 @@ jQuery ->
     panel: '.panel-heading'
     update: ->
       $.post($(this).data('update-url'), $(this).sortable('serialize'))
-      console.log($(this).data('update-url'));
-      console.log($(this).sortable('serialize'));
   );
