@@ -64,3 +64,7 @@ group :test do
   gem 'poltergeist'
   gem 'phantomjs', :require => 'phantomjs/poltergeist'
 end
+
+group :production do
+  gem 'rails_12factor'
+end

@@ -16,7 +16,9 @@
         <div class="panel-body">
           <div class="media">
             <div class="media-left media-top">
-              <%= image_tag image.picture.url(:thumb) %>
+              <span id="daycare-image-<%= image.id %>">
+                <%= image_tag image.picture.url(:thumb) %>
+              </span>
             </div>
             <div class="media-body">
               <h4>Description</h4>
