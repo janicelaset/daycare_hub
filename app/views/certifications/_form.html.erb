@@ -8,12 +8,12 @@
 
     <%= f.label :link, class: 'control-label col-md-1' %>
     <div class="col-md-5 daycare-edit-field">
-      <%= f.text_field :link, id: "certification-edit-link#{@certification.id}", class: 'form-control certification-edit-link', required: true, placeholder: "add a link to your certification" %>
+      <%= f.text_field :link, id: "certification-edit-link#{@certification.id}", class: 'form-control certification-edit-link', placeholder: "add a link to your certification" %>
     </div>
 
     <%= f.label :description, class: 'control-label col-md-1' %>
     <div class="col-md-11 daycare-edit-field">
-      <%= f.text_area :description, class: 'form-control', required: true, rows: "5", id: "certification-edit-desc#{@certification.id}" %>
+      <%= f.text_area :description, class: 'form-control', rows: "5", id: "certification-edit-desc#{@certification.id}" %>
     </div>
 
     <div class="col-md-12 daycare-edit-field">
