@@ -43,6 +43,12 @@ class DaycaresController < ApplicationController
     else
       @certifications = @daycare.certifications
     end
+
+    if @daycare.additionals.any? == false
+      @additional = Additional.new
+    else
+      @additionals = @daycare.additionals
+    end
   end
 
   def new
