@@ -15,6 +15,11 @@ class AdditionalsController < ApplicationController
     end
   end
 
+  def destroy
+    @additional = Additional.find(params[:id])
+    @additional.destroy
+  end
+
   private
   def additional_params
     params.require(:additional).permit(:title, :content, :image, :id, :position)
