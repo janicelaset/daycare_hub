@@ -1,6 +1,6 @@
 class Program < ActiveRecord::Base
   belongs_to :daycare
-  has_attached_file :picture, styles: { small: "256x144>",medium: "854x480>" }, default_url: ":style/program.png"
+  has_attached_file :picture, styles: { small: "256x144>",medium: "512x288>" }, default_url: ":style/program.png"
 
   validates :name, :presence => true
   validates :description, :presence => true
