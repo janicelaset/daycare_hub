@@ -15,9 +15,9 @@
                 <%= image_tag program.picture.url(:medium) %>
               </div>
               <div class="media-body">
-                <h3><%= program.name %></h3>
+                <h3 class="media-content-header"><%= program.name %></h3>
                 <p>
-                  <%= program.description %>
+                  <%= simple_format h program.description %>
                 </p>
                 <h4>Ages</h4>
                 <p>

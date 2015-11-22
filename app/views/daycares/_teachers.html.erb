@@ -5,21 +5,37 @@
       <h1>Teachers</h1>
     </div>
 
-    <div id="teacher-wrapper" class="row">
+    <div class="row">
       <% @teachers.each do |teacher| %>
+      <% if @teachers.count == 1 %>
+      <div class="col-md-12 col-md-8">
+        <div class="media daycare-profile-teacher">
+          <div class="media-left">
+            <%= image_tag teacher.picture.url(:medium) %>
+          </div>
+          <div class="media-body">
+            <h3 class="media-content-header"><%= teacher.name %></h3>
+            <p>
+              <%= simple_format h teacher.about %>
+            </p>
+          </div>
+        </div>
+      </div>
+      <% else %>
       <div class="col-md-6">
         <div class="media daycare-profile-teacher">
           <div class="media-left">
             <%= image_tag teacher.picture.url(:medium) %>
           </div>
           <div class="media-body">
-            <h4><%= teacher.name %></h4>
+            <h3><%= teacher.name %></h3>
             <p>
-              <%= teacher.about %>
+              <%= simple_format h teacher.about %>
             </p>
           </div>
         </div>
       </div>
+      <% end %>
       <% end %>
     </div>
   </div>
