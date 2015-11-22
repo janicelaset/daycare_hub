@@ -15,6 +15,12 @@ class CertificationsController < ApplicationController
     end
   end
 
+  def destroy
+    binding.pry
+    @certification = Certification.find(params[:id])
+    @certification.destroy
+  end
+
   private
   def cert_params
     params.require(:certification).permit(:name, :description, :image, :id, :position)
