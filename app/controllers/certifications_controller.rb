@@ -16,7 +16,6 @@ class CertificationsController < ApplicationController
   end
 
   def destroy
-    binding.pry
     @certification = Certification.find(params[:id])
     @certification.destroy
   end
