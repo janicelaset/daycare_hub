@@ -78,5 +78,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # config/environments/production.rb
-config.action_controller.asset_host = "d2sf6hezirmy3a.cloudfront.net"
+# config.action_controller.asset_host = "d2sf6hezirmy3a.cloudfront.net"
 end
