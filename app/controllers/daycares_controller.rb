@@ -38,6 +38,11 @@ class DaycaresController < ApplicationController
     #   @teachers = @daycare.teachers.order("position")
     # end
 
+    if @daycare.certifications.any? == false
+      @certification = Certification.new
+    else
+      @certifications = @daycare.certifications
+    end
   end
 
   def new

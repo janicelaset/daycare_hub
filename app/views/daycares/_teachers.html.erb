@@ -8,7 +8,7 @@
     <div class="row">
       <% @teachers.each do |teacher| %>
       <% if @teachers.count == 1 %>
-      <div class="col-md-12 col-md-8">
+      <div class="col-md-10 col-md-offset-1">
         <div class="media daycare-profile-teacher">
           <div class="media-left">
             <%= image_tag teacher.picture.url(:medium) %>
