@@ -24,9 +24,12 @@ class DaycaresController < ApplicationController
 
     if @daycare.images.any? == false
       @image = Image.new
+      @images = []
     else
-      @daycare.images = @daycare.images.order("position")
+      # @daycare.images = @daycare.images.order("position")
       @images = @daycare.images.order("position")
+      @image_first = @images.first
+      @images = @images.drop(1)
     end
 
     @daycare.programs = @daycare.programs.order("position")

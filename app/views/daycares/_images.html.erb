@@ -3,7 +3,7 @@
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      <% @daycare.images.each_with_index do |image, index| %>
+      <% @images.each_with_index do |image, index| %>
       <li data-target="#carousel-example-generic" data-slide-to="<%= index + 1 %>"></li>
       <% end %>
     </ol>
@@ -11,9 +11,9 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <%= image_tag @daycare.images.first.picture.url(:large) %>
+        <%= image_tag @image_first.picture.url(:large) %>
       </div>
-      <% @daycare.images.each do |image| %>
+      <% @images.each do |image| %>
       <div class="item">
         <%= image_tag image.picture.url(:large) %>
         <div class="carousel-caption">
