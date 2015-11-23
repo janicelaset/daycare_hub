@@ -12,6 +12,9 @@
     <div class="carousel-inner" role="listbox">
       <div class="item active">
         <%= image_tag @image_first.picture.url(:large) %>
+        <div class="carousel-caption">
+          <h3><%= @image_first.description %></h3>
+        </div>
       </div>
       <% @images.each do |image| %>
       <div class="item">

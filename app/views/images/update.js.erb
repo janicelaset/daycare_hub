@@ -1,6 +1,6 @@
 $('#edit-image-<%= @image.id %>').slideUp(350, function() {
   $("#daycare-image-<%= @image.id %>").html("<%= j image_tag @image.picture.url(:thumb) %>");
-  // $("#image-add-list").html("<%= j render 'images/image_list' %>")
+  $("#daycare-image-description-<%= @image.id %>").text("<%= @image.description %>")
   $('#panel-name-image-<%= @image.id %>').text('<%= @image.picture_file_name %>');
 
   $('#imageList').sortable({

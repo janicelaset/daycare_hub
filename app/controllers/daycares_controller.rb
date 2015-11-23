@@ -26,7 +26,6 @@ class DaycaresController < ApplicationController
       @image = Image.new
       @images = []
     else
-      # @daycare.images = @daycare.images.order("position")
       @images = @daycare.images.order("position")
       @image_first = @images.first
       @images = @images.drop(1)
@@ -94,6 +93,8 @@ class DaycaresController < ApplicationController
 
     if @daycare.images.any?
       @images = @daycare.images.order("position")
+    else
+      @images = []
     end
     @image = Image.new
 

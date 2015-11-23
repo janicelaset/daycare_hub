@@ -1,6 +1,6 @@
 <% if @daycare.images.any? %>
   <ul id="imageList" class="list-unstyled" data-update-url="<%= move_daycare_images_path(@daycare) %>">
-    <% @daycare.images.each do |image| %>
+    <% @images.each do |image| %>
       <li class="panel panel-info" id="image-<%= image.id %>">
         <div class="panel-heading">
           <span id="panel-name-image-<%= image.id %>">
@@ -22,7 +22,9 @@
             </div>
             <div class="media-body">
               <h4>Description</h4>
-              <%= image.description %>
+              <span id="daycare-image-description-<%= image.id %>">
+                <%= image.description %>
+              </span>
             </div>
           </div>
         </div>
