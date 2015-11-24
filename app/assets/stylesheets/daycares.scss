@@ -3,6 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $light-blue: #29AAE2;
 
+//--- profile page ---//
+#daycare-profile-page {
+  background: #F8F8F8;
+  color: #555555;
+}
+
+//daycare name
 .header-profile {
   text-align: center;
   color: #fff;
@@ -15,6 +22,58 @@ $light-blue: #29AAE2;
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 3em;
   font-weight: 700;
+}
+
+.carousel.slide {
+  margin: auto;
+  min-width: 100%;
+}
+
+.carousel-inner{
+  min-width: 100%;
+}
+
+.carousel .item {
+  width: 100%; /*slider width*/
+  max-height: 600px; /*slider height*/
+}
+
+.carousel .item img {
+  width: 100%; /*img width*/
+}
+
+.row.daycare-profile-section {
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #fff;
+  border-style: solid;
+  border-color: #ddd;
+  border-width: 1px;
+  border-radius: 4px 4px 0 0;
+  -webkit-box-shadow: none;
+  box-shadow: 2px 2px 8px #B1B1B1;
+}
+
+.daycare-profile-section-content {
+  margin: 2% 3%;
+}
+
+.daycare-profile-header {
+  text-align: center;
+  font-size: 3em;
+  color: $light-blue;
+  font-weight: 500;
+  margin-bottom: 2%;
+}
+
+.daycare-profile-teacher {
+  min-height: 200px;
+  margin-bottom: 3em;
+}
+
+//--- edit page ---//
+#daycare-edit-page {
+  margin-top: 2em;
 }
 
 .daycare-edit-glyph:hover,
@@ -40,46 +99,8 @@ a > .panel-heading {
   margin-bottom: 1em;
 }
 
-#daycare-edit-page {
-  margin-top: 2em;
-}
-
 .panel-daycare-edit {
   margin-bottom: 0.4em;
-}
-
-.carousel.slide {
-  margin: auto;
-  min-width: 100%;
-}
-
-.carousel-inner{
-  min-width: 100%;
-}
-
-.carousel .item {
-  width: 100%; /*slider width*/
-  max-height: 600px; /*slider height*/
-}
-
-.carousel .item img {
-  width: 100%; /*img width*/
-}
-
-.daycare-profile-header {
-  text-align: center;
-  margin-bottom: 3em;
-}
-
-.daycare-profile-teacher {
-  min-height: 200px;
-  margin-bottom: 3em;
-}
-
-#wrapper {
-    // margin-left:auto;
-    // margin-right:auto;
-    // width:992px;
 }
 
 .btn-file {
