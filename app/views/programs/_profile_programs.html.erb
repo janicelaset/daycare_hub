@@ -4,30 +4,27 @@
       <div class="daycare-profile-header">
         Programs
       </div>
-
+      <div class="row">
         <% @programs.each_with_index do |program, index| %>
           <% if @programs.count == 1 %>
             <div class="col-md-12 col-md-8">
-              <div class="media">
-                <div class="media-left">
-                  <%= image_tag program.picture.url(:medium) %>
-                </div>
-                <div class="media-body">
-                  <h3 class="media-content-header"><%= program.name %></h3>
-                  <p>
-                    <%= simple_format h program.description %>
-                  </p>
-                  <h4>Ages</h4>
-                  <p>
-                    <%= program.age_from %> to <%= program.age_to %>
-                  </p>
-                  <% if program.available == true %>
-                    We have openings
-                  <% else %>
-                    No openings
-                  <% end %>
-                </div>
+              <div class="daycare-profile-media">
+                <%= image_tag program.picture.url(:medium) %>
               </div>
+              <h3 class="media-content-header"><%= program.name %></h3>
+              <p>
+                <strong>Ages: </strong><%= program.age_from %> to <%= program.age_to %>
+              </p>
+              <p>
+                <% if program.available == true %>
+                  We have openings
+                <% else %>
+                  No openings
+                <% end %>
+              </p>
+              <p>
+                <%= simple_format h program.description %>
+              </p>
             </div>
           <% else %>
             <% if index%2 == 0 %>
@@ -42,13 +39,19 @@
                   <div class="daycare-profile-thumbnail-header">
                     <%= program.name %>
                   </div>
-                  <strong>Ages: </strong><%= program.age_from %> to <%= program.age_to %>
-                  <p><%= simple_format h program.description %></p>
-                  <% if program.available == true %>
-                    We have openings
-                  <% else %>
-                    No openings
-                  <% end %>
+                  <p>
+                    <strong>Ages: </strong><%= program.age_from %> to <%= program.age_to %>
+                  </p>
+                  <p>
+                    <% if program.available == true %>
+                      We have openings
+                    <% else %>
+                      No openings
+                    <% end %>
+                  </p>
+                  <p>
+                    <%= simple_format h program.description %>
+                  </p>
                 </div>
               </div>
             </div>
@@ -58,6 +61,6 @@
           <% end %>
         <% end %>
       </div>
-
+    </div>
   </div>
 <% end %>
