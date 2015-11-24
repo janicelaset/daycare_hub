@@ -73,8 +73,19 @@ $light-blue: #29AAE2;
   margin: 0.5em 1.5em 1em 0;
 }
 
+.row.daycare-profile-section-row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .daycare-profile-thumbnail {
   border: none;
+}
+
+.daycare-profile-thumbnail-header {
+  font-weight: 400;
+  font-size: 2em;
+  text-align: center;
 }
 
 .daycare-profile-thumbnail-img img{

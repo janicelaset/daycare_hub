@@ -1,17 +1,16 @@
 <% if @daycare.teachers.any? %>
-  <div id="daycare-profile-teacher">
+  <div class="row daycare-profile-section">
+    <div class="daycare-profile-section-content">
     <div class="daycare-profile-header">
-      <hr>
-      <h1>Teachers</h1>
+      Teachers
     </div>
-
     <div class="row">
       <% @teachers.each do |teacher| %>
       <% if @teachers.count == 1 %>
       <div class="col-md-10 col-md-offset-1">
         <div class="media daycare-profile-teacher">
           <div class="media-left">
-            <%= image_tag teacher.picture.url(:medium) %>
+            <%= image_tag teacher.picture.url(:medium), class: "img-circle" %>
           </div>
           <div class="media-body">
             <h3 class="media-content-header"><%= teacher.name %></h3>
@@ -38,5 +37,6 @@
       <% end %>
       <% end %>
     </div>
+  </div>
   </div>
 <% end %>
