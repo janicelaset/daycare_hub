@@ -32,11 +32,13 @@ $light-blue: #29AAE2;
 
 .carousel-inner{
   min-width: 100%;
+  margin-bottom: 2em;
 }
 
 .carousel .item {
   width: 100%; /*slider width*/
   max-height: 600px; /*slider height*/
+
 }
 
 .carousel .item img {
@@ -51,6 +53,7 @@ $light-blue: #29AAE2;
   border-color: #ddd;
   border-width: 1px;
   box-shadow: 2px 2px 6px #B1B1B1;
+  margin-bottom: 2em;
 }
 
 .daycare-profile-header {
@@ -63,6 +66,11 @@ $light-blue: #29AAE2;
 
 .daycare-profile-section-content {
   margin: 2% 3% 3% 3%;  //top right bottom left
+}
+
+.daycare-profile-media {
+  float: left;
+  margin: 0.5em 1.5em 1em 0;
 }
 
 .daycare-profile-thumbnail {
