@@ -2,3 +2,4 @@ var node = $('*[data-role="image<%= @image.id %>"]');
 var new_node_html = '<%= j render @image %>';
 
 node.replaceWith(new_node_html);
+// $("#image-add-list").html("<%= j render 'images/image_list' %>")

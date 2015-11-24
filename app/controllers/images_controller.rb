@@ -5,6 +5,7 @@ class ImagesController < ApplicationController
     @image.daycare = @daycare
 
     @image.save
+    @images = @daycare.images
 
     #create new image to display create image form so users can add more images
     @image = Image.new
