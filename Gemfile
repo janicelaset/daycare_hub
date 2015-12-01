@@ -40,6 +40,7 @@ gem 'jquery-ui-rails'
 gem 'acts_as_list'
 gem 'jquery-turbolinks'
 gem 'remotipart', '~> 1.2'
+gem 'aws-sdk'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
