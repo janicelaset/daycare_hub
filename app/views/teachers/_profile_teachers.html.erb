@@ -1,0 +1,24 @@
+<% if @daycare.teachers.any? %>
+  <div class="row daycare-profile-section">
+    <div class="daycare-profile-section-content">
+    <div class="daycare-profile-header">
+      Teachers
+    </div>
+    <div class="row">
+      <% @teachers.each do |teacher| %>
+        <div class="media">
+          <div class="media-left media-teacher">
+            <%= image_tag teacher.picture.url(:medium), class: "img-circle" %>
+          </div>
+          <div class="media-body">
+            <h3 class="media-content-header"><%= teacher.name %></h3>
+            <p>
+              <%= simple_format h teacher.about %>
+            </p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<% end %>
