@@ -57,7 +57,7 @@
 
   <% if @program.name != nil %>
       <div class="pull-right col-md-3">
-        <button class="btn btn-primary btn-block pull-right" onclick="hideTeacherForm('<%= @program.id %>')" id="cancel-program-edit">Cancel</button>
+        <button type="button" class="btn btn-primary btn-block pull-right" onclick="hideEditForm('<%= @program.id %>', 'program')">Cancel</button>
       </div>
   <% end %>
   </div>

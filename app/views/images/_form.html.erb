@@ -27,7 +27,7 @@
         <%= f.submit class:'btn btn-primary btn-block' %>
       </div>
       <div class="pull-right col-md-3">
-        <button class="btn btn-primary btn-block pull-right" onclick="hideTeacherForm('<%= @image.id %>')" id="cancel-program-edit">Cancel</button>
+        <button type="button" class="btn btn-primary btn-block pull-right" onclick="hideEditForm('<%= @image.id %>', 'image')">Cancel</button>
       </div>
     <% end %>
     <!-- <div class="pull-right col-sm-3">

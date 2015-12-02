@@ -1,5 +1,7 @@
+alert('teacher create');
 $('#teacher-add-edit-glyph').html('<%= j render 'teachers/add_edit_glyph' %>');
-$('#teacher-edit-form').html('<%= j render 'teachers/teacher_edit' %>');
+$('#teacher-edit-list').html('<%= j render 'teachers/teacher_list' %>');
+//$('#teacher-edit-form').html('<%= j render 'teachers/form' %>');
 
 $('#teacherList').sortable({
     axis: 'y',

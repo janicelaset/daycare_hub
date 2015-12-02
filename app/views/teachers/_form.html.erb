@@ -11,18 +11,20 @@
       <%= f.text_area :about, class: 'form-control', required: true %>
     </div>
 
-    <%= f.label 'Photo', class: 'control-label col-sm-1' %>
-    <div class="col-sm-12">
-      <%= f.file_field :picture %>
+    <div class="col-md-12 daycare-edit-field">
+      <span class="btn btn-default btn-file">
+        Select Image<%= f.file_field :picture, class: "btn-block", id: "btn-select-image", onchange: "$('#teacher-upload-file-info').html($(this).val());" %>
+      </span>
+      <span class='label label-default label-image-upload' id="teacher-upload-file-info"></span>
     </div>
 
     <div class="pull-right col-sm-3">
-      <%= f.submit class:'btn' %>
+      <%= f.submit class:'btn btn-primary btn-block' %>
     </div>
 
   <% if @teacher.name != nil %>
       <div class="pull-right col-sm-3">
-        <button class="btn pull-right" onclick="hideTeacherForm('<%= @teacher.id %>')" id="cancel-teacher-edit">Cancel</button>
+        <button type="button" class="btn btn-primary btn-block pull-right" onclick="hideEditForm('<%= @teacher.id %>', 'teacher')">Cancel</button>
       </div>
   <% end %>
   </div>

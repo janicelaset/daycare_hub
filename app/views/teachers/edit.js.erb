@@ -1,2 +1,4 @@
 $('#edit-teacher-<%= @teacher.id %>').html("<%= j render 'form' %>");
-$('#edit-teacher-<%= @teacher.id %>').show();
+$('#edit-teacher-<%= @teacher.id %>').prepend("<br><h4>Edit Teacher</h4><br>");
+$('#edit-teacher-<%= @teacher.id %>').hide();
+$('#edit-teacher-<%= @teacher.id %>').slideDown(350);

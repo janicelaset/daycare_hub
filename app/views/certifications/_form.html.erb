@@ -18,9 +18,9 @@
 
     <div class="col-md-12 daycare-edit-field">
       <span class="btn btn-default btn-file">
-        Select Image<%= f.file_field :image, class: "btn-block", id: "btn-select-image", onchange: "$('#upload-file-info').html($(this).val());" %>
+        Select Image<%= f.file_field :image, class: "btn-block", id: "btn-select-image", onchange: '$("#certification-upload-file-info").html($(this).val());' %>
       </span>
-      <span class='label label-default label-image-upload' id="certification-upload-file-info<%= @certification.id %>"></span>
+      <span class='label label-default label-image-upload' id="certification-upload-file-info"></span>
     </div>
 
     <div class="pull-right col-md-3">

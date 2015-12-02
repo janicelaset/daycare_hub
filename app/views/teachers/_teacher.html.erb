@@ -11,8 +11,14 @@
       </div>
     </a>
     <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
-      <div id="teacher-edit-form" class="panel-body">
-        <%= render 'teachers/teacher_edit' %>
+      <div class="panel-body">
+        <span id="teacher-edit-list"></span>
+          <%= render 'teachers/teacher_list' %>
+        </span>
+        <h4>Add a Teacher</h4>
+        <span id="teacher-edit-form">
+          <%= render 'teachers/form' %>
+        </span>
       </div>
     </div>
   </div>

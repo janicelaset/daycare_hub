@@ -24,6 +24,6 @@ var setRadius = function(radius, value) {
   $('#radius-value').val(value);
 }
 
-var hideTeacherForm = function (id) {
-  $('#edit-teacher-' + id).hide();
+var hideEditForm = function (id, section) {
+  $('#edit-' + section + '-' + id).slideUp(350);
 }
