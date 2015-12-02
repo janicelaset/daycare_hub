@@ -1,7 +1,7 @@
 <div class="container">
   <div id="search-filter">
-    <div class="well">
-      <div class="row">
+    <!-- <div class="well"> -->
+      <!-- <div class="row">
         <div class="col-md-3">
           <strong>Age</strong>
           <button type="button" class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -15,7 +15,7 @@
             <li><a href="#" onclick="setRadius('3 Years', 30)">3 Years</a></li>
           </ul>
         </div>
-      </div>
+      </div> -->
       <%= form_tag(search_results_path, :method => "get", id: "search-form") do %>
         <!-- <div class="row">
           <div class="input-group">
@@ -35,7 +35,7 @@
           </div>
         </div> -->
       <% end %>
-    </div>
+    <!-- </div> -->
   </div>
 
   <div id="map-container">
