@@ -5,6 +5,8 @@
 
 Beebsy is a web application that connects parents with daycares in their area. It allows daycares to add relevant information and generates a profile that parents can view. It features a simple user interface for daycare providers to make the process as easy as possible. Parents can search for daycares based on their location and view a map of the nearest facilities in their area.
 
+This application is live and can be viewed at [beebsy.herokuapp.com](http://beebsy.herokuapp.com)
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
