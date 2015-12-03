@@ -139,7 +139,7 @@ console.log(destination);
 
               $(".row.search-results").append(
                 "<div class='col-md-6'>" +
-                  "<div class='thumbnail'>" +
+                  "<div class='thumbnail search-results-thumb'>" +
                     "<div class='media'>" +
                       "<div class='media-left media-top'>" +
                         "<div class='search-results-image'>" +
