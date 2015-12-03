@@ -41,6 +41,16 @@ class AdditionalsController < ApplicationController
     @additional.destroy
   end
 
+  def move
+    @daycare = Daycare.find(params[:daycare_id])
+
+    params['additional'].each_with_index do |id, index|
+      additional = Additional.find(id)
+      additional.update_attribute(:position, index+1) if additional
+    end
+    render nothing: true
+  end
+
   private
   def additional_params
     params.require(:additional).permit(:title, :content, :image, :id, :position)

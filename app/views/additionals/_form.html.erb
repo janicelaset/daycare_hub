@@ -11,12 +11,11 @@
       <%= f.text_area :content, class: 'form-control', required: true, rows: "5" %>
     </div>
 
-    <div class="col-md-12">
-      <br>
-      <%= f.label 'Add Photo', class: 'control-label col-sm-2' %>
-      <div class="col-md-2">
-        <%= f.file_field :image %>
-      </div>
+    <div class="col-md-12 daycare-edit-field">
+      <span class="btn btn-default btn-file">
+        Select Image<%= f.file_field :image, class: "btn-block", id: "btn-select-image", onchange: '$("#additional-upload-file-info").html($(this).val());' %>
+      </span>
+      <span class='label label-default label-image-upload' id="additional-upload-file-info"></span>
     </div>
 
     <div class="pull-right col-md-3">
@@ -25,7 +24,7 @@
 
   <% if @additional.title != nil %>
       <div class="pull-right col-md-3">
-        <button class="btn btn-primary btn-block pull-right" onclick="hideTeacherForm('<%= @additional.id %>')" id="cancel-additional-edit">Cancel</button>
+        <button type="button" class="btn btn-primary btn-block pull-right" onclick="hideEditForm('<%= @additional.id %>', 'additional')">Cancel</button>
       </div>
   <% end %>
   </div>

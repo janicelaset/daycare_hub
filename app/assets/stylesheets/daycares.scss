@@ -163,3 +163,10 @@ a > .panel-heading {
   font-size: 1em;
   font-weight: normal;
 }
+
+#teacherList .panel-heading,
+#programList .panel-heading,
+#imageList .panel-heading,
+#additionalList .panel-heading {
+    cursor: move;
+}

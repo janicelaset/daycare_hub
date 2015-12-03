@@ -1,7 +1,8 @@
 $('#edit-additional-<%= @additional.id %>').slideUp(350, function() {
+  $("#image-additional-<%= @additional.id %>").html("<%= j image_tag @additional.image.url(:thumb) %>");
   $('#panel-name-additional-<%= @additional.id %>').text('<%= @additional.title %>');
   $('#header-name-additional-<%= @additional.id %>').text('<%= @additional.title %>');
-  $('#content-additional-<%= @additional.id %>').text('<%= @additional.content.gsub!(/\r\n/, '\r\n') %>');
+  $('#content-additional-<%= @additional.id %>').html('<%= @additional.content.gsub!(/\r\n/, '\r\n') %>');
 
   $('#additionalList').sortable({
       axis: 'y',

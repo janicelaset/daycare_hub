@@ -48,8 +48,9 @@ class DaycaresController < ApplicationController
 
     if @daycare.additionals.any? == false
       @additional = Additional.new
+      @additionals = []
     else
-      @additionals = @daycare.additionals
+      @additionals = @daycare.additionals.order("position")
     end
   end
 
@@ -108,6 +109,11 @@ class DaycaresController < ApplicationController
 
     @teacher = Teacher.new
 
+    if @daycare.additionals.any?
+      @additionals = @daycare.additionals.order("position")
+    else
+      @additionals = []
+    end
     @additional = Additional.new
 
     respond_to do |format|

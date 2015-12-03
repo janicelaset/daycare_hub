@@ -1,6 +1,6 @@
 <% if @daycare.additionals.any? %>
   <ul id="additionalList" class="list-unstyled" data-update-url="<%= move_daycare_additionals_path(@daycare) %>">
-    <% @daycare.additionals.each do |additional| %>
+    <% @additionals.each do |additional| %>
       <li class="panel panel-info" id="additional-<%= additional.id %>">
         <div class="panel-heading">
           <span id="panel-name-additional-<%= additional.id %>">
@@ -17,7 +17,9 @@
           <div class="media">
             <div class="media-left media-top">
               <% if additional.image_file_name != nil %>
-                <%= image_tag additional.image.url(:thumb) %>
+                <span id="image-additional-<%= @additional.id %>">
+                  <%= image_tag additional.image.url(:thumb) %>
+                </span>
               <% end %>
             </div>
             <div class="media-body">
@@ -25,13 +27,13 @@
                 <%= additional.title %>
               </h4>
               <span id="content-additional-<%= additional.id %>">
-                <%= additional.content %>
+                <%= simple_format h additional.content %>
               </span>
             </div>
           </div>
         </div>
       </li>
-      <div id="edit-additional-<%= additional.id %>">
+      <div id="edit-additional-<%= additional.id %>" class="daycare-edit-form-slide">
       </div>
     <% end %>
   </ul>
