@@ -1,0 +1,4 @@
+$('#edit-additional-<%= @additional.id %>').html("<%= j render 'form' %>");
+$('#edit-additional-<%= @additional.id %>').prepend("<br><h4>Edit Information</h4><br>");
+$('#edit-additional-<%= @additional.id %>').hide();
+$('#edit-additional-<%= @additional.id %>').slideDown(350);

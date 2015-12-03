@@ -1,0 +1,14 @@
+$('#edit-additional-<%= @additional.id %>').slideUp(350, function() {
+  $('#panel-name-additional-<%= @additional.id %>').text('<%= @additional.title %>');
+  $('#header-name-additional-<%= @additional.id %>').text('<%= @additional.title %>');
+console.log("<%= @additional.content %>");
+
+  $('#additionalList').sortable({
+      axis: 'y',
+      panel: '.panel-heading',
+      update: function() {
+        $.post($(this).data('update-url'), $(this).sortable('serialize'))
+      }
+    }
+  );
+});

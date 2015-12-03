@@ -15,6 +15,27 @@ class AdditionalsController < ApplicationController
     end
   end
 
+  def edit
+    @daycare = Daycare.find(params[:daycare_id])
+    @additional = Additional.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
+  def update
+    @additional = Additional.find(params[:id])
+    @daycare = Daycare.find(params[:daycare_id])
+    @additional.update(additional_params)
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   def destroy
     @additional = Additional.find(params[:id])
     @additional.destroy
