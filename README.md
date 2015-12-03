@@ -7,6 +7,8 @@ Beebsy is a web application that connects parents with daycares in their area. I
 
 This application is live and can be viewed at [beebsy.herokuapp.com](http://beebsy.herokuapp.com)
 
+This project is ongoing. Please visit the [beebsy Trello Board](https://trello.com/b/7MDhahCf/beebsy) to view the progress.
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
@@ -19,7 +21,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * open a command terminal
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/janicelaset/daycare_hub.git`
 * `cd daycare_hub` to navigate to project directory
 * `bundle install` to install program dependencies
 * `postgres` to start postgres server
@@ -54,8 +56,6 @@ Amazon Web Services used
 * JQuery UI
 * Google Maps
 
-## Additional Information
-This project is ongoing. Please visit https://trello.com/b/7MDhahCf/beebsy to view the progress.
 
   ### Legal
 
