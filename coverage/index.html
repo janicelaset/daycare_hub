@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-12-04T10:36:28-08:00">2015-12-04T10:36:28-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-12-04T10:48:13-08:00">2015-12-04T10:48:13-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">97.49%</span></span>
+    (<span class="covered_percent"><span class="green">98.69%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.3
+         2.35
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>103</b> files in total.
-    <b>1116</b> relevant lines. 
-    <span class="green"><b>1088</b> lines covered</span> and
-    <span class="red"><b>28</b> lines missed </span>
+    <b>104</b> files in total.
+    <b>1142</b> relevant lines. 
+    <span class="green"><b>1127</b> lines covered</span> and
+    <span class="red"><b>15</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -82,12 +82,12 @@
       
       <tr>
         <td class="strong"><a href="#1c61b649b669d5b001bad38303044b86e8a274b6" class="src_link" title="app/controllers/certifications_controller.rb">app/controllers/certifications_controller.rb</a></td>
-        <td class="red strong">31.25 %</td>
+        <td class="green strong">100.0 %</td>
         <td>27</td>
         <td>16</td>
-        <td>5</td>
-        <td>11</td>
-        <td>0.3</td>
+        <td>16</td>
+        <td>0</td>
+        <td>1.1</td>
       </tr>
       
       <tr>
@@ -102,12 +102,12 @@
       
       <tr>
         <td class="strong"><a href="#9815007a4dda6422a60879a1d9e3e2e70788ba94" class="src_link" title="app/controllers/daycares_controller.rb">app/controllers/daycares_controller.rb</a></td>
-        <td class="green strong">96.67 %</td>
+        <td class="green strong">98.89 %</td>
         <td>159</td>
         <td>90</td>
-        <td>87</td>
-        <td>3</td>
-        <td>13.3</td>
+        <td>89</td>
+        <td>1</td>
+        <td>14.1</td>
       </tr>
       
       <tr>
@@ -387,7 +387,7 @@
         <td>15</td>
         <td>13</td>
         <td>2</td>
-        <td>4.0</td>
+        <td>4.1</td>
       </tr>
       
       <tr>
@@ -663,9 +663,9 @@
       <tr>
         <td class="strong"><a href="#47da01ce00086883d79754d8a61c205cefa78110" class="src_link" title="spec/factories/certifications.rb">spec/factories/certifications.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>6</td>
-        <td>2</td>
-        <td>2</td>
+        <td>7</td>
+        <td>4</td>
+        <td>4</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -766,6 +766,16 @@
         <td>51</td>
         <td>40</td>
         <td>40</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#e5560f5ec6c33cd35d90b8448e350c536b70285a" class="src_link" title="spec/features/certification_spec.rb">spec/features/certification_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>29</td>
+        <td>24</td>
+        <td>24</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -1067,7 +1077,7 @@
         <td>29</td>
         <td>29</td>
         <td>0</td>
-        <td>5.8</td>
+        <td>6.0</td>
       </tr>
       
       <tr>
@@ -1849,11 +1859,11 @@
         <div class="source_table" id="1c61b649b669d5b001bad38303044b86e8a274b6">
   <div class="header">
     <h3>app/controllers/certifications_controller.rb</h3>
-    <h4><span class="red">31.25 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>16</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
-      <span class="red"><b>11</b> lines missed.</span>
+      <span class="green"><b>16</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -1872,20 +1882,20 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="3">
-          
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
           
           <code class="ruby">    @certification = Certification.new(cert_params)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="4">
-          
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
           
           <code class="ruby">    @daycare = Daycare.find(params[:daycare_id])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="5">
-          
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
           
           <code class="ruby">    @certification.daycare = @daycare</code>
         </li>
@@ -1896,8 +1906,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="7">
-          
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
           
           <code class="ruby">    @certification.save</code>
         </li>
@@ -1914,8 +1924,8 @@
           <code class="ruby">    #create new certification to display create certification form so users can add more programs</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="10">
-          
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
           
           <code class="ruby">    @certification = Certification.new</code>
         </li>
@@ -1926,20 +1936,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="12">
-          
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
           
           <code class="ruby">    respond_to do |format|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
-          
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
           
           <code class="ruby">      format.html</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="14">
-          
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
           
           <code class="ruby">      format.js</code>
         </li>
@@ -1968,14 +1978,14 @@
           <code class="ruby">  def destroy</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="19">
-          
+        <li class="covered" data-hits="2" data-linenumber="19">
+          <span class="hits">2</span>
           
           <code class="ruby">    @certification = Certification.find(params[:id])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
-          
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
           
           <code class="ruby">    @certification.destroy</code>
         </li>
@@ -2004,8 +2014,8 @@
           <code class="ruby">  def cert_params</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="25">
-          
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
           
           <code class="ruby">    params.require(:certification).permit(:name, :description, :image, :id, :position)</code>
         </li>
@@ -2239,11 +2249,11 @@
         <div class="source_table" id="9815007a4dda6422a60879a1d9e3e2e70788ba94">
   <div class="header">
     <h3>app/controllers/daycares_controller.rb</h3>
-    <h4><span class="green">96.67 %</span> covered</h4>
+    <h4><span class="green">98.89 %</span> covered</h4>
     <div>
       <b>90</b> relevant lines. 
-      <span class="green"><b>87</b> lines covered</span> and
-      <span class="red"><b>3</b> lines missed.</span>
+      <span class="green"><b>89</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -2274,8 +2284,8 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="5">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="26" data-linenumber="5">
+          <span class="hits">26</span>
           
           <code class="ruby">    @daycare = Daycare.find(params[:id])</code>
         </li>
@@ -2286,14 +2296,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="7">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="26" data-linenumber="7">
+          <span class="hits">26</span>
           
           <code class="ruby">    if @daycare.address.nil?  #if user has not added contact information</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="8">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="23" data-linenumber="8">
+          <span class="hits">23</span>
           
           <code class="ruby">      @address = Address.new</code>
         </li>
@@ -2322,14 +2332,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="13">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="26" data-linenumber="13">
+          <span class="hits">26</span>
           
           <code class="ruby">    if @daycare.contact.nil?  #if user has not added contact information</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="14">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="24" data-linenumber="14">
+          <span class="hits">24</span>
           
           <code class="ruby">      @contact = Contact.new</code>
         </li>
@@ -2358,14 +2368,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="19">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="26" data-linenumber="19">
+          <span class="hits">26</span>
           
           <code class="ruby">    if @daycare.summary.nil?</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="20">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="24" data-linenumber="20">
+          <span class="hits">24</span>
           
           <code class="ruby">      @summary = Summary.new</code>
         </li>
@@ -2394,20 +2404,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="25">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="26" data-linenumber="25">
+          <span class="hits">26</span>
           
           <code class="ruby">    if @daycare.images.any? == false</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="26">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="24" data-linenumber="26">
+          <span class="hits">24</span>
           
           <code class="ruby">      @image = Image.new</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="27">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="24" data-linenumber="27">
+          <span class="hits">24</span>
           
           <code class="ruby">      @images = []</code>
         </li>
@@ -2448,20 +2458,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="34">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="26" data-linenumber="34">
+          <span class="hits">26</span>
           
           <code class="ruby">    if @daycare.programs.any? == false</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="35">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="23" data-linenumber="35">
+          <span class="hits">23</span>
           
           <code class="ruby">      @program = Program.new</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="36">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="23" data-linenumber="36">
+          <span class="hits">23</span>
           
           <code class="ruby">      @programs = []</code>
         </li>
@@ -2490,20 +2500,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="41">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="26" data-linenumber="41">
+          <span class="hits">26</span>
           
           <code class="ruby">    if @daycare.teachers.any? == false</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="42">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="23" data-linenumber="42">
+          <span class="hits">23</span>
           
           <code class="ruby">      @teachers = Program.new</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="43">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="23" data-linenumber="43">
+          <span class="hits">23</span>
           
           <code class="ruby">      @teachers = []</code>
         </li>
@@ -2532,8 +2542,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="48">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="26" data-linenumber="48">
+          <span class="hits">26</span>
           
           <code class="ruby">    if @daycare.certifications.any? == false</code>
         </li>
@@ -2556,8 +2566,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="52">
-          
+        <li class="covered" data-hits="1" data-linenumber="52">
+          <span class="hits">1</span>
           
           <code class="ruby">      @certifications = @daycare.certifications.order(&quot;position&quot;)</code>
         </li>
@@ -2574,20 +2584,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="55">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="26" data-linenumber="55">
+          <span class="hits">26</span>
           
           <code class="ruby">    if @daycare.additionals.any? == false</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="56">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="24" data-linenumber="56">
+          <span class="hits">24</span>
           
           <code class="ruby">      @additional = Additional.new</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="57">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="24" data-linenumber="57">
+          <span class="hits">24</span>
           
           <code class="ruby">      @additionals = []</code>
         </li>
@@ -2730,8 +2740,8 @@
           <code class="ruby">  def edit</code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="81">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="27" data-linenumber="81">
+          <span class="hits">27</span>
           
           <code class="ruby">    @daycare = Daycare.find(params[:id])</code>
         </li>
@@ -2742,14 +2752,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="83">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="27" data-linenumber="83">
+          <span class="hits">27</span>
           
           <code class="ruby">    if @daycare.contact.nil? #if user has not added contact information</code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="84">
-          <span class="hits">24</span>
+        <li class="covered" data-hits="26" data-linenumber="84">
+          <span class="hits">26</span>
           
           <code class="ruby">      @contact = Contact.new</code>
         </li>
@@ -2778,14 +2788,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="89">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="27" data-linenumber="89">
+          <span class="hits">27</span>
           
           <code class="ruby">    if @daycare.summary.nil?</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="90">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="25" data-linenumber="90">
+          <span class="hits">25</span>
           
           <code class="ruby">      @summary = Summary.new</code>
         </li>
@@ -2814,14 +2824,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="95">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="27" data-linenumber="95">
+          <span class="hits">27</span>
           
           <code class="ruby">    if @daycare.address.nil? #if user has not added address</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="96">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="25" data-linenumber="96">
+          <span class="hits">25</span>
           
           <code class="ruby">      @address = Address.new</code>
         </li>
@@ -2850,8 +2860,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="101">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="27" data-linenumber="101">
+          <span class="hits">27</span>
           
           <code class="ruby">    if @daycare.images.any?</code>
         </li>
@@ -2868,8 +2878,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="104">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="27" data-linenumber="104">
+          <span class="hits">27</span>
           
           <code class="ruby">      @images = []</code>
         </li>
@@ -2880,8 +2890,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="106">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="27" data-linenumber="106">
+          <span class="hits">27</span>
           
           <code class="ruby">    @image = Image.new</code>
         </li>
@@ -2892,8 +2902,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="108">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="27" data-linenumber="108">
+          <span class="hits">27</span>
           
           <code class="ruby">    if @daycare.programs.any?</code>
         </li>
@@ -2910,8 +2920,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="111">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="24" data-linenumber="111">
+          <span class="hits">24</span>
           
           <code class="ruby">      @programs = []</code>
         </li>
@@ -2922,8 +2932,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="113">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="27" data-linenumber="113">
+          <span class="hits">27</span>
           
           <code class="ruby">    @program = Program.new</code>
         </li>
@@ -2934,14 +2944,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="115">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="27" data-linenumber="115">
+          <span class="hits">27</span>
           
           <code class="ruby">    if @daycare.certifications.any?</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="116">
-          
+        <li class="covered" data-hits="1" data-linenumber="116">
+          <span class="hits">1</span>
           
           <code class="ruby">      @certifications = @daycare.certifications.order(&quot;position&quot;)</code>
         </li>
@@ -2952,8 +2962,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="118">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="26" data-linenumber="118">
+          <span class="hits">26</span>
           
           <code class="ruby">      @certifications = []</code>
         </li>
@@ -2964,8 +2974,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="120">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="27" data-linenumber="120">
+          <span class="hits">27</span>
           
           <code class="ruby">    @certification = Certification.new</code>
         </li>
@@ -2976,8 +2986,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="122">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="27" data-linenumber="122">
+          <span class="hits">27</span>
           
           <code class="ruby">    if @daycare.teachers.any?</code>
         </li>
@@ -2994,8 +3004,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="125">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="24" data-linenumber="125">
+          <span class="hits">24</span>
           
           <code class="ruby">      @teachers = []</code>
         </li>
@@ -3006,8 +3016,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="127">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="27" data-linenumber="127">
+          <span class="hits">27</span>
           
           <code class="ruby">    @teacher = Teacher.new</code>
         </li>
@@ -3018,8 +3028,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="129">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="27" data-linenumber="129">
+          <span class="hits">27</span>
           
           <code class="ruby">    if @daycare.additionals.any?</code>
         </li>
@@ -3036,8 +3046,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="132">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="25" data-linenumber="132">
+          <span class="hits">25</span>
           
           <code class="ruby">      @additionals = []</code>
         </li>
@@ -3048,8 +3058,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="134">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="27" data-linenumber="134">
+          <span class="hits">27</span>
           
           <code class="ruby">    @additional = Additional.new</code>
         </li>
@@ -3060,20 +3070,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="136">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="27" data-linenumber="136">
+          <span class="hits">27</span>
           
           <code class="ruby">    respond_to do |format|</code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="137">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="27" data-linenumber="137">
+          <span class="hits">27</span>
           
           <code class="ruby">      format.html</code>
         </li>
       
-        <li class="covered" data-hits="25" data-linenumber="138">
-          <span class="hits">25</span>
+        <li class="covered" data-hits="27" data-linenumber="138">
+          <span class="hits">27</span>
           
           <code class="ruby">      format.js</code>
         </li>
@@ -6066,8 +6076,8 @@
           <code class="ruby">  def validate_username</code>
         </li>
       
-        <li class="covered" data-hits="39" data-linenumber="28">
-          <span class="hits">39</span>
+        <li class="covered" data-hits="41" data-linenumber="28">
+          <span class="hits">41</span>
           
           <code class="ruby">    if User.where(email: user_name).exists?</code>
         </li>
@@ -10221,8 +10231,8 @@
     <h3>spec/factories/certifications.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>2</b> relevant lines. 
-      <span class="green"><b>2</b> lines covered</span> and
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -10242,25 +10252,31 @@
           <code class="ruby">  factory :certification do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    </code>
+          <code class="ruby">    name &#39;cert name&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    description &#39;cert description&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">end</code>
@@ -11497,6 +11513,198 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="e5560f5ec6c33cd35d90b8448e350c536b70285a">
+  <div class="header">
+    <h3>spec/features/certification_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>24</b> relevant lines. 
+      <span class="green"><b>24</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe &quot;the certification crud process&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &quot;allows user to add certification&quot;, js: true do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    daycare = FactoryGirl.create(:daycare)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    user = daycare.user</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    login_as(user, :scope =&gt; :user)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit edit_user_daycare_path(user, daycare)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &#39;daycare-edit-certification&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &#39;certification-edit-name&#39;, :with =&gt; &#39;New Cert&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &#39;certification-edit-desc&#39;, :with =&gt; &#39;Cert Description&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button &#39;Create Certification&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    find(&#39;.dropdown&#39;).click</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    find(&#39;#menu-view-daycare&#39;).click</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &#39;New Cert&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &quot;allows the user to delete certification&quot;, js:true do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    daycare = FactoryGirl.create(:daycare)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    certification = FactoryGirl.create(:certification)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    daycare.certifications.push(certification)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    user = daycare.user</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    login_as(user, :scope =&gt; :user)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit edit_user_daycare_path(user, daycare)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &#39;daycare-edit-certification&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    find(&quot;#certification-delete-#{certification.id}&quot;).trigger(&#39;click&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="27">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    expect { find(&quot;#certification-delete-#{certification.id}&quot;).trigger(&#39;click&#39;) }.to change(Certification, :count).by(-1)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby">end</code>
@@ -16308,14 +16516,14 @@
           <code class="ruby">  config.around(:each) do |example|</code>
         </li>
       
-        <li class="covered" data-hits="71" data-linenumber="53">
-          <span class="hits">71</span>
+        <li class="covered" data-hits="73" data-linenumber="53">
+          <span class="hits">73</span>
           
           <code class="ruby">    DatabaseCleaner.cleaning do</code>
         </li>
       
-        <li class="covered" data-hits="71" data-linenumber="54">
-          <span class="hits">71</span>
+        <li class="covered" data-hits="73" data-linenumber="54">
+          <span class="hits">73</span>
           
           <code class="ruby">      example.run</code>
         </li>
