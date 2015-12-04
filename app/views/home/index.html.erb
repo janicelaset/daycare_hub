@@ -1,8 +1,8 @@
 <div id="search-page">
-<div class="jumbotron">
-  <h1>Find a daycare near you</h1>
+<div class="jumbotron search-header">
+  <div class="search-input search-text">Find a daycare near you</div>
   <div class="row">
-    <%= form_tag(search_results_path, :method => "get", id: "search-form") do %>
+    <%= form_tag(search_results_path, :method => "get", id: "search-form", class: "search-input") do %>
       <div class="col-md-8 col-md-offset-2">
         <div class="input-group">
           <span class="input-group-btn">
@@ -47,7 +47,7 @@
         <img src="<%= asset_path('daycares.png') %>" alt="daycares">
         <div class="caption">
           <h3>Daycares</h3>
-          <p>Connecting with families is as easy as creating a profile. You can create a free website without the hassle. <a href="#">Sign up</a> now and be part of a network where parents can reach out to you.</p>
+          <p>Connecting with families is as easy as creating a profile. You can create a free "website" without the hassle. <a href="#">Sign up</a> now and be part of a network where parents can reach out to you.</p>
         </div>
       </div>
     </div>
@@ -62,6 +62,10 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="home-infographic">
+    <img src="<%= asset_path('how-it-works.png') %>" alt="...">
   </div>
 </div>
 </div>
