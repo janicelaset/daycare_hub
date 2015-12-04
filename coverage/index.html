@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-12-04T10:28:01-08:00">2015-12-04T10:28:01-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-12-04T10:36:28-08:00">2015-12-04T10:36:28-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">96.15%</span></span>
+    (<span class="covered_percent"><span class="green">97.49%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.25
+         2.3
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>103</b> files in total.
-    <b>1090</b> relevant lines. 
-    <span class="green"><b>1048</b> lines covered</span> and
-    <span class="red"><b>42</b> lines missed </span>
+    <b>1116</b> relevant lines. 
+    <span class="green"><b>1088</b> lines covered</span> and
+    <span class="red"><b>28</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -52,12 +52,12 @@
       
       <tr>
         <td class="strong"><a href="#2de832a5e0c4dde82fb4e7e3205332867f5812cf" class="src_link" title="app/controllers/additionals_controller.rb">app/controllers/additionals_controller.rb</a></td>
-        <td class="red strong">48.57 %</td>
+        <td class="yellow strong">85.71 %</td>
         <td>58</td>
         <td>35</td>
-        <td>17</td>
-        <td>18</td>
-        <td>0.5</td>
+        <td>30</td>
+        <td>5</td>
+        <td>0.9</td>
       </tr>
       
       <tr>
@@ -102,12 +102,12 @@
       
       <tr>
         <td class="strong"><a href="#9815007a4dda6422a60879a1d9e3e2e70788ba94" class="src_link" title="app/controllers/daycares_controller.rb">app/controllers/daycares_controller.rb</a></td>
-        <td class="green strong">95.56 %</td>
+        <td class="green strong">96.67 %</td>
         <td>159</td>
         <td>90</td>
-        <td>86</td>
-        <td>4</td>
-        <td>12.5</td>
+        <td>87</td>
+        <td>3</td>
+        <td>13.3</td>
       </tr>
       
       <tr>
@@ -387,7 +387,7 @@
         <td>15</td>
         <td>13</td>
         <td>2</td>
-        <td>3.9</td>
+        <td>4.0</td>
       </tr>
       
       <tr>
@@ -643,9 +643,9 @@
       <tr>
         <td class="strong"><a href="#42d1ac913c245b70d3266769843001035224383a" class="src_link" title="spec/factories/additionals.rb">spec/factories/additionals.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>6</td>
-        <td>2</td>
-        <td>2</td>
+        <td>7</td>
+        <td>4</td>
+        <td>4</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -743,9 +743,9 @@
       <tr>
         <td class="strong"><a href="#9025f557c19c7e7a0d1bc48b5827ef1c2a26a281" class="src_link" title="spec/features/additional_spec.rb">spec/features/additional_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>17</td>
-        <td>14</td>
-        <td>14</td>
+        <td>46</td>
+        <td>38</td>
+        <td>38</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -1067,7 +1067,7 @@
         <td>29</td>
         <td>29</td>
         <td>0</td>
-        <td>5.7</td>
+        <td>5.8</td>
       </tr>
       
       <tr>
@@ -1099,11 +1099,11 @@
         <div class="source_table" id="2de832a5e0c4dde82fb4e7e3205332867f5812cf">
   <div class="header">
     <h3>app/controllers/additionals_controller.rb</h3>
-    <h4><span class="red">48.57 %</span> covered</h4>
+    <h4><span class="yellow">85.71 %</span> covered</h4>
     <div>
       <b>35</b> relevant lines. 
-      <span class="green"><b>17</b> lines covered</span> and
-      <span class="red"><b>18</b> lines missed.</span>
+      <span class="green"><b>30</b> lines covered</span> and
+      <span class="red"><b>5</b> lines missed.</span>
     </div>
   </div>
   
@@ -1218,14 +1218,14 @@
           <code class="ruby">  def edit</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="19">
-          
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
           
           <code class="ruby">    @daycare = Daycare.find(params[:daycare_id])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
-          
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
           
           <code class="ruby">    @additional = Additional.find(params[:id])</code>
         </li>
@@ -1236,20 +1236,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="22">
-          
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
           
           <code class="ruby">    respond_to do |format|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="23">
-          
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
           
           <code class="ruby">      format.html</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="24">
-          
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
           
           <code class="ruby">      format.js</code>
         </li>
@@ -1278,20 +1278,20 @@
           <code class="ruby">  def update</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="29">
-          
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
           
           <code class="ruby">    @additional = Additional.find(params[:id])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="30">
-          
+        <li class="covered" data-hits="1" data-linenumber="30">
+          <span class="hits">1</span>
           
           <code class="ruby">    @daycare = Daycare.find(params[:daycare_id])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="31">
-          
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
           
           <code class="ruby">    @additional.update(additional_params)</code>
         </li>
@@ -1302,20 +1302,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="33">
-          
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
           
           <code class="ruby">    respond_to do |format|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="34">
-          
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
           
           <code class="ruby">      format.html</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="35">
-          
+        <li class="covered" data-hits="1" data-linenumber="35">
+          <span class="hits">1</span>
           
           <code class="ruby">      format.js</code>
         </li>
@@ -1344,14 +1344,14 @@
           <code class="ruby">  def destroy</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="40">
-          
+        <li class="covered" data-hits="2" data-linenumber="40">
+          <span class="hits">2</span>
           
           <code class="ruby">    @additional = Additional.find(params[:id])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="41">
-          
+        <li class="covered" data-hits="1" data-linenumber="41">
+          <span class="hits">1</span>
           
           <code class="ruby">    @additional.destroy</code>
         </li>
@@ -1440,8 +1440,8 @@
           <code class="ruby">  def additional_params</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="56">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="56">
+          <span class="hits">2</span>
           
           <code class="ruby">    params.require(:additional).permit(:title, :content, :image, :id, :position)</code>
         </li>
@@ -2239,11 +2239,11 @@
         <div class="source_table" id="9815007a4dda6422a60879a1d9e3e2e70788ba94">
   <div class="header">
     <h3>app/controllers/daycares_controller.rb</h3>
-    <h4><span class="green">95.56 %</span> covered</h4>
+    <h4><span class="green">96.67 %</span> covered</h4>
     <div>
       <b>90</b> relevant lines. 
-      <span class="green"><b>86</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
+      <span class="green"><b>87</b> lines covered</span> and
+      <span class="red"><b>3</b> lines missed.</span>
     </div>
   </div>
   
@@ -2274,8 +2274,8 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="5">
-          <span class="hits">24</span>
+        <li class="covered" data-hits="25" data-linenumber="5">
+          <span class="hits">25</span>
           
           <code class="ruby">    @daycare = Daycare.find(params[:id])</code>
         </li>
@@ -2286,14 +2286,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="7">
-          <span class="hits">24</span>
+        <li class="covered" data-hits="25" data-linenumber="7">
+          <span class="hits">25</span>
           
           <code class="ruby">    if @daycare.address.nil?  #if user has not added contact information</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="8">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="22" data-linenumber="8">
+          <span class="hits">22</span>
           
           <code class="ruby">      @address = Address.new</code>
         </li>
@@ -2322,14 +2322,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="13">
-          <span class="hits">24</span>
+        <li class="covered" data-hits="25" data-linenumber="13">
+          <span class="hits">25</span>
           
           <code class="ruby">    if @daycare.contact.nil?  #if user has not added contact information</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="14">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="23" data-linenumber="14">
+          <span class="hits">23</span>
           
           <code class="ruby">      @contact = Contact.new</code>
         </li>
@@ -2358,14 +2358,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="19">
-          <span class="hits">24</span>
+        <li class="covered" data-hits="25" data-linenumber="19">
+          <span class="hits">25</span>
           
           <code class="ruby">    if @daycare.summary.nil?</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="20">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="23" data-linenumber="20">
+          <span class="hits">23</span>
           
           <code class="ruby">      @summary = Summary.new</code>
         </li>
@@ -2394,20 +2394,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="25">
-          <span class="hits">24</span>
+        <li class="covered" data-hits="25" data-linenumber="25">
+          <span class="hits">25</span>
           
           <code class="ruby">    if @daycare.images.any? == false</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="26">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="23" data-linenumber="26">
+          <span class="hits">23</span>
           
           <code class="ruby">      @image = Image.new</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="27">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="23" data-linenumber="27">
+          <span class="hits">23</span>
           
           <code class="ruby">      @images = []</code>
         </li>
@@ -2448,20 +2448,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="34">
-          <span class="hits">24</span>
+        <li class="covered" data-hits="25" data-linenumber="34">
+          <span class="hits">25</span>
           
           <code class="ruby">    if @daycare.programs.any? == false</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="35">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="22" data-linenumber="35">
+          <span class="hits">22</span>
           
           <code class="ruby">      @program = Program.new</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="36">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="22" data-linenumber="36">
+          <span class="hits">22</span>
           
           <code class="ruby">      @programs = []</code>
         </li>
@@ -2490,20 +2490,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="41">
-          <span class="hits">24</span>
+        <li class="covered" data-hits="25" data-linenumber="41">
+          <span class="hits">25</span>
           
           <code class="ruby">    if @daycare.teachers.any? == false</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="42">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="22" data-linenumber="42">
+          <span class="hits">22</span>
           
           <code class="ruby">      @teachers = Program.new</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="43">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="22" data-linenumber="43">
+          <span class="hits">22</span>
           
           <code class="ruby">      @teachers = []</code>
         </li>
@@ -2532,20 +2532,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="48">
-          <span class="hits">24</span>
+        <li class="covered" data-hits="25" data-linenumber="48">
+          <span class="hits">25</span>
           
           <code class="ruby">    if @daycare.certifications.any? == false</code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="49">
-          <span class="hits">24</span>
+        <li class="covered" data-hits="25" data-linenumber="49">
+          <span class="hits">25</span>
           
           <code class="ruby">      @certification = Certification.new</code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="50">
-          <span class="hits">24</span>
+        <li class="covered" data-hits="25" data-linenumber="50">
+          <span class="hits">25</span>
           
           <code class="ruby">      @certifications = []</code>
         </li>
@@ -2574,8 +2574,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="55">
-          <span class="hits">24</span>
+        <li class="covered" data-hits="25" data-linenumber="55">
+          <span class="hits">25</span>
           
           <code class="ruby">    if @daycare.additionals.any? == false</code>
         </li>
@@ -2598,8 +2598,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="59">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="59">
+          <span class="hits">2</span>
           
           <code class="ruby">      @additionals = @daycare.additionals.order(&quot;position&quot;)</code>
         </li>
@@ -2730,8 +2730,8 @@
           <code class="ruby">  def edit</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="81">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="25" data-linenumber="81">
+          <span class="hits">25</span>
           
           <code class="ruby">    @daycare = Daycare.find(params[:id])</code>
         </li>
@@ -2742,14 +2742,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="83">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="25" data-linenumber="83">
+          <span class="hits">25</span>
           
           <code class="ruby">    if @daycare.contact.nil? #if user has not added contact information</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="84">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="24" data-linenumber="84">
+          <span class="hits">24</span>
           
           <code class="ruby">      @contact = Contact.new</code>
         </li>
@@ -2778,14 +2778,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="89">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="25" data-linenumber="89">
+          <span class="hits">25</span>
           
           <code class="ruby">    if @daycare.summary.nil?</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="90">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="23" data-linenumber="90">
+          <span class="hits">23</span>
           
           <code class="ruby">      @summary = Summary.new</code>
         </li>
@@ -2814,14 +2814,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="95">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="25" data-linenumber="95">
+          <span class="hits">25</span>
           
           <code class="ruby">    if @daycare.address.nil? #if user has not added address</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="96">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="23" data-linenumber="96">
+          <span class="hits">23</span>
           
           <code class="ruby">      @address = Address.new</code>
         </li>
@@ -2850,8 +2850,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="101">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="25" data-linenumber="101">
+          <span class="hits">25</span>
           
           <code class="ruby">    if @daycare.images.any?</code>
         </li>
@@ -2868,8 +2868,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="104">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="25" data-linenumber="104">
+          <span class="hits">25</span>
           
           <code class="ruby">      @images = []</code>
         </li>
@@ -2880,8 +2880,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="106">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="25" data-linenumber="106">
+          <span class="hits">25</span>
           
           <code class="ruby">    @image = Image.new</code>
         </li>
@@ -2892,8 +2892,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="108">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="25" data-linenumber="108">
+          <span class="hits">25</span>
           
           <code class="ruby">    if @daycare.programs.any?</code>
         </li>
@@ -2910,8 +2910,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="20" data-linenumber="111">
-          <span class="hits">20</span>
+        <li class="covered" data-hits="22" data-linenumber="111">
+          <span class="hits">22</span>
           
           <code class="ruby">      @programs = []</code>
         </li>
@@ -2922,8 +2922,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="113">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="25" data-linenumber="113">
+          <span class="hits">25</span>
           
           <code class="ruby">    @program = Program.new</code>
         </li>
@@ -2934,8 +2934,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="115">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="25" data-linenumber="115">
+          <span class="hits">25</span>
           
           <code class="ruby">    if @daycare.certifications.any?</code>
         </li>
@@ -2952,8 +2952,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="118">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="25" data-linenumber="118">
+          <span class="hits">25</span>
           
           <code class="ruby">      @certifications = []</code>
         </li>
@@ -2964,8 +2964,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="120">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="25" data-linenumber="120">
+          <span class="hits">25</span>
           
           <code class="ruby">    @certification = Certification.new</code>
         </li>
@@ -2976,8 +2976,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="122">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="25" data-linenumber="122">
+          <span class="hits">25</span>
           
           <code class="ruby">    if @daycare.teachers.any?</code>
         </li>
@@ -2994,8 +2994,8 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="20" data-linenumber="125">
-          <span class="hits">20</span>
+        <li class="covered" data-hits="22" data-linenumber="125">
+          <span class="hits">22</span>
           
           <code class="ruby">      @teachers = []</code>
         </li>
@@ -3006,8 +3006,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="127">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="25" data-linenumber="127">
+          <span class="hits">25</span>
           
           <code class="ruby">    @teacher = Teacher.new</code>
         </li>
@@ -3018,14 +3018,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="129">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="25" data-linenumber="129">
+          <span class="hits">25</span>
           
           <code class="ruby">    if @daycare.additionals.any?</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="130">
-          
+        <li class="covered" data-hits="2" data-linenumber="130">
+          <span class="hits">2</span>
           
           <code class="ruby">      @additionals = @daycare.additionals.order(&quot;position&quot;)</code>
         </li>
@@ -3048,8 +3048,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="134">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="25" data-linenumber="134">
+          <span class="hits">25</span>
           
           <code class="ruby">    @additional = Additional.new</code>
         </li>
@@ -3060,20 +3060,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="136">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="25" data-linenumber="136">
+          <span class="hits">25</span>
           
           <code class="ruby">    respond_to do |format|</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="137">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="25" data-linenumber="137">
+          <span class="hits">25</span>
           
           <code class="ruby">      format.html</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="138">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="25" data-linenumber="138">
+          <span class="hits">25</span>
           
           <code class="ruby">      format.js</code>
         </li>
@@ -6066,8 +6066,8 @@
           <code class="ruby">  def validate_username</code>
         </li>
       
-        <li class="covered" data-hits="37" data-linenumber="28">
-          <span class="hits">37</span>
+        <li class="covered" data-hits="39" data-linenumber="28">
+          <span class="hits">39</span>
           
           <code class="ruby">    if User.where(email: user_name).exists?</code>
         </li>
@@ -10089,8 +10089,8 @@
     <h3>spec/factories/additionals.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>2</b> relevant lines. 
-      <span class="green"><b>2</b> lines covered</span> and
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -10110,25 +10110,31 @@
           <code class="ruby">  factory :additional do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    </code>
+          <code class="ruby">    title &quot;additional info&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    content &quot;additional content&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">end</code>
@@ -10671,8 +10677,8 @@
     <h3>spec/features/additional_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>14</b> relevant lines. 
-      <span class="green"><b>14</b> lines covered</span> and
+      <b>38</b> relevant lines. 
+      <span class="green"><b>38</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -10777,6 +10783,180 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &quot;allows the user to edit additional info&quot;, js:true do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    daycare = FactoryGirl.create(:daycare)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    additional = FactoryGirl.create(:additional)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    daycare.additionals.push(additional)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    user = daycare.user</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    login_as(user, :scope =&gt; :user)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit edit_user_daycare_path(user, daycare)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &#39;daycare-edit-additional&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">    # click_on &quot;additional-edit-#{additional.id}&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    find(&quot;#additional-edit-#{additional.id}&quot;).trigger(&#39;click&#39;)  #icon is on draggable panel header(overlapping elements)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;additional-edit-name#{additional.id}&quot;, :with =&gt; &#39;EditAdditional&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button &#39;Update Additional&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="30">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    find(&#39;.dropdown&#39;).click</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    find(&#39;#menu-view-daycare&#39;).click</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &#39;EditAdditional&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="35">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &quot;allows the user to delete additional info&quot;, js:true do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="36">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    daycare = FactoryGirl.create(:daycare)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    additional = FactoryGirl.create(:additional)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="38">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    daycare.additionals.push(additional)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="39">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    user = daycare.user</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="40">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    login_as(user, :scope =&gt; :user)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="41">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit edit_user_daycare_path(user, daycare)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="42">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &#39;daycare-edit-additional&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="43">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    find(&quot;#additional-delete-#{additional.id}&quot;).trigger(&#39;click&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="44">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    expect { find(&quot;#additional-delete-#{additional.id}&quot;).trigger(&#39;click&#39;) }.to change(Additional, :count).by(-1)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
           
           
           <code class="ruby">end</code>
@@ -16128,14 +16308,14 @@
           <code class="ruby">  config.around(:each) do |example|</code>
         </li>
       
-        <li class="covered" data-hits="69" data-linenumber="53">
-          <span class="hits">69</span>
+        <li class="covered" data-hits="71" data-linenumber="53">
+          <span class="hits">71</span>
           
           <code class="ruby">    DatabaseCleaner.cleaning do</code>
         </li>
       
-        <li class="covered" data-hits="69" data-linenumber="54">
-          <span class="hits">69</span>
+        <li class="covered" data-hits="71" data-linenumber="54">
+          <span class="hits">71</span>
           
           <code class="ruby">      example.run</code>
         </li>
