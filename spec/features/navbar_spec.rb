@@ -4,7 +4,7 @@ describe "The navbar links" do
   it "displays 'Add Daycare' link and user name if user with no daycare signs in" do
     user = FactoryGirl.create(:user)
     visit user_session_path
-    fill_in 'Login', :with => 'testuser'
+    fill_in 'user_login', :with => 'testuser'
     fill_in 'Password', :with => 'password'
     click_button 'Log in'
     expect(page).to have_content 'Add Daycare'
