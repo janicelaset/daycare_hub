@@ -50,7 +50,7 @@ describe "The program crud process" do
     source.drag_to(target)
     find('.dropdown').click
     find('#menu-view-daycare').click
-    expect(page).to have_content 'Programs Program Description Ages to No openings FirstProgram'
+    expect(page).to have_content 'Programs Program Ages: to No openings Description FirstProgram Ages: to We have openings Descriptio'
   end
 
   it "allows the user to delete a program", js:true do

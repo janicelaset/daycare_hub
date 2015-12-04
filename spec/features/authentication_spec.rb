@@ -14,7 +14,7 @@ describe "the sign in process" do
   it "signs in user with user name" do
     user = FactoryGirl.create(:user)
     visit user_session_path
-    fill_in 'Login', :with => 'testuser'
+    fill_in 'user_login', :with => 'testuser'
     fill_in 'Password', :with => 'password'
     click_button 'Log in'
     expect(page).to have_content 'testuser'
@@ -34,7 +34,7 @@ describe "the sign in process" do
   it "directs users with no daycare to new daycare page on sign in" do
     user = FactoryGirl.create(:user)
     visit user_session_path
-    fill_in 'Login', :with => 'testuser'
+    fill_in 'user_login', :with => 'testuser'
     fill_in 'Password', :with => 'password'
     click_button 'Log in'
     expect(page).to have_content 'Add Daycare'
@@ -43,7 +43,7 @@ describe "the sign in process" do
   it "directs users with daycare to profile page on sign in" do
     daycare = FactoryGirl.create(:daycare)
     visit user_session_path
-    fill_in 'Login', :with => 'testuser'
+    fill_in 'user_login', :with => 'testuser'
     fill_in 'Password', :with => 'password'
     click_button 'Log in'
     expect(page).to have_content 'My Daycare'

@@ -9,7 +9,7 @@ describe "the address crud process" do
     click_link 'daycare-edit-address'
     fill_in 'Street', :with => '1234 Address Dr'
     fill_in 'City', :with => 'City'
-    fill_in 'State', :with => 'OR'
+    # fill_in 'State', :with => 'OR'
     fill_in 'Zip', :with => '12345'
     click_button 'Create Address'
     find('.dropdown').click
