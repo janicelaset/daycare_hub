@@ -31,19 +31,25 @@ class DaycaresController < ApplicationController
       @images = @images.drop(1)
     end
 
-    @daycare.programs = @daycare.programs.order("position")
-    @programs = @daycare.programs.order("position")
+    if @daycare.programs.any? == false
+      @program = Program.new
+      @programs = []
+    else
+      @programs = @daycare.programs.order("position")
+    end
 
-    @daycare.teachers = @daycare.teachers.order("position")
-    @teachers = @daycare.teachers.order("position")
-    # if @daycare.teachers.any?
-    #   @teachers = @daycare.teachers.order("position")
-    # end
+    if @daycare.teachers.any? == false
+      @teachers = Program.new
+      @teachers = []
+    else
+      @teachers = @daycare.teachers.order("position")
+    end
 
     if @daycare.certifications.any? == false
       @certification = Certification.new
+      @certifications = []
     else
-      @certifications = @daycare.certifications
+      @certifications = @daycare.certifications.order("position")
     end
 
     if @daycare.additionals.any? == false
@@ -99,14 +105,25 @@ class DaycaresController < ApplicationController
     end
     @image = Image.new
 
+    if @daycare.programs.any?
+      @programs = @daycare.programs.order("position")
+    else
+      @programs = []
+    end
     @program = Program.new
 
+    if @daycare.certifications.any?
+      @certifications = @daycare.certifications.order("position")
+    else
+      @certifications = []
+    end
     @certification = Certification.new
 
     if @daycare.teachers.any?
       @teachers = @daycare.teachers.order("position")
+    else
+      @teachers = []
     end
-
     @teacher = Teacher.new
 
     if @daycare.additionals.any?

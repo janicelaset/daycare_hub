@@ -1,6 +1,6 @@
 <% if @daycare.certifications.any? %>
   <ul id="certificationList" class="list-unstyled" data-update-url="<%= move_daycare_certifications_path(@daycare) %>">
-    <% @daycare.certifications.each do |certification| %>
+    <% @certifications.each do |certification| %>
       <li class="panel panel-info" id="certification-<%= certification.id %>">
         <div class="panel-heading">
           <span id="panel-name-certification-<%= certification.id %>">
