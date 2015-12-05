@@ -15,12 +15,14 @@
         </div>
         <div class="panel-body">
           <div class="media">
-            <div class="media-left media-top">
+            <div class="media-left media-top" id="program-image<%= program.id %>">
               <%= image_tag program.picture.url(:small) %>
             </div>
             <div class="media-body">
               <h4 id="header-name-program-<%= program.id %>"><%= program.name %></h4>
-              <%= program.description %>
+              <div id="program-description-<%= program.id %>">
+                <%= program.description %>
+              </div>
             </div>
           </div>
         </div>

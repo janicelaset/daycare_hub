@@ -1,3 +1,15 @@
-$('#edit-program-<%= @program.id %>').slideUp(350);
-$('#panel-name-program-<%= @program.id %>').text('<%= @program.name %>')
-$('#header-name-program-<%= @program.id %>').text('<%= @program.name %>')
+$('#edit-program-<%= @program.id %>').slideUp(350, function() {
+  $('#panel-name-program-<%= @program.id %>').text('<%= @program.name %>')
+  $('#header-name-program-<%= @program.id %>').text('<%= @program.name %>')
+  $('#program-description-<%= @program.id %>').text('<%= @program.description %>')
+  $("#program-image<%= @program.id %>").html("<%= j image_tag @program.picture.url(:small) %>");
+
+  $('#programList').sortable({
+      axis: 'y',
+      panel: '.panel-heading',
+      update: function() {
+        $.post($(this).data('update-url'), $(this).sortable('serialize'))
+      }
+    }
+  );
+});
