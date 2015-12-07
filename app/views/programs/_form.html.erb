@@ -32,11 +32,12 @@
       <%= f.text_area :description, class: 'form-control', required: true, rows: "5" %>
     </div>
 
-    <div class="col-md-12">
-      <br>
-      <%= f.label 'Add Photo', class: 'control-label col-sm-2' %>
-      <div class="col-md-2">
-        <%= f.file_field :picture %>
+    <div class="col-md-12 daycare-edit-field">
+      <div class="col-md-4">
+        <span class="btn btn-default btn-file">
+          Select Image<%= f.file_field :picture, class: "btn-block", id: "btn-select-image", onchange: "$('#program-upload-file-info').html($(this).val());" %>
+        </span>
+        <span class='label label-default label-image-upload' id="program-upload-file-info"></span>
       </div>
 
       <%= f.label :available, "Are there Openings?", class: 'control-label col-md-3' %>

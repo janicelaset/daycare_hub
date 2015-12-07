@@ -19,7 +19,27 @@
               <%= image_tag program.picture.url(:small) %>
             </div>
             <div class="media-body">
-              <h4 id="header-name-program-<%= program.id %>"><%= program.name %></h4>
+              <h4 id="header-name-program-<%= program.id %>">
+                <%= program.name %>
+              </h4>
+              <div id="program-ages">
+                Ages:
+                <%= program.age_from %>
+                <% if program.age_from_units != program.age_to_units %>
+                  <%= program.age_from_units %>
+                <% end %>
+                to
+                <%= program.age_to %>
+                <%= program.age_to_units %>
+              </div>
+              <div id="program-availability-<%= program.id %>">
+                Available Space:
+                <% if program.available? %>
+                    yes
+                <% else %>
+                    none
+                <% end %>
+              </div>
               <div id="program-description-<%= program.id %>">
                 <%= program.description %>
               </div>

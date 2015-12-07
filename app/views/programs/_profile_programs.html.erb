@@ -12,9 +12,16 @@
                 <%= image_tag program.picture.url(:medium) %>
               </div>
               <h3 class="media-content-header"><%= program.name %></h3>
-              <p>
-                <strong>Ages: </strong><%= program.age_from %> to <%= program.age_to %>
-              </p>
+              <div id="profile-program-ages">
+                <strong>Ages: </strong>
+                <%= program.age_from %>
+                <% if program.age_from_units != program.age_to_units %>
+                  <%= program.age_from_units %>
+                <% end %>
+                to
+                <%= program.age_to %>
+                <%= program.age_to_units %>
+              </div>
               <p>
                 <% if program.available == true %>
                   We have openings
@@ -39,9 +46,19 @@
                   <div class="daycare-profile-thumbnail-header">
                     <%= program.name %>
                   </div>
-                  <p>
-                    <strong>Ages: </strong><%= program.age_from %> to <%= program.age_to %>
-                  </p>
+                  <div id="profile-program-ages">
+                    <p>
+
+                    <strong>Ages: </strong>
+                    <%= program.age_from %>
+                    <% if program.age_from_units != program.age_to_units %>
+                      <%= program.age_from_units %>
+                    <% end %>
+                    to
+                    <%= program.age_to %>
+                    <%= program.age_to_units %>
+                    </p>
+                  </div>
                   <p>
                     <% if program.available == true %>
                       We have openings
