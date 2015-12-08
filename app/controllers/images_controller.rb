@@ -1,6 +1,15 @@
 class ImagesController < ApplicationController
-  def create
+  def index
+    @daycare = Daycare.find(params[:daycare_id])
+    if @daycare.images.any?
+      @images = @daycare.images.order("position")
+    else
+      @images = []
+    end
+    @image = Image.new
+  end
 
+  def create
     @daycare = Daycare.find(params[:daycare_id])
     @image = Image.new(image_params)
     @image.daycare = @daycare
@@ -16,10 +25,10 @@ class ImagesController < ApplicationController
 
     #create new image to display create image form so users can add more images
     @image = Image.new
-    respond_to do |format|
-      format.html
-      format.js
-    end
+    # respond_to do |format|
+    #   format.html
+    #   format.js
+    # end
   end
 
   def edit

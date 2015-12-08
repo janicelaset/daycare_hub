@@ -8,6 +8,12 @@ Rails.application.routes.draw do
     resources :daycares
   end
 
+  resources :users do
+    resources :daycares do
+      resources :images, only: [:index]
+    end
+  end
+
   resources :daycares do
     resources :images, only: [:create, :edit, :update, :destroy] do
       collection { post :move }

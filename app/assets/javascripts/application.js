@@ -34,7 +34,7 @@ $(document).ready(function(){
 
 	dropzone.on("success", function(file) {
 		this.removeFile(file)
-		$.getScript("/images")
+		$.getScript("images")
 	})
 });
 
