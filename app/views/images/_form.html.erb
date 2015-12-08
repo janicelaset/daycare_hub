@@ -1,37 +1,9 @@
-<%= form_for [@daycare, @image], :html => {:class => "form-horizontal", :multipart => true, id: "image-form" }, remote: true do |f| %>
-  <div class="form-group">
+<%= form_for [@daycare, @image], :html => {:class => "form-horizontal dropzone", :multipart => true, id: "image-form" }, remote: true do |f| %>
 
-    <div class="col-sm-2 ">
-      <%= f.label :description, class: 'control-label' %>
-    </div>
-    <div class="col-sm-10 daycare-edit-field">
-      <%= f.text_field :description, class: 'form-control', id: "image-edit-desc#{@image.id}" %>
-    </div>
-
-    <% if @image.id.nil? %>
       <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
-      <div class="col-sm-12 daycare-edit-field">
-        <span class="btn btn-primary btn-file pull-right">
-          Add Image
-          <%= f.file_field :picture, onchange: "$('#image-form').submit();", class: "btn-block", id: "btn-select-image" %>
-        </span>
-      </div>
-    <% else %>
-      <div class="col-md-12 daycare-edit-field">
-        <span class="btn btn-default btn-file">
-          Select Image<%= f.file_field :picture, class: "btn-block", id: "btn-select-image", onchange: "$('#upload-file-info').html($(this).val());" %>
-        </span>
-        <span class='label label-default label-image-upload' id="upload-file-info"></span>
-      </div>
-      <div class="pull-right col-md-3">
-        <%= f.submit class:'btn btn-primary btn-block' %>
-      </div>
-      <div class="pull-right col-md-3">
-        <button type="button" class="btn btn-primary btn-block pull-right" onclick="hideEditForm('<%= @image.id %>', 'image')">Cancel</button>
-      </div>
-    <% end %>
-    <!-- <div class="pull-right col-sm-3">
-      <%= f.submit "Add Image", class: 'btn btn-primary btn-block' %>
-    </div> -->
-  </div>
+
+          <%= f.file_field :picture %><br>
+          <%= f.submit "Upload" %>
+
+
 <% end %>

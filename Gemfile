@@ -34,7 +34,7 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'hirb'
 gem "factory_girl_rails", "~> 4.0"
 gem 'devise'
-gem 'paperclip'
+gem 'paperclip', "~> 4.1"
 gem 'geocoder'
 gem 'jquery-ui-rails'
 gem 'acts_as_list'

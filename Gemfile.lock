@@ -268,7 +268,7 @@ DEPENDENCIES
   jquery-turbolinks
   jquery-ui-rails
   launchy
-  paperclip
+  paperclip (~> 4.1)
   pg
   phantomjs
   poltergeist

@@ -1,15 +1,21 @@
 class ImagesController < ApplicationController
   def create
+
     @daycare = Daycare.find(params[:daycare_id])
     @image = Image.new(image_params)
     @image.daycare = @daycare
 
-    @image.save
+    # @image.save
     @images = @daycare.images
+
+    if @image.save
+      render json: { message: "success", fileID: @image.id }, :status => 200
+    else
+      render json: { error: @image.errors.full_messages.join(',')}, :status => 400
+    end
 
     #create new image to display create image form so users can add more images
     @image = Image.new
-
     respond_to do |format|
       format.html
       format.js
