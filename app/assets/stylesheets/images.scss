@@ -1,3 +1,24 @@
 // Place all the styles related to the images controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.image-file-field {
+  display: none;
+}
+
+.dz-default.dz-message {
+  display: none;
+}
+
+.drop-image-field {
+  height: 150px;
+  width: 150px;
+  border: dashed 3px;
+  color: gray;
+  cursor: pointer;
+}
+
+.drop-image-field-text {
+  margin-top: 4em;
+  text-align: center;
+}

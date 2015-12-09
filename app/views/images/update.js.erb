@@ -5,7 +5,7 @@ $('#edit-image-<%= @image.id %>').slideUp(350, function() {
 
   $('#imageList').sortable({
       axis: 'y',
-      panel: '.panel-heading',
+      handle: '.panel-heading',
       update: function() {
         $.post($(this).data('update-url'), $(this).sortable('serialize'))
       }

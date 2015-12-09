@@ -5,7 +5,7 @@
 jQuery ->
   $('#imageList').sortable(
     axis: 'y'
-    panel: '.panel-heading'
+    handle: '.panel-heading'
     update: ->
       $.post($(this).data('update-url'), $(this).sortable('serialize'))
   );
