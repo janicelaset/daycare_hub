@@ -14,21 +14,22 @@ class ImagesController < ApplicationController
     @image = Image.new(image_params)
     @image.daycare = @daycare
 
-    # @image.save
+    @image.save
     @images = @daycare.images
 
-    if @image.save
-      render json: { message: "success", fileID: @image.id }, :status => 200
-    else
-      render json: { error: @image.errors.full_messages.join(',')}, :status => 400
-    end
+    #dropzone
+    # if @image.save
+    #   render json: { message: "success", fileID: @image.id }, :status => 200
+    # else
+    #   render json: { error: @image.errors.full_messages.join(',')}, :status => 400
+    # end
 
     #create new image to display create image form so users can add more images
     @image = Image.new
-    # respond_to do |format|
-    #   format.html
-    #   format.js
-    # end
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def edit
@@ -44,11 +45,11 @@ class ImagesController < ApplicationController
   def update
     @image = Image.find(params[:id])
     @daycare = Daycare.find(params[:daycare_id])
-    @image.update(image_params)
 
-    respond_to do |format|
-      format.html
-      format.js
+    if @image.update(image_params)
+      render json: { message: "success", fileID: @image.id }, :status => 200
+    else
+      render json: { error: @image.errors.full_messages.join(',')}, :status => 400
     end
   end
 

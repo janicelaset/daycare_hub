@@ -30,9 +30,6 @@ $(document).ready(function(){
 		paramName: "image[picture]", // Rails expects the file upload to be something like model[field_name]
 		addRemoveLinks: true, // Don't show remove links on dropzone itself.
 		autoProcessQueue: false,
-	  // uploadMultiple: true,
-	  // parallelUploads: 100,
-		// previewsContainer: "image-preview",
 		clickable: ".drop-image-field",
 	  maxFiles: 1,
 
@@ -48,34 +45,17 @@ $(document).ready(function(){
 	      myDropzone.processQueue();
 	    });
 
-	    // Listen to the sendingmultiple event. In this case, it's the sendingmultiple event instead
-	    // of the sending event because uploadMultiple is set to true.
-	    this.on("sendingmultiple", function() {
-	      // Gets triggered when the form is actually being sent.
-	      // Hide the success button or the complete form.
-	    });
-	    // this.on("successmultiple", function(files, response) {
-			// 	this.removeFile(files);
-			// 	$.getScript("images");
-			// 	alert("response");
-	    // });
-	    this.on("errormultiple", function(files, response) {
-	      // Gets triggered when there was an error sending the files.
-	      // Maybe show form again, and notify user of error
-	    });
+			this.on("success", function(file) {
+				this.removeFile(file);
+				$.getScript("images");
+				$(".drop-image-field").show();
+			})
+
+			this.on("addedfile", function() {
+				$(".drop-image-field").hide();
+			})
 	  }
 	});
-
-	dropzone.on("success", function(file) {
-		this.removeFile(file);
-		$.getScript("images");
-		$(".drop-image-field").show();
-	})
-
-	dropzone.on("addedfile", function() {
-		$(".drop-image-field").hide();
-	})
-
 });
 
 var setRadius = function(radius, value) {

@@ -1,0 +1,25 @@
+<%= form_for [@daycare, @image], :html => {:class => "form-horizontal dropzone", :multipart => true, id: "image-form#{@image.id}" } do |f| %>
+  <div class="row">
+
+  <div class="col-sm-12 daycare-edit-field">
+    <%= f.label :description %>
+    <%= f.text_field :description, class: 'form-control', id: "image-edit-desc#{@image.id}" %>
+  </div>
+  </div>
+
+  <div class="col-md-12 image-file-field">
+    <%= f.file_field :picture %>
+  </div>
+
+  <div class="pull-right col-md-3">
+    <%= f.submit class:'btn btn-primary btn-block image-submit' %>
+  </div>
+
+  <div class="drop-image-field">
+    <div class="drop-image-field-text">
+      Drop file or click to upload
+    </div>
+  </div>
+
+
+<% end %>
