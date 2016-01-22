@@ -1,22 +1,26 @@
 <%= form_for [@daycare, @image], remote: true, :html => {:class => "form-horizontal", :multipart => true, id: "image-form#{@image.id}" } do |f| %>
-  <div class="row">
+  <div class="form-group">
 
-  <div class="col-sm-12 daycare-edit-field">
-    <%= f.label :description %>
-    <%= f.text_field :description, class: 'form-control', id: "image-edit-desc#{@image.id}" %>
+    <div class="col-sm-12 daycare-edit-field">
+      <%= f.label :description %>
+      <%= f.text_field :description, class: 'form-control', id: "image-edit-desc#{@image.id}" %>
+    </div>
+
+    <div class="col-md-12 daycare-edit-field">
+      <span class="btn btn-default btn-file">
+        Select Image<%= f.file_field :picture, class: "btn-block", id: "btn-select-image", onchange: "$('#image-upload-file-info#{@image.id}').html($(this).val());" %>
+      </span>
+      <span class='label label-default label-image-upload' id="image-upload-file-info<%= @image.id %>"></span>
+    </div>
+
+    <div class="pull-right col-md-3">
+      <%= f.submit class:'btn btn-primary btn-block image-submit' %>
+    </div>
+
+    <% if @image.picture_file_name != nil %>
+        <div class="pull-right col-md-3">
+          <button type="button" class="btn btn-primary btn-block pull-right" onclick="hideEditForm('<%= @image.id %>', 'image')">Cancel</button>
+        </div>
+    <% end %>
   </div>
-  </div>
-
-  <div class="col-md-12 daycare-edit-field">
-    <span class="btn btn-default btn-file">
-      Select Image<%= f.file_field :picture, class: "btn-block", id: "btn-select-image", onchange: "$('#image-upload-file-info').html($(this).val());" %>
-    </span>
-    <span class='label label-default label-image-upload' id="image-upload-file-info"></span>
-  </div>
-
-  <div class="pull-right col-md-3">
-    <%= f.submit class:'btn btn-primary btn-block image-submit' %>
-  </div>
-
-
 <% end %>

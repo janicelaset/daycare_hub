@@ -46,10 +46,16 @@ class ImagesController < ApplicationController
     @image = Image.find(params[:id])
     @daycare = Daycare.find(params[:daycare_id])
 
-    if @image.update(image_params)
-      render json: { message: "success", fileID: @image.id }, :status => 200
-    else
-      render json: { error: @image.errors.full_messages.join(',')}, :status => 400
+    #for dropzone
+    # if @image.update(image_params)
+    #   render json: { message: "success", fileID: @image.id }, :status => 200
+    # else
+    #   render json: { error: @image.errors.full_messages.join(',')}, :status => 400
+    # end
+
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 

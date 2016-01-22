@@ -1,5 +1,6 @@
 $('#image-add-list').html('<%= j render 'images/image_list' %>');
 $('#image-edit-desc<%= @image.id %>').val("");
+$('#image-upload-file-info<%= @image.id%>').html("");
 $('#imageList').sortable({
     axis: 'y',
     panel: '.panel-heading',
