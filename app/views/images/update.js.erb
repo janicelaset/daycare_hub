@@ -1,14 +1,14 @@
 $('#edit-image-<%= @image.id %>').slideUp(350, function() {
   $("#daycare-image-<%= @image.id %>").html("<%= j image_tag @image.picture.url(:thumb) %>");
-  // $("#daycare-image-description-<%= @image.id %>").text("<%= @image.description %>")
-  // $('#panel-name-image-<%= @image.id %>').text('<%= @image.picture_file_name %>');
+  $("#daycare-image-description-<%= @image.id %>").text("<%= @image.description %>")
+  $('#panel-name-image-<%= @image.id %>').text('<%= @image.picture_file_name %>');
 
-  // $('#imageList').sortable({
-  //     axis: 'y',
-  //     handle: '.panel-heading',
-  //     update: function() {
-  //       $.post($(this).data('update-url'), $(this).sortable('serialize'))
-  //     }
-  //   }
-  // );
+  $('#imageList').sortable({
+      axis: 'y',
+      handle: '.panel-heading',
+      update: function() {
+        $.post($(this).data('update-url'), $(this).sortable('serialize'))
+      }
+    }
+  );
 });

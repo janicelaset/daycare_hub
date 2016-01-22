@@ -45,6 +45,7 @@ class ImagesController < ApplicationController
   def update
     @image = Image.find(params[:id])
     @daycare = Daycare.find(params[:daycare_id])
+    @image.update(image_params)
 
     #for dropzone
     # if @image.update(image_params)
