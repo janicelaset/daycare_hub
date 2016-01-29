@@ -45,11 +45,19 @@ class TeachersController < ApplicationController
   def move
     @daycare = Daycare.find(params[:daycare_id])
 
+    #re-rendering teacher_list template to make sure edit form belongs
+    #with same panel after sorting
+    #need to change code to re-order nodes but this will work for now
+    @teachers = @daycare.teachers
+
     params['teacher'].each_with_index do |id, index|
       teacher = Teacher.find(id)
       teacher.update_attribute(:position, index+1) if teacher
     end
-    render nothing: true
+
+    respond_to do |format|
+      format.js
+    end
   end
 
   private

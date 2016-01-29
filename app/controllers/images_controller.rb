@@ -67,13 +67,17 @@ class ImagesController < ApplicationController
 
   def move
     @daycare = Daycare.find(params[:daycare_id])
+
+    #re-rendering images_list template to make sure edit form belongs
+    #with same panel after sorting
+    #need to change code to re-order nodes but this will work for now
     @images = @daycare.images
-    
+
     params['image'].each_with_index do |id, index|
       image = Image.find(id)
       image.update_attribute(:position, index+1) if image
     end
-    # render nothing: true
+
     respond_to do |format|
       format.js
     end

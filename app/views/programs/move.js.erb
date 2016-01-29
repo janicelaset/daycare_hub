@@ -1,4 +1,9 @@
-var node = $('*[data-role="program<%= @program.id %>"]');
-var new_node_html = '<%= j render @program %>';
-
-node.replaceWith(new_node_html);
+$("#program-edit-list").html("<%= j render 'programs/program_list' %>")
+$('#programList').sortable({
+    axis: 'y',
+    panel: '.panel-heading',
+    update: function() {
+      $.post($(this).data('update-url'), $(this).sortable('serialize'))
+    }
+  }
+);
