@@ -4,7 +4,7 @@ class TeachersController < ApplicationController
     @teacher = Teacher.new(teacher_params)
     @daycare = Daycare.find(params[:daycare_id])
     @teacher.daycare = @daycare
-
+    @teachers = @daycare.teachers
     @teacher.save
 
     #create new teacher to display create teacher form so users can add more teachers
@@ -29,6 +29,7 @@ class TeachersController < ApplicationController
   def update
     @teacher = Teacher.find(params[:id])
     @daycare = Daycare.find(params[:daycare_id])
+    @teachers = @daycare.teachers
 
     @teacher.update(teacher_params)
     respond_to do |format|

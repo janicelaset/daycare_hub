@@ -1,7 +1,8 @@
+alert('update')
 $('#edit-program-<%= @program.id %>').slideUp(350, function() {
   $('#panel-name-program-<%= @program.id %>').text('<%= @program.name %>')
   $('#header-name-program-<%= @program.id %>').text('<%= @program.name %>')
-  $('#program-description-<%= @program.id %>').text('<%= @program.description %>')
+  $('#program-description-<%= @program.id %>').text('<%= @program.description.gsub!(/\r\n/, '\r\n') %>')
   $("#program-image<%= @program.id %>").html("<%= j image_tag @program.picture.url(:small) %>");
 
   $('#programList').sortable({
