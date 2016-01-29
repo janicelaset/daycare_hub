@@ -3,8 +3,9 @@ class ProgramsController < ApplicationController
     @program = Program.new(program_params)
     @daycare = Daycare.find(params[:daycare_id])
     @program.daycare = @daycare
-
     @program.save
+
+    @programs = @daycare.programs
 
     #create new program to display create program form so users can add more programs
     @program = Program.new
@@ -53,7 +54,7 @@ class ProgramsController < ApplicationController
       program = Program.find(id)
       program.update_attribute(:position, index+1) if program
     end
-    
+
     respond_to do |format|
       format.js
     end

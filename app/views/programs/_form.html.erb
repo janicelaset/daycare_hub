@@ -32,24 +32,24 @@
       <%= f.text_area :description, class: 'form-control', required: true, rows: "5" %>
     </div>
 
+    <%= f.label :available, "Are there Openings?", class: 'control-label col-md-3' %>
+    <div class="col-md-1 daycare-edit-field">
+      <%= f.label :available, "Yes", class: 'control-label' %>
+      <%= f.radio_button :available, true , class: 'form-control', :checked => true, :value => true %>
+    </div>
+    <div class="col-md-1 daycare-edit-field">
+      <%= f.label :available, "No", class: 'control-label' %>
+      <%= f.radio_button :available, false, class: 'form-control', :value => false %>
+    </div>
+    <br>
+
     <div class="col-md-12 daycare-edit-field">
-      <div class="col-md-4">
+      <div class="col-md-6">
         <span class="btn btn-default btn-file">
           Select Image<%= f.file_field :picture, class: "btn-block", id: "btn-select-image", onchange: "$('#program-upload-file-info').html($(this).val());" %>
         </span>
         <span class='label label-default label-image-upload' id="program-upload-file-info"></span>
       </div>
-
-      <%= f.label :available, "Are there Openings?", class: 'control-label col-md-3' %>
-      <div class="col-md-1 daycare-edit-field">
-      <%= f.label :available, "Yes", class: 'control-label' %>
-      <%= f.radio_button :available, true , class: 'form-control', :checked => true, :value => true %>
-      </div>
-      <div class="col-md-1 daycare-edit-field">
-        <%= f.label :available, "No", class: 'control-label' %>
-        <%= f.radio_button :available, false, class: 'form-control', :value => false %>
-      </div>
-      <br>
     </div>
 
     <div class="pull-right col-md-3">
