@@ -46,10 +46,10 @@ class CertificationsController < ApplicationController
   def move
     @daycare = Daycare.find(params[:daycare_id])
 
-    #re-rendering programs_list template to make sure edit form belongs
+    #re-rendering certifications_list template to make sure edit form belongs
     #with same panel after sorting
     #need to change code to re-order nodes but this will work for now
-    @certifications = @daycare.programs
+    @certifications = @daycare.certifications
 
     params['certification'].each_with_index do |id, index|
       certification = Certification.find(id)
