@@ -6,11 +6,11 @@ $('#certification-edit-desc<%= @certification.id %>').val("");
 //$('#certification-upload-file-info<%= @certification.id %>').val("");
 // $('#certification-edit-form').html('<%= j render 'certifications/form' %>');
 
-// $('#certificationList').sortable({
-//     axis: 'y',
-//     panel: '.panel-heading',
-//     update: function() {
-//       $.post($(this).data('update-url'), $(this).sortable('serialize'))
-//     }
-//   }
-// );
+$('#certificationList').sortable({
+    axis: 'y',
+    panel: '.panel-heading',
+    update: function() {
+      $.post($(this).data('update-url'), $(this).sortable('serialize'))
+    }
+  }
+);

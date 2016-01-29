@@ -43,6 +43,24 @@ class CertificationsController < ApplicationController
     @certification.destroy
   end
 
+  def move
+    @daycare = Daycare.find(params[:daycare_id])
+
+    #re-rendering programs_list template to make sure edit form belongs
+    #with same panel after sorting
+    #need to change code to re-order nodes but this will work for now
+    @certifications = @daycare.programs
+
+    params['certification'].each_with_index do |id, index|
+      certification = Certification.find(id)
+      certification.update_attribute(:position, index+1) if certification
+    end
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
   private
   def cert_params
     params.require(:certification).permit(:name, :description, :link, :image, :id, :position)
