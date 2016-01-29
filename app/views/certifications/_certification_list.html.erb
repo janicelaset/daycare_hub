@@ -20,12 +20,19 @@
             </div>
             <div class="media-body">
               <h4 id="header-name-certification-<%= certification.id %>"><%= certification.name %></h4>
-              <%= certification.description %>
+              <a href="<%= certification.link %>">
+                <div id="certification-link-<%= certification.id %>">
+                  <%= certification.link %>
+                </div>
+              </a>
+              <div id="certification-description-<%= certification.id %>">
+                <%= simple_format h certification.description %>
+              </div>
             </div>
           </div>
         </div>
       </li>
-      <div id="edit-certification-<%= certification.id %>">
+      <div id="edit-certification-<%= certification.id %>"  class="daycare-edit-form-slide">
       </div>
     <% end %>
   </ul>

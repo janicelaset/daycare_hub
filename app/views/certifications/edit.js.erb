@@ -1,0 +1,4 @@
+$('#edit-certification-<%= @certification.id %>').html("<%= j render 'form' %>");
+$('#edit-certification-<%= @certification.id %>').prepend("<br><h4>Edit Certification</h4><br>");
+$('#edit-certification-<%= @certification.id %>').hide();
+$('#edit-certification-<%= @certification.id %>').slideDown(350);
