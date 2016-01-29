@@ -1,5 +1,10 @@
-var node = $('*[data-role="image<%= @image.id %>"]');
-var new_node_html = '<%= j render @image %>';
 
-node.replaceWith(new_node_html);
-// $("#image-add-list").html("<%= j render 'images/image_list' %>")
+$("#image-add-list").html("<%= j render 'images/image_list' %>")
+$('#imageList').sortable({
+    axis: 'y',
+    panel: '.panel-heading',
+    update: function() {
+      $.post($(this).data('update-url'), $(this).sortable('serialize'))
+    }
+  }
+);
