@@ -1,7 +1,7 @@
 <%= form_for [@daycare, @image], remote: true, :html => {:class => "form-horizontal", :multipart => true, id: "image-form#{@image.id}" } do |f| %>
   <div class="form-group">
 
-    <div class="col-sm-12 daycare-edit-field">
+    <div class="col-md-12 daycare-edit-field">
       <%= f.label :description %>
       <%= f.text_field :description, class: 'form-control', id: "image-edit-desc#{@image.id}" %>
     </div>
