@@ -35,7 +35,7 @@ gem 'hirb'
 gem "factory_girl_rails", "~> 4.0"
 gem 'devise'
 gem 'paperclip', "~> 4.1"
-gem 'geocoder'
+
 gem 'jquery-ui-rails'
 gem 'acts_as_list'
 gem 'jquery-turbolinks'

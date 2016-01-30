@@ -1,6 +1,4 @@
-// $(window).load(function() {
-//   loadScript();
-// });
+
 
 var map;
 
@@ -169,14 +167,4 @@ function deleteMarkers(markersArray) {
     markersArray[i].setMap(null);
   }
   markersArray = [];
-}
-// <script
-//     src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=drawing,places&callback=initialize">
-// </script>
-function loadScript() {
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
-    '&libraries=drawing,places';
-  document.body.appendChild(script);
 }
