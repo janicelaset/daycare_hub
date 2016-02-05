@@ -3,7 +3,7 @@ class AdditionalsController < ApplicationController
     @additional = Additional.new(additional_params)
     @daycare = Daycare.find(params[:daycare_id])
     @additional.daycare = @daycare
-
+    @additionals = @daycare.additionals
     @additional.save
 
     #create new additional to display create additional form so users can add more programs
@@ -29,7 +29,7 @@ class AdditionalsController < ApplicationController
     @additional = Additional.find(params[:id])
     @daycare = Daycare.find(params[:daycare_id])
     @additionals = @daycare.additionals
-    
+
     @additional.update(additional_params)
 
     respond_to do |format|
