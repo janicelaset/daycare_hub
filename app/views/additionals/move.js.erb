@@ -1,4 +1,9 @@
-var node = $('*[data-role="additional<%= @additional.id %>"]');
-var new_node_html = '<%= j render @additional %>';
-
-node.replaceWith(new_node_html);
+$("#additional-edit-list").html("<%= j render 'additionals/additional_list' %>")
+$('#additionalList').sortable({
+    axis: 'y',
+    panel: '.panel-heading',
+    update: function() {
+      $.post($(this).data('update-url'), $(this).sortable('serialize'))
+    }
+  }
+);

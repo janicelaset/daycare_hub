@@ -17,7 +17,7 @@
           <div class="media">
             <div class="media-left media-top">
               <% if additional.image_file_name != nil %>
-                <span id="image-additional-<%= @additional.id %>">
+                <span id="image-additional-<%= additional.id %>">
                   <%= image_tag additional.image.url(:thumb) %>
                 </span>
               <% end %>

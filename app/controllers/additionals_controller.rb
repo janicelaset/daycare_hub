@@ -28,6 +28,8 @@ class AdditionalsController < ApplicationController
   def update
     @additional = Additional.find(params[:id])
     @daycare = Daycare.find(params[:daycare_id])
+    @additionals = @daycare.additionals
+    
     @additional.update(additional_params)
 
     respond_to do |format|
@@ -44,11 +46,19 @@ class AdditionalsController < ApplicationController
   def move
     @daycare = Daycare.find(params[:daycare_id])
 
+    #re-rendering additional_list template to make sure edit form belongs
+    #with same panel after sorting
+    #need to change code to re-order nodes but this will work for now
+    @additionals = @daycare.additionals
+
     params['additional'].each_with_index do |id, index|
       additional = Additional.find(id)
       additional.update_attribute(:position, index+1) if additional
     end
-    render nothing: true
+
+    respond_to do |format|
+      format.js
+    end
   end
 
   private
