@@ -7,6 +7,16 @@
   <div class="col-sm-11 daycare-edit-field">
     <%= f.text_field :name, class: 'form-control', required: true %>
   </div>
+
+  <%= f.label :url, 'URL', class: 'control-label col-sm-1' %>
+  <div class="col-sm-11 daycare-edit-field">
+    <div class="input-group">
+      <span class="input-group-addon">www.beebsy.com/
+      </span>
+      <%= f.text_field :url, class: 'form-control', required: true %>
+    </div>
+  </div>
+
   <div class="pull-right col-sm-3">
     <%= f.submit class:'btn btn-primary btn-block' %>
   </div>

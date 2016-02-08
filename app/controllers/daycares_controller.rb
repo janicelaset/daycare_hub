@@ -154,6 +154,6 @@ class DaycaresController < ApplicationController
 
   private
   def daycare_params
-    params.require(:daycare).permit(:name, :structure)
+    params.require(:daycare).permit(:name, :url)
   end
 end
