@@ -1,8 +1,8 @@
 class TeachersController < ApplicationController
+  before_action :find_daycare, except: [:destroy]
 
   def create
     @teacher = Teacher.new(teacher_params)
-    @daycare = Daycare.find(params[:daycare_id])
     @teacher.daycare = @daycare
     @teachers = @daycare.teachers
     @teacher.save
@@ -17,7 +17,6 @@ class TeachersController < ApplicationController
   end
 
   def edit
-    @daycare = Daycare.find(params[:daycare_id])
     @teacher = Teacher.find(params[:id])
 
     respond_to do |format|
@@ -28,7 +27,6 @@ class TeachersController < ApplicationController
 
   def update
     @teacher = Teacher.find(params[:id])
-    @daycare = Daycare.find(params[:daycare_id])
     @teachers = @daycare.teachers
 
     @teacher.update(teacher_params)
@@ -44,8 +42,6 @@ class TeachersController < ApplicationController
   end
 
   def move
-    @daycare = Daycare.find(params[:daycare_id])
-
     #re-rendering teacher_list template to make sure edit form belongs
     #with same panel after sorting
     #need to change code to re-order nodes but this will work for now
@@ -64,5 +60,9 @@ class TeachersController < ApplicationController
   private
   def teacher_params
     params.require(:teacher).permit(:name, :about, :picture, :id, :position)
+  end
+
+  def find_daycare
+    @daycare = Daycare.find(params[:daycare_id])
   end
 end

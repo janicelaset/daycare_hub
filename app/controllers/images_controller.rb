@@ -1,6 +1,7 @@
 class ImagesController < ApplicationController
+  before_action :find_daycare
+
   def index
-    @daycare = Daycare.find(params[:daycare_id])
     if @daycare.images.any?
       @images = @daycare.images.order("position")
     else
@@ -10,7 +11,6 @@ class ImagesController < ApplicationController
   end
 
   def create
-    @daycare = Daycare.find(params[:daycare_id])
     @image = Image.new(image_params)
     @image.daycare = @daycare
 
@@ -44,7 +44,6 @@ class ImagesController < ApplicationController
 
   def update
     @image = Image.find(params[:id])
-    @daycare = Daycare.find(params[:daycare_id])
     @image.update(image_params)
 
     #for dropzone
@@ -86,5 +85,9 @@ class ImagesController < ApplicationController
   private
   def image_params
     params.require(:image).permit(:picture, :description)
+  end
+
+  def find_daycare
+    @daycare = Daycare.find_by_url(params[:daycare_id])
   end
 end

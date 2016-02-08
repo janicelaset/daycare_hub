@@ -1,7 +1,8 @@
 class ProgramsController < ApplicationController
+  before_action :find_daycare, except: [:destroy]
+
   def create
     @program = Program.new(program_params)
-    @daycare = Daycare.find(params[:daycare_id])
     @program.daycare = @daycare
     @program.save
 
@@ -17,7 +18,6 @@ class ProgramsController < ApplicationController
   end
 
   def edit
-    @daycare = Daycare.find(params[:daycare_id])
     @program = Program.find(params[:id])
 
     respond_to do |format|
@@ -28,7 +28,6 @@ class ProgramsController < ApplicationController
 
   def update
     @program = Program.find(params[:id])
-    @daycare = Daycare.find(params[:daycare_id])
     @program.update(program_params)
 
     respond_to do |format|
@@ -63,5 +62,9 @@ class ProgramsController < ApplicationController
   private
   def program_params
     params.require(:program).permit(:name, :description, :age_from, :age_from_units, :age_to, :age_to_units, :picture, :available, :id, :position)
+  end
+
+  def find_daycare
+    @daycare = Daycare.find_by_url(params[:daycare_id])
   end
 end

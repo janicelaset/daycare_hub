@@ -7,7 +7,6 @@ class HomeController < ApplicationController
     @radius = params["radius-value"]
 
     @destination = Address.where("state = 'OR'")
-
     @daycares = []
     @images = []
     @destination.each do |address|

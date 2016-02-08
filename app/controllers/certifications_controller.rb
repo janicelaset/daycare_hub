@@ -1,8 +1,10 @@
 class CertificationsController < ApplicationController
+  before_action :find_daycare, except: [:destroy]
+
   def create
     @certification = Certification.new(cert_params)
-    @daycare = Daycare.find(params[:daycare_id])
     @certification.daycare = @daycare
+
     @certification.save
 
     @certifications = @daycare.certifications
@@ -17,7 +19,6 @@ class CertificationsController < ApplicationController
   end
 
   def edit
-    @daycare = Daycare.find(params[:daycare_id])
     @certification = Certification.find(params[:id])
 
     respond_to do |format|
@@ -28,7 +29,6 @@ class CertificationsController < ApplicationController
 
   def update
     @certification = Certification.find(params[:id])
-    @daycare = Daycare.find(params[:daycare_id])
     @certifications = @daycare.certifications
 
     @certification.update(cert_params)
@@ -44,8 +44,6 @@ class CertificationsController < ApplicationController
   end
 
   def move
-    @daycare = Daycare.find(params[:daycare_id])
-
     #re-rendering certifications_list template to make sure edit form belongs
     #with same panel after sorting
     #need to change code to re-order nodes but this will work for now
@@ -64,5 +62,9 @@ class CertificationsController < ApplicationController
   private
   def cert_params
     params.require(:certification).permit(:name, :description, :link, :image, :id, :position)
+  end
+
+  def find_daycare
+    @daycare = Daycare.find_by_url(params[:daycare_id])
   end
 end

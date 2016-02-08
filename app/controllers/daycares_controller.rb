@@ -1,9 +1,8 @@
 class DaycaresController < ApplicationController
   before_action :authenticate_user!, except: [:show]
+  before_action :find_daycare, only: [:show, :update, :edit]
 
   def show
-    @daycare = Daycare.find(params[:id])
-
     if @daycare.address.nil?  #if user has not added contact information
       @address = Address.new
     else
@@ -70,6 +69,7 @@ class DaycaresController < ApplicationController
     @daycare.user = @user
 
     @daycare.save
+    binding.pry
     respond_to do |format|
       format.html
       format.js
@@ -78,8 +78,6 @@ class DaycaresController < ApplicationController
   end
 
   def edit
-    @daycare = Daycare.find(params[:id])
-
     if @daycare.contact.nil? #if user has not added contact information
       @contact = Contact.new
     else
@@ -141,7 +139,6 @@ class DaycaresController < ApplicationController
 
   def update
     @user = User.find(params[:user_id])
-    @daycare = Daycare.find(params[:id])
     @daycare.user = @user
 
     @daycare.update(daycare_params)
@@ -155,5 +152,9 @@ class DaycaresController < ApplicationController
   private
   def daycare_params
     params.require(:daycare).permit(:name, :url)
+  end
+
+  def find_daycare
+    @daycare = Daycare.find_by_url(params[:id])
   end
 end

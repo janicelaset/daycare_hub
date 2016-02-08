@@ -10,4 +10,8 @@ class Daycare < ActiveRecord::Base
   has_many :additionals
 
   validates :name, :presence => true
+
+  def to_param
+    url || id
+  end
 end

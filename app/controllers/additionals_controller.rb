@@ -1,7 +1,9 @@
 class AdditionalsController < ApplicationController
+  before_action :find_daycare, except: [:destroy]
+
   def create
     @additional = Additional.new(additional_params)
-    @daycare = Daycare.find(params[:daycare_id])
+
     @additional.daycare = @daycare
     @additionals = @daycare.additionals
     @additional.save
@@ -16,7 +18,6 @@ class AdditionalsController < ApplicationController
   end
 
   def edit
-    @daycare = Daycare.find(params[:daycare_id])
     @additional = Additional.find(params[:id])
 
     respond_to do |format|
@@ -27,7 +28,6 @@ class AdditionalsController < ApplicationController
 
   def update
     @additional = Additional.find(params[:id])
-    @daycare = Daycare.find(params[:daycare_id])
     @additionals = @daycare.additionals
 
     @additional.update(additional_params)
@@ -44,8 +44,6 @@ class AdditionalsController < ApplicationController
   end
 
   def move
-    @daycare = Daycare.find(params[:daycare_id])
-
     #re-rendering additional_list template to make sure edit form belongs
     #with same panel after sorting
     #need to change code to re-order nodes but this will work for now
@@ -64,5 +62,9 @@ class AdditionalsController < ApplicationController
   private
   def additional_params
     params.require(:additional).permit(:title, :content, :image, :id, :position)
+  end
+
+  def find_daycare
+    @daycare = Daycare.find_by_url(params[:daycare_id])
   end
 end

@@ -146,7 +146,7 @@ console.log(destination);
                         "</div>" +
                       "</div>" +
                       "<div class='media-body'>" +
-                        "<h4><a href='/daycares/" + daycares[j].id + "'>" + daycares[j].name + "</a></h4>" +
+                        "<h4><a href='/daycares/" + daycares[j].url + "'>" + daycares[j].name + "</a></h4>" +
                         "<div>" + addresses[j].street + "</div>" +
                         "<div>" + addresses[j].city + ", " + addresses[j].state + " " + addresses[j].zip + "</div>" +
                         "<p>" + results[j].distance.text + "</p>" +
