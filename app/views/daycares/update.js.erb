@@ -1,2 +1,3 @@
 $('#collapseOne').collapse("hide");
 $('#nav-dropdown-name').text('<%= @daycare.name %>');
+window.location = "<%= j (edit_user_daycare_path(@user, @daycare)) %>"

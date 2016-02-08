@@ -69,7 +69,6 @@ class DaycaresController < ApplicationController
     @daycare.user = @user
 
     @daycare.save
-    binding.pry
     respond_to do |format|
       format.html
       format.js
@@ -140,7 +139,6 @@ class DaycaresController < ApplicationController
   def update
     @user = User.find(params[:user_id])
     @daycare.user = @user
-
     @daycare.update(daycare_params)
 
     respond_to do |format|
