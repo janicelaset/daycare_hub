@@ -56,8 +56,9 @@ Rails.application.routes.draw do
     end
   end
 
+  get '/:id', to: 'daycares#show', as: 'daycare_profile'
 
-  get "/search-results", to: "home#show", as: "search_results"
+  get '/search-results', to: 'home#show', as: 'search_results'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
