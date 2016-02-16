@@ -5,10 +5,10 @@
     <div class="col-md-12">
       <%= f.label "Type of Daycare:", class: 'col-md-2' %>
       <div class="col-md-2">
-        <%= f.radio_button :type_of_daycare, true, :checked => true, :value => "Family Daycare" %> Family Daycare
+        <%= f.radio_button :type_of_daycare, "family", :checked => (params[:type_of_daycare] == nil ? true : params[:type_of_daycare]) %> Family Daycare
       </div>
       <div class="col-md-2 daycare-edit-field">
-        <%= f.radio_button :type_of_daycare, false, :value => "Daycare Center" %> Daycare Center
+        <%= f.radio_button :type_of_daycare, "center" %> Daycare Center
       </div>
     </div>
     <br><br><br>

@@ -1,7 +1,3 @@
-if ("<%= @error %>")
-  alert("error");
-else {
-  $('#collapseContact').collapse("hide");
-  $('#contact-add-edit-glyph').html('<%= j render 'contacts/add_edit_glyph' %>')
-  $('#contact-edit-form').html('<%= j render 'contacts/form' %>')
-}
+$('#collapseContact').collapse("hide");
+$('#contact-add-edit-glyph').html('<%= j render 'contacts/add_edit_glyph' %>')
+$('#contact-edit-form').html('<%= j render 'contacts/form' %>')
