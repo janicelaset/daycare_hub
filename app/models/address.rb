@@ -3,9 +3,6 @@ class Address < ActiveRecord::Base
   attr_reader :full_address
   belongs_to :daycare
 
-  # geocoded_by :full_address
-  # after_validation :geocode
-
   validates :street, :presence => true
   validates :city, :presence => true
   validates :state, :presence => true
