@@ -35,6 +35,10 @@ Rails.application.routes.draw do
   end
 
   resources :daycares do
+    resources :generals, only: [:create, :update, :show]
+  end
+
+  resources :daycares do
     resources :programs, only: [:create, :edit, :update, :destroy] do
       collection { post :move }
     end

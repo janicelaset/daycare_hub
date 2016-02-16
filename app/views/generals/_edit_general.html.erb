@@ -1,0 +1,19 @@
+<div class="panel-daycare-edit">
+  <div class="panel panel-default">
+    <a id="daycare-edit-general" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseGeneral" aria-expanded="true" aria-controls="collapseGeneral" class="collapsed">
+      <div class="panel-heading" role="tab" id="headingFour">
+        <h4 class="panel-title">
+          <div id="general-add-edit-glyph">
+            <%= render 'generals/add_edit_glyph' %>
+          </div>
+          General Information
+        </h4>
+      </div>
+    </a>
+    <div id="collapseGeneral" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+      <div id="general-edit-form" class="panel-body">
+        <%= render 'generals/form' %>
+      </div>
+    </div>
+  </div>
+</div>

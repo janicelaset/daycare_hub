@@ -8,7 +8,7 @@ class Daycare < ActiveRecord::Base
   has_one :summary
   has_many :certifications
   has_many :additionals
-  has_many :generals
+  has_one :general
 
   validates :name, :presence => true
 

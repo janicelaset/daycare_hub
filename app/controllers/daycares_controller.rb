@@ -95,6 +95,12 @@ class DaycaresController < ApplicationController
       @address = @daycare.address
     end
 
+    if @daycare.general.nil? #if user has not added address
+      @general = General.new
+    else
+      @general = @daycare.general
+    end
+
     if @daycare.images.any?
       @images = @daycare.images.order("position")
     else
