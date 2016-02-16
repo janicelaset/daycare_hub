@@ -2,13 +2,38 @@
 
 <%= form_for [@daycare, @general], remote: true, :html => {:class => "form-horizontal"} do |f| %>
   <div class="form-group">
-    <%= f.label :year_opened, class: 'control-label col-sm-1' %>
-    <div class="col-sm-11 daycare-edit-field">
-      <%= f.text_field :year_opened, class: 'form-control' %>
+    <div class="col-md-12">
+      <%= f.label "Type of Daycare:", class: 'col-md-2' %>
+      <div class="col-md-2">
+        <%= f.radio_button :type_of_daycare, true, :checked => true, :value => "Family Daycare" %> Family Daycare
+      </div>
+      <div class="col-md-2 daycare-edit-field">
+        <%= f.radio_button :type_of_daycare, false, :value => "Daycare Center" %> Daycare Center
+      </div>
+    </div>
+    <br><br><br>
+    <div class="col-md-12">
+      <%= f.label "Are you licensed by the state?", class: 'col-md-3' %>
+      <div class="col-md-1 daycare-edit-field">
+        <%= f.radio_button :licensed, true, :checked => true, :value => true %> Yes
+      </div>
+      <div class="col-md-1 daycare-edit-field">
+        <%= f.radio_button :licensed, false, :value => false %> No
+      </div>
+    </div>
+    <br><br><br><br>
+
+    <div class="col-md-12">
+      <%= f.label :year_opened, class: 'col-md-2' %>
+      <div class="col-sm-3 daycare-edit-field">
+        <%= f.text_field :year_opened, class: 'form-control' %>
+      </div>
     </div>
 
-    <div class="pull-right col-sm-3">
-      <%= f.submit class:'btn btn-primary btn-block' %>
+    <div class="col-md-12">
+      <div class="pull-right col-md-3">
+        <%= f.submit class:'btn btn-primary btn-block' %>
+      </div>
     </div>
   </div>
 <% end %>
