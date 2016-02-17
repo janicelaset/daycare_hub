@@ -15,4 +15,5 @@ class Daycare < ActiveRecord::Base
   def to_param
     url || id
   end
+
 end
