@@ -51,4 +51,14 @@ p {
   font-family: 'Gorditas', cursive;
   font-size: 2.5em;
   color: #29AAE2;
+  padding-top: 7px;
 }
+
+.navbar-brand small {
+  display:block;
+  font-size:12px;
+  padding-top: 7px;
+  font-family: 'Arial';
+}
+
+.navbar-toggle {top:10px}

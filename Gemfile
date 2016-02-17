@@ -41,7 +41,7 @@ gem 'acts_as_list'
 gem 'jquery-turbolinks'
 gem 'remotipart', '~> 1.2'
 gem 'aws-sdk', '< 2.0'
-gem 'rack-mini-profiler'
+# gem 'rack-mini-profiler'
 gem 'rails_admin'
 
 
