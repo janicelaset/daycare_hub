@@ -47,7 +47,9 @@
         <img src="<%= asset_path('daycares.png') %>" alt="daycares">
         <div class="caption">
           <h3>Daycares</h3>
-          <p>Connecting with families is as easy as creating a profile. You can create a free "website" without the hassle. <a href="#">Sign up</a> now and be part of a network where parents can reach out to you.</p>
+          <p>Connecting with families is as easy as creating a profile. You can create a free "website" without the hassle.
+          <%= link_to "Sign up ", new_user_registration_path %>
+          now and be part of a network where parents can reach out to you.</p>
         </div>
       </div>
     </div>
