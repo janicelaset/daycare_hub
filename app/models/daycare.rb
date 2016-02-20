@@ -11,6 +11,10 @@ class Daycare < ActiveRecord::Base
   has_one :general
 
   validates :name, :presence => true
+  validates :url, :presence => true
+
+  validates :url, uniqueness: true
+  validates :url, format: { with: /\A[a-zA-Z0-9]+\Z/ }
 
   def to_param
     url || id

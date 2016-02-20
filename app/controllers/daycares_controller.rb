@@ -67,8 +67,9 @@ class DaycaresController < ApplicationController
     @daycare = Daycare.new(daycare_params)
     @user = User.find(params[:user_id])
     @daycare.user = @user
-
+binding.pry
     @daycare.save
+binding.pry
     respond_to do |format|
       format.html
       format.js
@@ -145,7 +146,14 @@ class DaycaresController < ApplicationController
   def update
     @user = User.find(params[:user_id])
     @daycare.user = @user
+
+    daycare_original = @daycare.dup
+
     @daycare.update(daycare_params)
+
+    if @daycare.errors.messages[:url].any?
+      @daycare.url = daycare_original.url
+    end
 
     respond_to do |format|
       format.html
