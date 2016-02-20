@@ -13,7 +13,7 @@ class Daycare < ActiveRecord::Base
   validates :name, :presence => true
   validates :url, :presence => true
 
-  validates :url, uniqueness: true
+  validates :url, uniqueness: {:message => " error: This URL is already taken. Please try a different URL."}
   validates :url, format: { with: /\A[a-zA-Z0-9]+\Z/ }
 
   def to_param

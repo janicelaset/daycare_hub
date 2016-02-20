@@ -147,12 +147,12 @@ binding.pry
     @user = User.find(params[:user_id])
     @daycare.user = @user
 
-    daycare_original = @daycare.dup
+    url_original = @daycare.url
 
     @daycare.update(daycare_params)
 
     if @daycare.errors.messages[:url].any?
-      @daycare.url = daycare_original.url
+      @daycare.url = url_original
     end
 
     respond_to do |format|
