@@ -18,6 +18,18 @@
 //= require jquery.turbolinks
 //= require turbolinks
 //= require dropzone
+//= require js/modernizr-2.6.2-respond-1.1.0.min
+//= require js/jquery.easing.1.3
+//= require js/jquery.isotope.min
+//= require js/jquery.nicescroll.min
+//= require js/fancybox/jquery.fancybox.pack
+//= require js/skrollr.min
+//= require js/jquery.scrollTo-1.4.3.1-min
+//= require js/jquery.localscroll-1.2.7-min
+//= require js/stellar
+//= require js/jquery.appear
+//= require js/validate
+//=require js/main
 //= require_tree .
 
 
