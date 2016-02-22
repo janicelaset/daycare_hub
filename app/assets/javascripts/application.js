@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require bootstrap-sprockets
+//= require bootstrap
 //= require jquery-ui
 //= require jquery_ujs
 //= require jquery.remotipart

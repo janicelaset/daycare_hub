@@ -48,18 +48,23 @@ p {
   margin: 0 auto;
 }
 
-.navbar-default .navbar-brand {
-  font-family: 'Gorditas', cursive;
-  font-size: 2.5em;
-  color: #29AAE2;
-  padding-top: 7px;
+.navbar-brand small {
+//  display:block;
+  font-size:12px;
+//  padding-top: 7px;
+  font-family: 'Arial';
 }
 
-.navbar-brand small {
-  display:block;
-  font-size:12px;
-  padding-top: 7px;
-  font-family: 'Arial';
+.navbar-brand.navbar-main {
+  font-family: 'Gorditas', cursive;
+  font-size: 2.5em;
+  padding-left: 10px;
+	line-height: 50px;
+  padding-top: 5px;
+}
+
+a.navbar-brand.navbar-main {
+  color: #fff;
 }
 
 .navbar-toggle {top:10px}

@@ -344,9 +344,9 @@ section.section {
   --- Header & menu ----
 =========================== */
 .navbar {
-	line-height: 100px;
-	height: 100px;
-	background-color: rgba(0,0,0,0.3);
+//	line-height: 100px;
+//	height: 100px;
+	background-color: rgba(0,0,0,0.5);
 	display: block;
 	vertical-align: middle;
 	text-align: center;
@@ -1088,4 +1088,8 @@ Media queries
 	.stats .col-md-3 {
 		margin-bottom: 30px;
 	}
+}
+
+.navbar.navbar-fixed-top.navbar-sub {
+	top: 50px;
 }
