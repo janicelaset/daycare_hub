@@ -151,8 +151,10 @@ binding.pry
 
     @daycare.update(daycare_params)
 
-    if @daycare.errors.messages[:url].any?
-      @daycare.url = url_original
+    if @daycare.errors.any?
+      if @daycare.errors.messages[:url].any?
+        @daycare.url = url_original
+      end
     end
 
     respond_to do |format|
