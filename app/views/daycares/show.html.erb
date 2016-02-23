@@ -18,7 +18,7 @@
       </div><!--/.navbar-collapse -->
     </div>
   </div>
-<div class="header-profile">
+<!-- <div class="header-profile">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
@@ -28,7 +28,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <div class="container">
   <%= render 'images' %>
@@ -46,10 +46,10 @@
   <div class="container">
       <div class="col-md-6 col-md-offset-3">
         <div class="align-center">
-          <h2 class="slogan">Welcome to beebsy</h2>
-          <i class="fa fa-connectdevelop fa-5x mar-bot20"></i>
+          <h2 class="slogan"><%= @daycare.name %></h2>
+          <i class="fa fa-child fa-5x mar-bot20"></i><i class="fa fa-child fa-5x mar-bot20"></i><i class="fa fa-child fa-5x mar-bot20"></i>
           <p>
-          Our goal is to connect families with daycares and make it easy to find quality childcare.
+          <%= render 'summary' %>
           </p>
         </div>
       </div>
