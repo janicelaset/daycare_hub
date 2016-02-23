@@ -41,6 +41,7 @@ class SummariesController < ApplicationController
   end
 
   def find_daycare
-    @daycare = Daycare.find(params[:daycare_id])
+    binding.pry
+    @daycare = Daycare.find_by_url(params[:daycare_id])
   end
 end
