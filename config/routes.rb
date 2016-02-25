@@ -64,6 +64,8 @@ Rails.application.routes.draw do
 
   get '/search-results' => 'home#show', as: 'search_results'
 
+  get '/yourdaycare' => 'demo#show', as: 'demo'
+
   get '/:id' => 'daycares#show', as: 'daycare_profile'
 
 
