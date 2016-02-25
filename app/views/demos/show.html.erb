@@ -1,17 +1,18 @@
-<div class="daycare-profile-page">
+<div class="daycare-profile-page" id="profile-home">
 <div class="navbar navbar-fixed-top navbar-sub" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.3);" data-300="line-height:60px; height:60px; background-color:rgba(0,0,0,0.3);">
    <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="fa fa-bars color-white"></span>
       </button>
-      <h1><a class="navbar-brand" href="/" data-0="line-height:90px;" data-300="line-height:50px;"><span class="name">Your Daycare Name</span></a></h1>
+      <h1><a class="navbar-brand" href="#profile-home" data-0="line-height:90px;" data-300="line-height:50px;"><span class="name">Your Daycare Name</span></a></h1>
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
-        <li class="active"><a href="/">Home</a></li>
-        <li><a href="#section-about">About</a></li>
-        <li><a href="#section-works">Portfolio</a></li>
+        <li><a href="#section-programs">Programs</a></li>
+        <li><a href="#section-teachers">Teachers</a></li>
+        <li><a href="#section-certifications">Certifications</a></li>
+        <li><a href="#section-additional">More Info</a></li>
         <li><a href="#section-contact">Contact</a></li>
       </ul>
     </div><!--/.navbar-collapse -->
@@ -29,19 +30,19 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="<%= asset_path('daycare1.jpg') %>" alt="daycare 1">
+      <img src="<%= asset_path('demo/daycare1.jpg') %>" alt="daycare 1">
       <div class="carousel-caption">
         <h3>Image 1</h3>
       </div>
     </div>
     <div class="item">
-      <img src="<%= asset_path('daycare2.jpg') %>" alt="daycare 2">
+      <img src="<%= asset_path('demo/daycare2.jpg') %>" alt="daycare 2">
       <div class="carousel-caption">
         <h3>Image 2</h3>
       </div>
     </div>
     <div class="item">
-      <img src="<%= asset_path('daycare3.jpg') %>" alt="daycare 3">
+      <img src="<%= asset_path('demo/daycare3.jpg') %>" alt="daycare 3">
       <div class="carousel-caption">
         <h3>Image 3</h3>
       </div>
@@ -73,7 +74,7 @@
   </div>
 </section>
 
-<section id="section-services" class="section pad-bot30 bg-white">
+<section id="section-programs" class="section pad-bot30 bg-white">
 <div class="container">
 
   <div class="row mar-bot40">
@@ -122,7 +123,7 @@
 </section>
 
 <!-- about -->
-<section id="section-about" class="section appear clearfix">
+<section id="section-teachers" class="section appear clearfix">
 <div class="container">
 
     <div class="row mar-bot40">
@@ -177,7 +178,7 @@
 </div>
 </section>
 
-<section id="section-services" class="section pad-bot30 bg-white">
+<section id="section-certifications" class="section pad-bot30 bg-white">
 <div class="container">
 
   <div class="row mar-bot40">
@@ -215,7 +216,7 @@
 </div>
 </section>
 
-<section id="section-services" class="section pad-bot30">
+<section id="section-additional" class="section pad-bot30">
 <div class="container">
 
   <div class="row mar-bot40">
