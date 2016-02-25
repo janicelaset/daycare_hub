@@ -7,7 +7,7 @@
   text-align: center;
 }
 
-div.circle-avatar{
+.circle-avatar{
 /* make it responsive */
 max-width: 100%;
 width:100%;
@@ -35,7 +35,7 @@ right: 0;
 bottom: 0;
 }
 
-.team-member.img-teacher {
-  margin-left: 20px;
-  margin-right: 20px;
+.team-member .img-teacher {
+  margin-left: 40px;
+  margin-right: 40px;
 }
