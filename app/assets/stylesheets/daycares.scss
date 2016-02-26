@@ -170,3 +170,11 @@ a > .panel-heading {
 #additionalList .panel-heading {
     cursor: move;
 }
+
+
+.profile-nav > li.active > a,
+.profile-nav > li.active > a:hover,
+.profile-nav > li.active > a:focus {
+  color: #29AAE2 !important;
+  cursor: default;
+}
