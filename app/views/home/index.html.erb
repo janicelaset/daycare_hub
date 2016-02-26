@@ -1,5 +1,4 @@
-
-<section id="search-background" class="section search-bkg pad-top40 pad-bot40" data-stellar-background-ratio="0.5">
+<section id="search-background" class="module parallax parallax-1">
 	<div class="container">
 		<div class="align-center">
 			<div class="search-input search-text">Find a daycare near you</div>
@@ -32,6 +31,40 @@
 		</div>
 	</div>
 </section>
+
+<!-- <section id="search-background" class="section search-bkg pad-top40 pad-bot40" data-stellar-background-ratio="0.5">
+	<div class="container">
+		<div class="align-center">
+			<div class="search-input search-text">Find a daycare near you</div>
+			<div class="row">
+				<%= form_tag(search_results_path, :method => "get", id: "search-form", class: "search-input") do %>
+				<div class="col-md-8 col-md-offset-2">
+					<div class="search-input input-group">
+						<span class="input-group-btn">
+							<button type="button" class="btn btn-default btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<span id="radius-select">5 miles</span>
+								<span class="caret"></span>
+							</button>
+							<ul id="search-dropdown" class="dropdown-menu">
+								<li><a href="#" onclick="setRadius('5 miles', 5)">5 miles</a></li>
+								<li><a href="#" onclick="setRadius('10 miles', 10)">10 miles</a></li>
+								<li><a href="#" onclick="setRadius('20 miles', 20)">20 miles</a></li>
+								<li><a href="#" onclick="setRadius('30 miles', 30)">30 miles</a></li>
+							</ul>
+						</span>
+						<span class="input-group-addon" id="sizing-addon1">from</span>
+						<%= text_field_tag :search, params[:search], class: "form-control input-lg", placeholder: "Enter address or zip code", id: "search-text-field" %>
+						<%= hidden_field_tag 'radius-value', 5 %>
+						<span class="input-group-btn">
+							<button class="btn btn-success btn-lg" type="submit">Go!</button>
+						</span>
+					</div>
+				</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</section> -->
 
 		<section class="featured">
 			<div class="container">
@@ -90,7 +123,7 @@
 		</div>
 		</section>
 
-		<a href="/yourdaycare">
+		<!-- <a href="/yourdaycare">
 			<section id="parallax1" class="section pad-top40 pad-bot40" data-stellar-background-ratio="0.5">
 				<div class="container">
 	            <div class="align-center pad-top40 pad-bot40">
@@ -99,6 +132,17 @@
 	            </div>
 				</div>
 			</section>
+		</a> -->
+
+<a href="/yourdaycare">
+		<section class="module parallax parallax-2">
+			<div class="container">
+						<div class="align-center pad-top40 pad-bot40">
+								<blockquote class="bigquote color-white">Daycares</blockquote>
+								<blockquote class="bigquote color-white">Click here to see what your page could look like</blockquote>
+						</div>
+			</div>
+		</section>
 		</a>
 
 		<!-- contact -->
