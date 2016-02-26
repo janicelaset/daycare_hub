@@ -22,7 +22,7 @@ background-position-x: center;
 background-repeat: no-repeat;
 
 /* it makes the clue thing, takes smaller dimention to fill div */
-background-size: cover;
+background-size: contain;
 
 /* it is optional, for making this div centered in parent*/
 margin: 20px auto;
@@ -30,4 +30,9 @@ top: 0;
 left: 0;
 right: 0;
 bottom: 0;
+}
+
+.cert-container {
+  margin-left: 50px;
+  margin-right: 50px;
 }
