@@ -11,7 +11,7 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( /map/gmap.js )
 Rails.application.config.assets.precompile += %w( js/modernizr-2.6.2-respond-1.1.0.min.js )
-Rails.application.config.assets.precompile += %w( js/jquery.js )
+
 Rails.application.config.assets.precompile += %w( js/jquery.easing.1.3.js )
 Rails.application.config.assets.precompile += %w( js/jquery.isotope.min.js )
 Rails.application.config.assets.precompile += %w( js/jquery.nicescroll.min.js )
