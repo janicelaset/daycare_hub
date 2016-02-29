@@ -1,29 +1,33 @@
 <section id="search-background" class="module parallax parallax-1">
 	<div class="container">
 		<div class="align-center">
-			<div class="search-input search-text">Find a daycare near you</div>
+			<div class="col-md-12">
+				<h2 class="search-input search-text">Find a daycare near you</h2>
+			</div>
 			<div class="row">
 				<%= form_tag(search_results_path, :method => "get", id: "search-form", class: "search-input") do %>
-				<div class="col-md-8 col-md-offset-2">
-					<div class="search-input input-group">
-						<span class="input-group-btn">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="search-input input-group custom-input-group">
+						<div class="input-group-btn">
 							<button type="button" class="btn btn-default btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<span id="radius-select">5 miles</span>
 								<span class="caret"></span>
 							</button>
+							<%= hidden_field_tag 'radius-value', 5 %>
 							<ul id="search-dropdown" class="dropdown-menu">
 								<li><a href="#" onclick="setRadius('5 miles', 5)">5 miles</a></li>
 								<li><a href="#" onclick="setRadius('10 miles', 10)">10 miles</a></li>
 								<li><a href="#" onclick="setRadius('20 miles', 20)">20 miles</a></li>
 								<li><a href="#" onclick="setRadius('30 miles', 30)">30 miles</a></li>
 							</ul>
-						</span>
-						<span class="input-group-addon" id="sizing-addon1">from</span>
+						</div>
+						<label class="input-group-addon" id="sizing-addon1">from</label>
 						<%= text_field_tag :search, params[:search], class: "form-control input-lg", placeholder: "Enter address or zip code", id: "search-text-field" %>
-						<%= hidden_field_tag 'radius-value', 5 %>
-						<span class="input-group-btn">
-							<button class="btn btn-success btn-lg" type="submit">Go!</button>
-						</span>
+						<span> </span>
+						<div class="input-group-btn">
+							<button class="btn btn-success btn-lg btn-go" type="submit">Go!</button>
+						</div>
+
 					</div><!-- /input-group -->
 				</div><!-- /.col-md-8 -->
 				<% end %>

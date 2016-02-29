@@ -18,8 +18,8 @@
   opacity: 0.90;
 }
 
-.search-text {
-  padding-top: 110px;
+h2.search-text {
+  margin-top: 110px;
   padding-bottom: 40px;
   font-size: 4.5em;
   margin-bottom: 1%;
@@ -118,14 +118,48 @@ section.section.search-bkg {
 }
 
 @media (max-width: 767px) {
-  .input-group-addon, .input-group-btn, .input-group .form-control {
-      display: block;
-      margin-bottom: 5px;
+  // .input-group-addon, .input-group-btn, .input-group .form-control {
+  //     display: block;
+  //     // margin-bottom: 5px;
+  //     // clear: both;
+  //     }
+  // .input-group {
+  //     display: block;
+  //     }
+  h2.search-text {
+    margin-top: 110px;
+    padding-bottom: 20px;
+    font-size: 3.5em;
+    margin-bottom: 1%;
+    font-weight: 500;
+    color: #fff;
+      }
+}
+
+@media (max-width: 767px) {
+    .custom-input-group.input-group .input-group-btn {
+      width:100%;
+      display:block;
+      margin-bottom:5px;
       clear: both;
-      }
-  .input-group {
-      display: block;
-      }
+    }
+    .custom-input-group.input-group .input-group-btn .btn {
+        width: 100%;
+    }
+    .custom-input-group {
+        display: block;
+    }
+    .custom-input-group.input-group .input-group-addon {
+        clear: both;
+        display: block;
+        width: 100%;
+        border: 1px solid #ccc;
+        // border-radius: 4px;
+    }
+    .custom-input-group.input-group .input-group-addon + .form-control {
+        // border-radius: 4px;
+        margin-bottom: 5px;
+    }
 }
 
 #search-filter {
