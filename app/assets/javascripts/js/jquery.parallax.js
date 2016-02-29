@@ -1,3 +1,4 @@
+
 (function($) {
     $.fn.parallax = function(options) {
         var windowHeight = $(window).height();
