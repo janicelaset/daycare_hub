@@ -14,7 +14,7 @@ class SummariesController < ApplicationController
 
   def update
     @summary = Summary.find(params[:id])
-
+    
     @summary.update(summary_params)
     respond_to do |format|
       format.html
@@ -41,7 +41,6 @@ class SummariesController < ApplicationController
   end
 
   def find_daycare
-    binding.pry
     @daycare = Daycare.find_by_url(params[:daycare_id])
   end
 end

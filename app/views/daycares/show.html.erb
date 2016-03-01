@@ -1,5 +1,4 @@
 <div class="daycare-profile-page">
-
   <div class="navbar navbar-fixed-top navbar-sub" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.3);" data-300="line-height:60px; height:60px; background-color:rgba(0,0,0,0.3);">
      <div class="container">
       <div class="navbar-header">
@@ -32,7 +31,6 @@
 
 <div class="container">
   <%= render 'images' %>
-  <%= render 'summary' %>
   <%= render 'programs/profile_programs' %>
   <%= render 'teachers/profile_teachers' %>
   <%= render 'certifications/profile_certifications' %>
@@ -44,7 +42,7 @@
 
 <section class="featured">
   <div class="container">
-      <div class="col-md-6 col-md-offset-3">
+      <div class="col-md-10 col-md-offset-1">
         <div class="align-center">
           <h2 class="slogan"><%= @daycare.name %></h2>
           <i class="fa fa-child fa-5x mar-bot20"></i><i class="fa fa-child fa-5x mar-bot20"></i><i class="fa fa-child fa-5x mar-bot20"></i>
@@ -53,7 +51,6 @@
           </p>
         </div>
       </div>
-
   </div>
 </section>
 
