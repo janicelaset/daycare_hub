@@ -152,7 +152,7 @@ class DaycaresController < ApplicationController
     @daycare.update(daycare_params)
 
     if @daycare.errors.any?
-      if @daycare.errors.messages[:url].any?
+      if @daycare.errors.messages[:url] != nil
         @daycare.url = url_original
       end
     end
