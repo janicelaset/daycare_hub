@@ -7,11 +7,12 @@
             <%= additional.title %>
           </span>
           <%= link_to edit_daycare_additional_path(@daycare, additional), id: "additional-edit-#{additional.id}", remote:true do %>
-            <span><i class="glyphicon glyphicon-pencil pull-right"></i></span>
+            <span><i class="glyphicon glyphicon-pencil pull-right" data-toggle="tooltip" data-placement="top" title="Edit"></i></span>
           <% end %>
           <%= link_to daycare_additional_path(@daycare, additional), method: 'delete', data: { confirm: "Are you sure you want do delete #{additional.title}?" }, id: "additional-delete-#{additional.id}", remote:true do %>
-            <span><i class="glyphicon glyphicon-trash pull-right"></i></span>
+            <span><i class="glyphicon glyphicon-trash pull-right" data-toggle="tooltip" data-placement="top" title="Delete"></i></span>
           <% end %>
+          <a><i class="glyphicon glyphicon-move pull-right" data-toggle="tooltip" data-placement="top" title="Drag panel title to rearrange sections"></i></a>
         </div>
         <div class="panel-body">
           <div class="media">

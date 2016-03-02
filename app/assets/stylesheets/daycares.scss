@@ -4,9 +4,8 @@
 $light-blue: #29AAE2;
 
 //--- profile page ---//
-#daycare-profile-page {
-  background: #F8F8F8;
-  color: #555555;
+.daycare-profile-page {
+  margin-top: 164px;
 }
 
 //daycare name
@@ -32,7 +31,6 @@ $light-blue: #29AAE2;
 
 .carousel-inner{
   min-width: 100%;
-  margin-bottom: 2em;
 }
 
 .carousel .item {
@@ -99,10 +97,6 @@ $light-blue: #29AAE2;
 
 
 //--- edit page ---//
-#daycare-edit-page {
-  margin-top: 2em;
-}
-
 .daycare-edit-glyph:hover,
 .daycare-add-glyph:hover {
   color: gray;
@@ -135,6 +129,16 @@ a > .panel-heading {
 
 .panel-daycare-edit {
   margin-bottom: 0.4em;
+}
+
+.btn-submit,
+.btn-cancel {
+    position: relative;
+    overflow: hidden;
+    float: right;
+    width: 14.5em;
+    margin-left: 8px;
+    margin-bottom: 8px;
 }
 
 .btn-file {
@@ -171,4 +175,12 @@ a > .panel-heading {
 #certificationList .panel-heading,
 #additionalList .panel-heading {
     cursor: move;
+}
+
+
+.profile-nav > li.active > a,
+.profile-nav > li.active > a:hover,
+.profile-nav > li.active > a:focus {
+  color: #29AAE2 !important;
+  cursor: default;
 }

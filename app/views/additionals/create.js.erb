@@ -1,6 +1,12 @@
-$('#additional-add-edit-glyph').html('<%= j render 'additionals/add_edit_glyph' %>');
-$('#additional-edit-list').html('<%= j render 'additionals/additional_list' %>');
-// $('#additional-edit-form').html('<%= j render 'additionals/form' %>');
+<% if @additional.errors.messages.any? %>
+  $('#additional-edit-form').html('<%= j render 'additionals/form' %>')
+<% else %>
+  $('#additional-add-edit-glyph').html('<%= j render 'additionals/add_edit_glyph' %>');
+  $('#additional-edit-list').html('<%= j render 'additionals/additional_list' %>');
+  $('#additional-edit-name<%= @additional.id %>').val("");
+  $('#additional-edit-content<%= @additional.id %>').val("");
+  $('#additional-upload-file-info').html("");
+<% end %>
 
 $('#additionalList').sortable({
     axis: 'y',

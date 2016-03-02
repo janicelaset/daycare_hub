@@ -15,13 +15,16 @@
 }
 
 .search-input {
-  opacity: 0.85;
+  opacity: 0.90;
 }
 
-.search-text {
+h2.search-text {
+  margin-top: 110px;
+  padding-bottom: 40px;
   font-size: 4.5em;
   margin-bottom: 1%;
   font-weight: 500;
+  color: #fff;
 }
 
 .home-info-section {
@@ -38,10 +41,6 @@
   text-align: center;
   background: #FFF;
   box-shadow: 2px 2px 6px #B1B1B1;
-}
-
-#search-filter {
-  margin-top: 25px;
 }
 
 #map-container {
@@ -71,12 +70,24 @@
   margin-bottom: 0;
 }
 
-.navbar-default {
-  // background-color: white;
+#search-background {
+  background-image: url("<%= asset_path('header_bkg.jpg') %>");
+  opacity: 0.9;
+  background-size: cover;
+  width: 100%;
+}
+
+#daycare-link{
+	background-image: url("<%= asset_path('daycare_link.jpg') %>");
+	background-size: cover;
+}
+
+section.section.search-bkg {
+  padding: 160px 0 180px 0;
 }
 
 .jumbotron {
-  background-image:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("<%= asset_path('header_bkg.jpg') %>");
+  background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("<%= asset_path('header_bkg.jpg') %>");
   opacity: 0.9;
   background-size: cover;
   margin-bottom: 0;
@@ -107,17 +118,70 @@
 }
 
 @media (max-width: 767px) {
-  .input-group-addon, .input-group-btn, .input-group .form-control {
-      display: block;
-      margin-bottom: 5px;
+  h2.search-text {
+    margin-top: 110px;
+    padding-bottom: 20px;
+    font-size: 3.5em;
+    margin-bottom: 1%;
+    font-weight: 500;
+    color: #fff;
+      }
+}
+
+@media (max-width: 767px) {
+    .custom-input-group.input-group .input-group-btn {
+      width:100%;
+      display:block;
+      margin-bottom:5px;
       clear: both;
-      }
-  .input-group {
-      display: block;
-      }
+    }
+    .custom-input-group.input-group .input-group-btn .btn {
+        width: 100%;
+    }
+    .custom-input-group {
+        display: block;
+    }
+    .custom-input-group.input-group .input-group-addon {
+        clear: both;
+        display: block;
+        width: 100%;
+        border: 1px solid #ccc;
+        // border-radius: 4px;
+    }
+    .custom-input-group.input-group .input-group-addon + .form-control {
+        // border-radius: 4px;
+        margin-bottom: 5px;
+    }
 }
 
 #search-filter {
   position: relative;
   z-index: 999;
+  margin-top: 25px;
+}
+
+#search-dropdown {
+  z-index: 9999;
+  position: relative;
+}
+
+section.module.parallax {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  // position: relative;
+  z-index: -1;
+}
+
+section.module.parallax-1 {
+  height: 600px;
+  background-image: url("<%= asset_path('header_bkg.jpg') %>");
+  // z-index: -1;
+  // position: relative;
+}
+
+section.module.parallax-2 {
+  height: 300px;
+  background-image: url("<%= asset_path('daycare_link.jpg') %>");
 }

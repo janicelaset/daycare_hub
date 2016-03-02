@@ -12,12 +12,14 @@
 //
 //= require jquery
 //= require bootstrap-sprockets
+//= require bootstrap
 //= require jquery-ui
 //= require jquery_ujs
 //= require jquery.remotipart
 //= require jquery.turbolinks
 //= require turbolinks
 //= require dropzone
+//= require js/jquery.parallax
 //= require_tree .
 
 
@@ -66,3 +68,7 @@ var setRadius = function(radius, value) {
 var hideEditForm = function (id, section) {
   $('#edit-' + section + '-' + id).slideUp(350);
 }
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});

@@ -1,31 +1,29 @@
 
 <%= form_for [@daycare, @teacher], remote: true, :html => { :class => "form-horizontal", :multipart => true } do |f| %>
   <div class="form-group">
-    <%= f.label :name, class: 'control-label col-sm-1' %>
-    <div class="col-sm-5 daycare-edit-field">
+    <%= f.label :name, class: 'control-label col-md-1' %>
+    <div class="col-md-11 daycare-edit-field">
       <%= f.text_field :name, id: "teacher-edit-name#{@teacher.id}", class: 'form-control teacher-edit-name', required: true %>
     </div>
 
-    <%= f.label :about, class: 'control-label col-sm-1' %>
-    <div class="col-sm-5 daycare-edit-field">
-      <%= f.text_area :about, class: 'form-control', required: true %>
+    <%= f.label :about, class: 'control-label col-md-1' %>
+    <div class="col-md-11 daycare-edit-field">
+      <%= f.text_area :about, class: 'form-control', required: true, rows: "5" %>
     </div>
 
     <div class="col-md-12 daycare-edit-field">
-      <span class="btn btn-default btn-file">
+      <span class="btn btn-info btn-file">
         Select Image<%= f.file_field :picture, class: "btn-block", id: "btn-select-image", onchange: "$('#teacher-upload-file-info').html($(this).val());" %>
       </span>
       <span class='label label-default label-image-upload' id="teacher-upload-file-info"></span>
     </div>
 
-    <div class="pull-right col-sm-3">
-      <%= f.submit "Submit", class:'btn btn-primary btn-block' %>
+    <div class="col-sm-12">
+      <%= f.submit "Submit", class:'btn btn-primary btn-submit' %>
+      <% if @teacher.name != nil %>
+        <button type="button" class="btn btn-primary btn-cancel" onclick="hideEditForm('<%= @teacher.id %>', 'teacher')">Cancel</button>
+      <% end %>
     </div>
 
-  <% if @teacher.name != nil %>
-      <div class="pull-right col-sm-3">
-        <button type="button" class="btn btn-primary btn-block pull-right" onclick="hideEditForm('<%= @teacher.id %>', 'teacher')">Cancel</button>
-      </div>
-  <% end %>
   </div>
 <% end %>

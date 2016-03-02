@@ -1,26 +1,127 @@
-<div id="daycare-profile-page">
-
-
-<div class="header-profile">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="intro-text">
-          <span class="name"><%= @daycare.name %></span>
-        </div>
+<div class="daycare-profile-page">
+  <div class="navbar navbar-fixed-top navbar-sub" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.3);" data-300="line-height:60px; height:60px; background-color:rgba(0,0,0,0.3);">
+     <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="fa fa-bars color-white"></span>
+        </button>
+        <h1><a class="navbar-brand" href="/" data-0="line-height:90px;" data-300="line-height:50px;"><span class="name"><%= @daycare.name %></span></a></h1>
       </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
+          <li><a href="#section-about">About</a></li>
+          <li><a href="#section-works">Portfolio</a></li>
+          <li><a href="#section-contact">Contact</a></li>
+        </ul>
+      </div><!--/.navbar-collapse -->
     </div>
   </div>
-</div>
 
 <div class="container">
   <%= render 'images' %>
-  <%= render 'summary' %>
   <%= render 'programs/profile_programs' %>
   <%= render 'teachers/profile_teachers' %>
-  <%= render 'certifications/profile_certifications' %>
-  <%= render 'additionals/profile_additionals' %>
+
   <%= render 'address' %>
   <%= render 'contact' %>
 </div>
 </div>
+
+<section class="featured">
+  <div class="container">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="align-center">
+          <h2 class="slogan"><%= @daycare.name %></h2>
+          <i class="fa fa-child fa-5x mar-bot20"></i><i class="fa fa-child fa-5x mar-bot20"></i><i class="fa fa-child fa-5x mar-bot20"></i>
+          <p>
+          <%= render 'summary' %>
+          </p>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section id="section-certifications" class="section appear clearfix pad-bot30 bg-white">
+<div class="container">
+  <div class="row mar-bot40">
+    <%= render 'certifications/profile_certifications' %>
+  </div>
+</div>
+</section>
+
+<section id="section-additional" class="section appear clearfix pad-bot30">
+  <div class="container">
+    <div class="row mar-bot40">
+      <%= render 'additionals/profile_additionals' %>
+    </div>
+  </div>
+</section>
+
+<!-- contact -->
+<section id="section-contact" class="section appear clearfix">
+  <div class="container">
+    <div class="row mar-bot40">
+      <div class="col-md-offset-3 col-md-6">
+        <div class="section-header">
+          <h2 class="section-heading animated" data-animation="bounceInUp">Contact us</h2>
+          <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="cform" id="contact-form">
+          <div id="sendmessage">
+             Your message has been sent. Thank you!
+          </div>
+          <form action="contact/contact.php" method="post" role="form" class="contactForm">
+            <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="maxlen:4" data-msg="Please enter at least 4 chars" />
+            <div class="validation"></div>
+            </div>
+            <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+            <div class="validation"></div>
+            </div>
+            <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="maxlen:4" data-msg="Please enter at least 8 chars of subject" />
+            <div class="validation"></div>
+            </div>
+            <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us"></textarea>
+            <div class="validation"></div>
+            </div>
+
+            <button type="submit" class="btn btn-theme pull-left">SEND MESSAGE</button>
+          </form>
+
+        </div>
+      </div>
+      <!-- ./span12 -->
+    </div>
+
+  </div>
+</section>
+<!-- map -->
+<section id="section-map" class="clearfix">
+  <div id="map"></div>
+</section>
+
+
+<script src="<%= asset_path('js/modernizr-2.6.2-respond-1.1.0.min.js') %>"></script>
+
+<script src="<%= asset_path('js/jquery.easing.1.3.js') %>"></script>
+<script src="<%= asset_path('js/jquery.isotope.min.js') %>"></script>
+<script src="<%= asset_path('js/jquery.nicescroll.min.js') %>"></script>
+<script src="<%= asset_path('js/fancybox/jquery.fancybox.pack.js') %>"></script>
+<script src="<%= asset_path('js/skrollr.min.js') %>"></script>
+<script src="<%= asset_path('js/jquery.scrollTo-1.4.3.1-min.js') %>"></script>
+<script src="<%= asset_path('js/jquery.localscroll-1.2.7-min.js') %>"></script>
+<script src="<%= asset_path('js/stellar.js') %>"></script>
+<script src="<%= asset_path('js/jquery.appear.js') %>"></script>
+<script src="<%= asset_path('js/validate.js') %>"></script>
+<script src="<%= asset_path('js/main.js') %>"></script>

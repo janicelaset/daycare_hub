@@ -10,10 +10,10 @@ class Daycare < ActiveRecord::Base
   has_many :additionals
   has_one :general
 
-  validates :name, :presence => true
-  validates :url, :presence => true
+  validates :name, :presence => true, length: { maximum: 55 }
+  validates :url, :presence => true, length: { maximum: 55 }
 
-  validates :url, uniqueness: {:message => " error: This URL is already taken. Please try a different URL."}
+  validates :url, uniqueness: {:message => " error: The URL you entered is already taken. Please try a different URL."}
   validates :url, format: { with: /\A[a-zA-Z0-9]+\Z/ }
 
   def to_param

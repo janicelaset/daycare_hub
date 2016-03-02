@@ -1,31 +1,32 @@
+<%= render "layouts/errors", :object => @additional %>
 
 <%= form_for [@daycare, @additional], :html => { :class => "form-horizontal", :multipart => true }, remote: true do |f| %>
   <div class="form-group">
+
     <%= f.label :title, class: 'control-label col-md-1' %>
-    <div class="col-md-4 daycare-edit-field">
-      <%= f.text_field :title, id: "additional-edit-name#{@additional.id}", class: 'form-control additional-edit-name', required: true, placeholder: "" %>
+    <div class="col-md-11 daycare-edit-field">
+      <%= f.text_field :title, id: "additional-edit-name#{@additional.id}", class: 'form-control additional-edit-name', required: true, placeholder: "
+      Enter the name of additional sections you want on your page (eg. Food, Discipline, Extra-Curricular Activities)" %>
     </div>
 
     <%= f.label :content, class: 'control-label col-md-1' %>
     <div class="col-md-11 daycare-edit-field">
-      <%= f.text_area :content, class: 'form-control', required: true, rows: "5" %>
+      <%= f.text_area :content, id: "additional-edit-content#{@additional.id}", class: 'form-control', required: true, rows: "5", placeholder: "Enter additional information you want to include on your page" %>
     </div>
 
     <div class="col-md-12 daycare-edit-field">
-      <span class="btn btn-default btn-file">
+      <span class="btn btn-info btn-file">
         Select Image<%= f.file_field :image, class: "btn-block", id: "btn-select-image", onchange: '$("#additional-upload-file-info").html($(this).val());' %>
       </span>
       <span class='label label-default label-image-upload' id="additional-upload-file-info"></span>
     </div>
 
-    <div class="pull-right col-md-3">
-      <%= f.submit "Submit", class:'btn btn-primary btn-block' %>
-    </div>
+  <div class="col-md-12">
+      <%= f.submit "Submit", class:'btn btn-primary btn-submit' %>
+      <% if @additional.title != nil %>
+        <button type="button" class="btn btn-primary btn-cancel" onclick="hideEditForm('<%= @additional.id %>', 'additional')">Cancel</button>
+      <% end %>
+  </div>
 
-  <% if @additional.title != nil %>
-      <div class="pull-right col-md-3">
-        <button type="button" class="btn btn-primary btn-block pull-right" onclick="hideEditForm('<%= @additional.id %>', 'additional')">Cancel</button>
-      </div>
-  <% end %>
   </div>
 <% end %>
