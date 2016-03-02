@@ -1,15 +1,11 @@
 <% if @daycare.additionals.any? %>
   <% @additionals.each do |additional| %>
-    <div class="row daycare-profile-section">
-      <div class="daycare-profile-section-content">
-        <div class="daycare-profile-header">
-          <%= additional.title %>
-        </div>
+    <div class="col-md-6 mar-bot40" >
+      <div class="align-center">
         <% if additional.image_file_name != nil %>
-          <div class="daycare-profile-media">
-            <%= image_tag additional.image.url(:medium) %>
-          </div>
+          <%= image_tag additional.image.url, class: 'img-responsive mar-bot20' %>
         <% end %>
+        <h4 class="text-bold"><%= additional.title %></h4>
         <p>
           <%= simple_format h additional.content %>
         </p>
