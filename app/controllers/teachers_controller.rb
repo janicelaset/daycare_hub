@@ -63,6 +63,6 @@ class TeachersController < ApplicationController
   end
 
   def find_daycare
-    @daycare = Daycare.find(params[:daycare_id])
+    @daycare = Daycare.find_by_url(params[:daycare_id])
   end
 end
