@@ -1,5 +1,8 @@
 <% if @daycare.additionals.any? %>
-  <% @additionals.each do |additional| %>
+  <% @additionals.each_with_index do |additional, index| %>
+    <% if index%2 == 0 %>
+      <div class="row">
+    <% end  %>
     <div class="col-md-6 mar-bot40" >
       <div class="align-center">
         <% if additional.image_file_name != nil %>
@@ -11,5 +14,8 @@
         </p>
       </div>
     </div>
+    <% if index%2 == 1 %>
+      </div>
+    <% end %>
   <% end %>
 <% end %>
