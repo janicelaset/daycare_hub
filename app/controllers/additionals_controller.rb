@@ -8,8 +8,10 @@ class AdditionalsController < ApplicationController
     @additionals = @daycare.additionals
     @additional.save
 
-    #create new additional to display create additional form so users can add more programs
-    @additional = Additional.new
+    if @additional.errors.nil?
+      #create new additional to display create additional form so users can add more programs
+      @additional = Additional.new
+    end
 
     respond_to do |format|
       format.html

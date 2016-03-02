@@ -1,3 +1,4 @@
+<%= render "layouts/errors", :object => @additional %>
 
 <%= form_for [@daycare, @additional], :html => { :class => "form-horizontal", :multipart => true }, remote: true do |f| %>
   <div class="form-group">
@@ -9,7 +10,7 @@
 
     <%= f.label :content, class: 'control-label col-md-1' %>
     <div class="col-md-11 daycare-edit-field">
-      <%= f.text_area :content, class: 'form-control', required: true, rows: "5" %>
+      <%= f.text_area :content, id: "additional-edit-content#{@additional.id}", class: 'form-control', required: true, rows: "5" %>
     </div>
 
     <div class="col-md-12 daycare-edit-field">
@@ -22,7 +23,7 @@
   <div class="col-md-12">
       <%= f.submit "Submit", class:'btn btn-primary btn-submit' %>
       <% if @additional.title != nil %>
-        <button type="button" class="btn btn-primary btn-cancel" onclick="hideEditForm('<%= @additional.id %>', 'additional')">Cancel</button>  
+        <button type="button" class="btn btn-primary btn-cancel" onclick="hideEditForm('<%= @additional.id %>', 'additional')">Cancel</button>
       <% end %>
   </div>
 

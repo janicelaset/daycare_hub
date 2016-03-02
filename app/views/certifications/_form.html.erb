@@ -26,7 +26,7 @@
     <div class="col-md-12">
       <%= f.submit "Submit", class:'btn btn-primary btn-submit' %>
       <% if @certification.name != nil %>
-      <button class="btn btn-primary btn-cancel" onclick="hideTeacherForm('<%= @certification.id %>')" id="cancel-certification-edit">Cancel</button>
+      <button class="btn btn-primary btn-cancel" onclick="hideEditForm('<%= @certification.id %>')" id="cancel-certification-edit">Cancel</button>
       <% end %>
     </div>
   </div>

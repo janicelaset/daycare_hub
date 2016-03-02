@@ -1,15 +1,20 @@
-$('#edit-additional-<%= @additional.id %>').slideUp(350, function() {
-  $("#image-additional-<%= @additional.id %>").html("<%= j image_tag @additional.image.url(:thumb) %>");
-  $('#panel-name-additional-<%= @additional.id %>').text('<%= @additional.title %>');
-  $('#header-name-additional-<%= @additional.id %>').text('<%= @additional.title %>');
-  $('#content-additional-<%= @additional.id %>').html('<%= j simple_format h @additional.content %>');
+<% if @additional.errors.messages.any? %>
+  $('#edit-additional-<%= @additional.id %>').html('<%= j render 'additionals/form' %>')
+  $('#edit-additional-<%= @additional.id %>').prepend("<br><h4>Edit Information</h4><br>");
+<% else %>
+  $('#edit-additional-<%= @additional.id %>').slideUp(350, function() {
+    $("#image-additional-<%= @additional.id %>").html("<%= j image_tag @additional.image.url(:thumb) %>");
+    $('#panel-name-additional-<%= @additional.id %>').text('<%= @additional.title %>');
+    $('#header-name-additional-<%= @additional.id %>').text('<%= @additional.title %>');
+    $('#content-additional-<%= @additional.id %>').html('<%= j simple_format h @additional.content %>');
+  });
+<% end %>
 
-  $('#additionalList').sortable({
-      axis: 'y',
-      panel: '.panel-heading',
-      update: function() {
-        $.post($(this).data('update-url'), $(this).sortable('serialize'))
-      }
+$('#additionalList').sortable({
+    axis: 'y',
+    panel: '.panel-heading',
+    update: function() {
+      $.post($(this).data('update-url'), $(this).sortable('serialize'))
     }
-  );
-});
+  }
+);
