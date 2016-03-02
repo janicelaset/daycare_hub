@@ -131,6 +131,16 @@ a > .panel-heading {
   margin-bottom: 0.4em;
 }
 
+.btn-submit,
+.btn-cancel {
+    position: relative;
+    overflow: hidden;
+    float: right;
+    width: 14.5em;
+    margin-left: 8px;
+    margin-bottom: 8px;
+}
+
 .btn-file {
     position: relative;
     overflow: hidden;

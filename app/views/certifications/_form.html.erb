@@ -23,14 +23,11 @@
       <span class='label label-default label-image-upload' id="certification-upload-file-info"></span>
     </div>
 
-    <div class="pull-right col-md-3">
-      <%= f.submit "Submit", class:'btn btn-primary btn-block' %>
+    <div class="col-md-12">
+      <%= f.submit "Submit", class:'btn btn-primary btn-submit' %>
+      <% if @certification.name != nil %>
+      <button class="btn btn-primary btn-cancel" onclick="hideTeacherForm('<%= @certification.id %>')" id="cancel-certification-edit">Cancel</button>
+      <% end %>
     </div>
-
-  <% if @certification.name != nil %>
-      <div class="pull-right col-md-3">
-        <button class="btn btn-primary btn-block pull-right" onclick="hideTeacherForm('<%= @certification.id %>')" id="cancel-certification-edit">Cancel</button>
-      </div>
-  <% end %>
   </div>
 <% end %>
