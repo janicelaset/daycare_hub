@@ -19,8 +19,6 @@
 
 <div class="container">
   <%= render 'images' %>
-  <%= render 'programs/profile_programs' %>
-
   <%= render 'address' %>
   <%= render 'contact' %>
 </div>
@@ -38,6 +36,14 @@
         </div>
       </div>
   </div>
+</section>
+
+<section id="section-programs" class="section appear clearfix pad-bot30 bg-white">
+<div class="container">
+  <div class="row mar-bot40">
+    <%= render 'programs/profile_programs' %>
+  </div>
+</div>
 </section>
 
 <section id="section-teachers" class="section appear clearfix">
