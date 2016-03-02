@@ -1,26 +1,25 @@
 <% if @daycare.certifications.any? %>
-  <div class="row daycare-profile-section">
-    <div class="daycare-profile-section-content">
-    <div class="daycare-profile-header">
-      <h1>Certifications</h1>
+  <div class="row mar-bot40">
+    <div class="col-md-offset-3 col-md-6">
+      <div class="section-header">
+        <h2 class="section-heading animated" data-animation="bounceInUp">Certifications</h2>
+        <p></p>
+      </div>
     </div>
-    <div class="row">
-      <% @certifications.each do |certification| %>
-        <div class="col-md-12 col-md-8 daycare-profile-section-list">
-          <div class="media">
-            <div class="media-left media-top media-cert">
-              <%= image_tag certification.image.url(:small) %>
-            </div>
-            <div class="media-body">
-              <h3 class="media-content-header"><%= certification.name %></h3>
-              <p>
-                <%= simple_format h certification.description %>
-              </p>
-            </div>
+  </div>
+
+  <% @certifications.each do |certification| %>
+    <div class="col-sm-3" >
+      <div class="align-center">
+        <div class="cert-container">
+          <div class="img-cert" style="background-image:url(<%= certification.image.url %>)">
           </div>
         </div>
-      <% end %>
+        <h4 class="text-bold"><%= certification.name %></h4>
+        <p>
+          <%= simple_format h certification.description %>
+        </p>
+      </div>
     </div>
-  </div>
-  </div>
+  <% end %>
 <% end %>

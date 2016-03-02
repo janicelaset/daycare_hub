@@ -9,7 +9,6 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
-          <li class="active"><a href="/">Home</a></li>
           <li><a href="#section-about">About</a></li>
           <li><a href="#section-works">Portfolio</a></li>
           <li><a href="#section-contact">Contact</a></li>
@@ -22,7 +21,7 @@
   <%= render 'images' %>
   <%= render 'programs/profile_programs' %>
   <%= render 'teachers/profile_teachers' %>
-  <%= render 'certifications/profile_certifications' %>
+
   <%= render 'address' %>
   <%= render 'contact' %>
 </div>
@@ -40,6 +39,14 @@
         </div>
       </div>
   </div>
+</section>
+
+<section id="section-certifications" class="section appear clearfix pad-bot30 bg-white">
+<div class="container">
+  <div class="row mar-bot40">
+    <%= render 'certifications/profile_certifications' %>
+  </div>
+</div>
 </section>
 
 <section id="section-additional" class="section appear clearfix pad-bot30">

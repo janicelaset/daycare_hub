@@ -1,19 +1,20 @@
+<%= render "layouts/errors", :object => @certification %>
 
 <%= form_for [@daycare, @certification], :html => { :class => "form-horizontal", :multipart => true }, remote: true do |f| %>
   <div class="form-group">
     <%= f.label :name, class: 'control-label col-lg-1' %>
     <div class="col-lg-11 daycare-edit-field">
-      <%= f.text_field :name, id: "certification-edit-name#{@certification.id}", class: 'form-control certification-edit-name', required: true, placeholder: "" %>
+      <%= f.text_field :name, id: "certification-edit-name#{@certification.id}", class: 'form-control certification-edit-name', required: true, placeholder: "Enter the name of the certification" %>
     </div>
 
     <%= f.label :link, class: 'control-label col-lg-1' %>
     <div class="col-lg-11 daycare-edit-field">
-      <%= f.text_field :link, id: "certification-edit-link#{@certification.id}", class: 'form-control certification-edit-link', placeholder: "add a link to your certification" %>
+      <%= f.text_field :link, id: "certification-edit-link#{@certification.id}", class: 'form-control certification-edit-link', placeholder: "Enter the URL for the organization or a link to your certification if it is available online" %>
     </div>
 
     <%= f.label :description, class: 'control-label col-lg-1' %>
     <div class="col-lg-11 daycare-edit-field">
-      <%= f.text_area :description, class: 'form-control', rows: "5", id: "certification-edit-desc#{@certification.id}" %>
+      <%= f.text_area :description, class: 'form-control', rows: "5", id: "certification-edit-desc#{@certification.id}", placeholder: 'Add a short description of the organization and what the certification means' %>
     </div>
 
     <div class="col-md-12 daycare-edit-field">
