@@ -68,3 +68,4 @@ var setRadius = function(radius, value) {
 var hideEditForm = function (id, section) {
   $('#edit-' + section + '-' + id).slideUp(350);
 }
+s

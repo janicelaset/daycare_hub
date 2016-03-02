@@ -1,8 +1,9 @@
 
 <%= form_for [@daycare, @additional], :html => { :class => "form-horizontal", :multipart => true }, remote: true do |f| %>
   <div class="form-group">
+
     <%= f.label :title, class: 'control-label col-md-1' %>
-    <div class="col-md-4 daycare-edit-field">
+    <div class="col-md-11 daycare-edit-field">
       <%= f.text_field :title, id: "additional-edit-name#{@additional.id}", class: 'form-control additional-edit-name', required: true, placeholder: "" %>
     </div>
 
@@ -12,7 +13,7 @@
     </div>
 
     <div class="col-md-12 daycare-edit-field">
-      <span class="btn btn-default btn-file">
+      <span class="btn btn-info btn-file">
         Select Image<%= f.file_field :image, class: "btn-block", id: "btn-select-image", onchange: '$("#additional-upload-file-info").html($(this).val());' %>
       </span>
       <span class='label label-default label-image-upload' id="additional-upload-file-info"></span>
