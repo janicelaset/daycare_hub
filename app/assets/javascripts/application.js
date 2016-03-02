@@ -71,5 +71,4 @@ var hideEditForm = function (id, section) {
 
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
-    $(document).tooltip({show: null});
 });
