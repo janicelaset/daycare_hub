@@ -68,3 +68,8 @@ var setRadius = function(radius, value) {
 var hideEditForm = function (id, section) {
   $('#edit-' + section + '-' + id).slideUp(350);
 }
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+    $(document).tooltip({show: null});
+});
