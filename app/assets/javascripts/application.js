@@ -70,5 +70,15 @@ var hideEditForm = function (id, section) {
 }
 
 $(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="tooltip"]').tooltip();
+
+  $(function() {
+    $('.edit-section.panel-heading').bind('click',function(){
+      var self = this;
+      setTimeout(function() {
+        theOffset = $(self).offset();
+        $('body,html').animate({ scrollTop: theOffset.top - 100 });
+      }, 310); // ensure the collapse animation is done
+    });
+  });
 });
