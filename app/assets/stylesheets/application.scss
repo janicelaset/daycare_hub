@@ -45,11 +45,15 @@ p {
 .form-devise {
   max-width: 330px;
   padding: 15px;
-  margin: 80px auto;
+  margin: 70px auto;
 }
 
 .form-devise.reg-edit {
-  margin-bottom: 0 !important;
+  margin-bottom: 0;
+}
+
+.form-devise.cancel {
+  margin-top: 0;
 }
 
 .navbar-brand small {
