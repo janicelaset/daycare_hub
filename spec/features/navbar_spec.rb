@@ -37,8 +37,8 @@ describe "The navbar links" do
     login_as(user, :scope => :user)
     visit user_daycare_path(user, daycare)
     find('.dropdown').click
-    find('#menu-home').click
-    expect(page).to have_content('Home')
+    find('#menu-profile').click
+    expect(page).to have_content('Profile')
   end
 
   it "view daycare link navigates to daycare page" do

@@ -42,10 +42,14 @@ p {
   margin-left: 1em;
 }
 
-.form-signin {
+.form-devise {
   max-width: 330px;
   padding: 15px;
-  margin: 0 auto;
+  margin: 80px auto;
+}
+
+.form-devise.reg-edit {
+  margin-bottom: 0 !important;
 }
 
 .navbar-brand small {
