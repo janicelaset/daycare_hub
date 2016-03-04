@@ -7,7 +7,7 @@ class CertificationsController < ApplicationController
 
     @certification.save
 
-    @certifications = @daycare.certifications
+    @certifications = @daycare.certifications.order("position")
 
     #create new certification to display create certification form so users can add more programs
     @certification = Certification.new

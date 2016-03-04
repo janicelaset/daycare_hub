@@ -4,8 +4,9 @@ class TeachersController < ApplicationController
   def create
     @teacher = Teacher.new(teacher_params)
     @teacher.daycare = @daycare
-    @teachers = @daycare.teachers
     @teacher.save
+    
+    @teachers = @daycare.teachers.order("position")
 
     #create new teacher to display create teacher form so users can add more teachers
     @teacher = Teacher.new

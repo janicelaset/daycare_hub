@@ -3,10 +3,10 @@ class AdditionalsController < ApplicationController
 
   def create
     @additional = Additional.new(additional_params)
-
     @additional.daycare = @daycare
-    @additionals = @daycare.additionals
     @additional.save
+
+    @additionals = @daycare.additionals.order("position")
 
     if @additional.errors.nil?
       #create new additional to display create additional form so users can add more programs
