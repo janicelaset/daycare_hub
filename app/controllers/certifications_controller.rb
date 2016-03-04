@@ -44,15 +44,15 @@ class CertificationsController < ApplicationController
   end
 
   def move
-    #re-rendering certifications_list template to make sure edit form belongs
-    #with same panel after sorting
-    #need to change code to re-order nodes but this will work for now
-    @certifications = @daycare.certifications
-
     params['certification'].each_with_index do |id, index|
       certification = Certification.find(id)
       certification.update_attribute(:position, index+1) if certification
     end
+
+    #re-rendering certifications_list template to make sure edit form belongs
+    #with same panel after sorting
+    #need to change code to re-order nodes but this will work for now
+    @certifications = @daycare.certifications.order("positions")
 
     respond_to do |format|
       format.js

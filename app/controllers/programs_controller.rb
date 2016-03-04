@@ -42,15 +42,15 @@ class ProgramsController < ApplicationController
   end
 
   def move
-    #re-rendering programs_list template to make sure edit form belongs
-    #with same panel after sorting
-    #need to change code to re-order nodes but this will work for now
-    @programs = @daycare.programs
-
     params['program'].each_with_index do |id, index|
       program = Program.find(id)
       program.update_attribute(:position, index+1) if program
     end
+    
+    #re-rendering programs_list template to make sure edit form belongs
+    #with same panel after sorting
+    #need to change code to re-order nodes but this will work for now
+    @programs = @daycare.programs.order("position")
 
     respond_to do |format|
       format.js
