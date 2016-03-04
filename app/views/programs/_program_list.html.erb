@@ -25,21 +25,27 @@
               </h4>
               <div id="program-ages">
                 Ages:
-                <%= program.age_from %>
-                <% if program.age_from_units != program.age_to_units %>
-                  <%= program.age_from_units %>
-                <% end %>
+                <span id="program-age-from-<%= program.id %>"><%= program.age_from %></span>
+                <span id="program-age-from-units-<%= program.id %>">
+                  <% if program.age_from_units != program.age_to_units %>
+                    <%= program.age_from_units %>
+                  <% end %>
+                </span>
                 to
-                <%= program.age_to %>
-                <%= program.age_to_units %>
+                <span id="program-age-to-<%= program.id %>"><%= program.age_to %></span>
+                <span id="program-age-to-units-<%= program.id %>">
+                  <%= program.age_to_units %>
+                </span>
               </div>
-              <div id="program-availability-<%= program.id %>">
+              <div>
                 Available Space:
+                <span id="program-availability-<%= program.id %>">
                 <% if program.available? %>
                     yes
                 <% else %>
                     none
                 <% end %>
+                </span>
               </div>
               <br>
               <div id="program-description-<%= program.id %>">
