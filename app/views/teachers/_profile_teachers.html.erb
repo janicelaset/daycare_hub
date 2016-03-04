@@ -8,7 +8,10 @@
     </div>
   </div>
 
-  <% @teachers.each do |teacher| %>
+  <% @teachers..each_with_index do |teacher, index| %>
+    <% if index%3 === 0 %>
+      <div class="row">
+    <% end %>
     <div class="col-md-4">
       <div class="team-member img-teacher">
         <div class="img-teacher">
@@ -24,5 +27,8 @@
         </div>
       </div>
     </div>
+    <% if index%3 == 2 %>
+      </div>
+    <% end %>
   <% end %>
 <% end %>
