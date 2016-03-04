@@ -6,7 +6,7 @@ class ProgramsController < ApplicationController
     @program.daycare = @daycare
     @program.save
 
-    @programs = @daycare.programs
+    @programs = @daycare.programs.order("position")
 
     #create new program to display create program form so users can add more programs
     @program = Program.new
