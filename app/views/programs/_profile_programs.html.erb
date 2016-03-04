@@ -14,24 +14,26 @@
     <div class="col-md-4 mar-bot40" >
       <div class="align-center">
         <img src="<%= program.picture.url %>" class="img-responsive mar-bot20" alt="" />
-        <h4 class="text-bold">Infant</h4>
-        <p>
-          Ages:
-          <%= program.age_from %>
-          <% if program.age_from_units != program.age_to_units %>
-            <%= program.age_from_units %>
+        <h4 class="text-bold"><%= program.name %></h4>
+        <% if program.age_from != nil && program.age_to != nil %>
+          <p>
+            Ages:
+            <%= program.age_from %>
+            <% if program.age_from_units != program.age_to_units %>
+              <%= program.age_from_units %>
+            <% end %>
+            to
+            <%= program.age_to %>
+            <%= program.age_to_units %>
+          </p>
           <% end %>
-          to
-          <%= program.age_to %>
-          <%= program.age_to_units %>
-        </p>
-        <p>
-          <% if program.available == true %>
-            We have openings for this program!
-          <% else %>
-            No currently have no openings :(
-          <% end %>
-        </p>
+          <p>
+            <% if program.available == true %>
+              We have openings for this program!
+            <% else %>
+              No openings for this program.
+            <% end %>
+          </p>
         <p>
           <%= simple_format h program.description %>
         </p>
