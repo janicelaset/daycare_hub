@@ -3,7 +3,7 @@ $('#edit-certification-<%= @certification.id %>').slideUp(350, function() {
   $('#header-name-certification-<%= @certification.id %>').text('<%= @certification.name %>')
   $('#certification-link-<%= @certification.id %>').text('<%= @certification.link %>')
   $('#certification-description-<%= @certification.id %>').html('<%= j simple_format h @certification.description %>')
-  $("#certification-image<%= @certification.id %>").html("<%= j image_tag @certification.image.url(:small) %>");
+  $('#certification-image<%= @certification.id %>').html("<%= j image_tag @certification.image.url(:small) %>");
 
   $('#certificationList').sortable({
       axis: 'y',
