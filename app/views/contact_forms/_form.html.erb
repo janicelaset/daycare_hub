@@ -2,7 +2,7 @@
 
 <%= simple_form_for [@daycare, @contact_form], :html => {:class => 'form-horizontal' }, remote: true do |f| %>
 
-  <%= f.input :name, :required => true, id: 'contact_form_name' %>
+  <%= f.input :name, :required => true, id: 'contact_form_name', label: "Your Name" %>
   <%= f.input :email, :required => true, id: 'contact_form_email' %>
   <%= f.input :message, :as => :text, :required => true, id: 'contact_form_message' %>
   <div class= "hidden">
@@ -14,8 +14,6 @@
     <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
   </div>
 <% end %>
-
-
 
 <div id="sendmessage">
    Your message has been sent. Thank you!
