@@ -43,6 +43,8 @@ gem 'remotipart', '~> 1.2'
 gem 'aws-sdk', '< 2.0'
 # gem 'rack-mini-profiler'
 gem 'rails_admin'
+gem 'mail_form'
+gem 'simple_form'
 
 
 group :development, :test do

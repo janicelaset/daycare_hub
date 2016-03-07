@@ -57,6 +57,8 @@ class DaycaresController < ApplicationController
     else
       @additionals = @daycare.additionals.order("position")
     end
+
+    @contact_form = ContactForm.new
   end
 
   def new

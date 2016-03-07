@@ -27,6 +27,10 @@ Rails.application.routes.draw do
   end
 
   resources :daycares do
+    resources :contact_forms
+  end
+
+  resources :daycares do
     resources :summaries, only: [:create, :edit, :update, :destroy]
   end
 
