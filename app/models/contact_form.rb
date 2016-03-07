@@ -9,7 +9,7 @@ class ContactForm < MailForm::Base
   # in ActionMailer accepts.
   def headers
     {
-      :subject => "Message from beebsy",
+      :subject => "Message from Beebsy",
       :to => %(<#{recipient}>),
       :from => %("#{name}" <#{email}>)
     }

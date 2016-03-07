@@ -19,10 +19,8 @@
 
 <div class="container">
   <%= render 'images' %>
-  <%= render 'address' %>
-  <%= render 'contact' %>
 </div>
-</div>
+
 
 <section class="featured">
   <div class="container">
@@ -70,6 +68,8 @@
   </div>
 </section>
 
+  <%= render 'address' %>
+
 <!-- contact -->
 <section id="section-contact" class="section appear clearfix">
   <div class="container">
@@ -97,6 +97,8 @@
               <%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
             </div>
           <% end %>
+
+
 
           <div id="sendmessage">
              Your message has been sent. Thank you!
@@ -133,12 +135,14 @@
 
   </div>
 </section>
+<div id="message-modal" class="modal fade"></div>
+
 <!-- map -->
 <section id="section-map" class="clearfix">
   <div id="map"></div>
 </section>
 
-
+</div>
 <script src="<%= asset_path('js/modernizr-2.6.2-respond-1.1.0.min.js') %>"></script>
 
 <script src="<%= asset_path('js/jquery.easing.1.3.js') %>"></script>
