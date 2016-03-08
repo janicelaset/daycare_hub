@@ -774,12 +774,17 @@ nav#filter a {
 	display:block;
 }
 
-#contact-form {
+#contact-form,
+#feedback-form {
 	position: relative;
 	z-index: 999;
 }
 
-#contact-form input[type=text],#contact-form input[type=email], .contactForm textarea {
+#contact-form input[type=text],
+#contact-form input[type=email],
+#feedback-form input[type=text],
+#feedback-form input[type=email],
+.contactForm textarea {
 	width: 100%;
 	// background: rgba(227, 231, 228, 1);
 	background: rgba(40, 170, 225, 0.1);
@@ -790,7 +795,11 @@ nav#filter a {
 	vertical-align: middle;
 	padding:0 10px;
 }
-#contact-form input[type=text]:focus,#contact-form input[type=email]:focus, .contactForm textarea:focus {
+#contact-form input[type=text]:focus,
+#contact-form input[type=email]:focus,
+#feedback-form input[type=text]:focus,
+#feedback-form input[type=email]:focus,
+.contactForm textarea:focus {
 	background: rgba(101, 106, 100, 0.1);
 	// color: #eff1ef;
 	box-shadow: none;
@@ -800,11 +809,15 @@ nav#filter a {
 	-moz-transition: background 0.25 ease-in;
 	-webkit-transition: background 0.25 ease-in;
 }
-#contact-form input[type=text],#contact-form input[type=email] {
+#contact-form input[type=text],
+#contact-form input[type=email],
+#feedback-form input[type=text],
+#feedback-form input[type=email] {
 	height: 60px;
 	margin-bottom:30px;
 }
-#contact-form input[type=submit] {
+#contact-form input[type=submit],
+#feedback-form input[type=submit] {
 	color: #fff;
 	width: 185px;
 	height: 60px;
@@ -823,10 +836,14 @@ nav#filter a {
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
 }
-#contact-form input[type=submit]:hover, #contact-form input[type=submit]:active {
+#contact-form input[type=submit]:hover,
+#contact-form input[type=submit]:active,
+#feedback-form input[type=submit]:hover,
+#feedback-form input[type=submit]:active {
 	background: #43413e !important;
 }
-#contact-form textarea {
+#contact-form textarea,
+#feedback-form textarea {
 	padding-top: 1em;
 }
 
