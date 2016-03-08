@@ -21,5 +21,4 @@ Rails.application.config.assets.precompile += %w( js/jquery.scrollTo-1.4.3.1-min
 Rails.application.config.assets.precompile += %w( js/jquery.localscroll-1.2.7-min.js )
 Rails.application.config.assets.precompile += %w( js/stellar.js )
 Rails.application.config.assets.precompile += %w( js/jquery.appear.js )
-Rails.application.config.assets.precompile += %w( js/validate.js )
 Rails.application.config.assets.precompile += %w( js/main.js )
