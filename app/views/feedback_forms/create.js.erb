@@ -1,0 +1,9 @@
+<% if @feedback_form.errors.any? %>
+  $('#feedback-form').html('<%= j render 'feedback_forms/form' %>');
+<% else %>
+  $('#message-modal').html("<%= j render 'layouts/message_success' %>");
+  $('#message-modal').modal("show");
+  $('#feedback_form_name').val('');
+  $('#feedback_form_email').val('');
+  $('#feedback_form_message').val('');
+<% end %>

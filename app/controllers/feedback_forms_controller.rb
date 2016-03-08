@@ -14,7 +14,7 @@ end
 
 private
 def feedback_form_params
-  params.require(:feedback_form).permit(:name, :email, :message, :nickname, :recipient)
+  params.require(:feedback_form).permit(:name, :email, :message, :nickname)
 end
 
 def find_daycare

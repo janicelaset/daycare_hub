@@ -92,45 +92,28 @@
 	</section>
 </a>
 
-		<!-- contact -->
-		<section id="section-contact" class="section appear clearfix">
-			<div class="container">
-				<div class="row mar-bot40">
-					<div class="col-md-offset-3 col-md-6">
-						<div class="section-header">
-							<h2 class="section-heading animated" data-animation="bounceInUp">Contact us</h2>
-							<p>If you have any suggestions or feedback, or you just wanna say hi, drop us a line.</p>
-						</div>
-					</div>
+<!-- contact -->
+<section id="section-contact" class="section appear clearfix">
+	<div class="container">
+		<div class="row mar-bot40">
+			<div class="col-md-offset-3 col-md-6">
+				<div class="section-header">
+					<h2 class="section-heading animated" data-animation="bounceInUp">Contact us</h2>
+					<p>If you have any suggestions or feedback, or you just wanna say hi, drop us a line.</p>
 				</div>
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						<div class="cform" id="contact-form">
-
-							<%= render "layouts/errors", :object => @feedback_form %>
-
-							<%= simple_form_for [@feedback_form], :html => {:class => 'form-horizontal contactForm' }, remote: true do |f| %>
-
-							  <%= f.input :name, :required => true, id: 'feedback_form_name', label: "Your Name" %>
-							  <%= f.input :email, :required => true, id: 'feedback_form_email', label: "Your Email" %>
-							  <%= f.input :message, :as => :text, :required => true, id: 'feedback_form_message', class: 'form-control', :input_html => {rows: 5} %>
-							  <div class= "hidden">
-							    <%= f.input :nickname, :hint => 'Leave this field blank!' %>
-							  </div>
-							  <div>
-							    </br>
-							    <%= f.button :submit, 'SEND MESSAGE', :class=> "btn btn-theme pull-left" %>
-							  </div>
-							<% end %>
-
-						</div>
-					</div>
-					<!-- ./span12 -->
-				</div>
-
 			</div>
-		</section>
-
+		</div>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="cform" id="feedback-form">
+					<%= render 'feedback_forms/form' %>
+				</div>
+			</div>
+			<!-- ./span12 -->
+		</div>
+	</div>
+</section>
+<div id="message-modal" class="modal fade"></div>
 
 	<section id="footer" class="section footer">
 		<div class="container">

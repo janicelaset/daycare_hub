@@ -1,7 +1,7 @@
 <% if @contact_form.errors.any? %>
   $('#contact-form').html('<%= j render 'contact_forms/form' %>');
 <% else %>
-  $('#message-modal').html("<%= j render 'message_success' %>");
+  $('#message-modal').html("<%= j render 'layouts/message_success' %>");
   $('#message-modal').modal("show");
   $('#contact_form_name').val('');
   $('#contact_form_email').val('');
