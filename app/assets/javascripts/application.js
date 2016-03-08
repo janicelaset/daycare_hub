@@ -69,6 +69,10 @@ var hideEditForm = function (id, section) {
   $('#edit-' + section + '-' + id).slideUp(350);
 }
 
+var disableCertInput = function(id) {
+alert('test');
+}
+
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
 
