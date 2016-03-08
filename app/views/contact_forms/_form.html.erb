@@ -4,9 +4,9 @@
 
 <%= simple_form_for [@daycare, @contact_form], :html => {:class => 'form-horizontal contactForm' }, remote: true do |f| %>
 
-  <%= f.input :name, :required => true, id: 'contact_form_name', label: "Your Name" %>
-  <%= f.input :email, :required => true, id: 'contact_form_email', label: "Your Email" %>
-  <%= f.input :message, :as => :text, :required => true, id: 'contact_form_message', class: 'form-control', :input_html => {rows: 5} %>
+  <%= f.input :name, :required => true, id: 'contact_form_name', label: "Your Name", error: false %>
+  <%= f.input :email, :required => true, id: 'contact_form_email', label: "Your Email", error: false %>
+  <%= f.input :message, :as => :text, :required => true, id: 'contact_form_message', class: 'form-control', error: false, :input_html => {rows: 5} %>
   <div class= "hidden">
     <%= f.input :nickname, :hint => 'Leave this field blank!' %>
     <%= f.input :recipient, :input_html => { :value => @daycare.contact.email } %>
