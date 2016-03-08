@@ -72,6 +72,7 @@
 
 <!-- contact -->
 <section id="section-contact" class="section appear clearfix">
+  <% if @daycare.contact != nil %>
   <div class="container">
     <div class="row mar-bot40">
       <div class="col-md-offset-3 col-md-6">
@@ -92,6 +93,7 @@
     </div>
 
   </div>
+  <% end %>
 </section>
 <div id="message-modal" class="modal fade"></div>
 
