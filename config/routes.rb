@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  resources :feedback_forms, only: [:create]
+
   resources :users do
     resources :daycares
   end
@@ -27,7 +29,7 @@ Rails.application.routes.draw do
   end
 
   resources :daycares do
-    resources :contact_forms
+    resources :contact_forms, only: [:create]
   end
 
   resources :daycares do

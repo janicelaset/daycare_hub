@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    @feedback_form = FeedbackForm.new
   end
 
   def show
