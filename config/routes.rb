@@ -4,11 +4,13 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'home#index'
 
-  devise_for :users
+  devise_for :users, controllers: { registrations: "user_registrations" }
+
 
   resources :feedback_forms, only: [:create]
 
   resources :users do
+    get 'users/registration-instructions' => 'users#instructions', as: 'registration_instructions'
     resources :daycares
   end
 
