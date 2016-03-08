@@ -2,9 +2,10 @@ class CertificationsController < ApplicationController
   before_action :find_daycare, except: [:destroy]
 
   def create
+    @certifications = Certification.all
     @certification = Certification.new(cert_params)
     @certification.daycare = @daycare
-
+binding.pry
     @certification.save
 
     @certifications = @daycare.certifications.order("position")
@@ -61,7 +62,7 @@ class CertificationsController < ApplicationController
 
   private
   def cert_params
-    params.require(:certification).permit(:name, :description, :link, :image, :id, :position)
+    params.require(:certification).permit(:certification, :name, :description, :link, :image, :id, :position)
   end
 
   def find_daycare
