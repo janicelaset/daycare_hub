@@ -1,4 +1,6 @@
-<%= render "layouts/errors", :object => @contact_form %>
+<div id="contact-form-errors">
+  <%= render "layouts/errors", :object => @contact_form %>
+</div>
 
 <%= simple_form_for [@daycare, @contact_form], :html => {:class => 'form-horizontal contactForm' }, remote: true do |f| %>
 
