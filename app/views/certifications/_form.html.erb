@@ -3,13 +3,13 @@
 <%= form_for [@daycare, @certification], :html => { :class => "form-horizontal", :multipart => true }, remote: true do |f| %>
   <div class="form-group">
     <div class="col-lg-3 daycare-edit-field">
-      <%= f.collection_select(:id, Certification.all, :id, :name, { :include_blank => "Add New Certification"}, { class: 'form-control', onchange: "disableCertInput(#{@certification.id})" }) %>
+      <%= f.collection_select(:id, Certification.all, :id, :name, { :include_blank => "Add New Certification"}, { class: 'form-control', onchange: "disableCertInput()" }) %>
     </div>
 
     <div class="col-lg-12">
     <%= f.label :name, class: 'control-label col-lg-1' %>
     <div class="col-lg-11 daycare-edit-field">
-      <%= f.text_field :name, id: "certification-edit-name#{@certification.id}", class: 'form-control', required: true, placeholder: "Enter the name of the certification" %>
+      <%= f.text_field :name, id: "certification-edit-name", class: 'form-control', required: true, placeholder: "Enter the name of the certification" %>
     </div>
   </div>
 
@@ -21,7 +21,7 @@
     <div class="col-lg-12">
       <%= f.label :description, class: 'control-label col-lg-1' %>
       <div class="col-lg-11 daycare-edit-field">
-        <%= f.text_area :description, class: 'form-control', rows: "5", id: "certification-edit-desc#{@certification.id}", placeholder: 'Add a short description of the organization and what the certification means' %>
+        <%= f.text_area :description, class: 'form-control', rows: "5", id: "certification-edit-desc", placeholder: 'Add a short description of the organization and what the certification means' %>
       </div>
     </div>
 

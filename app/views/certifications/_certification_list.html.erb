@@ -6,9 +6,9 @@
           <span id="panel-name-certification-<%= certification.id %>">
             <%= certification.name %>
           </span>
-          <%= link_to edit_daycare_certification_path(@daycare, certification), id: "certification-edit-#{certification.id}", remote:true do %>
+          <!-- <%= link_to edit_daycare_certification_path(@daycare, certification), id: "certification-edit-#{certification.id}", remote:true do %>
             <span><i class="glyphicon glyphicon-pencil pull-right"data-toggle="tooltip" data-placement="top" title="Edit"></i></span>
-          <% end %>
+          <% end %> -->
           <%= link_to daycare_certification_path(@daycare, certification), method: 'delete', data: { confirm: "Are you sure you want do delete #{certification.name}?" }, id: "certification-delete-#{certification.id}", remote:true do %>
             <span><i class="glyphicon glyphicon-trash pull-right"data-toggle="tooltip" data-placement="top" title="Delete"></i></span>
           <% end %>
