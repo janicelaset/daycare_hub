@@ -2,12 +2,14 @@ class CertificationsController < ApplicationController
   before_action :find_daycare, except: [:destroy]
 
   def create
-    @certifications = Certification.all
-    @certification = Certification.new(cert_params)
+    if cert_params.has_key? :name
+      @certification = Certification.new(cert_params)
+    else
+      @certification = Certification.find(cert_params['id'])
+    end
     @certification.daycare = @daycare
-binding.pry
     @certification.save
-
+binding.pry
     @certifications = @daycare.certifications.order("position")
 
     #create new certification to display create certification form so users can add more programs

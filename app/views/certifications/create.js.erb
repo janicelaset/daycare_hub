@@ -4,7 +4,7 @@ $('#certification-edit-name<%= @certification.id %>').val("");
 $('#certification-edit-link<%= @certification.id %>').val("");
 $('#certification-edit-desc<%= @certification.id %>').val("");
 $('#certification-upload-file-info').html("");
-// $('#certification-edit-form').html('<%= j render 'certifications/form' %>');
+$('#certification-edit-form').html('<%= j render 'certifications/form' %>');
 
 $('#certificationList').sortable({
     axis: 'y',
