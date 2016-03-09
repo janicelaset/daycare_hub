@@ -70,7 +70,14 @@ var hideEditForm = function (id, section) {
 }
 
 var disableCertInput = function(id) {
-alert('test');
+  if($('#certification_id').val() === '') {
+    $('#certification-edit-name').prop('disabled', false);
+    $('#certification-edit-desc').prop('disabled', false);
+  }
+  else {
+    $('#certification-edit-name').prop('disabled', true);
+    $('#certification-edit-desc').prop('disabled', true);
+  }
 }
 
 $(document).ready(function(){
