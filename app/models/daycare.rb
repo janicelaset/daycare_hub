@@ -6,7 +6,8 @@ class Daycare < ActiveRecord::Base
   has_many :teachers
   has_many :programs
   has_one :summary
-  has_many :certifications
+  has_many :daycare_certifications
+  has_many :certifications, :through => :daycare_certifications
   has_many :additionals
   has_one :general
 

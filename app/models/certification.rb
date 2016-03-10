@@ -1,5 +1,6 @@
 class Certification < ActiveRecord::Base
-  belongs_to :daycare
+  has_many :daycare_certifications
+  has_many :daycares, :through => :daycare_certifications
   has_attached_file :image, styles: { small: "150x150>" }, default_url: ":style/cert.png"
 
   validates :name, :presence => true
