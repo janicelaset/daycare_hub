@@ -3,7 +3,7 @@
 <%= form_for [@daycare, @certification], :html => { :class => "form-horizontal", :multipart => true }, remote: true do |f| %>
   <div class="form-group">
     <div class="col-lg-3 daycare-edit-field">
-      <%= f.collection_select(:id, Certification.joins(:daycare_certifications).where("daycare_id != ?", @daycare.id), :id, :name, { :include_blank => "Add New Certification"}, { class: 'form-control', onchange: "disableCertInput()" }) %>
+      <%= f.collection_select(:id, Certification.where.not(id: @certifications), :id, :name, { :include_blank => "Add New Certification"}, { class: 'form-control', onchange: "disableCertInput()" }) %>
     </div>
 
     <div class="col-lg-12">

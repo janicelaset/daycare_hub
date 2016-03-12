@@ -11,9 +11,10 @@ class CertificationsController < ApplicationController
 
     daycare_certification = DaycareCertification.new(daycare: @daycare, certification: @certification)
     daycare_certification.save
-binding.pry
-    @certifications = Certification.joins(:daycare_certifications).where("daycare_id = ?", @daycare.id).order("position")
+
+    # @certifications = Certification.joins(:daycare_certifications).where("daycare_id = ?", @daycare.id).order("position")
     # @certifications = @daycare_certifications.certifications.order("position")
+    @certifications = @daycare.certifications.order("position")
 
     #create new certification to display create certification form so users can add more programs
     @certification = Certification.new
