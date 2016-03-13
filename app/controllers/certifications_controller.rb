@@ -1,5 +1,5 @@
 class CertificationsController < ApplicationController
-  before_action :find_daycare, except: [:destroy]
+  before_action :find_daycare
 
   def create
     if cert_params.has_key? :name
@@ -8,12 +8,10 @@ class CertificationsController < ApplicationController
       @certification = Certification.find(cert_params['id'])
     end
     @certification.save
-
+binding.pry
     daycare_certification = DaycareCertification.new(daycare: @daycare, certification: @certification)
     daycare_certification.save
 
-    # @certifications = Certification.joins(:daycare_certifications).where("daycare_id = ?", @daycare.id).order("position")
-    # @certifications = @daycare_certifications.certifications.order("position")
     @certifications = @daycare.certifications.order("position")
 
     #create new certification to display create certification form so users can add more programs
@@ -47,7 +45,10 @@ class CertificationsController < ApplicationController
 
   def destroy
     @certification = Certification.find(params[:id])
-    @certification.destroy
+    @certifications = @daycare.certifications
+
+    daycare_certification = DaycareCertification.where("daycare_id = ? AND certification_id = ?", @daycare.id, @certification.id)
+    daycare_certification.first.destroy
   end
 
   def move
