@@ -8,7 +8,7 @@ class CertificationsController < ApplicationController
       @certification = Certification.find(cert_params['id'])
     end
     @certification.save
-binding.pry
+
     daycare_certification = DaycareCertification.new(daycare: @daycare, certification: @certification)
     daycare_certification.save
 
@@ -44,11 +44,14 @@ binding.pry
   end
 
   def destroy
-    @certification = Certification.find(params[:id])
+    @cert_deleted = Certification.find(params[:id])
     @certifications = @daycare.certifications
 
-    daycare_certification = DaycareCertification.where("daycare_id = ? AND certification_id = ?", @daycare.id, @certification.id)
+    daycare_certification = DaycareCertification.where("daycare_id = ? AND certification_id = ?", @daycare.id, @cert_deleted.id)
     daycare_certification.first.destroy
+
+    #create new certification to display create certification form so users can add more programs
+    @certification = Certification.new
   end
 
   def move
