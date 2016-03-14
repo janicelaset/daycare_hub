@@ -1,5 +1,7 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => { class: "form-devise" }) do |f| %>
+
   <h2>Log in</h2>
+  <div class="error-message"><%= alert %></div>
 
   <div class="field">
     <%= f.label "User name or email", id: "user_login" %><br />
