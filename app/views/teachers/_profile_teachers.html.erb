@@ -15,8 +15,10 @@
     <div class="col-md-4">
       <div class="team-member img-teacher">
         <div class="img-teacher">
-          <div class="circle-avatar" style="background-image:url(<%= teacher.picture.url %>)">
-          </div>
+          <% if teacher.picture_file_name != nil %>
+            <div class="circle-avatar" style="background-image:url(<%= teacher.picture.url %>)">
+            </div>
+          <% end %>
         </div>
         <div class="team-detail">
           <h4><%= teacher.name %></h4>
