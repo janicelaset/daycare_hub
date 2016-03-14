@@ -1,6 +1,12 @@
 <div class="container main-nav-content">
-  <div class="align-center">
-    <h2>Edit Your Daycare</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Edit Your Daycare</h2>
+    </div>
+    <div class="col-md-8 pull-right">
+      <%= link_to 'Preview My Page', user_daycare_path(current_user, current_user.daycare), class: 'btn btn-primary btn-edit' %>
+      <!-- <%= link_to 'Walk Me Through', user_daycare_path(current_user, current_user.daycare), class: 'btn btn-primary btn-edit' %> -->
+    </div>
   </div>
   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
     <%= render 'name' %>
