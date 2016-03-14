@@ -8,7 +8,7 @@
 
     <%= f.label :about, class: 'control-label col-md-1' %>
     <div class="col-md-11 daycare-edit-field">
-      <%= f.text_area :about, class: 'form-control', required: true, rows: "5" %>
+      <%= f.text_area :about, id: "teacher-edit-about#{@teacher.id}", class: 'form-control', required: true, rows: "5" %>
     </div>
 
     <div class="col-md-12 daycare-edit-field">
