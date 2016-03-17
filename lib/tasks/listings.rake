@@ -3,13 +3,18 @@ require 'csv'
 desc "Import listings from csv file"
 task :listings => [:environment] do
 
-  file = "db/listings.csv"
+  file_path = "db/listings/"
+  files = [
+            "oregon.csv",
+            "washington.csv"
+          ]
 
   Listing.delete_all
-  ActiveRecord::Base.connection.execute("TRUNCATE listings")
+  ActiveRecord::Base.connection.reset_pk_sequence!('listings')
 
-  CSV.foreach(file, :headers => true) do |row|
-    Listing.create(
+  files.each do |file|
+    CSV.foreach(file_path + file, :headers => true) do |row|
+      Listing.create(
       :name => row[0],
       :address => row[1],
       :city => row[2],
@@ -18,7 +23,8 @@ task :listings => [:environment] do
       :phone => row[5],
       :verified => row[6],
       :daycare_id => row[7]
-    )
+      )
+    end
   end
 
 end
