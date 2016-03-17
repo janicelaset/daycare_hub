@@ -16,7 +16,7 @@ task :listings => [:environment] do
     CSV.foreach(file_path + file, :headers => true) do |row|
       Listing.create(
       :name => row[0],
-      :address => row[1],
+      :street => row[1],
       :city => row[2],
       :state => row[3],
       :zip => row[4],

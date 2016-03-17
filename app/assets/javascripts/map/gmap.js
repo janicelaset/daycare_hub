@@ -34,12 +34,13 @@ function displaySearchResults(origin, radius, addresses, daycares, images) {
 
   //google distance matrix values always expressed in meters
   radius = milesToMeters(radius);
-console.log(radius);
+console.log("radius:" + radius);
 
 daycares = daycares.replace(/&quot;/g, '"');
 daycares = JSON.parse(daycares);
 console.log(daycares);
 
+console.log(addresses);
 addresses = addresses.replace(/&quot;/g, '"');
 addresses = JSON.parse(addresses);
 
@@ -52,7 +53,9 @@ addresses.forEach(function(address) {
   address = fullAddress(address);
   destination.push(address);
 });
+console.log("addresses:");
 console.log(addresses);
+console.log("destinations:");
 console.log(destination);
 
   var bounds = new google.maps.LatLngBounds;
