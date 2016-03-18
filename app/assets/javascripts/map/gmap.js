@@ -22,7 +22,7 @@ var info;
 
 
 function fullAddress(address) {
-  return address.street + ", " + address.city + ", " + address.state + address.zip;
+  return address.street + ", " + address.city + ", " + address.state + " " +  address.zip;
 }
 
 function milesToMeters(miles) {
@@ -62,10 +62,10 @@ console.log(destination);
   var markersArray = [];
   var infoWindowContentArray = [];
 
-  // var destinationIcon = 'https://chart.googleapis.com/chart?' +
-  //     'chst=d_map_pin_letter&chld=D|FF0000|000000';
-  // var originIcon = 'https://chart.googleapis.com/chart?' +
-  //     'chst=d_map_pin_letter&chld=O|FFFF00|000000';
+  var destinationIcon = 'https://chart.googleapis.com/chart?' +
+      'chst=d_map_pin_letter&chld=D|FF0000|000000';
+  var originIcon = 'https://chart.googleapis.com/chart?' +
+      'chst=d_map_pin_letter&chld=O|FFFF00|000000';
   var map = new google.maps.Map(document.getElementById('map-canvas'), {
     center: {lat: 39.8282, lng: -98.5795},
     zoom: 4
@@ -91,7 +91,7 @@ console.log(destination);
         deleteMarkers(markersArray);
 
         var showGeocodedAddressOnMap = function(asDestination, contentString) {
-          // var icon = asDestination ? destinationIcon : originIcon;
+          var icon = asDestination ? destinationIcon : originIcon;
           return function(results, status) {
             if (status === google.maps.GeocoderStatus.OK) {
               map.fitBounds(bounds.extend(results[0].geometry.location));
@@ -99,6 +99,7 @@ console.log(destination);
                 map: map,
                 animation: google.maps.Animation.DROP,
                 position: results[0].geometry.location,
+                icon: icon,
               });
               if(contentString != "") {
                 var infowindow = new google.maps.InfoWindow({
@@ -127,36 +128,51 @@ console.log(destination);
 
           for (var j = 0; j < results.length; j++) {
             //show addresses within radius
+            console.log(results[j].distance.value);
             if(results[j].distance.value <= radius) {
-              if (images[j] === null) {
-                images[j] = 'Brick.png';
+              // if (images[j] === null) {
+              //   images[j] = 'Brick.png';
+              // }
+              // var content = "<strong><a href='/daycares/" + daycares[j].id + "'>" + daycares[j].name + "</a><strong>" +
+              //               "<div>" + addresses[j].street + "</div>" +
+              //               "<div>" + addresses[j].city + ", " + addresses[j].state + " " + addresses[j].zip + "</div>" +
+              //               "<p>" + results[j].distance.text + "</p>";
+              if (addresses[j].daycare_id) {
+                var content = "<strong><a href='/daycares/" + daycares[j].id + "'>" + daycares[j].name + "</a><strong>" +
+                "<div>" + addresses[j].street + "</div>" +
+                "<div>" + addresses[j].city + ", " + addresses[j].state + " " + addresses[j].zip + "</div>" +
+                "<p>" + results[j].distance.text + "</p>";
               }
-              var content = "<strong><a href='/daycares/" + daycares[j].id + "'>" + daycares[j].name + "</a><strong>" +
-                            "<div>" + addresses[j].street + "</div>" +
-                            "<div>" + addresses[j].city + ", " + addresses[j].state + " " + addresses[j].zip + "</div>" +
-                            "<p>" + results[j].distance.text + "</p>";
+              else {
+                var content = "<strong>" + addresses[j].name + "</strong>" +
+                "<div>" + addresses[j].street + "</div>" +
+                "<div>" + addresses[j].city + ", " + addresses[j].state + " " + addresses[j].zip + "</div>" +
+                "<div>" + addresses[j].phone + "</div>" +
+                "<div style='color: blue;'>" + results[j].distance.text + "</div>";
+              }
               geocoder.geocode({'address': destinationList[j]},
+                  // showGeocodedAddressOnMap(true, content));
                   showGeocodedAddressOnMap(true, content));
 
-              $(".row.search-results").append(
-                "<div class='col-md-6'>" +
-                  "<div class='thumbnail search-results-thumb'>" +
-                    "<div class='media'>" +
-                      "<div class='media-left media-top'>" +
-                        "<div class='search-results-image'>" +
-                        "<img src=" + images[j] + ">" +
-                        // "<img src=" + 'Brick.png' + ">" +
-                        "</div>" +
-                      "</div>" +
-                      "<div class='media-body'>" +
-                        "<h4><a href='/daycares/" + daycares[j].url + "'>" + daycares[j].name + "</a></h4>" +
-                        "<div>" + addresses[j].street + "</div>" +
-                        "<div>" + addresses[j].city + ", " + addresses[j].state + " " + addresses[j].zip + "</div>" +
-                        "<p>" + results[j].distance.text + "</p>" +
-                      "</div>" +
-                    "</div>" +
-                  "</div>" +
-                "</div>");
+              // $(".row.search-results").append(
+              //   "<div class='col-md-6'>" +
+              //     "<div class='thumbnail search-results-thumb'>" +
+              //       "<div class='media'>" +
+              //         "<div class='media-left media-top'>" +
+              //           "<div class='search-results-image'>" +
+              //           "<img src=" + images[j] + ">" +
+              //           // "<img src=" + 'Brick.png' + ">" +
+              //           "</div>" +
+              //         "</div>" +
+              //         "<div class='media-body'>" +
+              //           "<h4><a href='/daycares/" + daycares[j].url + "'>" + daycares[j].name + "</a></h4>" +
+              //           "<div>" + addresses[j].street + "</div>" +
+              //           "<div>" + addresses[j].city + ", " + addresses[j].state + " " + addresses[j].zip + "</div>" +
+              //           "<p>" + results[j].distance.text + "</p>" +
+              //         "</div>" +
+              //       "</div>" +
+              //     "</div>" +
+              //   "</div>");
             }
           }
         }
