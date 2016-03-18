@@ -130,9 +130,12 @@ console.log(destination);
             //show addresses within radius
             console.log(results[j].distance.value);
             if(results[j].distance.value <= radius) {
-              // if (images[j] === null) {
-              //   images[j] = 'Brick.png';
-              // }
+              console.log("images:");
+              console.log(images[j]);
+              if (images[j] === null || images[j] === undefined) {
+                images[j] = 'Brick.png';
+              }
+              console.log(images[j]);
               // var content = "<strong><a href='/daycares/" + daycares[j].id + "'>" + daycares[j].name + "</a><strong>" +
               //               "<div>" + addresses[j].street + "</div>" +
               //               "<div>" + addresses[j].city + ", " + addresses[j].state + " " + addresses[j].zip + "</div>" +
@@ -142,6 +145,25 @@ console.log(destination);
                 "<div>" + addresses[j].street + "</div>" +
                 "<div>" + addresses[j].city + ", " + addresses[j].state + " " + addresses[j].zip + "</div>" +
                 "<p>" + results[j].distance.text + "</p>";
+
+                $(".row.search-results").append(
+                  "<div class='col-md-6'>" +
+                    "<div class='thumbnail search-results-thumb'>" +
+                      "<div class='media'>" +
+                        "<div class='media-left media-top'>" +
+                          "<div class='search-results-image'>" +
+                          "<img src=" + images[j] + ">" +
+                          "</div>" +
+                        "</div>" +
+                        "<div class='media-body'>" +
+                          "<h4><a href='/daycares/" + daycares[j].url + "'>" + daycares[j].name + "</a></h4>" +
+                          "<div>" + addresses[j].street + "</div>" +
+                          "<div>" + addresses[j].city + ", " + addresses[j].state + " " + addresses[j].zip + "</div>" +
+                          "<p>" + results[j].distance.text + "</p>" +
+                        "</div>" +
+                      "</div>" +
+                    "</div>" +
+                  "</div>");
               }
               else {
                 var content = "<strong>" + addresses[j].name + "</strong>" +
@@ -149,30 +171,28 @@ console.log(destination);
                 "<div>" + addresses[j].city + ", " + addresses[j].state + " " + addresses[j].zip + "</div>" +
                 "<div>" + addresses[j].phone + "</div>" +
                 "<div style='color: blue;'>" + results[j].distance.text + "</div>";
+
+                $(".row.search-results").append(
+                  "<div class='col-md-6'>" +
+                    "<div class='thumbnail search-results-thumb'>" +
+                      "<div class='media'>" +
+                        "<div class='media-left media-top'>" +
+                          "<div class='search-results-image'>" +
+                          "<img src=" + images[j] + ">" +
+                          "</div>" +
+                        "</div>" +
+                        "<div class='media-body'>" +
+                          "<h4>" + addresses[j].name + "</h4>" +
+                          "<div>" + addresses[j].street + "</div>" +
+                          "<div>" + addresses[j].city + ", " + addresses[j].state + " " + addresses[j].zip + "</div>" +
+                          "<p>" + results[j].distance.text + "</p>" +
+                        "</div>" +
+                      "</div>" +
+                    "</div>" +
+                  "</div>");
               }
               geocoder.geocode({'address': destinationList[j]},
-                  // showGeocodedAddressOnMap(true, content));
                   showGeocodedAddressOnMap(true, content));
-
-              // $(".row.search-results").append(
-              //   "<div class='col-md-6'>" +
-              //     "<div class='thumbnail search-results-thumb'>" +
-              //       "<div class='media'>" +
-              //         "<div class='media-left media-top'>" +
-              //           "<div class='search-results-image'>" +
-              //           "<img src=" + images[j] + ">" +
-              //           // "<img src=" + 'Brick.png' + ">" +
-              //           "</div>" +
-              //         "</div>" +
-              //         "<div class='media-body'>" +
-              //           "<h4><a href='/daycares/" + daycares[j].url + "'>" + daycares[j].name + "</a></h4>" +
-              //           "<div>" + addresses[j].street + "</div>" +
-              //           "<div>" + addresses[j].city + ", " + addresses[j].state + " " + addresses[j].zip + "</div>" +
-              //           "<p>" + results[j].distance.text + "</p>" +
-              //         "</div>" +
-              //       "</div>" +
-              //     "</div>" +
-              //   "</div>");
             }
           }
         }
