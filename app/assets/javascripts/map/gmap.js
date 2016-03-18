@@ -3,7 +3,6 @@
 var map;
 
 function autoComplete() {
-console.log("init")
   var input = document.getElementById('search-text-field');
 
   var options = {
@@ -74,8 +73,6 @@ console.log(destination);
   var geocoder = new google.maps.Geocoder;
   var service = new google.maps.DistanceMatrixService;
   service.getDistanceMatrix({
-      // origins: [origin1, origin2],
-      // destinations: [destinationA, destinationB],
       origins: [origin],
       destinations: destination,
       travelMode: google.maps.TravelMode.DRIVING,
@@ -110,11 +107,6 @@ console.log(destination);
                 });
               }
               markersArray.push(marker);
-              // markersArray.push(new google.maps.Marker({
-              //   map: map,
-              //   position: results[0].geometry.location,
-              //   // icon: icon
-              // }));
             } else {
               alert('Geocode was not successful due to: ' + status);
             }
@@ -130,16 +122,9 @@ console.log(destination);
             //show addresses within radius
             console.log(results[j].distance.value);
             if(results[j].distance.value <= radius) {
-              console.log("images:");
-              console.log(images[j]);
-              if (images[j] === null || images[j] === undefined) {
+              if (images[j] === null) {
                 images[j] = 'Brick.png';
               }
-              console.log(images[j]);
-              // var content = "<strong><a href='/daycares/" + daycares[j].id + "'>" + daycares[j].name + "</a><strong>" +
-              //               "<div>" + addresses[j].street + "</div>" +
-              //               "<div>" + addresses[j].city + ", " + addresses[j].state + " " + addresses[j].zip + "</div>" +
-              //               "<p>" + results[j].distance.text + "</p>";
               if (addresses[j].daycare_id) {
                 var content = "<strong><a href='/daycares/" + daycares[j].id + "'>" + daycares[j].name + "</a><strong>" +
                 "<div>" + addresses[j].street + "</div>" +

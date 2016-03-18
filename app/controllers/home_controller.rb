@@ -40,9 +40,24 @@ class HomeController < ApplicationController
     # @daycares = @daycares.to_json
     # @images = @images.to_json
 
-    @destination = Listing.where(state: address_split[2])
-    @daycares = []
     @images = []
+    @daycares = []
+
+    @destination = Listing.where(state: address_split[2])
+    @destination.each do |listing|
+      if listing.daycare_id?
+        daycare = Daycare.find(listing.daycare_id)
+        if daycare.images.any?
+          image = daycare.images.first.image_url
+        else
+          image = nil
+        end
+      else
+        image = nil
+      end
+      @images.push(image)
+    end
+
     @destination = @destination.to_json
     @daycares = @daycares.to_json
     @images = @images.to_json
