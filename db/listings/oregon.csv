@@ -1,3 +1,24 @@
-name,street,city,state,zip,phone,verified,daycare_id
-Swede Care,2222 SE Foxglove Terr,Hillsboro,OR,97007,(123)456-7890,0,0
-Twin Oaks Child Development Center,1889 NW 169th Pl,Beaverton,OR,97006,(324)223-2233,0,0
+name,street,city,state,zip,phone,daycare_id
+Swede Care,2222 SE Foxglove Terr,Hillsboro,OR,97007,(123) 456-7890,0
+Twin Oaks Child Development Center,1889 NW 169th Pl,Beaverton,OR,97006,(324) 223-2233,0
+Horizon Christian Learning Center,23370 SW Boones Ferry Rd,Tualatin,OR,97062,(503) 691-1054,0
+Children's Hour Academy,17650 Meridian Rd,Lake Oswego,OR,97035,(503) 635-2139,0
+KinderCare Learning Centers,19300 SW 65th Ave,Tualatin,OR,97062,(503) 692-7438,0
+Odyssey Preschool,9120 SW Arapaho rd,Tualatin,OR,97062,(971) 344-2164,0
+Rocking Horse Day School,15750 SW Upper Boones Ferry Rd,Lake Oswego,OR,97035,(503) 639-0231,0
+Sunrise Montessori School,22100 SW Grahams Ferry Rd,Tualatin,OR,97062,(503) 885-1460,0
+Kids Kastle On Campus,21800 SW 91st Ave,Tualatin,OR,97062,(503) 692-8200,0
+Durham Learning Tree Preschool,18115 SW Lower Boones Ferry Rd,Portland,OR,97224,(503) 620-9815,0
+Learning Tree Day School,14440 SW Milton Ct,Portland,OR,97224,(503) 684-3772,0
+La Petite Academy,15940 SW Tualatin Sherwood Rd,Sherwood,OR,97140,(888) 976-2792,0
+7 Day Child Care,16603 SW 134th Terrace,Tigard,OR,97224,(503) 403-9453,0
+Northwest Nannies Institute,11830 Kerr Pkwy # 330,Lake Oswego,OR,97035,(503) 245-5288,0
+Montessori Preschool Childcare,2829 13th Place,Forest Grove,OR,97116,(503) 992-1441,0
+�Anne's Toddler Care,19644 SW Sharoaks Dr,Beaverton,OR,97003,(503) 799-7763,0
+Early Bird Preschool,13665 SW Hathaway Ter,Tigard,OR,97223,(503) 521-8862,0
+Fun in Fundamentals,11735 SW Lynn Street,Tigard,OR,97223,(971) 244-2135,0
+Hummingbird House Child Care and Preschool,12310 SW Thornwood Dr,Portland,OR,97224,(503) 747-0225,0
+Kk Daycare,7709 SW Pfaffle St Apt 103,Portland,OR,97223,(503) 598-7744,0
+Touchstone Preschool,7090 SW Fir Loop,Portland,OR,97223,(503) 968-0963,0
+Tiny Blessing Montessori,19160 SW Alexander St,Beaverton,OR,97003,(503) 649-4815,0
+Sherwood Child Care Ctr,22280 SW Washington St,Sherwood,OR,97140,(503) 925-9602,0
