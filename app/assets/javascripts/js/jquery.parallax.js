@@ -31,3 +31,8 @@ var yBgPosition = Math.round((offset - scrollTop) * settings.speed);
         });
     }
 }(jQuery));
+
+var setRadius = function(radius, value) {
+  $('#radius-select').text(radius);
+  $('#radius-value').val(value);
+}
