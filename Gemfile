@@ -45,6 +45,7 @@ gem 'aws-sdk', '< 2.0'
 gem 'rails_admin'
 gem 'mail_form'
 gem 'simple_form'
+gem 'geocoder'
 
 
 group :development, :test do
