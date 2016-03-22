@@ -24,6 +24,7 @@ task :listings => [:environment] do
       :verified => row[6],
       :daycare_id => row[7]
       )
+      sleep(1.0/5.0)
     end
   end
 
