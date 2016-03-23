@@ -28114,13 +28114,18 @@ nav#filter a {
 }
 
 /* line 778, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
-#contact-form {
+#contact-form,
+#feedback-form {
   position: relative;
   z-index: 999;
 }
 
-/* line 783, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
-#contact-form input[type=text], #contact-form input[type=email], .contactForm textarea {
+/* line 784, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+#contact-form input[type=text],
+#contact-form input[type=email],
+#feedback-form input[type=text],
+#feedback-form input[type=email],
+.contactForm textarea {
   width: 100%;
   background: rgba(40, 170, 225, 0.1);
   font-family: 'Open Sans', sans serif;
@@ -28131,8 +28136,12 @@ nav#filter a {
   padding: 0 10px;
 }
 
-/* line 794, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
-#contact-form input[type=text]:focus, #contact-form input[type=email]:focus, .contactForm textarea:focus {
+/* line 799, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+#contact-form input[type=text]:focus,
+#contact-form input[type=email]:focus,
+#feedback-form input[type=text]:focus,
+#feedback-form input[type=email]:focus,
+.contactForm textarea:focus {
   background: rgba(101, 106, 100, 0.1);
   box-shadow: none;
   -moz-box-shadow: none;
@@ -28142,14 +28151,18 @@ nav#filter a {
   -webkit-transition: background 0.25 ease-in;
 }
 
-/* line 804, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
-#contact-form input[type=text], #contact-form input[type=email] {
+/* line 813, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+#contact-form input[type=text],
+#contact-form input[type=email],
+#feedback-form input[type=text],
+#feedback-form input[type=email] {
   height: 60px;
   margin-bottom: 30px;
 }
 
-/* line 808, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
-#contact-form input[type=submit] {
+/* line 820, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+#contact-form input[type=submit],
+#feedback-form input[type=submit] {
   color: #fff;
   width: 185px;
   height: 60px;
@@ -28169,24 +28182,28 @@ nav#filter a {
   -webkit-box-shadow: none;
 }
 
-/* line 827, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
-#contact-form input[type=submit]:hover, #contact-form input[type=submit]:active {
+/* line 840, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+#contact-form input[type=submit]:hover,
+#contact-form input[type=submit]:active,
+#feedback-form input[type=submit]:hover,
+#feedback-form input[type=submit]:active {
   background: #43413e !important;
 }
 
-/* line 830, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
-#contact-form textarea {
+/* line 846, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+#contact-form textarea,
+#feedback-form textarea {
   padding-top: 1em;
 }
 
-/* line 834, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 851, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 textarea.form-control {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
 }
 
-/* line 840, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 857, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 div.cform-response-output {
   max-width: 60%;
   text-align: center;
@@ -28198,7 +28215,7 @@ div.cform-response-output {
   -webkit-border-radius: 4px;
 }
 
-/* line 850, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 867, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .cform-not-valid-tip {
   color: #888;
   border: 1px dotted #ad3729 !important;
@@ -28215,7 +28232,7 @@ div.cform-response-output {
 }
 
 /* google map */
-/* line 866, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 883, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 #map {
   height: 500px;
 }
@@ -28223,12 +28240,12 @@ div.cform-response-output {
 /*====================
   Clients
 ==================== */
-/* line 874, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 891, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 #clients img {
   opacity: 0.7;
 }
 
-/* line 878, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 895, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 #clients img:hover {
   opacity: 1;
 }
@@ -28236,19 +28253,19 @@ div.cform-response-output {
 /*=========================
   Footer
  ================= */
-/* line 887, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 904, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 section#footer {
   background: #242424;
   margin: 0;
 }
 
-/* line 892, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 909, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 section#footer .copyright {
   text-align: center;
 }
 
 /* footer social icons */
-/* line 897, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 914, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 ul.social-network {
   list-style: none;
   display: inline;
@@ -28256,14 +28273,14 @@ ul.social-network {
   padding: 0;
 }
 
-/* line 903, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 920, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 ul.social-network li {
   display: inline;
   margin: 0 5px;
 }
 
 /* footer menu */
-/* line 909, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 926, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 ul.footer-menu {
   list-style: none;
   display: inline;
@@ -28271,13 +28288,13 @@ ul.footer-menu {
   padding: 0;
 }
 
-/* line 915, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 932, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 ul.footer-menu li {
   display: inline;
   margin: 0 5px;
 }
 
-/* line 920, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 937, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 a.scrollup {
   height: 32px;
   width: 32px;
@@ -28293,7 +28310,7 @@ a.scrollup {
   opacity: 0.5;
 }
 
-/* line 934, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 951, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 a.scrollup:hover {
   opacity: 1;
   color: #fff;
@@ -28303,48 +28320,48 @@ a.scrollup:hover {
   --- Template Components ----
 =========================== */
 /* footer social icons */
-/* line 944, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 961, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .social-network a.icoRss:hover {
   background-color: #F56505;
 }
 
-/* line 947, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 964, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .social-network a.icoFacebook:hover {
   background-color: #3B5998;
 }
 
-/* line 950, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 967, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .social-network a.icoTwitter:hover {
   background-color: #33ccff;
 }
 
-/* line 953, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 970, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .social-network a.icoGoogle:hover {
   background-color: #BD3518;
 }
 
-/* line 956, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 973, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .social-network a.icoVimeo:hover {
   background-color: #0590B8;
 }
 
-/* line 959, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 976, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .social-network a.icoLinkedin:hover {
   background-color: #007bb7;
 }
 
-/* line 962, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 979, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
 .social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
   color: #fff;
 }
 
-/* line 966, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 983, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 a.socialIcon:hover, .socialHoverClass {
   color: #44BCDD;
 }
 
-/* line 970, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 987, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .social-circle li a {
   display: inline-block;
   position: relative;
@@ -28358,14 +28375,14 @@ a.socialIcon:hover, .socialHoverClass {
   font-size: 20px;
 }
 
-/* line 982, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 999, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .social-circle li i {
   margin: 0;
   line-height: 50px;
   text-align: center;
 }
 
-/* line 988, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 1005, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .social-circle li a:hover i, .triggeredHover {
   -moz-transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
@@ -28378,7 +28395,7 @@ a.socialIcon:hover, .socialHoverClass {
   transition: all 0.2s;
 }
 
-/* line 999, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 1016, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .social-circle i {
   color: #fff;
   -webkit-transition: all 0.8s;
@@ -28389,50 +28406,50 @@ a.socialIcon:hover, .socialHoverClass {
 }
 
 /* stats */
-/* line 1010, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 1027, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .stats .icon {
   margin: 0 0 20px 0;
 }
 
-/* line 1014, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 1031, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .stats strong.number {
   font-size: 38px;
 }
 
-/* line 1018, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 1035, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .stats span.text {
   font-weight: 700;
   font-size: 24px;
 }
 
 /* buttons */
-/* line 1024, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 1041, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .btn {
   border: 0;
 }
 
-/* line 1028, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 1045, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .btn.bold {
   font-weight: 600;
 }
 
-/* line 1032, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 1049, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .btn-cta {
   color: #ffffff;
   border-bottom: 4px solid;
 }
 
-/* line 1036, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 1053, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .btn-cta:hover {
   color: #ffffff;
 }
 
-/* line 1040, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 1057, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .btn-cta {
   border-bottom: 2px solid;
 }
 
-/* line 1043, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 1060, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .btn-cta.btn-lg {
   border-bottom: 4px solid;
 }
@@ -28441,30 +28458,30 @@ a.socialIcon:hover, .socialHoverClass {
 Media queries
 ========================================= */
 @media (min-width: 959px) and (max-width: 1199px) {
-  /* line 1053, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+  /* line 1070, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
   .navbar-nav {
     margin-top: 20px;
   }
 }
 @media only screen and (min-device-width: 979px) and (max-device-width: 1024px) {
-  /* line 1060, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+  /* line 1077, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
   .navbar-nav {
     margin-top: 20px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-  /* line 1068, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+  /* line 1085, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
   .navbar-nav {
     margin-top: 20px;
   }
 }
 @media (max-width: 767px) {
-  /* line 1074, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+  /* line 1091, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
   .navbar.navbar-fixed-top {
     background-color: black;
   }
 
-  /* line 1077, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+  /* line 1094, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
   .navbar .navbar-collapse ul.nav {
     background-color: #444;
     width: 100%;
@@ -28473,22 +28490,22 @@ Media queries
     padding: 0;
   }
 
-  /* line 1084, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+  /* line 1101, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
   .navbar .navbar-collapse ul.nav li {
     border-bottom: 1px solid #666;
   }
 
-  /* line 1087, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+  /* line 1104, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
   section.featured {
     padding-top: 40px;
   }
 
-  /* line 1091, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+  /* line 1108, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
   .team-member, .col-lg-4 {
     margin-bottom: 30px;
   }
 
-  /* line 1095, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+  /* line 1112, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
   .stats .col-md-3 {
     margin-bottom: 30px;
   }
@@ -28496,23 +28513,23 @@ Media queries
 /* ========================================
 added styles
 ========================================= */
-/* line 1103, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 1120, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .navbar.navbar-fixed-top.navbar-sub {
   top: 64px;
   z-index: 10;
 }
 
-/* line 1108, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 1125, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .main-nav-content {
   margin-top: 70px;
 }
 
-/* line 1112, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 1129, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .error-message {
   color: red;
 }
 
-/* line 1116, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
+/* line 1133, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/css/style.scss.erb */
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
@@ -28667,7 +28684,8 @@ a > .panel-heading {
 
 /* line 134, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/daycares.scss */
 .btn-submit,
-.btn-cancel {
+.btn-cancel,
+.btn-edit {
   position: relative;
   overflow: hidden;
   float: right;
@@ -28676,14 +28694,14 @@ a > .panel-heading {
   margin-bottom: 8px;
 }
 
-/* line 144, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/daycares.scss */
+/* line 145, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/daycares.scss */
 .btn-file {
   position: relative;
   overflow: hidden;
   width: 14.5em;
 }
 
-/* line 150, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/daycares.scss */
+/* line 151, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/daycares.scss */
 .btn-file input[type=file] {
   position: absolute;
   top: 0;
@@ -28700,13 +28718,13 @@ a > .panel-heading {
   display: block;
 }
 
-/* line 166, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/daycares.scss */
+/* line 167, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/daycares.scss */
 .label-image-upload {
   font-size: 1em;
   font-weight: normal;
 }
 
-/* line 171, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/daycares.scss */
+/* line 172, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/daycares.scss */
 #teacherList .panel-heading,
 #programList .panel-heading,
 #imageList .panel-heading,
@@ -28716,7 +28734,7 @@ a > .panel-heading {
   cursor: move;
 }
 
-/* line 181, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/daycares.scss */
+/* line 182, /Users/janicelaset/Desktop/daycare_hub/app/assets/stylesheets/daycares.scss */
 .profile-nav > li.active > a,
 .profile-nav > li.active > a:hover,
 .profile-nav > li.active > a:focus {

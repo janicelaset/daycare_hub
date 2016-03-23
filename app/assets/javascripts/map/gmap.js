@@ -29,33 +29,30 @@ function milesToMeters(miles) {
   return miles * 1609.344;
 }
 
-function displaySearchResults(origin, radius, addresses, daycares, images) {
+function displaySearchResults(origin, radius, addresses, daycares, images, listings) {
 
   //google distance matrix values always expressed in meters
   radius = milesToMeters(radius);
-console.log("radius:" + radius);
+console.log("test:" + radius);
+console.log(listings);
+listings = listings.replace(/&quot;/g, '"');
+listings = JSON.parse(listings);
+console.log(listings);
 
 daycares = daycares.replace(/&quot;/g, '"');
 daycares = JSON.parse(daycares);
-console.log(daycares);
 
-console.log(addresses);
 addresses = addresses.replace(/&quot;/g, '"');
 addresses = JSON.parse(addresses);
 
 images = images.replace(/&quot;/g, '"');
 images = JSON.parse(images);
-console.log(images);
 
 var destination = [];
 addresses.forEach(function(address) {
   address = fullAddress(address);
   destination.push(address);
 });
-console.log("addresses:");
-console.log(addresses);
-console.log("destinations:");
-console.log(destination);
 
   var bounds = new google.maps.LatLngBounds;
   var markersArray = [];
@@ -120,7 +117,6 @@ console.log(destination);
 
           for (var j = 0; j < results.length; j++) {
             //show addresses within radius
-            console.log(results[j].distance.value);
             if(results[j].distance.value <= radius) {
               if (images[j] === null) {
                 images[j] = 'Brick.png';

@@ -58,19 +58,23 @@ class HomeController < ApplicationController
       @images.push(image)
     end
 
-    @distances = []
     @listings = Listing.near(@address, @radius)
 
     @listings.each do |listing|
-      @distances.push(listing.distance)
+      listing.image_url = 'Brick.png'
+      if listing.daycare_id?
+        daycare = Daycare.find(listing.daycare_id)
+        if daycare.images.any?
+          listing.image_url = daycare.images.first.image_url
+        end
+      end
     end
 
     @destination = @destination.to_json
     @daycares = @daycares.to_json
     @images = @images.to_json
     @listings = @listings.to_json
-    @distances = @distances.to_json
-binding.pry
+
     respond_to do |format|
       format.html
       format.js
