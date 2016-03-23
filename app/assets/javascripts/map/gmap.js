@@ -181,6 +181,8 @@ addresses.forEach(function(address) {
     });
 
   for (var i = 0; i < listings.length; i++) {
+
+
     //info window content
     if (listings[i].daycare_id) {
       var content_head = "<strong><a href='/daycares/" + listings[i].daycare_id + "'>" + listings[i].name + "</a><strong>";
@@ -193,26 +195,30 @@ addresses.forEach(function(address) {
     "<div>" + listings[i].city + ", " + listings[i].state + " " + listings[i].zip + "</div>" +
     "<p>" + listings[i].distance + " miles</p>";
 console.log(info_window_content);
-    //markers
-    // console.log(i);
-    // console.log(listings[i].latitude);
-    // console.log(listings[i].longitude);
-    var lat_long = { lat: listings[i].latitude, lng: listings[i].longitude};
-    var marker = new google.maps.Marker({
-      map: map,
-      animation: google.maps.Animation.DROP,
-      position: lat_long,
-    });
 
-    var infowindow = new google.maps.InfoWindow({
-      content: info_window_content
-    });
-    marker.addListener('click', function() {
-      infowindow.open(map, marker);
-    });
-
+var lat_long = { lat: listings[i].latitude, lng: listings[i].longitude};
+    createMarkers(map, lat_long, info_window_content);
   }
+}
 
+function createMarkers(map, lat_long, info_window_content) {
+  var infowindow = new google.maps.InfoWindow({
+    content: info_window_content
+  });
+  //markers
+  // console.log(i);
+  // console.log(listings[i].latitude);
+  // console.log(listings[i].longitude);
+
+  var marker = new google.maps.Marker({
+    map: map,
+    animation: google.maps.Animation.DROP,
+    position: lat_long,
+  });
+
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
 }
 
 function deleteMarkers(markersArray) {
