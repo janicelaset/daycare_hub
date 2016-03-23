@@ -33,8 +33,8 @@ function displaySearchResults(origin, radius, addresses, daycares, images, listi
 
   //google distance matrix values always expressed in meters
   radius = milesToMeters(radius);
-console.log("test:" + radius);
-console.log(listings);
+console.log("radius:" + radius);
+
 listings = listings.replace(/&quot;/g, '"');
 listings = JSON.parse(listings);
 console.log(listings);
@@ -179,6 +179,39 @@ addresses.forEach(function(address) {
         }
       }
     });
+
+  for (var i = 0; i < listings.length; i++) {
+    //info window content
+    if (listings[i].daycare_id) {
+      var content_head = "<strong><a href='/daycares/" + listings[i].daycare_id + "'>" + listings[i].name + "</a><strong>";
+    }
+    else {
+      var content_head = "<strong>" + listings[i].name + "<strong>";
+    }
+    var info_window_content = content_head +
+    "<div>" + listings[i].street + "</div>" +
+    "<div>" + listings[i].city + ", " + listings[i].state + " " + listings[i].zip + "</div>" +
+    "<p>" + listings[i].distance + " miles</p>";
+console.log(info_window_content);
+    //markers
+    // console.log(i);
+    // console.log(listings[i].latitude);
+    // console.log(listings[i].longitude);
+    var lat_long = { lat: listings[i].latitude, lng: listings[i].longitude};
+    var marker = new google.maps.Marker({
+      map: map,
+      animation: google.maps.Animation.DROP,
+      position: lat_long,
+    });
+
+    var infowindow = new google.maps.InfoWindow({
+      content: info_window_content
+    });
+    marker.addListener('click', function() {
+      infowindow.open(map, marker);
+    });
+
+  }
 
 }
 
