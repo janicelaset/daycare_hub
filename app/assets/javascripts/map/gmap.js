@@ -181,7 +181,7 @@ addresses.forEach(function(address) {
   //       }
   //     }
   //   });
-
+  var bounds = new google.maps.LatLngBounds;
   for (var i = 0; i < listings.length; i++) {
     // info window content
     if (listings[i].daycare_id) {
@@ -195,9 +195,9 @@ addresses.forEach(function(address) {
     "<div>" + listings[i].city + ", " + listings[i].state + " " + listings[i].zip + "</div>" +
     "<p>" + listings[i].distance + " miles</p>";
 
-    // marker position
-    var lat_long = { lat: listings[i].latitude, lng: listings[i].longitude};
-
+    // markers
+    var lat_long = new google.maps.LatLng(listings[i].latitude, listings[i].longitude);
+    map.fitBounds(bounds.extend(lat_long));
     addMarker(map, lat_long, info_window_content);
 
     $(".row.search-results").append(
@@ -230,10 +230,7 @@ function addMarker(map, lat_long, info_window_content) {
   // console.log(i);
   // console.log(listings[i].latitude);
   // console.log(listings[i].longitude);
-// debugger;
-  var bounds = new google.maps.LatLngBounds;
-  var new_loc = new google.maps.LatLng(lat_long.lat, lat_long.lng);
-  map.fitBounds(bounds.extend(new_loc));
+// debugger
 
   var marker = new google.maps.Marker({
     map: map,
