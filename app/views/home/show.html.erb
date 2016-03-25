@@ -1,52 +1,51 @@
-<div class="container">
+<div class="container site-content">
   <div id="search-filter">
-     <div class="well">
-       <div class="row">
-      <%= form_tag(search_results_path, :method => "get", id: "search-form", class: "search-input") do %>
-      <div class="col-md-12">
-        <div class="input-group">
-          <span class="input-group-btn">
-            <button type="button" class="btn btn-default btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span id="radius-select"><%= @radius %> miles</span>
-            <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-              <li><a href="#" onclick="setRadius('5 miles', 5)">5 miles</a></li>
-              <li><a href="#" onclick="setRadius('10 miles', 10)">10 miles</a></li>
-              <li><a href="#" onclick="setRadius('20 miles', 20)">20 miles</a></li>
-              <li><a href="#" onclick="setRadius('30 miles', 30)">30 miles</a></li>
-            </ul>
-          </span>
-          <span class="input-group-addon" style="resize:none !important;" id="sizing-addon1">from</span>
-          <%= text_field_tag :search, params[:search], class: "form-control input-lg", placeholder: "Enter address or zip code", id: "search-text-field" %>
-          <%= hidden_field_tag 'radius-value', 5 %>
-          <span class="input-group-btn">
-            <button class="btn btn-success btn-lg" type="submit">Go!</button>
-          </span>
-        </div><!-- /input-group -->
-        <!-- <div class="row">
-          <%= check_box_tag 'family', @family, @family %> Family Daycare
-          <%= check_box_tag 'center', @center, @center %> Daycare Center
-          <%= check_box_tag 'licensed', @licensed, @licensed %> State Licensed
-        </div>
-        <button class="btn btn-md" type="submit">Filter</button> -->
-      </div><!-- /.col-md-8 -->
-      <% end %>
+    <div class="well">
+      <div class="row">
+        <%= form_tag(search_results_path, :method => "get", id: "search-form", class: "search-input") do %>
+          <div class="col-md-12">
+            <div class="input-group">
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span id="radius-select"><%= @radius %> miles</span>
+                <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#" onclick="setRadius('5 miles', 5)">5 miles</a></li>
+                  <li><a href="#" onclick="setRadius('10 miles', 10)">10 miles</a></li>
+                  <li><a href="#" onclick="setRadius('20 miles', 20)">20 miles</a></li>
+                  <li><a href="#" onclick="setRadius('30 miles', 30)">30 miles</a></li>
+                </ul>
+              </span>
+              <span class="input-group-addon" style="resize:none !important;" id="sizing-addon1">from</span>
+              <%= text_field_tag :search, params[:search], class: "form-control input-lg", placeholder: "Enter address or zip code", id: "search-text-field" %>
+              <%= hidden_field_tag 'radius-value', 5 %>
+              <span class="input-group-btn">
+                <button class="btn btn-success btn-lg" type="submit">Go!</button>
+              </span>
+            </div><!-- /input-group -->
+            <!-- <div class="row">
+              <%= check_box_tag 'family', @family, @family %> Family Daycare
+              <%= check_box_tag 'center', @center, @center %> Daycare Center
+              <%= check_box_tag 'licensed', @licensed, @licensed %> State Licensed
+            </div>
+            <button class="btn btn-md" type="submit">Filter</button> -->
+          </div><!-- /.col-md-8 -->
+        <% end %>
+      </div>
     </div>
-
-
   </div>
-</div>
 
   <div id="map-container">
     <div id="map-canvas"></div>
   </div>
 
-  <div class="row search-results">
-  </div>
+  <div id="search-results-count"></div>
 
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=drawing,places">
-  </script>
+  <div class="row search-results"></div>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=drawing,places"></script>
 
 <script>
   displaySearchResults("<%= @address %>", "<%= @radius %>", "<%= @destination %>", "<%= @daycares %>", "<%= @images %>", "<%= @listings %>");

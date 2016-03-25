@@ -46,19 +46,28 @@ function displaySearchResults(origin, radius, addresses, daycares, images, listi
 
   geocoder.geocode({'address': origin}, showGeocodedAddressOnMap());
 
+  $('#search-results-count').append(
+    "There are " + listings.length + " daycares in your area."
+  );
+
   var bounds = new google.maps.LatLngBounds;
   for (var i = 0; i < listings.length; i++) {
     // info window content
+    distance_rounded = listings[i].distance.toFixed(1);
     if (listings[i].daycare_id) {
-      var content_head = "<strong><a href='/daycares/" + listings[i].daycare_id + "'>" + listings[i].name + "</a><strong>";
+      var content_head = "<strong><a href='/daycares/" + listings[i].daycare_id + "'>" + listings[i].name + "</a></strong>";
+
+      var daycare_page_link = "";
     }
     else {
-      var content_head = "<strong>" + listings[i].name + "<strong>";
+      var content_head = "<strong>" + listings[i].name + "</strong>";
+
+      var daycare_page_link = "<a href='#'>Is this your daycare?</a>";
     }
-    var info_window_content = content_head +
+    var info_window_content = "<div>" + content_head + "</div>" +
     "<div>" + listings[i].street + "</div>" +
     "<div>" + listings[i].city + ", " + listings[i].state + " " + listings[i].zip + "</div>" +
-    "<p>" + listings[i].distance + " miles</p>";
+    "<div>" + distance_rounded + " miles</div>";
 
     // markers
     var lat_long = new google.maps.LatLng(listings[i].latitude, listings[i].longitude);
@@ -75,11 +84,12 @@ function displaySearchResults(origin, radius, addresses, daycares, images, listi
               "</div>" +
             "</div>" +
             "<div class='media-body'>" +
-              content_head +
+              "<br>" + content_head + "" +
               "<div>" + listings[i].street + "</div>" +
               "<div>" + listings[i].city + ", " + listings[i].state + " " + listings[i].zip + "</div>" +
-              "<p>" + listings[i].distance + " miles</p>" +
-            "</div>" +
+              "<p>" + distance_rounded + " miles</p>" +
+              "<div>" + daycare_page_link + "</div>" +
+            "<br></div>" +
           "</div>" +
         "</div>" +
       "</div>");
