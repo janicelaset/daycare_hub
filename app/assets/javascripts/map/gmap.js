@@ -14,16 +14,7 @@ function autoComplete() {
   autocomplete.addListener('place_changed', autocomplete.getPlace());
 }
 
-function displaySearchResults(origin, radius, addresses, daycares, images, listings) {
-
-  listings = listings.replace(/&quot;/g, '"');
-  listings = JSON.parse(listings);
-
-  var map = new google.maps.Map(document.getElementById('map-canvas'), {
-    center: {lat: 39.8282, lng: -98.5795},
-    zoom: 4
-  });
-
+function displayOriginMarker(map, origin) {
   var geocoder = new google.maps.Geocoder;
 
   var originIcon = 'https://chart.googleapis.com/chart?' +
@@ -45,6 +36,19 @@ function displaySearchResults(origin, radius, addresses, daycares, images, listi
   };
 
   geocoder.geocode({'address': origin}, showGeocodedAddressOnMap());
+}
+
+function displaySearchResults(origin, radius, addresses, daycares, images, listings) {
+
+  listings = listings.replace(/&quot;/g, '"');
+  listings = JSON.parse(listings);
+
+  var map = new google.maps.Map(document.getElementById('map-canvas'), {
+    center: {lat: 39.8282, lng: -98.5795},
+    zoom: 4
+  });
+
+  displayOriginMarker(map, origin);
 
   $('#search-results-count').append(
     "There are " + listings.length + " daycares in your area."
