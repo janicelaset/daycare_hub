@@ -51,7 +51,7 @@ function displaySearchResults(origin, radius, addresses, daycares, images, listi
   displayOriginMarker(map, origin);
 
   $('#search-results-count').append(
-    "There are " + listings.length + " daycares in your area."
+    "There are " + listings.length + " daycares " + radius + " miles from your address."
   );
 
   var bounds = new google.maps.LatLngBounds;
