@@ -3,6 +3,5 @@
   $('#daycare-name-form').html('<%= j render 'daycares/form' %>')
 <% else %>
   $('#collapseName').collapse("hide");
-  $('#nav-dropdown-name').text('test');
   window.location = "<%= j (edit_user_daycare_path(@user, @daycare)) %>"
 <% end %>

@@ -6,12 +6,13 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: "user_registrations" }
 
-
   resources :feedback_forms, only: [:create]
 
   resources :users do
     get 'users/registration-instructions' => 'users#instructions', as: 'registration_instructions'
-    resources :daycares
+    resources :daycares do
+      member { get '/wizard/name'  => 'daycares#wizard' }
+    end
   end
 
   resources :users do

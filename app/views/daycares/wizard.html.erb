@@ -1,0 +1,36 @@
+<div class="main-nav-content">
+  <div class="col-xs-10 col-xs-offset-1">
+    <div class="align-center">
+      <h2>Daycare Name/h2>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <h4 class="edit-form-heading">Daycare</h4>
+        <%= render "layouts/errors", :object => @daycare %>
+
+        <%= form_for [current_user, @daycare], :html => {:class => "form-horizontal"} do |f| %>
+        <div class="form-group">
+
+          <%= f.label :name, class: 'control-label col-sm-1' %>
+          <div class="col-sm-11 daycare-edit-field">
+            <%= f.text_field :name, class: 'form-control', required: true %>
+          </div>
+
+          <%= f.label :url, 'URL', class: 'control-label col-sm-1' %>
+          <div class="col-sm-11 daycare-edit-field">
+            <div class="input-group">
+              <span class="input-group-addon">www.beebsy.com/
+              </span>
+              <%= f.text_field :url, class: 'form-control', :placeholder => "Create a custom URL for your daycare", required: true %>
+            </div>
+          </div>
+
+          <div class="col-sm-12">
+            <%= f.submit "Submit", class:'btn btn-primary btn-submit' %>
+          </div>
+        </div>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>

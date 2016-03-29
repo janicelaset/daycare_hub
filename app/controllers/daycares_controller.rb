@@ -1,6 +1,6 @@
 class DaycaresController < ApplicationController
   before_action :authenticate_user!, except: [:show]
-  before_action :find_daycare, only: [:show, :update, :edit]
+  before_action :find_daycare, only: [:show, :update, :edit, :wizard]
 
   def show
     if @daycare.address.nil?  #if user has not added contact information
@@ -158,6 +158,17 @@ class DaycaresController < ApplicationController
         @daycare.url = url_original
       end
     end
+    respond_to do |format|
+      if @daycare.errors.any?
+        format.html { render :wizard }
+      else
+        format.html { redirect_to root_path }
+      end
+      format.js
+    end
+  end
+
+  def wizard
     respond_to do |format|
       format.html
       format.js
