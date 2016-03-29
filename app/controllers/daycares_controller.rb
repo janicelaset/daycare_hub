@@ -158,6 +158,7 @@ class DaycaresController < ApplicationController
         @daycare.url = url_original
       end
     end
+
     respond_to do |format|
       if @daycare.errors.any?
         format.html { render :wizard }
