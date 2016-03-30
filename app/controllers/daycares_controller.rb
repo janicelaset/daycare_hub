@@ -163,7 +163,7 @@ class DaycaresController < ApplicationController
       if @daycare.errors.any?
         format.html { render :wizard }
       else
-        format.html { redirect_to root_path }
+        format.html { redirect_to wizard_address_user_daycare_path(@user, @daycare) }
       end
       format.js
     end

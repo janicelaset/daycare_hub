@@ -1,5 +1,5 @@
 class AddressesController < ApplicationController
-  before_action :find_daycare
+  before_action :find_daycare, except: [:wizard]
 
   def create
     @address = Address.new(address_params)
@@ -21,7 +21,21 @@ class AddressesController < ApplicationController
       format.html
       format.js
     end
+  end
 
+  def wizard
+    @daycare = Daycare.find_by_url(params[:id])
+
+    if @daycare.address.nil?  #if user has not added contact information
+      @address = Address.new
+    else
+      @address = @daycare.address
+    end
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   private

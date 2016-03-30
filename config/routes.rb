@@ -12,8 +12,18 @@ Rails.application.routes.draw do
     get 'users/registration-instructions' => 'users#instructions', as: 'registration_instructions'
     resources :daycares do
       member { get '/wizard/name'  => 'daycares#wizard' }
+      member { get '/wizard/address'  => 'addresses#wizard' }
     end
   end
+
+  resources :daycares do
+    resources :addresses, only: [:create, :update, :show] 
+    resources :contacts
+  end
+
+  # resources :daycares do
+  #   resources :contacts
+  # end
 
   resources :users do
     resources :daycares do
@@ -28,10 +38,6 @@ Rails.application.routes.draw do
   end
 
   resources :daycares do
-    resources :contacts
-  end
-
-  resources :daycares do
     resources :contact_forms, only: [:create]
   end
 
@@ -39,9 +45,6 @@ Rails.application.routes.draw do
     resources :summaries, only: [:create, :edit, :update, :destroy]
   end
 
-  resources :daycares do
-    resources :addresses, only: [:create, :update, :show]
-  end
 
   resources :daycares do
     resources :generals, only: [:create, :update, :show]

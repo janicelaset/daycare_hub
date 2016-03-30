@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="main-nav-content">
+    <div class="col-xs-10 col-xs-offset-1">
+      <div class="align-center">
+        <h2>Daycare Address</h2>
+        2 of 10
+      </div>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <p>
+            Enter the address of your daycare. We'll use this address to display your daycare on the map when users search for daycares in their area.
+          </p><br>
+
+          <%= render "layouts/errors", :object => @address %>
+
+          <%= form_for [@daycare, @address], :html => {:class => "form-horizontal"} do |f| %>
+            <div class="form-group">
+              <%= f.label :street, class: 'control-label col-sm-1' %>
+              <div class="col-sm-11 daycare-edit-field">
+                <%= f.text_field :street, class: 'form-control', required: true %>
+              </div>
+
+              <%= f.label :city, class: 'control-label col-sm-1' %>
+              <div class="col-sm-4 daycare-edit-field">
+                <%= f.text_field :city, class: 'form-control', required: true %>
+              </div>
+
+              <%= f.label :state, class: 'control-label col-sm-1' %>
+              <div class="col-sm-2 daycare-edit-field">
+                <%= f.select :state,
+                  ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL",
+                   "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME",
+                   "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH",
+                   "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "PR",
+                   "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV",
+                   "WI", "WY"],
+                  { :style =>  "min-width: 5em;"}, class: 'form-control' %>
+              </div>
+
+              <%= f.label :zip, class: 'control-label col-sm-1' %>
+              <div class="col-sm-3 daycare-edit-field">
+                <%= f.text_field :zip, class: 'form-control', required: true %>
+              </div>
+
+            <div class="col-sm-12 buttons-wizard">
+              <%= f.submit "Next", class:'btn btn-primary btn-submit' %>
+              <%= link_to 'Back', wizard_name_user_daycare_path(current_user, current_user.daycare), class: 'btn btn-primary btn-edit' %>
+              <%= link_to 'Skip This Step', wizard_name_user_daycare_path(current_user, current_user.daycare), class: 'btn btn-primary btn-edit' %>
+            </div>
+          </div>
+          <% end %>
+        </li>
+      </ul>
+      <%= link_to 'Back to Edit Page', edit_user_daycare_path(current_user, current_user.daycare) %>
+    </div>
+  </div>
+</div>
