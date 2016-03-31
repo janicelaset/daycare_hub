@@ -1,5 +1,6 @@
 class SummariesController < ApplicationController
   before_action :find_daycare, except: [:destroy]
+  before_action :find_user, only: [:create, :update]
 
   def create
     @summary = Summary.new(summary_params)
@@ -7,7 +8,11 @@ class SummariesController < ApplicationController
 
     @summary.save
     respond_to do |format|
-      format.html
+      if @summary.errors.any?
+        format.html { render :wizard }
+      else
+        format.html { redirect_to wizard_image_user_daycare_path(@user, @daycare) }
+      end
       format.js
     end
   end
@@ -17,7 +22,11 @@ class SummariesController < ApplicationController
 
     @summary.update(summary_params)
     respond_to do |format|
-      format.html
+      if @summary.errors.any?
+        format.html { render :wizard }
+      else
+        format.html { redirect_to wizard_image_user_daycare_path(@user, @daycare) }
+      end
       format.js
     end
   end
@@ -56,5 +65,9 @@ class SummariesController < ApplicationController
 
   def find_daycare
     @daycare = Daycare.find_by_url(params[:daycare_id])
+  end
+
+  def find_user
+    @user = @daycare.user
   end
 end

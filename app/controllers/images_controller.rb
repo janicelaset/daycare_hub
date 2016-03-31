@@ -1,5 +1,6 @@
 class ImagesController < ApplicationController
   before_action :find_daycare
+  before_action :find_user, only: [:create, :update]
 
   def index
     if @daycare.images.any?
@@ -24,12 +25,17 @@ class ImagesController < ApplicationController
     #   render json: { error: @image.errors.full_messages.join(',')}, :status => 400
     # end
 
-    #create new image to display create image form so users can add more images
-    @image = Image.new
     respond_to do |format|
-      format.html
+      if @image.errors.any?
+        format.html { render :wizard }
+      else
+        format.html { redirect_to wizard_program_user_daycare_path(@user, @daycare) }
+      end
       format.js
     end
+
+    #create new image to display create image form so users can add more images
+    @image = Image.new
   end
 
   def edit
@@ -54,7 +60,11 @@ class ImagesController < ApplicationController
     # end
 
     respond_to do |format|
-      format.html
+      if @image.errors.any?
+        format.html { render :wizard }
+      else
+        format.html { redirect_to wizard_program_user_daycare_path(@user, @daycare) }
+      end
       format.js
     end
   end
@@ -82,6 +92,17 @@ class ImagesController < ApplicationController
     end
   end
 
+  def wizard
+    @daycare = Daycare.find_by_url(params[:id])
+    @images = @daycare.images
+    @image = Image.new
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   private
   def image_params
     params.require(:image).permit(:picture, :description)
@@ -89,5 +110,9 @@ class ImagesController < ApplicationController
 
   def find_daycare
     @daycare = Daycare.find_by_url(params[:daycare_id])
+  end
+
+  def find_user
+    @user = @daycare.user
   end
 end

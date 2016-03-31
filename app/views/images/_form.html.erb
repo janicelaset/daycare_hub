@@ -1,3 +1,5 @@
+<%= render "layouts/errors", :object => @image %>
+
 <%= form_for [@daycare, @image], remote: true, :html => {:class => "form-horizontal", :multipart => true, id: "image-form#{@image.id}" } do |f| %>
   <div class="form-group">
 
