@@ -13,12 +13,38 @@ Rails.application.routes.draw do
     resources :daycares do
       member { get '/wizard/name'  => 'daycares#wizard' }
       member { get '/wizard/address'  => 'addresses#wizard' }
+      member { get '/wizard/contact'  => 'contacts#wizard' }
+      member { get '/wizard/general'  => 'generals#wizard' }
+      member { get '/wizard/summary'  => 'summaries#wizard' }
+      member { get '/wizard/image'  => 'images#wizard' }
+      member { get '/wizard/program'  => 'programs#wizard' }
+      member { get '/wizard/teacher'  => 'teachers#wizard' }
+      member { get '/wizard/certification'  => 'certifications#wizard' }
+      member { get '/wizard/additional'  => 'additionals#wizard' }
     end
   end
 
   resources :daycares do
-    resources :addresses, only: [:create, :update, :show] 
+    resources :addresses, only: [:create, :update, :show]
     resources :contacts
+    resources :generals, only: [:create, :update, :show]
+    resources :summaries, only: [:create, :edit, :update, :destroy]
+    resources :images, only: [:create, :edit, :update, :destroy] do
+      collection { post :move }
+    end
+    resources :programs, only: [:create, :edit, :update, :destroy] do
+      collection { post :move }
+    end
+    resources :teachers, only: [:create, :edit, :update, :destroy] do
+      collection { post :move }
+    end
+    resources :certifications, only: [:create, :edit, :update, :destroy] do
+      collection { post :move }
+    end
+    resources :additionals, only: [:create, :edit, :update, :destroy] do
+      collection { post :move }
+    end
+    resources :contact_forms, only: [:create]
   end
 
   # resources :daycares do
@@ -31,48 +57,48 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :daycares do
-    resources :images, only: [:create, :edit, :update, :destroy] do
-      collection { post :move }
-    end
-  end
+  # resources :daycares do
+  #   resources :images, only: [:create, :edit, :update, :destroy] do
+  #     collection { post :move }
+  #   end
+  # end
 
-  resources :daycares do
-    resources :contact_forms, only: [:create]
-  end
+  # resources :daycares do
+  #   resources :contact_forms, only: [:create]
+  # end
 
-  resources :daycares do
-    resources :summaries, only: [:create, :edit, :update, :destroy]
-  end
+  # resources :daycares do
+  #   resources :summaries, only: [:create, :edit, :update, :destroy]
+  # end
 
 
-  resources :daycares do
-    resources :generals, only: [:create, :update, :show]
-  end
+  # resources :daycares do
+  #   resources :generals, only: [:create, :update, :show]
+  # end
 
-  resources :daycares do
-    resources :programs, only: [:create, :edit, :update, :destroy] do
-      collection { post :move }
-    end
-  end
+  # resources :daycares do
+  #   resources :programs, only: [:create, :edit, :update, :destroy] do
+  #     collection { post :move }
+  #   end
+  # end
 
-  resources :daycares do
-    resources :certifications, only: [:create, :edit, :update, :destroy] do
-      collection { post :move }
-    end
-  end
+  # resources :daycares do
+  #   resources :certifications, only: [:create, :edit, :update, :destroy] do
+  #     collection { post :move }
+  #   end
+  # end
 
-  resources :daycares do
-    resources :teachers, only: [:create, :edit, :update, :destroy] do
-      collection { post :move }
-    end
-  end
+  # resources :daycares do
+  #   resources :teachers, only: [:create, :edit, :update, :destroy] do
+  #     collection { post :move }
+  #   end
+  # end
 
-  resources :daycares do
-    resources :additionals, only: [:create, :edit, :update, :destroy] do
-      collection { post :move }
-    end
-  end
+  # resources :daycares do
+  #   resources :additionals, only: [:create, :edit, :update, :destroy] do
+  #     collection { post :move }
+  #   end
+  # end
 
   get '/search-results' => 'home#show', as: 'search_results'
 
