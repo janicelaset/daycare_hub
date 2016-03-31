@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="main-nav-content">
+    <div class="col-xs-10 col-xs-offset-1">
+      <div class="align-center">
+        <h2>Daycare Contact</h2>
+        3 of 10
+      </div>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <p>
+            Enter the email where you'd like parents to contact you. We won't display this email on your page, but parents can fill out a form and the message will go directly to this email. This is separate from your log in email.
+          </p><br>
+
+          <%= render "layouts/errors", :object => @contact %>
+
+          <%= form_for [@daycare, @contact], :html => {:class => "form-horizontal"} do |f| %>
+            <div class="form-group">
+              <%= f.label :email, class: 'control-label col-sm-1' %>
+              <div class="col-sm-5 daycare-edit-field">
+                <%= f.text_field :email, class: 'form-control', required: true %>
+              </div>
+
+              <%= f.label :phone, class: 'control-label col-sm-1' %>
+              <div class="col-sm-5 daycare-edit-field">
+                <%= f.text_field :phone, class: 'form-control', required: true %>
+              </div>
+
+            <div class="col-sm-12 buttons-wizard">
+              <%= f.submit "Next", class:'btn btn-primary btn-submit' %>
+              <%= link_to 'Back', wizard_address_user_daycare_path(current_user, current_user.daycare), class: 'btn btn-primary btn-edit' %>
+              <%= link_to 'Skip This Step', wizard_general_user_daycare_path(current_user, current_user.daycare), class: 'btn btn-primary btn-edit' %>
+            </div>
+          </div>
+          <% end %>
+        </li>
+      </ul>
+      <%= link_to 'Back to Edit Page', edit_user_daycare_path(current_user, current_user.daycare) %>
+    </div>
+  </div>
+</div>

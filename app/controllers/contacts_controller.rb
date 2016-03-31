@@ -1,5 +1,6 @@
 class ContactsController < ApplicationController
   before_action :find_daycare
+  before_action :find_user, only: [:create, :update]
 
   def create
     @contact = Contact.new(contact_params)
@@ -7,7 +8,11 @@ class ContactsController < ApplicationController
 
     @contact.save
     respond_to do |format|
-      format.html
+      if @contact.errors.any?
+        format.html { render :wizard }
+      else
+        format.html { redirect_to wizard_general_user_daycare_path(@user, @daycare) }
+      end
       format.js
     end
   end
@@ -16,6 +21,25 @@ class ContactsController < ApplicationController
     @contact = Contact.find(params[:id])
 
     @contact.update(contact_params)
+    respond_to do |format|
+      if @contact.errors.any?
+        format.html { render :wizard }
+      else
+        format.html { redirect_to wizard_general_user_daycare_path(@user, @daycare) }
+      end
+      format.js
+    end
+  end
+
+  def wizard
+    @daycare = Daycare.find_by_url(params[:id])
+
+    if @daycare.contact.nil?  #if user has not added contact information
+      @contact = Contact.new
+    else
+      @contact = @daycare.contact
+    end
+
     respond_to do |format|
       format.html
       format.js
@@ -29,5 +53,9 @@ private
 
   def find_daycare
     @daycare = Daycare.find_by_url(params[:daycare_id])
+  end
+
+  def find_user
+    @user = @daycare.user
   end
 end

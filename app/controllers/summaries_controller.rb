@@ -14,7 +14,7 @@ class SummariesController < ApplicationController
 
   def update
     @summary = Summary.find(params[:id])
-    
+
     @summary.update(summary_params)
     respond_to do |format|
       format.html
@@ -32,7 +32,21 @@ class SummariesController < ApplicationController
       format.html
       format.js
     end
+  end
 
+  def wizard
+    @daycare = Daycare.find_by_url(params[:id])
+
+    if @daycare.summary.nil?  #if user has not added summary information
+      @summary = Summary.new
+    else
+      @summary = @daycare.summary
+    end
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   private

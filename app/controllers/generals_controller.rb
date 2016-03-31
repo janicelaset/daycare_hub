@@ -1,21 +1,45 @@
 class GeneralsController < ApplicationController
   before_action :find_daycare
+  before_action :find_user, only: [:create, :update]
 
   def create
     @general = General.new(general_params)
     @general.daycare = @daycare
-binding.pry
+
     @general.save
     respond_to do |format|
-      format.html
+      if @general.errors.any?
+        format.html { render :wizard }
+      else
+        format.html { redirect_to wizard_summary_user_daycare_path(@user, @daycare) }
+      end
       format.js
     end
   end
 
   def update
     @general = General.find(params[:id])
-binding.pry
+
     @general.update(general_params)
+    respond_to do |format|
+      if @general.errors.any?
+        format.html { render :wizard }
+      else
+        format.html { redirect_to wizard_summary_user_daycare_path(@user, @daycare) }
+      end
+      format.js
+    end
+  end
+
+  def wizard
+    @daycare = Daycare.find_by_url(params[:id])
+
+    if @daycare.general.nil?  #if user has not added general information
+      @general = General.new
+    else
+      @general = @daycare.general
+    end
+
     respond_to do |format|
       format.html
       format.js
@@ -29,5 +53,9 @@ private
 
   def find_daycare
     @daycare = Daycare.find_by_url(params[:daycare_id])
+  end
+
+  def find_user
+    @user = @daycare.user
   end
 end

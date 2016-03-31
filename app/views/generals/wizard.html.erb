@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="main-nav-content">
+    <div class="col-xs-10 col-xs-offset-1">
+      <div class="align-center">
+        <h2>General Information</h2>
+        4 of 10
+      </div>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <p>
+            This information will be displayed on your page. Parents will also be able to use this information when they search for daycares.
+          </p><br>
+
+          <%= render "layouts/errors", :object => @general %>
+
+          <%= form_for [@daycare, @general], :html => {:class => "form-horizontal"} do |f| %>
+            <div class="form-group">
+              <div class="col-md-12">
+                <%= f.label "Type of Daycare:", class: 'col-md-2' %>
+                <div class="col-md-3">
+                  <%= f.radio_button :type_of_daycare, "family", :checked => (params[:type_of_daycare] == nil ? true : params[:type_of_daycare]) %> Family Daycare
+                </div>
+                <div class="col-md-3 daycare-edit-field">
+                  <%= f.radio_button :type_of_daycare, "center" %> Daycare Center
+                </div>
+              </div>
+              <br><br><br>
+              <div class="col-md-12">
+                <%= f.label "Are you licensed by the state?", class: 'col-md-3' %>
+                <div class="col-md-1 daycare-edit-field">
+                  <%= f.radio_button :licensed, true, :checked => true, :value => true %> Yes
+                </div>
+                <div class="col-md-1 daycare-edit-field">
+                  <%= f.radio_button :licensed, false, :value => false %> No
+                </div>
+              </div>
+              <br><br><br><br>
+
+              <div class="col-md-12">
+                <%= f.label :year_opened, class: 'col-md-2' %>
+                <div class="col-sm-3 daycare-edit-field">
+                  <%= f.text_field :year_opened, class: 'form-control' %>
+                </div>
+              </div>
+
+            <div class="col-sm-12 buttons-wizard">
+              <%= f.submit "Next", class:'btn btn-primary btn-submit' %>
+              <%= link_to 'Back', wizard_contact_user_daycare_path(current_user, current_user.daycare), class: 'btn btn-primary btn-edit' %>
+              <%= link_to 'Skip This Step', wizard_summary_user_daycare_path(current_user, current_user.daycare), class: 'btn btn-primary btn-edit' %>
+            </div>
+          </div>
+          <% end %>
+        </li>
+      </ul>
+      <%= link_to 'Back to Edit Page', edit_user_daycare_path(current_user, current_user.daycare) %>
+    </div>
+  </div>
+</div>
