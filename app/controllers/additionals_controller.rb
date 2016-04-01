@@ -1,5 +1,6 @@
 class AdditionalsController < ApplicationController
   before_action :find_daycare, except: [:destroy]
+  before_action :find_user, only: [:create, :update]
 
   def create
     @additional = Additional.new(additional_params)
@@ -61,6 +62,17 @@ class AdditionalsController < ApplicationController
     end
   end
 
+  def wizard
+    @daycare = Daycare.find_by_url(params[:id])
+    @additionals = @daycare.additionals
+    @additional = Additional.new
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   private
   def additional_params
     params.require(:additional).permit(:title, :content, :image, :id, :position)
@@ -68,5 +80,9 @@ class AdditionalsController < ApplicationController
 
   def find_daycare
     @daycare = Daycare.find_by_url(params[:daycare_id])
+  end
+
+  def find_user
+    @user = @daycare.user
   end
 end

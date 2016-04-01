@@ -1,5 +1,6 @@
 class CertificationsController < ApplicationController
   before_action :find_daycare
+  before_action :find_user, only: [:create, :update]
 
   def create
     if cert_params.has_key? :name
@@ -70,6 +71,17 @@ class CertificationsController < ApplicationController
     end
   end
 
+  def wizard
+    @daycare = Daycare.find_by_url(params[:id])
+    @certifications = @daycare.certifications
+    @certification = Certification.new
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   private
   def cert_params
     params.require(:certification).permit(:certification, :name, :description, :link, :image, :id, :position)
@@ -77,5 +89,9 @@ class CertificationsController < ApplicationController
 
   def find_daycare
     @daycare = Daycare.find_by_url(params[:daycare_id])
+  end
+
+  def find_user
+    @user = @daycare.user
   end
 end
