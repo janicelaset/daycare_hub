@@ -40,7 +40,6 @@ class ImagesController < ApplicationController
   end
 
   def edit
-    @daycare = Daycare.find(params[:daycare_id])
     @image = Image.find(params[:id])
 
     respond_to do |format|
