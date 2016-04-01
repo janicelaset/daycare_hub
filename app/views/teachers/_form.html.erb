@@ -1,3 +1,4 @@
+<%= render "layouts/errors", :object => @teacher %>
 
 <%= form_for [@daycare, @teacher], remote: true, :html => { :class => "form-horizontal", :multipart => true } do |f| %>
   <div class="form-group">
@@ -13,7 +14,7 @@
 
     <div class="col-md-12 daycare-edit-field">
       <span class="btn btn-info btn-file">
-        Select Image<%= f.file_field :picture, class: "btn-block", id: "btn-select-image", onchange: "$('#teacher-upload-file-info').html($(this).val());" %>
+        Select Image<%= f.file_field :picture, class: "btn-block", id: "btn-select-image", onchange: "$('#teacher-upload-file-info').html($(this).val()).replace('C:\\\\fakepath\\\\', ''));" %>
       </span>
       <span class='label label-default label-image-upload' id="teacher-upload-file-info"></span>
     </div>
