@@ -1,5 +1,6 @@
 class ProgramsController < ApplicationController
   before_action :find_daycare, except: [:destroy]
+  before_action :find_user, only: [:create, :update]
 
   def create
     @program = Program.new(program_params)
@@ -46,13 +47,24 @@ class ProgramsController < ApplicationController
       program = Program.find(id)
       program.update_attribute(:position, index+1) if program
     end
-    
+
     #re-rendering programs_list template to make sure edit form belongs
     #with same panel after sorting
     #need to change code to re-order nodes but this will work for now
     @programs = @daycare.programs.order("position")
 
     respond_to do |format|
+      format.js
+    end
+  end
+
+  def wizard
+    @daycare = Daycare.find_by_url(params[:id])
+    @programs = @daycare.programs
+    @program = Program.new
+
+    respond_to do |format|
+      format.html
       format.js
     end
   end
@@ -64,5 +76,9 @@ class ProgramsController < ApplicationController
 
   def find_daycare
     @daycare = Daycare.find_by_url(params[:daycare_id])
+  end
+
+  def find_user
+    @user = @daycare.user
   end
 end

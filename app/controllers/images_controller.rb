@@ -60,11 +60,7 @@ class ImagesController < ApplicationController
     # end
 
     respond_to do |format|
-      if @image.errors.any?
-        format.html { render :wizard }
-      else
-        format.html { redirect_to wizard_program_user_daycare_path(@user, @daycare) }
-      end
+      format.html
       format.js
     end
   end

@@ -1,5 +1,6 @@
 class TeachersController < ApplicationController
   before_action :find_daycare, except: [:destroy]
+  before_action :find_user, only: [:create, :update]
 
   def create
     @teacher = Teacher.new(teacher_params)
@@ -58,6 +59,17 @@ class TeachersController < ApplicationController
     end
   end
 
+  def wizard
+    @daycare = Daycare.find_by_url(params[:id])
+    @teachers = @daycare.teachers
+    @teacher = Teacher.new
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   private
   def teacher_params
     params.require(:teacher).permit(:name, :about, :picture, :id, :position)
@@ -65,5 +77,9 @@ class TeachersController < ApplicationController
 
   def find_daycare
     @daycare = Daycare.find_by_url(params[:daycare_id])
+  end
+
+  def find_user
+    @user = @daycare.user
   end
 end
