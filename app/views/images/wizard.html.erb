@@ -1,6 +1,5 @@
-<div class="container">
-  <div class="main-nav-content">
-    <div class="col-xs-10 col-xs-offset-1">
+<div class="container main-nav-content">
+  <div class="row">
       <div class="align-center">
         <h2>Images</h2>
         6 of 10
@@ -11,6 +10,10 @@
             Upload images of your daycare. These will be displayed as a slideshow on your page.
           </p><br>
 
+          <span id="image-add-list">
+            <%= render 'images/image_list' %>
+          </span>
+
           <%= render "layouts/errors", :object => @image %>
 
           <%= form_for [@daycare, @image], remote: true, :html => {:class => "form-horizontal", :multipart => true, id: "image-form#{@image.id}" } do |f| %>
@@ -20,24 +23,23 @@
               <div class="col-lg-11 daycare-edit-field">
                 <%= f.text_field :description, class: 'form-control', id: "image-edit-desc#{@image.id}" %>
               </div>
-
+              <!-- <%= f.hidden_field :wizard, :value => true %> -->
               <div class="col-md-12 daycare-edit-field">
                 <span class="btn btn-info btn-file">
-                  Select Image<%= f.file_field :picture, class: "btn-block", id: "btn-select-image", onchange: "$('#image-upload-file-info#{@image.id}').html($(this).val());" %>
+                  Select Image<%= f.file_field :picture, class: "btn-block", id: "btn-select-image", onchange: "$('#image-upload-file-info#{@image.id}').html($(this).val().replace('C:\\\\fakepath\\\\', ''));" %>
                 </span>
                 <span class='label label-default label-image-upload' id="image-upload-file-info<%= @image.id %>"></span>
               </div>
 
             <div class="col-sm-12 buttons-wizard">
-              <%= f.submit "Next", class:'btn btn-primary btn-submit' %>
+              <%= f.submit "Submit", class:'btn btn-primary btn-submit' %>
+              <%= link_to 'Next Step', wizard_program_user_daycare_path(current_user, current_user.daycare), class: 'btn btn-primary btn-edit' %>
               <%= link_to 'Back', wizard_summary_user_daycare_path(current_user, current_user.daycare), class: 'btn btn-primary btn-edit' %>
-              <%= link_to 'Skip This Step', wizard_program_user_daycare_path(current_user, current_user.daycare), class: 'btn btn-primary btn-edit' %>
             </div>
           </div>
           <% end %>
         </li>
       </ul>
       <%= link_to 'Back to Edit Page', edit_user_daycare_path(current_user, current_user.daycare) %>
-    </div>
   </div>
 </div>

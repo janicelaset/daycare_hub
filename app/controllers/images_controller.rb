@@ -25,12 +25,13 @@ class ImagesController < ApplicationController
     #   render json: { error: @image.errors.full_messages.join(',')}, :status => 400
     # end
 
+    # if params[:image][:wizard]
+    #   @wizard = true
+    # end
+
+    # binding.pry
     respond_to do |format|
-      if @image.errors.any?
-        format.html { render :wizard }
-      else
-        format.html { redirect_to wizard_program_user_daycare_path(@user, @daycare) }
-      end
+      format.html
       format.js
     end
 
@@ -75,8 +76,6 @@ class ImagesController < ApplicationController
   end
 
   def move
-    @daycare = Daycare.find(params[:daycare_id])
-
     #re-rendering images_list template to make sure edit form belongs
     #with same panel after sorting
     #need to change code to re-order nodes but this will work for now
