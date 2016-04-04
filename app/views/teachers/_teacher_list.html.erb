@@ -21,6 +21,9 @@
             </div>
             <div class="media-body">
               <h4 id="header-name-teacher-<%= teacher.id %>"><%= teacher.name %></h4>
+              <div id="teacher-title-<%= teacher.id %>">
+                <%= teacher.title %>
+              </div>
               <div id="teacher-about-<%= teacher.id %>">
                 <%= simple_format h teacher.about %>
               </div>

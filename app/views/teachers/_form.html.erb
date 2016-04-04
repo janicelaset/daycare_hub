@@ -7,6 +7,11 @@
       <%= f.text_field :name, id: "teacher-edit-name#{@teacher.id}", class: 'form-control teacher-edit-name', required: true %>
     </div>
 
+    <%= f.label :title, class: 'control-label col-md-1' %>
+    <div class="col-md-11 daycare-edit-field">
+      <%= f.text_field :title, id: "teacher-edit-title#{@teacher.id}", class: 'form-control teacher-edit-title', required: true %>
+    </div>
+
     <%= f.label :about, class: 'control-label col-md-1' %>
     <div class="col-md-11 daycare-edit-field">
       <%= f.text_area :about, id: "teacher-edit-about#{@teacher.id}", class: 'form-control', required: true, rows: "5" %>
@@ -14,7 +19,7 @@
 
     <div class="col-md-12 daycare-edit-field">
       <span class="btn btn-info btn-file">
-        Select Image<%= f.file_field :picture, class: "btn-block", id: "btn-select-image", onchange: "$('#teacher-upload-file-info').html($(this).val()).replace('C:\\\\fakepath\\\\', ''));" %>
+        Select Image<%= f.file_field :picture, class: "btn-block", id: "btn-select-image", onchange: "$('#teacher-upload-file-info').html($(this).val().replace('C:\\\\fakepath\\\\', ''));" %>
       </span>
       <span class='label label-default label-image-upload' id="teacher-upload-file-info"></span>
     </div>

@@ -72,7 +72,7 @@ class TeachersController < ApplicationController
 
   private
   def teacher_params
-    params.require(:teacher).permit(:name, :about, :picture, :id, :position)
+    params.require(:teacher).permit(:name, :title, :about, :picture, :id, :position)
   end
 
   def find_daycare

@@ -23,6 +23,11 @@
                 <%= f.text_field :name, id: "teacher-edit-name#{@teacher.id}", class: 'form-control teacher-edit-name', required: true %>
               </div>
 
+              <%= f.label :title, class: 'control-label col-md-1' %>
+              <div class="col-md-11 daycare-edit-field">
+                <%= f.text_field :title, id: "teacher-edit-title#{@teacher.id}", class: 'form-control teacher-edit-title', required: true %>
+              </div>
+              
               <%= f.label :about, class: 'control-label col-md-1' %>
               <div class="col-md-11 daycare-edit-field">
                 <%= f.text_area :about, id: "teacher-edit-about#{@teacher.id}", class: 'form-control', required: true, rows: "5" %>
