@@ -48,7 +48,7 @@ class GeneralsController < ApplicationController
 
 private
   def general_params
-    params.require(:general).permit(:licensed, :type_of_daycare, :year_opened)
+    params.require(:general).permit(:license, :type_of_daycare, :year_opened)
   end
 
   def find_daycare
