@@ -5,6 +5,7 @@ class CertificationsController < ApplicationController
   def create
     if cert_params.has_key? :name
       @certification = Certification.new(cert_params)
+      @certification.state = @daycare.address.state
     else
       @certification = Certification.find(cert_params['id'])
     end
@@ -33,16 +34,16 @@ class CertificationsController < ApplicationController
     end
   end
 
-  def update
-    @certification = Certification.find(params[:id])
-    @certifications = @daycare.certifications
-
-    @certification.update(cert_params)
-    respond_to do |format|
-      format.html
-      format.js
-    end
-  end
+  # def update
+  #   @certification = Certification.find(params[:id])
+  #   @certifications = @daycare.certifications
+  #
+  #   @certification.update(cert_params)
+  #   respond_to do |format|
+  #     format.html
+  #     format.js
+  #   end
+  # end
 
   def destroy
     @cert_deleted = Certification.find(params[:id])
