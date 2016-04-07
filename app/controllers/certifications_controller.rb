@@ -6,6 +6,7 @@ class CertificationsController < ApplicationController
     if cert_params.has_key? :name
       @certification = Certification.new(cert_params)
       @certification.state = @daycare.address.state
+      @certification.created_by = @daycare.id
     else
       @certification = Certification.find(cert_params['id'])
     end

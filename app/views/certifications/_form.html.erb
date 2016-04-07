@@ -3,8 +3,7 @@
 <%= form_for [@daycare, @certification], :html => { :class => "form-horizontal", :multipart => true }, remote: true do |f| %>
   <div class="form-group">
     <div class="col-lg-3 daycare-edit-field">
-      <% binding.pry %>
-      <%= f.collection_select(:id, Certification.where.not(id: @certifications).where("verified = ? AND state = ? OR state = ?", true, nil, @daycare.address.state), :id, :name, { :include_blank => "Add New Certification"}, { class: 'form-control', onchange: "disableCertInput()" }) %>
+      <%= f.collection_select(:id, Certification.where.not(id: @certifications).where("created_by = ? OR (verified = ? AND state = ?) OR (verified = ? AND state = ?)", @daycare.id, true, "ALL", true, @daycare.address.state), :id, :name, { :include_blank => "Add New Certification"}, { class: 'form-control', onchange: "disableCertInput()" }) %>
     </div>
 
     <div class="col-lg-12">
