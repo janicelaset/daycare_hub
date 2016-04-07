@@ -2,6 +2,15 @@ class AddressesController < ApplicationController
   before_action :find_daycare, except: [:wizard]
   before_action :find_user, only: [:create, :update]
 
+  def new
+    @address = Address.new
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   def create
     @address = Address.new(address_params)
     @address.daycare = @daycare

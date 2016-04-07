@@ -73,7 +73,7 @@ class DaycaresController < ApplicationController
     @daycare.save
 
     respond_to do |format|
-      format.html
+      format.html 
       format.js
     end
 
