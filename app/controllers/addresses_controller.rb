@@ -4,6 +4,7 @@ class AddressesController < ApplicationController
 
   def new
     @address = Address.new
+    @user = @daycare.user
 
     respond_to do |format|
       format.html
