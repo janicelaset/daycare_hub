@@ -15,7 +15,7 @@ class CertificationsController < ApplicationController
     daycare_certification = DaycareCertification.new(daycare: @daycare, certification: @certification)
     daycare_certification.save
 
-    @certifications = @daycare.certifications.order("position")
+    @certifications = @daycare.certifications
 
     #create new certification to display create certification form so users can add more programs
     @certification = Certification.new
@@ -58,11 +58,12 @@ class CertificationsController < ApplicationController
   end
 
   def move
+binding.pry
     params['certification'].each_with_index do |id, index|
       certification = Certification.find(id)
       certification.update_attribute(:position, index+1) if certification
     end
-
+binding.pry
     #re-rendering certifications_list template to make sure edit form belongs
     #with same panel after sorting
     #need to change code to re-order nodes but this will work for now
