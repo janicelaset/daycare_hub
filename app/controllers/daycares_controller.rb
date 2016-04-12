@@ -48,7 +48,7 @@ class DaycaresController < ApplicationController
       @certification = Certification.new
       @certifications = []
     else
-      @certifications = @daycare.certifications
+      @certifications = @daycare.certifications.order("list_order")
     end
 
     if @daycare.additionals.any? == false
@@ -119,7 +119,7 @@ class DaycaresController < ApplicationController
     @program = Program.new
 
     if @daycare.certifications.any?
-      @certifications = @daycare.certifications
+      @certifications = @daycare.certifications.order("list_order")
     else
       @certifications = []
     end
