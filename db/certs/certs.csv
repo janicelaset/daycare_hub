@@ -1,3 +1,4 @@
-name,link,description,verified,state
-NAEYC,naeyc.com,National Association Education,1,ALL
-NAFCC,naeyc.com,National Association FAMILY Child Care,1,ALL
+name,link,description,verified,state, image
+NAEYC,naeyc.com,National Association Education,1,ALL,all_naeyc.jpg
+NAFCC,naeyc.com,National Association FAMILY Child Care,1,CA,all_nafcc.jpg
+QRIS 5 Star,triwou.com,Quality Improvement Rating System,1,OR,or_qris_5star.jpg
