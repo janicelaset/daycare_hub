@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160412124521) do
+ActiveRecord::Schema.define(version: 20160415130717) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -91,6 +91,8 @@ ActiveRecord::Schema.define(version: 20160412124521) do
     t.datetime "updated_at",       null: false
     t.integer  "list_order"
   end
+
+  add_index "daycare_certifications", ["daycare_id", "certification_id"], name: "index_daycare_certifications_on_daycare_id_and_certification_id", using: :btree
 
   create_table "daycares", force: :cascade do |t|
     t.string   "name"
