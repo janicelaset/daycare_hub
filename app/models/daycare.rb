@@ -1,15 +1,15 @@
 class Daycare < ActiveRecord::Base
   belongs_to :user
-  has_many :images
-  has_one :contact
-  has_one :address
-  has_many :teachers
-  has_many :programs
-  has_one :summary
-  has_many :daycare_certifications
-  has_many :certifications, :through => :daycare_certifications
-  has_many :additionals
-  has_one :general
+  has_many :images, :dependent => :destroy
+  has_one :contact, :dependent => :destroy
+  has_one :address, :dependent => :destroy
+  has_many :teachers, :dependent => :destroy
+  has_many :programs, :dependent => :destroy
+  has_one :summary, :dependent => :destroy
+  has_many :daycare_certifications, :dependent => :destroy
+  has_many :certifications, :through => :daycare_certifications, :dependent => :destroy
+  has_many :additionals, :dependent => :destroy
+  has_one :general, :dependent => :destroy
 
   validates :name, :presence => true, length: { maximum: 55 }
   validates :url, :presence => true, length: { maximum: 55 }
