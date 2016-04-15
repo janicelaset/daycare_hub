@@ -1,36 +1,42 @@
 <% if @daycare.teachers.any? %>
-  <div class="row mar-bot40">
-    <div class="col-md-offset-3 col-md-6">
-      <div class="section-header">
-        <h2 class="section-heading animated" data-animation="bounceInUp">Teachers</h2>
-        <p></p>
-      </div>
-    </div>
-  </div>
+  <section id="section-teachers" class="section appear clearfix">
+    <div class="container">
+      <div class="row align-center mar-bot40">
+        <div class="row mar-bot40">
+          <div class="col-md-offset-3 col-md-6">
+            <div class="section-header">
+              <h2 class="section-heading animated" data-animation="bounceInUp">Teachers</h2>
+              <p></p>
+            </div>
+          </div>
+        </div>
 
-  <% @teachers.each_with_index do |teacher, index| %>
-    <% if index%3 === 0 %>
-      <div class="row">
-    <% end %>
-    <div class="col-md-4">
-      <div class="team-member img-teacher">
-        <div class="img-teacher">
-          <% if teacher.picture_file_name != nil %>
-            <div class="circle-avatar" style="background-image:url(<%= teacher.picture.url %>)">
+        <% @teachers.each_with_index do |teacher, index| %>
+          <% if index%3 === 0 %>
+            <div class="row">
+          <% end %>
+          <div class="col-md-4">
+            <div class="team-member img-teacher">
+              <div class="img-teacher">
+                <% if teacher.picture_file_name != nil %>
+                  <div class="circle-avatar" style="background-image:url(<%= teacher.picture.url %>)">
+                  </div>
+                <% end %>
+              </div>
+              <div class="team-detail">
+                <h4><%= teacher.name %></h4>
+                <span><%= teacher.title %></span>
+                <p>
+                  <%= simple_format h teacher.about %>
+                </p>
+              </div>
+            </div>
+          </div>
+          <% if index%3 == 2 %>
             </div>
           <% end %>
-        </div>
-        <div class="team-detail">
-          <h4><%= teacher.name %></h4>
-          <span><%= teacher.title %></span>
-          <p>
-            <%= simple_format h teacher.about %>
-          </p>
-        </div>
+        <% end %>
       </div>
     </div>
-    <% if index%3 == 2 %>
-      </div>
-    <% end %>
-  <% end %>
+  </section>
 <% end %>

@@ -36,39 +36,10 @@
   </div>
 </section>
 
-<section id="section-programs" class="section appear clearfix pad-bot30 bg-white">
-<div class="container">
-  <div class="row mar-bot40">
-    <%= render 'programs/profile_programs' %>
-  </div>
-</div>
-</section>
-
-<section id="section-teachers" class="section appear clearfix">
-  <div class="container">
-    <div class="row align-center mar-bot40">
-      <%= render 'teachers/profile_teachers' %>
-    </div>
-  </div>
-</section>
-
-<section id="section-certifications" class="section appear clearfix pad-bot30 bg-white">
-<div class="container">
-  <div class="row mar-bot40">
-    <%= render 'certifications/profile_certifications' %>
-  </div>
-</div>
-</section>
-
-<section id="section-additional" class="section appear clearfix pad-bot30">
-  <div class="container">
-    <div class="row mar-bot40">
-      <%= render 'additionals/profile_additionals' %>
-    </div>
-  </div>
-</section>
-
-  <%= render 'address' %>
+<%= render 'programs/profile_programs' %>
+<%= render 'teachers/profile_teachers' %>
+<%= render 'certifications/profile_certifications' %>
+<%= render 'additionals/profile_additionals' %>
 
 <!-- contact -->
 <section id="section-contact" class="section appear clearfix">
@@ -100,6 +71,7 @@
 <!-- map -->
 <section id="section-map" class="clearfix">
   <div id="map"></div>
+  <%= render 'address' %>
 </section>
 
 </div>

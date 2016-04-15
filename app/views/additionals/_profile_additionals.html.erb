@@ -1,21 +1,27 @@
 <% if @daycare.additionals.any? %>
-  <% @additionals.each_with_index do |additional, index| %>
-    <% if index%2 == 0 %>
-      <div class="row">
-    <% end  %>
-    <div class="col-md-6 mar-bot40" >
-      <div class="align-center">
-        <% if additional.image_file_name != nil %>
-          <%= image_tag additional.image.url, class: 'img-responsive mar-bot20' %>
+  <section id="section-additional" class="section appear clearfix pad-bot30">
+    <div class="container">
+      <div class="row mar-bot40">
+        <% @additionals.each_with_index do |additional, index| %>
+          <% if index%2 == 0 %>
+            <div class="row">
+          <% end  %>
+          <div class="col-md-6 mar-bot40" >
+            <div class="align-center">
+              <% if additional.image_file_name != nil %>
+                <%= image_tag additional.image.url, class: 'img-responsive mar-bot20' %>
+              <% end %>
+              <h4 class="text-bold"><%= additional.title %></h4>
+              <p>
+                <%= simple_format h additional.content %>
+              </p>
+            </div>
+          </div>
+          <% if index%2 == 1 %>
+            </div>
+          <% end %>
         <% end %>
-        <h4 class="text-bold"><%= additional.title %></h4>
-        <p>
-          <%= simple_format h additional.content %>
-        </p>
       </div>
     </div>
-    <% if index%2 == 1 %>
-      </div>
-    <% end %>
-  <% end %>
+  </section>
 <% end %>
