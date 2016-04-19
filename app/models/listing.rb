@@ -4,6 +4,8 @@ class Listing < ActiveRecord::Base
   # after_validation :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
   after_validation :geocode
 
+  belongs_to :daycare
+
   def full_address
     "#{street}, #{city}, #{state} #{zip}"
   end

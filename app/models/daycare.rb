@@ -10,6 +10,7 @@ class Daycare < ActiveRecord::Base
   has_many :certifications, :through => :daycare_certifications, :dependent => :destroy
   has_many :additionals, :dependent => :destroy
   has_one :general, :dependent => :destroy
+  has_one :listing
 
   validates :name, :presence => true, length: { maximum: 55 }
   validates :url, :presence => true, length: { maximum: 55 }
