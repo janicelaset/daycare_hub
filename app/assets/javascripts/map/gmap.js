@@ -30,7 +30,7 @@ function displayOriginMarker(map, origin) {
           icon: originIcon,
         });
       } else {
-        alert('Geocode was not successful due to: ' + status);
+        alert('We weren\'t able to find any daycares near the address you entered.');
       }
     };
   };
@@ -114,5 +114,12 @@ function addMarker(map, lat_long, info_window_content) {
 
   marker.addListener('click', function() {
     infowindow.open(map, marker);
+  });
+}
+
+function displayDaycareAddressMap () {
+  var map = new google.maps.Map(document.getElementById('daycare-map'), {
+    center: {lat: 39.8282, lng: -98.5795},
+    zoom: 4
   });
 }

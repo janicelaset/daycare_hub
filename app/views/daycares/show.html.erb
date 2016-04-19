@@ -41,8 +41,27 @@
 <%= render 'certifications/profile_certifications' %>
 <%= render 'additionals/profile_additionals' %>
 
+<!-- map -->
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+<section id="section-map" class="clearfix pad-bot30">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 pad-top30">
+        <%= render 'address' %>
+      </div>
+      <div class="col-md-9">
+        <div id="daycare-map-container">
+          <div id="daycare-map"></div>
+        </div>
+        <script>displayDaycareAddressMap();</script>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- contact -->
-<section id="section-contact" class="section appear clearfix">
+<section id="section-contact" class="section appear clearfix bg-white">
   <% if @daycare.contact != nil %>
   <div class="container">
     <div class="row mar-bot40">
@@ -55,9 +74,7 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <div class="cform" id="contact-form">
-
           <%= render 'contact_forms/form' %>
-
         </div>
       </div>
       <!-- ./span12 -->
@@ -68,11 +85,6 @@
 </section>
 <div id="message-modal" class="modal fade"></div>
 
-<!-- map -->
-<section id="section-map" class="clearfix">
-  <div id="map"></div>
-  <%= render 'address' %>
-</section>
 
 </div>
 <script src="<%= asset_path('js/modernizr-2.6.2-respond-1.1.0.min.js') %>"></script>
