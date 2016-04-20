@@ -54,7 +54,7 @@ function displaySearchResults(origin, radius, addresses, daycares, images, listi
     "There are " + listings.length + " daycares " + radius + " miles from your address."
   );
 
-  var bounds = new google.maps.LatLngBounds;
+  var bounds = new google.maps.LatLngBounds();
   for (var i = 0; i < listings.length; i++) {
     // info window content
     distance_rounded = listings[i].distance.toFixed(1);
@@ -117,9 +117,19 @@ function addMarker(map, lat_long, info_window_content) {
   });
 }
 
-function displayDaycareAddressMap () {
+function displayDaycareAddressMap (listing) {
+  listing = listing.replace(/&quot;/g, '"');
+  listing = JSON.parse(listing);
+  lat_long = {lat: listing.latitude, lng: listing.longitude};
+
   var map = new google.maps.Map(document.getElementById('daycare-map'), {
-    center: {lat: 39.8282, lng: -98.5795},
-    zoom: 4
+    center: lat_long,
+    zoom: 12
+  });
+
+  var marker = new google.maps.Marker({
+    map: map,
+    animation: google.maps.Animation.DROP,
+    position: lat_long,
   });
 }
