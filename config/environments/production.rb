@@ -101,5 +101,5 @@ Rails.application.configure do
     :user_name => ENV['EMAIL_USER'],
     :password => ENV['EMAIL_PW'],
     :authentication => 'plain',
-    :enable_starttls_auto: true }
+    :enable_starttls_auto => true }
 end
