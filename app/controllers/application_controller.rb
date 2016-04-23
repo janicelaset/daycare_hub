@@ -20,7 +20,11 @@ class ApplicationController < ActionController::Base
         new_user_daycare_path(current_user)
       else
         @daycare = Daycare.find(current_user.daycare.id)
-        user_daycare_path(current_user, @daycare)
+        if @daycare.address.nil?
+          new_daycare_address_path(@daycare)
+        else
+          edit_user_daycare_path(current_user, @daycare)
+        end
       end
     end
  end
