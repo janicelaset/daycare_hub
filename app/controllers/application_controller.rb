@@ -19,7 +19,6 @@ class ApplicationController < ActionController::Base
       if current_user.daycare.nil?
         new_user_daycare_path(current_user)
       else
-        binding.pry
         @daycare = Daycare.find(current_user.daycare.id)
         if @daycare.address.nil?
           new_daycare_address_path(@daycare)

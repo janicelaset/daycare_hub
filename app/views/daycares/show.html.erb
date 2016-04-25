@@ -51,10 +51,12 @@
         <%= render 'address' %>
       </div>
       <div class="col-md-9">
-        <div id="daycare-map-container">
-          <div id="daycare-map"></div>
-        </div>
-        <script>displayDaycareAddressMap("<%= @listing %>");</script>
+        <% if !@listing.nil? %>
+          <div id="daycare-map-container">
+            <div id="daycare-map"></div>
+          </div>
+          <script>displayDaycareAddressMap("<%= @listing_json %>");</script>
+        <% end %>
       </div>
     </div>
   </div>

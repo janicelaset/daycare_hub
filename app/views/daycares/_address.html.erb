@@ -2,3 +2,6 @@
   <p><%= @address.street %></p>
   <p><%= @address.city %> <%= @address.state %> <%= @address.zip %></p>
 <% end %>
+<% if @contact.id != nil %>
+  <p><%= @contact.phone %></p>
+<% end %>

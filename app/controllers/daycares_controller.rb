@@ -8,7 +8,7 @@ class DaycaresController < ApplicationController
     else
       @address = @daycare.address
       @listing = @daycare.listing
-      @listing = @listing.to_json
+      @listing_json = @daycare.listing.to_json
     end
 
     if @daycare.contact.nil?  #if user has not added contact information
