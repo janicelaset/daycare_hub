@@ -38,7 +38,7 @@ function displayOriginMarker(map, origin) {
   geocoder.geocode({'address': origin}, showGeocodedAddressOnMap());
 }
 
-function displaySearchResults(origin, radius, addresses, daycares, images, listings) {
+function displaySearchResults(origin, radius, listings) {
 
   listings = listings.replace(/&quot;/g, '"');
   listings = JSON.parse(listings);

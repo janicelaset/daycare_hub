@@ -24,22 +24,6 @@ class HomeController < ApplicationController
 #     generals = generals.select{ |general| general.type_of_daycare == 'center' }
 # binding.pry
 
-    # @destination = Address.where(state: address_split[2])
-    # @daycares = []
-    # @images = []
-    # @destination.each do |address|
-    #   @daycares.push(address.daycare)
-    #   if address.daycare.images.any?
-    #     image = address.daycare.images.first.image_url
-    #   else
-    #     image = nil
-    #   end
-    #   @images.push(image)
-    # end
-    # @destination = @destination.to_json
-    # @daycares = @daycares.to_json
-    # @images = @images.to_json
-
     @images = []
     @daycares = []
 
@@ -70,9 +54,6 @@ class HomeController < ApplicationController
       end
     end
 
-    @destination = @destination.to_json
-    @daycares = @daycares.to_json
-    @images = @images.to_json
     @listings = @listings.to_json
 
     respond_to do |format|
