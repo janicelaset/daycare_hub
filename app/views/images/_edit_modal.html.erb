@@ -5,6 +5,8 @@
       <h4 class="modal-title">Edit Image</h4>
     </div>
     <div class="modal-body">
+      <%= image_tag image.picture.url(:thumb) %>
+      <%= image.description %>
       <%= render "images/form" %>
     </div>
     <!-- <div class="modal-footer">
