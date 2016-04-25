@@ -1,0 +1,28 @@
+<div class="modal-dialog modal-lg">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title">Edit Program</h4>
+    </div>
+    <div class="modal-body">
+      <div class="media">
+        <div class="media-left media-top" id="teacher-image<%= teacher.id %>">
+         <%= image_tag teacher.picture.url(:thumb) %>
+        </div>
+        <div class="media-body">
+          <h4 id="header-name-teacher-<%= teacher.id %>"><%= teacher.name %></h4>
+          <div id="teacher-title-<%= teacher.id %>">
+            <%= teacher.title %>
+          </div>
+          <div id="teacher-about-<%= teacher.id %>">
+            <%= simple_format h teacher.about %>
+          </div>
+        </div>
+      </div>
+      <%= render "teachers/form" %>
+    </div>
+    <!-- <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div> -->
+  </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->

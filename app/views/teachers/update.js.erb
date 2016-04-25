@@ -1,15 +1,15 @@
-$('#edit-teacher-<%= @teacher.id %>').slideUp(350, function() {
-  $('#panel-name-teacher-<%= @teacher.id %>').text('<%= @teacher.name %>')
-  $('#header-name-teacher-<%= @teacher.id %>').text('<%= @teacher.name %>')
-  $("#teacher-image<%= @teacher.id %>").html("<%= j image_tag @teacher.picture.url(:thumb) %>");
-  $('#teacher-about-<%= @teacher.id %>').html('<%= j simple_format h @teacher.about %>')
+$('#teacher-edit-modal').modal("hide");
 
-  $('#teacherList').sortable({
-      axis: 'y',
-      panel: '.panel-heading',
-      update: function() {
-        $.post($(this).data('update-url'), $(this).sortable('serialize'))
-      }
+$('#panel-name-teacher-<%= @teacher.id %>').text('<%= @teacher.name %>')
+$('#header-name-teacher-<%= @teacher.id %>').text('<%= @teacher.name %>')
+$("#teacher-image<%= @teacher.id %>").html("<%= j image_tag @teacher.picture.url(:thumb) %>");
+$('#teacher-about-<%= @teacher.id %>').html('<%= j simple_format h @teacher.about %>')
+
+$('#teacherList').sortable({
+    axis: 'y',
+    panel: '.panel-heading',
+    update: function() {
+      $.post($(this).data('update-url'), $(this).sortable('serialize'))
     }
-  );
-});
+  }
+);
