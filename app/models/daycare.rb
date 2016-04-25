@@ -1,5 +1,6 @@
 class Daycare < ActiveRecord::Base
   belongs_to :user
+  belongs_to :listing
   has_many :images, :dependent => :destroy
   has_one :contact, :dependent => :destroy
   has_one :address, :dependent => :destroy
