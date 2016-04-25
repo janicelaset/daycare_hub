@@ -1,0 +1,31 @@
+<div class="modal-dialog modal-lg">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title">Edit Program</h4>
+    </div>
+    <div class="modal-body">
+      <div class="media">
+        <div class="media-left media-top">
+          <% if additional.image_file_name != nil %>
+            <span id="image-additional-<%= additional.id %>">
+              <%= image_tag additional.image.url(:thumb) %>
+            </span>
+          <% end %>
+        </div>
+        <div class="media-body">
+          <h4 id="header-name-additional-<%= additional.id %>">
+            <%= additional.title %>
+          </h4>
+          <span id="content-additional-<%= additional.id %>">
+            <%= simple_format h additional.content %>
+          </span>
+        </div>
+      </div>
+      <%= render "additionals/form" %>
+    </div>
+    <!-- <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div> -->
+  </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
