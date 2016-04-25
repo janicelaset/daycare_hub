@@ -9,8 +9,18 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
-          <li><a href="#section-about">About</a></li>
-          <li><a href="#section-works">Portfolio</a></li>
+          <% if @daycare.programs.any? %>
+            <li><a href="#section-programs">Programs</a></li>
+          <% end %>
+          <% if @daycare.teachers.any? %>
+            <li><a href="#section-teachers">Teachers</a></li>
+          <% end %>
+          <% if @daycare.certifications.any? %>
+            <li><a href="#section-certifications">Certifications</a></li>
+          <% end %>
+          <% if @daycare.additionals.any? %>
+            <li><a href="#section-additional">More Info</a></li>
+            <% end %>
           <li><a href="#section-contact">Contact</a></li>
         </ul>
       </div><!--/.navbar-collapse -->
