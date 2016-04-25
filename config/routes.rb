@@ -26,7 +26,7 @@ Rails.application.routes.draw do
 
   resources :daycares do
     resources :addresses, only: [:new, :create, :update, :show]
-    resources :contacts
+    resources :contacts, only: [:new, :create, :update, :show]
     resources :generals, only: [:create, :update, :show]
     resources :summaries, only: [:create, :edit, :update, :destroy]
     resources :images, only: [:create, :edit, :update, :destroy] do

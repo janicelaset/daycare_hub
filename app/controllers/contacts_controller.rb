@@ -1,6 +1,15 @@
 class ContactsController < ApplicationController
   before_action :find_daycare
-  before_action :find_user, only: [:create, :update]
+  before_action :find_user, only: [:new, :create, :update]
+
+  def new
+    @contact = Contact.new
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
 
   def create
     @contact = Contact.new(contact_params)
