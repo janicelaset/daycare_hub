@@ -5,8 +5,19 @@
       <h4 class="modal-title">Edit Image</h4>
     </div>
     <div class="modal-body">
-      <%= image_tag image.picture.url(:thumb) %>
-      <%= image.description %>
+      <div class="media">
+        <div class="media-left media-top">
+          <span id="daycare-image-<%= image.id %>">
+            <%= image_tag image.picture.url(:thumb) %>
+          </span>
+        </div>
+        <div class="media-body">
+          <h4>Description</h4>
+          <span id="daycare-image-description-<%= image.id %>">
+            <%= image.description %>
+          </span>
+        </div>
+      </div>
       <%= render "images/form" %>
     </div>
     <!-- <div class="modal-footer">

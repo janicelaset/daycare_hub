@@ -1,0 +1,52 @@
+<div class="modal-dialog modal-lg">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title">Edit Program</h4>
+    </div>
+    <div class="modal-body">
+      <div class="media">
+        <div class="media-left media-top" id="program-image<%= program.id %>">
+          <%= image_tag program.picture.url(:small) %>
+        </div>
+        <div class="media-body">
+          <h4 id="header-name-program-<%= program.id %>">
+            <%= program.name %>
+          </h4>
+          <div id="program-ages">
+            Ages:
+            <span id="program-age-from-<%= program.id %>"><%= program.age_from %></span>
+            <span id="program-age-from-units-<%= program.id %>">
+              <% if program.age_from_units != program.age_to_units %>
+                <%= program.age_from_units %>
+              <% end %>
+            </span>
+            to
+            <span id="program-age-to-<%= program.id %>"><%= program.age_to %></span>
+            <span id="program-age-to-units-<%= program.id %>">
+              <%= program.age_to_units %>
+            </span>
+          </div>
+          <div>
+            Available Space:
+            <span id="program-availability-<%= program.id %>">
+            <% if program.available? %>
+                yes
+            <% else %>
+                none
+            <% end %>
+            </span>
+          </div>
+          <br>
+          <div id="program-description-<%= program.id %>">
+            <%= simple_format h program.description %>
+          </div>
+        </div>
+      </div>
+      <%= render "programs/form" %>
+    </div>
+    <!-- <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div> -->
+  </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
