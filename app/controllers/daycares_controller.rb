@@ -1,6 +1,7 @@
 class DaycaresController < ApplicationController
   before_action :authenticate_user!, except: [:show]
   before_action :find_daycare, only: [:show, :update, :edit, :wizard]
+  before_action :init_state
 
   def show
     if @daycare.address.nil?  #if user has not added contact information
@@ -172,6 +173,8 @@ class DaycaresController < ApplicationController
   end
 
   def wizard
+    @wizard = true
+
     respond_to do |format|
       format.html
       format.js
@@ -185,5 +188,9 @@ class DaycaresController < ApplicationController
 
   def find_daycare
     @daycare = Daycare.find_by_url(params[:id])
+  end
+
+  def init_state
+    @wizard = false
   end
 end

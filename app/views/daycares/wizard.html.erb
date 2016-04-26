@@ -13,31 +13,7 @@
             Enter the name of your daycare and the URL you want to use for your web page.
           </p><br>
 
-          <%= render "layouts/errors", :object => @daycare %>
-
-          <%= form_for [current_user, @daycare], :html => {:class => "form-horizontal"} do |f| %>
-          <div class="form-group">
-
-            <%= f.label :name, class: 'control-label col-sm-1' %>
-            <div class="col-sm-11 daycare-edit-field">
-              <%= f.text_field :name, class: 'form-control', required: true %>
-            </div>
-
-            <%= f.label :url, 'URL', class: 'control-label col-sm-1' %>
-            <div class="col-sm-11 daycare-edit-field">
-              <div class="input-group">
-                <span class="input-group-addon">www.beebsy.com/
-                </span>
-                <%= f.text_field :url, class: 'form-control', :placeholder => "Create a custom URL for your daycare", required: true %>
-              </div>
-            </div>
-
-            <div class="col-sm-12 buttons-wizard">
-              <%= f.submit "Next", class:'btn btn-primary btn-submit' %>
-              <%= link_to 'Skip This Step', wizard_address_user_daycare_path(current_user, current_user.daycare), class: 'btn btn-primary btn-edit' %>
-            </div>
-          </div>
-          <% end %>
+          <%= render "form" %>
         </li>
       </ul>
       <%= link_to 'Back to Edit Page', edit_user_daycare_path(current_user, current_user.daycare) %>
