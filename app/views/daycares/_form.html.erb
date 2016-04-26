@@ -23,13 +23,15 @@
       </div>
     </div>
 
+    <div class="col-sm-12">
     <% if @wizard %>
-      <div class="col-sm-12 buttons-wizard">
+      <div class="buttons-wizard">
         <%= f.submit "Next", class:'btn btn-primary btn-submit' %>
         <%= link_to 'Skip This Step', wizard_address_user_daycare_path(current_user, current_user.daycare), class: 'btn btn-primary btn-edit' %>
       </div>
     <% else %>
       <%= f.submit "Submit", class:'btn btn-primary btn-submit' %>
     <% end %>
+  </div>
   </div>
 <% end %>
