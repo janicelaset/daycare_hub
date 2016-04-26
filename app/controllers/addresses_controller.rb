@@ -1,6 +1,7 @@
 class AddressesController < ApplicationController
   before_action :find_daycare, except: [:wizard]
   before_action :find_user, only: [:new, :create, :update]
+  before_action :init_state
 
   def new
     @address = Address.new
@@ -43,6 +44,8 @@ class AddressesController < ApplicationController
   end
 
   def wizard
+    @wizard = true
+    
     @daycare = Daycare.find_by_url(params[:id])
 
     if @daycare.address.nil?  #if user has not added address information
@@ -68,5 +71,9 @@ class AddressesController < ApplicationController
 
   def find_user
     @user = @daycare.user
+  end
+
+  def init_state
+    @wizard = false
   end
 end
