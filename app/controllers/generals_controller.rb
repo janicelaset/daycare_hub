@@ -1,6 +1,7 @@
 class GeneralsController < ApplicationController
   before_action :find_daycare
   before_action :find_user, only: [:create, :update]
+  before_action :init_state
 
   def create
     @general = General.new(general_params)
@@ -32,6 +33,8 @@ class GeneralsController < ApplicationController
   end
 
   def wizard
+    @wizard = true
+
     @daycare = Daycare.find_by_url(params[:id])
 
     if @daycare.general.nil?  #if user has not added general information
@@ -57,5 +60,9 @@ private
 
   def find_user
     @user = @daycare.user
+  end
+
+  def init_state
+    @wizard = false
   end
 end
