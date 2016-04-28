@@ -10,21 +10,8 @@
             Write a short summary about your daycare. We'll display this as a heading on your page. Do you specialize in infants? Does your philosophy in raising children set you apart from other daycares? Show off what makes your daycare great.
           </p><br>
 
-          <%= render "layouts/errors", :object => @summary %>
+          <%= render 'form' %>
 
-          <%= form_for [@daycare, @summary], remote: true, :html => {:class => "form-horizontal"} do |f| %>
-            <div class="form-group">
-              <div class="col-sm-12 daycare-edit-field">
-                <%= f.text_area :content, class: 'form-control', required: true, rows: '4', placeholder: "Write a short summary about your daycare. This will appear as a heading on your page." %>
-              </div>
-
-            <div class="col-sm-12 buttons-wizard">
-              <%= f.submit "Next", class:'btn btn-primary btn-submit' %>
-              <%= link_to 'Skip This Step', wizard_image_user_daycare_path(current_user, current_user.daycare), class: 'btn btn-primary btn-edit' %>
-              <%= link_to 'Back', wizard_general_user_daycare_path(current_user, current_user.daycare), class: 'btn btn-primary btn-edit' %>
-            </div>
-          </div>
-          <% end %>
         </li>
       </ul>
       <%= link_to 'Back to Edit Page', edit_user_daycare_path(current_user, current_user.daycare) %>

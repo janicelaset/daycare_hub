@@ -1,6 +1,7 @@
 class SummariesController < ApplicationController
-  before_action :find_daycare, except: [:destroy]
+  before_action :find_daycare
   before_action :find_user, only: [:create, :update]
+  before_action :init_state
 
   def create
     @summary = Summary.new(summary_params)
@@ -44,6 +45,7 @@ class SummariesController < ApplicationController
   end
 
   def wizard
+    @wizard = true
     @daycare = Daycare.find_by_url(params[:id])
 
     if @daycare.summary.nil?  #if user has not added summary information
@@ -69,5 +71,9 @@ class SummariesController < ApplicationController
 
   def find_user
     @user = @daycare.user
+  end
+
+  def init_state
+    @wizard = false
   end
 end
