@@ -14,67 +14,8 @@
             <%= render 'programs/program_list' %>
           </span>
 
-          <%= render "layouts/errors", :object => @program %>
+          <%= render 'form' %>
 
-          <%= form_for [@daycare, @program], :html => { :class => "form-horizontal", :multipart => true }, remote: true do |f| %>
-            <div class="form-group">
-              <%= f.label :name, class: 'control-label col-sm-1' %>
-              <div class="col-sm-11 daycare-edit-field">
-                <%= f.text_field :name, id: "program-edit-name#{@program.id}", class: 'form-control program-edit-name', required: true, placeholder: "eg. Infant, Toddler, Preschool, etc" %>
-              </div>
-
-              <%= f.label "Ages", class: 'control-label col-sm-1' %>
-              <div class="col-sm-2 daycare-edit-field">
-                <%= f.text_field :age_from, class: 'form-control program-age-field' %>
-              </div>
-
-              <div class="col-sm-3 daycare-edit-field">
-                <%= f.select :age_from_units, ["years", "months", "weeks"], { :style =>  "min-width: 5em;"}, class: 'form-control program-age-units'%>
-              </div>
-
-              <div class="col-sm-1">
-                <center><%= f.label "to", "to", class: 'control-label' %></center>
-              </div>
-
-              <div class="col-sm-2 daycare-edit-field">
-                <%= f.text_field :age_to, class: 'form-control program-age-field' %>
-              </div>
-
-              <div class="col-sm-3 daycare-edit-field">
-                <%= f.select :age_to_units, ["years", "months", "weeks"], { :style =>  "min-width: 5em;"}, class: 'form-control program-age-units'%>
-              </div>
-
-              <%= f.label :description, class: 'control-label col-lg-1' %>
-              <div class="col-lg-11 daycare-edit-field">
-                <%= f.text_area :description, class: 'form-control', required: true, rows: "5" %>
-              </div>
-
-              <%= f.label "Are there openings?", class: 'col-md-3' %>
-              <div class="col-md-2">
-                <%= f.radio_button :available, true, :checked => true, :value => true %> Yes
-              </div>
-              <div class="col-md-2 daycare-edit-field">
-                <%= f.radio_button :available, false, :value => false %> No
-              </div>
-
-              <br>
-
-              <div class="col-md-12 daycare-edit-field">
-                <div class="col-md-6">
-                  <span class="btn btn-info btn-file">
-                    Select Image<%= f.file_field :picture, class: "btn-block", id: "btn-select-image", onchange: "$('#program-upload-file-info').html($(this).val()).replace('C:\\\\fakepath\\\\', ''));" %>
-                  </span>
-                  <span class='label label-default label-image-upload' id="program-upload-file-info"></span>
-                </div>
-              </div>
-
-            <div class="col-sm-12 buttons-wizard">
-              <%= f.submit "Submit", class:'btn btn-primary btn-submit' %>
-              <%= link_to 'Next Step', wizard_teacher_user_daycare_path(current_user, current_user.daycare), class: 'btn btn-primary btn-edit' %>
-              <%= link_to 'Back', wizard_image_user_daycare_path(current_user, current_user.daycare), class: 'btn btn-primary btn-edit' %>
-            </div>
-          </div>
-          <% end %>
         </li>
       </ul>
       <%= link_to 'Back to Edit Page', edit_user_daycare_path(current_user, current_user.daycare) %>

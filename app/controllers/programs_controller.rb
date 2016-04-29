@@ -1,6 +1,7 @@
 class ProgramsController < ApplicationController
   before_action :find_daycare, except: [:destroy]
   before_action :find_user, only: [:create, :update]
+  before_action :init_state
 
   def create
     @program = Program.new(program_params)
@@ -59,6 +60,7 @@ class ProgramsController < ApplicationController
   end
 
   def wizard
+    @wizard = true
     @daycare = Daycare.find_by_url(params[:id])
     @programs = @daycare.programs
     @program = Program.new
@@ -80,5 +82,9 @@ class ProgramsController < ApplicationController
 
   def find_user
     @user = @daycare.user
+  end
+
+  def init_state
+    @wizard = false
   end
 end

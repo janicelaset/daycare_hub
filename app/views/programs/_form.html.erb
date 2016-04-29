@@ -9,7 +9,7 @@
 
     <%= f.label "Ages", class: 'control-label col-sm-1' %>
     <div class="col-sm-2 daycare-edit-field">
-      <%= f.text_field :age_from, class: 'form-control program-age-field' %>
+      <%= f.text_field :age_from, id: "program-edit-age-from#{@program.id}", class: 'form-control program-age-field' %>
     </div>
 
     <div class="col-sm-3 daycare-edit-field">
@@ -21,7 +21,7 @@
     </div>
 
     <div class="col-sm-2 daycare-edit-field">
-      <%= f.text_field :age_to, class: 'form-control program-age-field' %>
+      <%= f.text_field :age_to, id: "program-edit-age-to#{@program.id}", class: 'form-control program-age-field' %>
     </div>
 
     <div class="col-sm-3 daycare-edit-field">
@@ -30,7 +30,7 @@
 
     <%= f.label :description, class: 'control-label col-lg-1' %>
     <div class="col-lg-11 daycare-edit-field">
-      <%= f.text_area :description, class: 'form-control', required: true, rows: "5" %>
+      <%= f.text_area :description, id: "program-edit-description#{@program.id}", class: 'form-control', required: true, rows: "5" %>
     </div>
 
     <%= f.label "Are there openings?", class: 'col-md-3' %>
@@ -53,10 +53,18 @@
     </div>
 
     <div class="col-md-12">
+      <% if @wizard %>
+        <div class="buttons-wizard">
+          <%= f.submit "Submit", class:'btn btn-primary btn-submit' %>
+          <%= link_to 'Next Step', wizard_teacher_user_daycare_path(current_user, current_user.daycare), class: 'btn btn-primary btn-edit' %>
+          <%= link_to 'Back', wizard_image_user_daycare_path(current_user, current_user.daycare), class: 'btn btn-primary btn-edit' %>
+        </div>
+      <% else %>
         <%= f.submit "Submit", class:'btn btn-primary btn-submit' %>
         <% if @program.name != nil %>
           <button type="button" class="btn btn-primary btn-cancel" data-dismiss="modal">Cancel</button>
         <% end %>
+      <% end %>
     </div>
 
   </div>

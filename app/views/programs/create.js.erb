@@ -1,6 +1,9 @@
 $('#program-add-edit-glyph').html('<%= j render 'programs/add_edit_glyph' %>');
 $('#program-edit-list').html('<%= j render 'programs/program_list' %>');
-$('#program-edit-form').html('<%= j render 'programs/form' %>');
+$('#program-edit-name<%= @program.id %>').val("");
+$('#program-edit-age-from<%= @program.id %>').val("");
+$('#program-edit-age-to<%= @program.id %>').val("");
+$('#program-edit-description<%= @program.id %>').val("");
 
 $('#programList').sortable({
     axis: 'y',
