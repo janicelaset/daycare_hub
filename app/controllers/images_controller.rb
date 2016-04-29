@@ -1,6 +1,7 @@
 class ImagesController < ApplicationController
   before_action :find_daycare
   before_action :find_user, only: [:create, :update]
+  before_action :init_state
 
   def index
     if @daycare.images.any?
@@ -87,6 +88,7 @@ class ImagesController < ApplicationController
   end
 
   def wizard
+    @wizard = true
     @daycare = Daycare.find_by_url(params[:id])
     @images = @daycare.images
     @image = Image.new
@@ -108,5 +110,9 @@ class ImagesController < ApplicationController
 
   def find_user
     @user = @daycare.user
+  end
+
+  def init_state
+    @wizard = false
   end
 end
