@@ -1,6 +1,7 @@
 class CertificationsController < ApplicationController
   before_action :find_daycare
   before_action :find_user, only: [:create, :update]
+  before_action :init_state
 
   def create
     if cert_params.has_key? :name
@@ -76,6 +77,7 @@ class CertificationsController < ApplicationController
   end
 
   def wizard
+    @wizard = true
     @daycare = Daycare.find_by_url(params[:id])
     @certifications = @daycare.certifications
     @certification = Certification.new
@@ -97,5 +99,9 @@ class CertificationsController < ApplicationController
 
   def find_user
     @user = @daycare.user
+  end
+
+  def init_state
+    @wizard = false
   end
 end
