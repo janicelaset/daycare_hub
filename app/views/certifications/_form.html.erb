@@ -7,16 +7,11 @@
     </div>
 
     <div class="col-lg-12">
-    <%= f.label :name, class: 'control-label col-lg-1' %>
-    <div class="col-lg-11 daycare-edit-field">
-      <%= f.text_field :name, id: "certification-edit-name", class: 'form-control', required: true, placeholder: "Enter the name of the certification" %>
+      <%= f.label :name, class: 'control-label col-lg-1' %>
+      <div class="col-lg-11 daycare-edit-field">
+        <%= f.text_field :name, id: "certification-edit-name", class: 'form-control', required: true, placeholder: "Enter the name of the certification" %>
+      </div>
     </div>
-  </div>
-
-    <!-- <%= f.label :link, class: 'control-label col-lg-1' %>
-    <div class="col-lg-11 daycare-edit-field">
-      <%= f.text_field :link, id: "certification-edit-link#{@certification.id}", class: 'form-control certification-edit-link', placeholder: "Enter the URL for the organization or a link to your certification if it is available online" %>
-    </div> -->
 
     <div class="col-lg-12">
       <%= f.label :description, class: 'control-label col-lg-1' %>
@@ -24,13 +19,6 @@
         <%= f.text_area :description, class: 'form-control', rows: "5", id: "certification-edit-desc", placeholder: 'Add a short description of the organization and what the certification means' %>
       </div>
     </div>
-
-    <!-- <div class="col-md-12 daycare-edit-field">
-      <span class="btn btn-info btn-file">
-        Select Image<%= f.file_field :image, class: "btn-block", id: "btn-select-image", onchange: '$("#certification-upload-file-info").html($(this).val());' %>
-      </span>
-      <span class='label label-default label-image-upload' id="certification-upload-file-info"></span>
-    </div> -->
 
     <div class="col-md-12">
       <% if @wizard %>
