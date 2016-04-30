@@ -4,6 +4,7 @@ class DaycaresController < ApplicationController
   before_action :init_state
 
   def show
+    @profile_page = true
     if @daycare.address.nil?  #if user has not added contact information
       @address = Address.new
     else
@@ -83,6 +84,7 @@ class DaycaresController < ApplicationController
   end
 
   def edit
+    @edit_page = true
     if @daycare.contact.nil? #if user has not added contact information
       @contact = Contact.new
     else
@@ -191,6 +193,8 @@ class DaycaresController < ApplicationController
   end
 
   def init_state
+    @edit_page = false
+    @profile_page = false
     @wizard = false
   end
 end
