@@ -26,7 +26,7 @@
             </li>
           <% end %>
           <li>
-            <%= link_to 'I Have Questions', user_daycare_path(current_user, current_user.daycare) %>
+            <%= link_to 'I Have Questions', new_feedback_form_path %>
           </li>
           <% if current_user.daycare == nil %>
             <li><%= link_to "Add Daycare", new_user_daycare_path(current_user) %></li>

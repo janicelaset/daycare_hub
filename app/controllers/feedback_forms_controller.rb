@@ -1,6 +1,15 @@
 class FeedbackFormsController < ApplicationController
 before_action :find_daycare
 
+def new
+  @feedback_form = FeedbackForm.new
+  
+  respond_to do |format|
+    format.html
+    format.js
+  end
+end
+
 def create
   @feedback_form = FeedbackForm.new(feedback_form_params)
   @feedback_form.request = request

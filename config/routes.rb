@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: "user_registrations" }
 
-  resources :feedback_forms, only: [:create]
+  resources :feedback_forms, only: [:new, :create]
 
   resources :users do
     get 'users/registration-instructions' => 'users#instructions', as: 'registration_instructions'
