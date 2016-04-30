@@ -1,6 +1,7 @@
 class TeachersController < ApplicationController
   before_action :find_daycare, except: [:destroy]
   before_action :find_user, only: [:create, :update]
+  before_action :init_state
 
   def create
     @teacher = Teacher.new(teacher_params)
@@ -60,6 +61,7 @@ class TeachersController < ApplicationController
   end
 
   def wizard
+    @wizard = true
     @daycare = Daycare.find_by_url(params[:id])
     @teachers = @daycare.teachers
     @teacher = Teacher.new
@@ -81,5 +83,9 @@ class TeachersController < ApplicationController
 
   def find_user
     @user = @daycare.user
+  end
+
+  def init_state
+    @wizard = false
   end
 end
