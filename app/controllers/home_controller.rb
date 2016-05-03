@@ -60,7 +60,14 @@ class HomeController < ApplicationController
       format.html
       format.js
     end
-
   end
 
+  def about
+  end
+
+  def parent
+  end
+
+  def daycare
+  end
 end

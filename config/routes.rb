@@ -100,10 +100,11 @@ Rails.application.routes.draw do
   #   end
   # end
 
+  get '/about' => 'home#about', as: 'about'
+  get '/daycare' => 'home#daycare', as: 'for_daycares'
+  get '/parent' => 'home#parent', as: 'for_parents'
   get '/search-results' => 'home#show', as: 'search_results'
-
   get '/yourdaycare' => 'demos#show', as: 'demo'
-
   get '/:id' => 'daycares#show', as: 'daycare_profile'
 
 
