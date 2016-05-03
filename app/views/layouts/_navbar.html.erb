@@ -39,7 +39,7 @@
               <%= link_to 'Edit My Page', edit_user_daycare_path(current_user, current_user.daycare) %>
             </li>
           <% end %>
-          <% if current_user.daycare == nil %>
+          <% if current_user.daycare == nil && (@edit_page || @profile_page) %>
             <li><%= link_to "Add Daycare", new_user_daycare_path(current_user) %></li>
           <% end %>
           <li class="dropdown">
@@ -62,7 +62,6 @@
             </ul>
           </li>
         <% else %>
-          <li><%= link_to "Add Your Daycare", new_user_registration_path %></li>
           <li><%= link_to "Sign In", new_user_session_path %></li>
         <% end %>
       </ul>
