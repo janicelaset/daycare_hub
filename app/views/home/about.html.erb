@@ -8,7 +8,7 @@
         <p>
 
         <h3 class="tagline">
-          He was my daughter's favorite toy when she was a baby.<br>
+          <br>He was my daughter's favorite toy when she was a baby.<br>
           He helped take care of her, and it's only fair that he gets his own website.
         </h3>
       </p>
@@ -21,35 +21,14 @@
 <section id="section-services" class="section pad-bot30 bg-white">
 	<div class="container">
 		<div class="row mar-bot40">
-			<div class="col-md-4" >
-				<div class="align-center">
-					<img src="<%= asset_path('parents.png') %>" alt="parents">
-					<h4 class="text-bold">Parents</h4>
-					<p>
-						Finding care for your child can be extremely stressful. We make it easier by providing a dedicated place where you can find a daycare and get the information relevant to you.
-					</p>
-				</div>
-			</div>
-			<div class="col-md-4" >
-				<div class="align-center">
-					<img src="<%= asset_path('daycares.png') %>" alt="daycares">
-					<h4 class="text-bold">Daycares</h4>
-					<p>Connecting with families is as easy as creating a profile. You can create a free website without the hassle.
-          <%= link_to "Sign up ", new_user_registration_path %>
-          now and be part of a network where parents can reach out to you.
-					</p>
-				</div>
-			</div>
-			<div class="col-md-4" >
-				<div class="align-center">
-					<img src="<%= asset_path('feedback.png') %>" alt="...">
-					<h4 class="text-bold">Feedback</h4>
-					<p>
-						Our goal is to make this service as helpful as possible. If there is anything that can make it better for you, please let us know. Your feedback is extremely important.
-					</p>
-          <p><a href="#section-contact">Send us your feedback</a></p>
-				</div>
-			</div>
+      <div class="col-md-8 col-md-offset-2">
+  			<p>
+  				For now, the "We" in Beebsy is just me. I'm a mom. When my family moved to Portland, I had the hardest time finding a daycare for my daughter. I couldn't believe how scattered all the resources were.
+        </p>
+        <p>
+          I also found that a lot of daycares either didn't have a website or had outdated ones. Nowadays, a business doesn't exist unless they have a website. 
+  			</p>
+      </div>
 		</div>
 	</div>
 </section>
@@ -70,18 +49,3 @@
 	speed : 0.3
 	});
 </script>
-	<script src="<%= asset_path('js/modernizr-2.6.2-respond-1.1.0.min.js') %>"></script>
-
-	<script src="<%= asset_path('js/jquery.easing.1.3.js') %>"></script>
-	<script src="<%= asset_path('js/jquery.isotope.min.js') %>"></script>
-	<script src="<%= asset_path('js/jquery.nicescroll.min.js') %>"></script>
-	<script src="<%= asset_path('js/fancybox/jquery.fancybox.pack.js') %>"></script>
-	<script src="<%= asset_path('js/skrollr.min.js') %>"></script>
-	<script src="<%= asset_path('js/jquery.scrollTo-1.4.3.1-min.js') %>"></script>
-	<script src="<%= asset_path('js/jquery.localscroll-1.2.7-min.js') %>"></script>
-	<script src="<%= asset_path('js/stellar.js') %>"></script>
-	<script src="<%= asset_path('js/jquery.appear.js') %>"></script>
-
-	<script src="<%= asset_path('js/main.js') %>"></script>
-
-	  <script  src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=drawing,places&callback=autoComplete"></script>
