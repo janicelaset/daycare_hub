@@ -4,8 +4,9 @@ class NewUserMailer < Devise::Mailer
   default template_path: 'devise/mailer' # to make sure that your mailer uses the devise views
 
   def confirmation_instructions(record, token, opts={})
-    opts[:from] = 'Welcome@beebsy.com'
-    opts[:bcc] = 'janicelaset@gmail.com'
+    opts[:from] = 'janice@beebsy.com'
+    opts[:bcc] = 'janice@beebsy.com'
+    opts[:subject] = 'Thanks for joining Beebsy!'
   super
 end
 end

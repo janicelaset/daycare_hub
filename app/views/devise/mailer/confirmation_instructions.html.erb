@@ -4,12 +4,15 @@
   Thanks so much for joining Beebsy! My name is Janice. I'm a mom, and I created Beebsy so I can help daycares and parents connect with each other. When you add your information, you'll get a web page that parents can view when they search for daycares in their area. The goal is to make it easier for parents to find you and learn more about your daycare.
 </p>
 <p>
-  Beebsy isn't my full time job, but I work on it on weekdays in between spending time with my family and my regular 8-5 (which usually falls between the time I wake up and when my daughter wakes up). If you have any questions or suggestions, or if there are improvements you'd like added, feel free to leave me a message at <a href="https://beebsy.com#contact">here</a> or email me directly at janice@beebsy.com. 
+  Beebsy isn't my full time job, but I work on it on weekdays in between spending time with my family and my regular 8-5 (which usually falls between the time I wake up and when my daughter wakes up). If you have any questions or suggestions, or if there are improvements you'd like added, feel free to leave me a message at <a href="https://beebsy.com#contact">here</a> or email me directly at janice@beebsy.com.
 </p>
 <%
 confirm_url = confirmation_url(@resource, confirmation_token: @token)
 confirm_url.sub!('www', '')
 %>
+<p>
+  Please spread the word and help make Beebsy the go to site for daycares!
+</p>
 <p>
   <%= link_to 'Click here', confirm_url %> when you're ready to confirm your account and sign in.
 </p>
