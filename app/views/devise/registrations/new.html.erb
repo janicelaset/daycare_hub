@@ -3,6 +3,15 @@
   <h2>Sign up</h2>
 
   <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, autofocus: true, class: "form-control" %>
+  </div>
+  <div class="field">
     <%= f.label :user_name %><br />
     <%= f.text_field :user_name, autofocus: true, class: "form-control" %>
   </div>
