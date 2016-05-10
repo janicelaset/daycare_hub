@@ -8,7 +8,7 @@
 </p>
 <%
 confirm_url = confirmation_url(@resource, confirmation_token: @token)
-confirm_url.sub!('www', '')
+confirm_url.sub!('www.', '')
 %>
 <p>
   Please spread the word and help make Beebsy the go to site for daycares!
