@@ -5,11 +5,13 @@ Rails.application.routes.draw do
   root 'home#index'
 
   devise_for :users, controllers: { registrations: "user_registrations" }
+  devise_for :users, controllers: { passwords: "user_passwords" }, only: [:notification]
 
   resources :feedback_forms, only: [:new, :create]
 
   resources :users do
     get 'users/registration-instructions' => 'users#instructions', as: 'registration_instructions'
+    get 'users/password-reset' => 'user_passwords#notification', as: 'password_reset'
     resources :daycares do
       member { get '/wizard/name'  => 'daycares#wizard' }
       member { get '/wizard/address'  => 'addresses#wizard' }
