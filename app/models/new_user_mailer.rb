@@ -11,15 +11,17 @@ class NewUserMailer < Devise::Mailer
     super
   end
 
-  def reset_password_instructions
+  def reset_password_instructions(record, token, opts={})
     opts[:from] = %("Beebsy" <no-reply@beebsy.com>)
     opts[:subject] = 'Reset Your Password'
     opts[:reply_to] = 'no-reply@beebsy.com'
+    super
   end
 
-  def unlock_instructions
+  def unlock_instructions(record, token, opts={})
     opts[:from] = %("Beebsy" <no-reply@beebsy.com>)
     opts[:subject] = 'Unlock Your Account'
     opts[:reply_to] = 'no-reply@beebsy.com'
+    super
   end
 end
