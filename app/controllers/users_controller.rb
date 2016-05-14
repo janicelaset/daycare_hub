@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  def instructions
+  def reg_instructions
     user = User.find(params[:user_id])
     @email = user.email
   end

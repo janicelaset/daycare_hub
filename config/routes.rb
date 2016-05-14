@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :feedback_forms, only: [:new, :create]
 
   resources :users do
-    get 'users/registration-instructions' => 'users#instructions', as: 'registration_instructions'
+    get 'users/registration-instructions' => 'users#reg_instructions', as: 'registration_instructions'
     get 'users/password-reset' => 'users#password_reset', as: 'password_reset_instructions'
     resources :daycares do
       member { get '/wizard/name'  => 'daycares#wizard' }
