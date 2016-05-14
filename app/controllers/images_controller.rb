@@ -30,14 +30,14 @@ class ImagesController < ApplicationController
     #   @wizard = true
     # end
 
-    # binding.pry
+    #create new image to display create image form so users can add more images
+    @image = Image.new
+    
     respond_to do |format|
       format.html
       format.js
     end
 
-    #create new image to display create image form so users can add more images
-    @image = Image.new
   end
 
   def edit
