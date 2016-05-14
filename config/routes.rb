@@ -4,12 +4,13 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'home#index'
 
-  devise_for :users, controllers: { registrations: "user_registrations" }
+  devise_for :users, controllers: { registrations: "user_registrations", passwords: "user_passwords" }
 
   resources :feedback_forms, only: [:new, :create]
 
   resources :users do
-    get 'users/registration-instructions' => 'users#instructions', as: 'registration_instructions'
+    get 'users/registration-instructions' => 'users#reg_instructions', as: 'registration_instructions'
+    get 'users/password-reset' => 'users#password_reset', as: 'password_reset_instructions'
     resources :daycares do
       member { get '/wizard/name'  => 'daycares#wizard' }
       member { get '/wizard/address'  => 'addresses#wizard' }
