@@ -12,9 +12,11 @@
   <link href='https://fonts.googleapis.com/css?family=Delius+Unicase:700|Gorditas:700' rel='stylesheet' type='text/css'>
 
   <%= csrf_meta_tags %>
+  <%= render partial: "partials/google_analytics" %>
 </head>
 <body>
   <%= render 'layouts/navbar' %>
-    <%= yield %>
+  <%= yield %>
+  <%= render partial: "partials/google_analytics_pageview" %>  
 </body>
 </html>
