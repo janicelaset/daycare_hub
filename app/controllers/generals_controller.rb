@@ -51,7 +51,7 @@ class GeneralsController < ApplicationController
 
 private
   def general_params
-    params.require(:general).permit(:license, :type_of_daycare, :year_opened, :mon_open, :tues_open, :wed_open, :thurs_open, :fri_open, :sat_open, :sun_open, :mon_close, :tues_close, :wed_close, :thurs_close, :fri_close, :sat_close, :sun_close)
+    params.require(:general).permit(:license, :type_of_daycare, :website, :hours)
   end
 
   def find_daycare
