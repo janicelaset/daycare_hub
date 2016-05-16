@@ -1,0 +1,8 @@
+<% if @general.id != nil %>
+  <% if !@general.website.empty? %>
+    <p><a href="http://<%= @general.website %>" target=blank><%= @daycare.name %></a></p>
+  <% end %>
+  <% if !@general.hours.empty? %>
+    <p>M-F Hours: <%= @general.hours %></p>
+  <% end %>
+<% end %>

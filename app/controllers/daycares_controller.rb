@@ -13,6 +13,12 @@ class DaycaresController < ApplicationController
       @listing_json = @daycare.listing.to_json
     end
 
+    if @daycare.general.nil?
+      @general = General.new
+    else
+      @general = @daycare.general
+    end
+
     if @daycare.contact.nil?  #if user has not added contact information
       @contact = Contact.new
     else
