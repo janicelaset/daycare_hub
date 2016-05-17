@@ -24,9 +24,6 @@ class HomeController < ApplicationController
 #     generals = generals.select{ |general| general.type_of_daycare == 'center' }
 # binding.pry
 
-    @images = []
-    @daycares = []
-
     @destination = Listing.where(state: address_split[2])
     @destination.each do |listing|
       if listing.daycare_id?

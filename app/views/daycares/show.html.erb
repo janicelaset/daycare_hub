@@ -20,8 +20,10 @@
           <% end %>
           <% if @daycare.additionals.any? %>
             <li><a href="#section-additional">More Info</a></li>
-            <% end %>
+          <% end %>
+          <% if !@daycare.contact.nil? %>
           <li><a href="#section-contact">Contact</a></li>
+          <% end %>
         </ul>
       </div><!--/.navbar-collapse -->
     </div>

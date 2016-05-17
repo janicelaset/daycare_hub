@@ -43,7 +43,7 @@ class ContactsController < ApplicationController
 
   def wizard
     @wizard = true
-    
+
     @daycare = Daycare.find_by_url(params[:id])
 
     if @daycare.contact.nil?  #if user has not added contact information

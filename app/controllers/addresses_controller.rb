@@ -45,7 +45,7 @@ class AddressesController < ApplicationController
 
   def wizard
     @wizard = true
-    
+
     @daycare = Daycare.find_by_url(params[:id])
 
     if @daycare.address.nil?  #if user has not added address information
