@@ -45,8 +45,10 @@
 				</div>
 			</div>
 		</div>
-    <div class="align-center">
-      <%= link_to "SIGN ME UP", new_user_registration_path, class: 'btn btn-lg btn-primary' %>
-    </div>
+		<% if !current_user %>
+	    <div class="align-center">
+	      <%= link_to "SIGN ME UP", new_user_registration_path, class: 'btn btn-lg btn-primary' %>
+	    </div>
+		<% end %>
 	</div>
 </section>

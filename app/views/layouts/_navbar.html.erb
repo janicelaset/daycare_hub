@@ -16,15 +16,15 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <% if !@edit_page && !@profile_page %>
-        <li>
-          <%= link_to 'About', about_path %>
-        </li>
-        <!-- <li>
-          <%= link_to 'Parents', for_parents_path %>
-        </li> -->
-        <li>
-          <%= link_to 'Daycares', for_daycares_path %>
-        </li>
+          <li>
+            <%= link_to 'About', about_path %>
+          </li>
+          <!-- <li>
+            <%= link_to 'Parents', for_parents_path %>
+          </li> -->
+          <li>
+            <%= link_to 'Daycares', for_daycares_path %>
+          </li>
         <% end %>
         <% if user_signed_in? %>
           <% if @edit_page %>
@@ -52,12 +52,18 @@
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
-              <% if current_user.daycare != nil %>
+              <% if current_user.daycare.nil? %>
+                <li><%= link_to "Edit Daycare", new_user_daycare_path(current_user) %></li>
+              <% elsif current_user.daycare.address.nil? %>
+                <li><%= link_to "Edit Daycare", new_daycare_address_path(current_user.daycare) %></li>
+              <% elsif current_user.daycare.contact.nil? %>
+                <li><%= link_to "Edit Daycare", new_daycare_contact_path(current_user.daycare) %></li>
+              <% else %>
                 <li><%= link_to "View Daycare", user_daycare_path(current_user, current_user.daycare), id: 'menu-view-daycare' %></li>
                 <li><%= link_to "Edit Daycare", edit_user_daycare_path(current_user, current_user.daycare), id: 'menu-edit-daycare' %></li>
-                <li><%= link_to 'User Settings', edit_user_registration_path, id: 'menu-profile' %></li>
               <% end %>
-                <li role="separator" class="divider"></li>
+              <li><%= link_to 'User Settings', edit_user_registration_path, id: 'menu-profile' %></li>
+              <li role="separator" class="divider"></li>
               <li><%= link_to "Sign Out", destroy_user_session_path, id: 'menu-signout', method: 'delete' %></li>
             </ul>
           </li>

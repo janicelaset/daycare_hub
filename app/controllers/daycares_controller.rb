@@ -91,6 +91,7 @@ class DaycaresController < ApplicationController
 
   def edit
     @edit_page = true
+
     if @daycare.contact.nil? #if user has not added contact information
       @contact = Contact.new
     else
