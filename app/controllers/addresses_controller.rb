@@ -17,6 +17,13 @@ class AddressesController < ApplicationController
     @address.daycare = @daycare
 
     @address.save
+
+    if @address.errors.any? == false
+      @listing = Listing.new(address_params)
+      @listing.daycare = @daycare
+      @listing.save
+    end
+
     respond_to do |format|
       if @address.errors.any?
         format.html { render :wizard }
@@ -32,6 +39,11 @@ class AddressesController < ApplicationController
     @address = Address.find(params[:id])
 
     @address.update(address_params)
+
+    if @address.errors.any? == false
+      listing = Listing.where(daycare_id: @address.daycare.id).first
+      listing.update(address_params)
+    end
 
     respond_to do |format|
       if @address.errors.any?

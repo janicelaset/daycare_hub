@@ -24,20 +24,20 @@ class HomeController < ApplicationController
 #     generals = generals.select{ |general| general.type_of_daycare == 'center' }
 # binding.pry
 
-    @destination = Listing.where(state: address_split[2])
-    @destination.each do |listing|
-      if listing.daycare_id?
-        daycare = Daycare.find(listing.daycare_id)
-        if daycare.images.any?
-          image = daycare.images.first.image_url
-        else
-          image = nil
-        end
-      else
-        image = nil
-      end
-      @images.push(image)
-    end
+    # @destination = Listing.where(state: address_split[2])
+    # @destination.each do |listing|
+    #   if listing.daycare_id?
+    #     daycare = Daycare.find(listing.daycare_id)
+    #     if daycare.images.any?
+    #       image = daycare.images.first.image_url
+    #     else
+    #       image = nil
+    #     end
+    #   else
+    #     image = nil
+    #   end
+    #   @images.push(image)
+    # end
 
     @listings = Listing.near(@address, @radius)
 
@@ -50,7 +50,8 @@ class HomeController < ApplicationController
         end
       end
     end
-
+    binding.pry
+    # @listings = []
     @listings = @listings.to_json
 
     respond_to do |format|

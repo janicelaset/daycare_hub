@@ -1,10 +1,11 @@
 class Address < ActiveRecord::Base
   # attr_accessible :street, :city, :state, :zip, :latitude, :longitude
   attr_reader :full_address
+
   belongs_to :daycare
 
   geocoded_by :full_address
-  
+
   after_validation :geocode
 
   validates :street, :presence => true

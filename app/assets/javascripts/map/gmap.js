@@ -15,6 +15,7 @@ function autoComplete() {
 }
 
 function displayOriginMarker(map, origin) {
+
   var geocoder = new google.maps.Geocoder;
 
   var originIcon = 'https://chart.googleapis.com/chart?' +
