@@ -50,7 +50,7 @@ class HomeController < ApplicationController
         end
       end
     end
-    binding.pry
+
     # @listings = []
     @listings = @listings.to_json
 
