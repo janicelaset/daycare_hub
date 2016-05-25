@@ -14,7 +14,7 @@ function autoComplete() {
   autocomplete.addListener('place_changed', autocomplete.getPlace());
 }
 
-function displayOriginMarker(map, origin) {
+function displayOriginMarker(map, origin, bounds) {
 
   var geocoder = new google.maps.Geocoder;
 
@@ -30,6 +30,7 @@ function displayOriginMarker(map, origin) {
           position: results[0].geometry.location,
           icon: originIcon,
         });
+        map.fitBounds(bounds.extend(marker.getPosition()));
       } else {
         alert('We weren\'t able to find any daycares near the address you entered.');
       }
@@ -49,13 +50,14 @@ function displaySearchResults(origin, radius, listings) {
     zoom: 4
   });
 
-  displayOriginMarker(map, origin);
-
   $('#search-results-count').append(
     "There are " + listings.length + " daycares " + radius + " miles from your address."
   );
 
   var bounds = new google.maps.LatLngBounds();
+
+  displayOriginMarker(map, origin, bounds);
+
   for (var i = 0; i < listings.length; i++) {
     // info window content
     distance_rounded = listings[i].distance.toFixed(1);
