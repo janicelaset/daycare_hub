@@ -80,8 +80,11 @@ class DaycaresController < ApplicationController
     @daycare = Daycare.new(daycare_params)
     @user = User.find(params[:user_id])
     @daycare.user = @user
-
     @daycare.save
+
+    @listing = Listing.new(name: @daycare.name)
+    @listing.daycare = @daycare
+    @listing.save
 
     respond_to do |format|
       format.html
@@ -165,6 +168,10 @@ class DaycaresController < ApplicationController
     url_original = @daycare.url
 
     @daycare.update(daycare_params)
+
+    listing = Listing.where(daycare_id: @daycare.id).first
+    listing.update(name: daycare_params["name"])
+    listing.save
 
     if @daycare.errors.any?
       if @daycare.errors.messages[:url] != nil

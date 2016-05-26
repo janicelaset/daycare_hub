@@ -19,9 +19,9 @@ class AddressesController < ApplicationController
     @address.save
 
     if @address.errors.any? == false
-      @listing = Listing.new(address_params)
-      @listing.daycare = @daycare
-      @listing.save
+      listing = Listing.find(@address.daycare.id)
+      listing.update(address_params)
+      listing.save
     end
 
     respond_to do |format|
