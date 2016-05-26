@@ -132,7 +132,6 @@ function displayDaycareAddressMap (address) {
 
   var marker = new google.maps.Marker({
     map: map,
-    animation: google.maps.Animation.DROP,
     position: lat_long,
   });
 }

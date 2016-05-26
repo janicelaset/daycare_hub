@@ -10,8 +10,6 @@ class DaycaresController < ApplicationController
     else
       @address = @daycare.address
       @address_json = @address.to_json
-      # @listing = @daycare.listing
-      # @listing_json = @daycare.listing.to_json
     end
 
     if @daycare.general.nil?
@@ -205,6 +203,10 @@ class DaycaresController < ApplicationController
 
   def find_daycare
     @daycare = Daycare.find_by_url(params[:id])
+
+    if @daycare.nil?
+      @daycare = Daycare.find(params[:id])
+    end
   end
 
   def init_state
