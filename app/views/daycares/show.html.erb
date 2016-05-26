@@ -65,11 +65,11 @@
         <%= render 'generals/profile_generals' %>
       </div>
       <div class="col-md-9">
-        <% if !@listing.nil? %>
+        <% if @address.id != nil %>
           <div id="daycare-map-container">
             <div id="daycare-map"></div>
           </div>
-          <script>displayDaycareAddressMap("<%= @listing_json %>");</script>
+          <script>displayDaycareAddressMap("<%= @address_json %>");</script>
         <% end %>
       </div>
     </div>

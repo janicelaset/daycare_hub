@@ -120,10 +120,10 @@ function addMarker(map, lat_long, info_window_content) {
   });
 }
 
-function displayDaycareAddressMap (listing) {
-  listing = listing.replace(/&quot;/g, '"');
-  listing = JSON.parse(listing);
-  lat_long = {lat: listing.latitude, lng: listing.longitude};
+function displayDaycareAddressMap (address) {
+  address = address.replace(/&quot;/g, '"');
+  address = JSON.parse(address);
+  lat_long = {lat: address.latitude, lng: address.longitude};
 
   var map = new google.maps.Map(document.getElementById('daycare-map'), {
     center: lat_long,

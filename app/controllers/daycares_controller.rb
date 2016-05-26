@@ -9,8 +9,9 @@ class DaycaresController < ApplicationController
       @address = Address.new
     else
       @address = @daycare.address
-      @listing = @daycare.listing
-      @listing_json = @daycare.listing.to_json
+      @address_json = @address.to_json
+      # @listing = @daycare.listing
+      # @listing_json = @daycare.listing.to_json
     end
 
     if @daycare.general.nil?
