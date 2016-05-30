@@ -13,10 +13,11 @@
 
   <%= csrf_meta_tags %>
   <%= render partial: "partials/google_analytics" %>
+  <%= render partial: "partials/google_maps" %>
 </head>
 <body>
   <%= render 'layouts/navbar' %>
   <%= yield %>
-  <%= render partial: "partials/google_analytics_pageview" %>  
+  <%= render partial: "partials/google_analytics_pageview" %>
 </body>
 </html>
