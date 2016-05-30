@@ -121,6 +121,7 @@ function addMarker(map, lat_long, info_window_content) {
 }
 
 function displayDaycareAddressMap (address) {
+  console.log("display map");
   address = address.replace(/&quot;/g, '"');
   address = JSON.parse(address);
   lat_long = {lat: address.latitude, lng: address.longitude};
@@ -134,4 +135,8 @@ function displayDaycareAddressMap (address) {
     map: map,
     position: lat_long,
   });
+}
+
+function testScript() {
+  console.log("test script");
 }

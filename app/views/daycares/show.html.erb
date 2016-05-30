@@ -54,7 +54,7 @@
 <%= render 'additionals/profile_additionals' %>
 
 <!-- map -->
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
 
 <section id="section-map" class="clearfix pad-bot30">
   <div class="container">
@@ -69,7 +69,13 @@
           <div id="daycare-map-container">
             <div id="daycare-map"></div>
           </div>
-          <script>displayDaycareAddressMap("<%= @address_json %>");</script>
+
+          <script src="https://maps.googleapis.com/maps/api/js?v=3.exp">
+          </script>
+          <script>
+            displayDaycareAddressMap("<%= @address_json %>");
+          </script>
+
         <% end %>
       </div>
     </div>
