@@ -1,6 +1,7 @@
 $('#image-add-list').html('<%= j render 'images/image_list' %>');
 $('#image-edit-desc<%= @image.id %>').val("");
 $('#image-upload-file-info<%= @image.id%>').html("");
+$('#image-add-edit-glyph').html('<%= j render 'images/add_edit_glyph' %>')
 
 $('#imageList').sortable({
     axis: 'y',
