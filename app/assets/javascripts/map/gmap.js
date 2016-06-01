@@ -51,7 +51,7 @@ function displaySearchResults(origin, radius, listings) {
   });
 
   $('#search-results-count').append(
-    "There are " + listings.length + " daycares " + radius + " miles from your address."
+    "We found " + listings.length + " daycares " + radius + " miles from your address."
   );
 
   var bounds = new google.maps.LatLngBounds();

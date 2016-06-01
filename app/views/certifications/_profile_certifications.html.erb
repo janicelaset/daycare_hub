@@ -20,10 +20,13 @@
               <div class="cert-container">
                 <% if certification.image_file_name == nil %>
                   <div class="img-cert" style="background-image:url(<%= asset_path('cert.png') %>)">
+                  </div>
                 <% else %>
-                  <div class="img-cert" style="background-image:url(<%= certification.image.url(:small) %>)">
+                  <a href="http://<%= certification.link %>" target="blank">
+                    <div class="img-cert" style="background-image:url(<%= certification.image.url(:small) %>)">
+                    </div>
+                  </a>
                 <% end %>
-                </div>
               </div>
               <h4 class="text-bold"><%= certification.name %></h4>
               <p>

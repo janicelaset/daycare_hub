@@ -6,9 +6,6 @@
           <span id="panel-name-certification-<%= certification.id %>">
             <%= certification.name %>
           </span>
-          <!-- <%= link_to edit_daycare_certification_path(@daycare, certification), id: "certification-edit-#{certification.id}", remote:true do %>
-            <span><i class="glyphicon glyphicon-pencil pull-right"data-toggle="tooltip" data-placement="top" title="Edit"></i></span>
-          <% end %> -->
           <%= link_to daycare_certification_path(@daycare, certification), method: 'delete', data: { confirm: "Are you sure you want do delete #{certification.name}?" }, id: "certification-delete-#{certification.id}", remote:true do %>
             <span><i class="glyphicon glyphicon-trash pull-right"data-toggle="tooltip" data-placement="top" title="Delete"></i></span>
           <% end %>
@@ -17,15 +14,11 @@
         <div class="panel-body">
           <div class="media">
             <div class="media-left media-top" id="certification-image<%= certification.id %>">
-              <%= image_tag certification.image.url(:small) %>
+              <a href="http://<%= certification.link %>" target="blank"><%= image_tag certification.image.url(:small) %></a>
             </div>
             <div class="media-body">
               <h4 id="header-name-certification-<%= certification.id %>"><%= certification.name %></h4>
-              <a href="<%= certification.link %>">
-                <div id="certification-link-<%= certification.id %>">
-                  <%= certification.link %>
-                </div>
-              </a>
+
               <div id="certification-description-<%= certification.id %>">
                 <%= simple_format h certification.description %>
               </div>
