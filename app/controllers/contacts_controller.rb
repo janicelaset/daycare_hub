@@ -17,6 +17,13 @@ class ContactsController < ApplicationController
     @contact.daycare = @daycare
 
     @contact.save
+
+    if @contact.errors.any? == false
+      listing = Listing.find(@contact.daycare.id)
+      listing.phone = contact_params["phone"]
+      listing.save
+    end
+
     respond_to do |format|
       if @contact.errors.any?
         format.html { render :wizard }
@@ -31,6 +38,12 @@ class ContactsController < ApplicationController
     @contact = Contact.find(params[:id])
 
     @contact.update(contact_params)
+
+    if @contact.errors.any? == false
+      listing = Listing.where(daycare_id: @contact.daycare.id).first
+      listing.update(phone: contact_params["phone"])
+    end
+
     respond_to do |format|
       if @contact.errors.any?
         format.html { render :wizard }
