@@ -1,1 +1,5 @@
-window.location = "<%= j (new_daycare_address_path(@daycare)) %>"
+<% if @daycare.errors.messages.any? %>
+  $('#daycare-name-create').html('<%= j render 'daycares/form' %>')
+<% else %>
+  window.location = "<%= j (new_daycare_address_path(@daycare)) %>"
+<% end %>

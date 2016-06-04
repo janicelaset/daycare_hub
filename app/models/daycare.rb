@@ -16,7 +16,7 @@ class Daycare < ActiveRecord::Base
   validates :name, :presence => true, length: { maximum: 55 }
   validates :url, :presence => true, length: { maximum: 55 }
 
-  validates :url, uniqueness: {:message => " error: The URL you entered is already taken. Please try a different URL."}
+  validates :url, uniqueness: {:message => " error: The web page address you entered is already taken. Please try a different web address."}
   validates :url, format: { with: /\A[a-zA-Z0-9]+\Z/ }
 
   def to_param

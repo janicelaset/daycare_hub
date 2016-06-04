@@ -80,9 +80,13 @@ class DaycaresController < ApplicationController
     @daycare.user = @user
     @daycare.save
 
-    @listing = Listing.new(name: @daycare.name)
-    @listing.daycare = @daycare
-    @listing.save
+    if @daycare.errors.any? == false
+      binding.pry
+
+      @listing = Listing.new(name: @daycare.name)
+      @listing.daycare = @daycare
+      @listing.save
+    end
 
     respond_to do |format|
       format.html
