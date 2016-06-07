@@ -81,8 +81,6 @@ class DaycaresController < ApplicationController
     @daycare.save
 
     if @daycare.errors.any? == false
-      binding.pry
-
       @listing = Listing.new(name: @daycare.name)
       @listing.daycare = @daycare
       @listing.save
