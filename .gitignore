@@ -13,4 +13,3 @@
 /tmp
 /public/system
 .env
-/config/secrets.yml

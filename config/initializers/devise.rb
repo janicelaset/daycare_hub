@@ -264,5 +264,5 @@ Devise.setup do |config|
   config.reset_password_keys = [ :email ]
   config.confirmation_keys = [ :email ]
 
-  config.secret_key = '30b636446b1616ec3a6e67867c79ef3832819e27ac9b7a4c1343f7aaa8af41333ab658bafe229574d527acaf50d11fc29bff2e3856dcf823d321e2bf866c2242'
+  config.secret_key = ENV['DEVISE_SECRET_KEY']
 end
