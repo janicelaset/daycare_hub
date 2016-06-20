@@ -13,7 +13,9 @@
             Enter the name of your daycare and the URL you want to use for your web page.
           </p><br>
 
-          <%= render "form" %>
+          <div id="wizard-name-form">
+            <%= render "form" %>
+          </div>
         </li>
       </ul>
       <%= link_to 'Back to Edit Page', edit_user_daycare_path(current_user, current_user.daycare) %>

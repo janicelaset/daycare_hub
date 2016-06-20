@@ -178,9 +178,9 @@ class DaycaresController < ApplicationController
         @daycare.url = url_original
       end
     end
-
     respond_to do |format|
       if @daycare.errors.any?
+        @wizard = true
         format.html { render :wizard }
       else
         format.html { redirect_to wizard_address_user_daycare_path(@user, @daycare) }

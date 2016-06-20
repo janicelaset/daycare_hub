@@ -1,7 +1,16 @@
 
-<% if @daycare.errors.messages.any? %>
-  $('#daycare-name-form').html('<%= j render 'daycares/form' %>')
+<% if @wizard == true %>
+alert("wizard submit");
+  <% if @daycare.errors.messages.any? %>
+    $('#wizard-name-form').html('<%= j render 'daycares/form' %>')
+  <% else %>
+    window.location = "<%= j (wizard_name_user_daycare_path(@user, @daycare)) %>"
+  <% end %>
 <% else %>
-  $('#collapseName').collapse("hide");
-  window.location = "<%= j (edit_user_daycare_path(@user, @daycare)) %>"
+  <% if @daycare.errors.messages.any? %>
+    $('#daycare-name-form').html('<%= j render 'daycares/form' %>')
+  <% else %>
+    $('#collapseName').collapse("hide");
+    window.location = "<%= j (edit_user_daycare_path(@user, @daycare)) %>"
+  <% end %>
 <% end %>
