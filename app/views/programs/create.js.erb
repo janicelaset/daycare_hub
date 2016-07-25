@@ -1,10 +1,10 @@
-$('#program-add-edit-glyph').html('<%= j render 'programs/add_edit_glyph' %>');
 $('#program-edit-list').html('<%= j render 'programs/program_list' %>');
 $('#program-edit-name<%= @program.id %>').val("");
 $('#program-edit-age-from<%= @program.id %>').val("");
 $('#program-edit-age-to<%= @program.id %>').val("");
 $('#program-edit-description<%= @program.id %>').val("");
 $('#program-upload-file-info').html("");
+$('#program-add-edit-glyph').html('<%= j render 'programs/add_edit_glyph' %>');
 
 $('#programList').sortable({
     axis: 'y',

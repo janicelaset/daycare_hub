@@ -1,5 +1,5 @@
 class AdditionalsController < ApplicationController
-  before_action :find_daycare, except: [:destroy]
+  before_action :find_daycare
   before_action :find_user, only: [:create, :update]
   before_action :init_state
 
@@ -45,6 +45,12 @@ class AdditionalsController < ApplicationController
   def destroy
     @additional = Additional.find(params[:id])
     @additional.destroy
+
+    if @daycare.additionals.any?
+      @additionals = @daycare.additionals.order("position")
+    else
+      @additionals = []
+    end
   end
 
   def move

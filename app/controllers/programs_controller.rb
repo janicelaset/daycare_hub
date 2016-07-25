@@ -1,5 +1,5 @@
 class ProgramsController < ApplicationController
-  before_action :find_daycare, except: [:destroy]
+  before_action :find_daycare
   before_action :find_user, only: [:create, :update]
   before_action :init_state
 
@@ -41,6 +41,12 @@ class ProgramsController < ApplicationController
   def destroy
     @program = Program.find(params[:id])
     @program.destroy
+
+    if @daycare.programs.any?
+      @programs = @daycare.programs.order("position")
+    else
+      @programs = []
+    end
   end
 
   def move
@@ -52,7 +58,7 @@ class ProgramsController < ApplicationController
     #re-rendering programs_list template to make sure edit form belongs
     #with same panel after sorting
     #need to change code to re-order nodes but this will work for now
-    @programs = @daycare.programs.order("position")
+    # @programs = @daycare.programs.order("position")
 
     respond_to do |format|
       format.js

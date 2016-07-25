@@ -1,5 +1,5 @@
 class TeachersController < ApplicationController
-  before_action :find_daycare, except: [:destroy]
+  before_action :find_daycare
   before_action :find_user, only: [:create, :update]
   before_action :init_state
 
@@ -42,6 +42,12 @@ class TeachersController < ApplicationController
   def destroy
     @teacher = Teacher.find(params[:id])
     @teacher.destroy
+
+    if @daycare.teachers.any?
+      @teachers = @daycare.programs.order("position")
+    else
+      @teachers = []
+    end
   end
 
   def move
