@@ -10,15 +10,11 @@
             </div>
           </div>
         </div>
-
         <% if @teachers.length == 1 %>
           <div class="row">
             <% @teachers.each do |teacher| %>
-
-                <div class="team-member img-teacher">
-                  <div class="col-md-4">
-
-                  <div class="img-teacher">
+                <div class="col-md-4">
+                  <div class="landscape img-teacher">
                     <% if teacher.picture_file_name != nil %>
                       <div class="circle-avatar" style="background-image:url(<%= teacher.picture.url %>)">
                       </div>
@@ -26,8 +22,7 @@
                   </div>
                 </div>
                 <div class="col-md-8">
-
-                  <div class="team-detail">
+                  <div class="landscape team-detail">
                     <h4><%= teacher.name %></h4>
                     <span><%= teacher.title %></span>
                     <p>
@@ -35,37 +30,35 @@
                     </p>
                   </div>
                 </div>
-                </div>
             <% end %>
           </div>
         <% else %>
-
-        <% @teachers.each_with_index do |teacher, index| %>
-          <% if index%3 === 0 %>
-            <div class="row">
-          <% end %>
-          <div class="col-md-4">
-            <div class="team-member img-teacher">
-              <div class="img-teacher">
-                <% if teacher.picture_file_name != nil %>
-                  <div class="circle-avatar" style="background-image:url(<%= teacher.picture.url %>)">
-                  </div>
-                <% end %>
-              </div>
-              <div class="team-detail">
-                <h4><%= teacher.name %></h4>
-                <span><%= teacher.title %></span>
-                <p>
-                  <%= simple_format h teacher.about %>
-                </p>
+          <% @teachers.each_with_index do |teacher, index| %>
+            <% if index%3 == 0 %>
+              <div class="row">
+            <% end %>
+            <div class="col-md-4">
+              <div class="team-member img-teacher">
+                <div class="img-teacher">
+                  <% if teacher.picture_file_name != nil %>
+                    <div class="circle-avatar" style="background-image:url(<%= teacher.picture.url %>)">
+                    </div>
+                  <% end %>
+                </div>
+                <div class="team-detail">
+                  <h4><%= teacher.name %></h4>
+                  <span><%= teacher.title %></span>
+                  <p>
+                    <%= simple_format h teacher.about %>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <% if index%3 == 2 %>
-            </div>
+            <% if index%3 == 2 %>
+              </div>
+            <% end %>
           <% end %>
         <% end %>
-      <% end if %>
       </div>
     </div>
   </section>
