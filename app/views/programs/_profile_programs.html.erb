@@ -10,6 +10,70 @@
             </div>
           </div>
         </div>
+        <% if @programs.length == 1 %>
+          <div class="row">
+            <% @programs.each do |program| %>
+              <% if program.picture_file_name != nil %>
+                <div class="col-md-4">
+                  <img src="<%= program.picture.url %>" class="img-responsive mar-bot20" alt="" />
+                  <h4 class="text-bold"><%= program.name %></h4>
+                  <% if program.age_from != nil && program.age_to != nil %>
+                  <p>
+                    Ages:
+                    <%= program.age_from %>
+                    <% if program.age_from_units != program.age_to_units %>
+                    <%= program.age_from_units %>
+                    <% end %>
+                    to
+                    <%= program.age_to %>
+                    <%= program.age_to_units %>
+                  </p>
+                  <% end %>
+                  <p>
+                    Openings:
+                    <% if program.available == true %>
+                    Yes
+                    <% else %>
+                    None
+                    <% end %>
+                  </p>
+                </div>
+                <div class="col-md-8">
+                  <p>
+                    <%= simple_format h program.description %>
+                  </p>
+                </div>
+              <% else %>
+                <div class="col-md-12">
+                  <h4 class="text-bold"><%= program.name %></h4>
+                  <% if program.age_from != nil && program.age_to != nil %>
+                  <p>
+                    Ages:
+                    <%= program.age_from %>
+                    <% if program.age_from_units != program.age_to_units %>
+                    <%= program.age_from_units %>
+                    <% end %>
+                    to
+                    <%= program.age_to %>
+                    <%= program.age_to_units %>
+                  </p>
+                  <% end %>
+                  <p>
+                    Openings:
+                    <% if program.available == true %>
+                    Yes
+                    <% else %>
+                    None
+                    <% end %>
+                  </p>
+                  <p>
+                    <%= simple_format h program.description %>
+                  </p>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        <% else %>
         <% @programs.each_with_index do |program, index| %>
           <% if index%3 === 0 %>
             <div class="row">
@@ -33,10 +97,11 @@
                 </p>
                 <% end %>
                 <p>
+                  Openings:
                   <% if program.available == true %>
-                    We have openings for this program!
+                    Yes
                   <% else %>
-                    No openings for this program.
+                    None
                   <% end %>
                 </p>
               <p>
@@ -47,6 +112,7 @@
           <% if index%3 == 2 %>
             </div>
           <% end %>
+        <% end %>
         <% end %>
       </div>
     </div>
