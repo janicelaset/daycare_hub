@@ -1,14 +1,9 @@
-<% if @additional.errors.messages.any? %>
-  $('#edit-additional-<%= @additional.id %>').html('<%= j render 'additionals/form' %>')
-  $('#edit-additional-<%= @additional.id %>').prepend("<br><h4>Edit Information</h4><br>");
-<% else %>
-  $('#additional-edit-modal').modal("hide");
+$('#additional-edit-modal').modal("hide");
 
-  $("#image-additional-<%= @additional.id %>").html("<%= j image_tag @additional.image.url(:thumb) %>");
-  $('#panel-name-additional-<%= @additional.id %>').text('<%= @additional.title %>');
-  $('#header-name-additional-<%= @additional.id %>').text('<%= @additional.title %>');
-  $('#content-additional-<%= @additional.id %>').html('<%= j simple_format h @additional.content %>');
-<% end %>
+$('#panel-name-additional-<%= @additional.id %>').text('<%= @additional.title %>');
+$('#header-name-additional-<%= @additional.id %>').text('<%= @additional.title %>');
+$('#content-additional-<%= @additional.id %>').html('<%= j simple_format h @additional.content %>');
+$("#image-additional-<%= @additional.id %>").html("<%= j image_tag @additional.image.url(:thumb) %>");
 
 $('#additionalList').sortable({
     axis: 'y',

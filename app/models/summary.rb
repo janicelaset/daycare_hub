@@ -1,6 +1,6 @@
 class Summary < ActiveRecord::Base
   belongs_to :daycare
 
-  validates :content, :presence => true, length: { maximum: 255 }
+  validates :content, :presence => true
 
 end

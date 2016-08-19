@@ -12,10 +12,10 @@
                 <%= image_tag additional.image.url, class: 'img-responsive mar-bot20' %>
               <% end %>
               <h4 class="text-bold"><%= additional.title %></h4>
-              <p>
-                <%= simple_format h additional.content %>
-              </p>
             </div>
+            <p>
+              <%= simple_format h additional.content %>
+            </p>
           </div>
           <% if index%2 == 1 %>
             </div>
