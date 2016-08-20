@@ -73,10 +73,12 @@ var disableCertInput = function(id) {
   if($('#certification_id').val() === '') {
     $('#certification-edit-name').prop('disabled', false);
     $('#certification-edit-desc').prop('disabled', false);
+    console.log('enabled');
   }
   else {
     $('#certification-edit-name').prop('disabled', true);
     $('#certification-edit-desc').prop('disabled', true);
+    console.log('disabled');
   }
 }
 
