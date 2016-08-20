@@ -63,6 +63,7 @@
 var setRadius = function(radius, value) {
   $('#radius-select').text(radius);
   $('#radius-value').val(value);
+  console.log('set radius');
 }
 
 var hideEditForm = function (id, section) {
